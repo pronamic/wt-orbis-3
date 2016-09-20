@@ -6,7 +6,7 @@
 		<div class="col-md-8">
 			<div class="panel with-cols clearfix">
 				<header>
-					<h3><?php _e( 'About this person', 'orbis' ); ?></h3>
+					<h3><?php esc_html_e( 'About this person', 'orbis' ); ?></h3>
 				</header>
 
 				<div class="row">
@@ -29,21 +29,21 @@
 							<dl>
 								<?php if ( get_post_meta( $post->ID, '_orbis_person_phone_number', true ) ) : ?>
 
-									<dt><?php _e( 'Phone number', 'orbis' ); ?></dt>
-									<dd><a href="tel:<?php echo get_post_meta( $post->ID, '_orbis_person_phone_number', true ); ?>" class="anchor-tooltip" title="<?php _e( 'Call this number', 'orbis' ); ?>"><?php echo get_post_meta( $post->ID, '_orbis_person_phone_number', true ); ?></a></dd>
+									<dt><?php esc_html_e( 'Phone number', 'orbis' ); ?></dt>
+									<dd><a href="tel:<?php echo esc_attr( get_post_meta( $post->ID, '_orbis_person_phone_number', true ) ); ?>" class="anchor-tooltip" title="<?php esc_attr_e( 'Call this number', 'orbis' ); ?>"><?php echo esc_html( get_post_meta( $post->ID, '_orbis_person_phone_number', true ) ); ?></a></dd>
 
 								<?php endif; ?>
 
 								<?php if ( get_post_meta( $post->ID, '_orbis_person_mobile_number', true ) ) : ?>
 
-									<dt><?php _e( 'Mobile number', 'orbis' ); ?></dt>
-									<dd><a href="tel:<?php echo get_post_meta( $post->ID, '_orbis_person_mobile_number', true ); ?>" class="anchor-tooltip" title="<?php _e( 'Call this number', 'orbis' ); ?>"><?php echo get_post_meta( $post->ID, '_orbis_person_mobile_number', true ); ?></a></dd>
+									<dt><?php esc_html_e( 'Mobile number', 'orbis' ); ?></dt>
+									<dd><a href="tel:<?php echo esc_attr( get_post_meta( $post->ID, '_orbis_person_mobile_number', true ) ); ?>" class="anchor-tooltip" title="<?php esc_attr_e( 'Call this number', 'orbis' ); ?>"><?php echo esc_html( get_post_meta( $post->ID, '_orbis_person_mobile_number', true ) ); ?></a></dd>
 
 								<?php endif; ?>
 
 								<?php if ( get_post_meta( $post->ID, '_orbis_person_email_address', true ) ) : ?>
 
-									<dt><?php _e( 'E-mail address', 'orbis' ); ?></dt>
+									<dt><?php esc_html_e( 'E-mail address', 'orbis' ); ?></dt>
 									<dd>
 										<?php $email = get_post_meta( $post->ID, '_orbis_person_email_address', true ); ?>
 										<a href="mailto:<?php echo esc_attr( $email ); ?>"><?php echo esc_html( $email ); ?></a>
@@ -53,7 +53,7 @@
 
 								<?php if ( get_post_meta( $post->ID, '_orbis_person_twitter', true ) || get_post_meta( $post->ID, '_orbis_person_facebook', true ) || get_post_meta( $post->ID, '_orbis_person_linkedin', true ) ) : ?>
 
-									<dt><?php _e( 'Social media', 'orbis' ); ?></dt>
+									<dt><?php esc_html_e( 'Social media', 'orbis' ); ?></dt>
 									<dd>
 										<ul class="social clearfix">
 											<?php if ( get_post_meta( $post->ID, '_orbis_person_twitter', true ) ) : ?>
@@ -118,16 +118,16 @@
 
 			<div class="panel">
 				<header>
-					<h3><?php _e( 'Additional information', 'orbis' ); ?></h3>
+					<h3><?php esc_html_e( 'Additional information', 'orbis' ); ?></h3>
 				</header>
 
 				<div class="content">
 					<dl>
-						<dt><?php _e( 'Posted on', 'orbis' ); ?></dt>
+						<dt><?php esc_html_e( 'Posted on', 'orbis' ); ?></dt>
 						<dd><?php echo esc_html( get_the_date() ); ?></dd>
-						<dt><?php _e( 'Posted by', 'orbis' ); ?></dt>
+						<dt><?php esc_html_e( 'Posted by', 'orbis' ); ?></dt>
 						<dd><?php echo esc_html( get_the_author() ); ?></dd>
-						<dt><?php _e( 'Actions', 'orbis' ); ?></dt>
+						<dt><?php esc_html_e( 'Actions', 'orbis' ); ?></dt>
 						<dd><?php edit_post_link( __( 'Edit', 'orbis' ) ); ?></dd>
 					</dl>
 				</div>

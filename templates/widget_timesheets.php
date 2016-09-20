@@ -5,7 +5,7 @@ global $wpdb;
 $user_ids = filter_var( get_option( 'orbis_timesheets_email_users', array( -1 ) ), FILTER_VALIDATE_INT, array( 'flags' => FILTER_FORCE_ARRAY ) );
 
 $users = get_users( array(
-	'include' => $user_ids
+	'include' => $user_ids,
 ) );
 
 $query = "
@@ -38,9 +38,9 @@ $query = "
 				<?php echo get_avatar( $user->ID, 60 ); ?>
 			</div>
 
-			<?php 
+			<?php
 
-			$total = 28800; 
+			$total = 28800;
 
 			$percentage = $seconds / $total * 100;
 
@@ -61,13 +61,13 @@ $query = "
 			?>
 
 			<div class="progress">
-				<div class="progress-bar progress-bar-<?php echo $bar; ?>" style="width: <?php echo $percentage; ?>%;" aria-valuemax="100" aria-valuemin="0" aria-valuenow="<?php echo $percentage; ?>" role="progressbar"><?php echo round( $percentage ) . '%'; ?></div>
+				<div class="progress-bar progress-bar-<?php echo esc_attr( $bar ); ?>" style="width: <?php echo esc_attr( $percentage ); ?>%;" aria-valuemax="100" aria-valuemin="0" aria-valuenow="<?php echo esc_attr( $percentage ); ?>" role="progressbar"><?php echo esc_html( round( $percentage ) ) . '%'; ?></div>
 			</div>
 		</div>
 
 		<div class="number-hours">
 			<p class="h2">
-				<?php echo orbis_time( $seconds ); ?>
+				<?php echo esc_html( orbis_time( $seconds ) ); ?>
 			</p>
 		</div>
 	</div>

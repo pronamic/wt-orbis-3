@@ -12,8 +12,8 @@ if ( $query->have_posts() ) : ?>
 		<table class="table table-striped table-bordered">
 			<thead>
 				<tr>
-					<th><?php _e( 'Project', 'orbis' ); ?></th>
-					<th><?php _e( 'Time', 'orbis' ); ?></th>
+					<th><?php esc_html_e( 'Project', 'orbis' ); ?></th>
+					<th><?php esc_html_e( 'Time', 'orbis' ); ?></th>
 				</tr>
 			</thead>
 
@@ -24,7 +24,7 @@ if ( $query->have_posts() ) : ?>
 						<td>
 							<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 
-							<?php if ( get_comments_number() != 0  ) : ?>
+							<?php if ( 0 !== get_comments_number() ) : ?>
 
 								<div class="comments-number">
 									<span class="glyphicon glyphicon-comment"></span>
@@ -34,7 +34,7 @@ if ( $query->have_posts() ) : ?>
 							<?php endif; ?>
 						</td>
 						<td class="project-time">
-							<?php 
+							<?php
 
 							if ( function_exists( 'orbis_project_the_time' ) ) {
 								orbis_project_the_time();
@@ -42,14 +42,14 @@ if ( $query->have_posts() ) : ?>
 
 							if ( function_exists( 'orbis_project_the_logged_time' ) ) : ?>
 
-								<?php 
+								<?php
 
 								$classes = array();
 								$classes[] = orbis_project_in_time() ? 'text-success' : 'text-error';
 
 								?>
 
-								<span class="<?php echo implode( $classes, ' ' ); ?>"><?php orbis_project_the_logged_time(); ?></span>
+								<span class="<?php echo esc_attr( implode( $classes, ' ' ) ); ?>"><?php orbis_project_the_logged_time(); ?></span>
 
 							<?php endif; ?>
 						</td>
@@ -60,12 +60,14 @@ if ( $query->have_posts() ) : ?>
 		</table>
 	</div>
 
+	<?php wp_reset_postdata(); ?>
+
 <?php else : ?>
 
 	<div class="content">
 		<p class="alt">
-			<?php _e( 'No projects found.', 'orbis' ); ?>
+			<?php esc_html_e( 'No projects found.', 'orbis' ); ?>
 		</p>
 	</div>
 
-<?php endif; wp_reset_postdata(); ?>
+<?php endif; ?>

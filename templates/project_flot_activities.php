@@ -36,8 +36,8 @@
 		$flot_data[] = array(
 			'label' => $label,
 			'data'  => array(
-				array( 0, $row->total_seconds )
-			)
+				array( 0, $row->total_seconds ),
+			),
 		);
 	}
 
@@ -45,9 +45,9 @@
 		'series' => array(
 			'pie' => array(
 				'innerRadius' => 0.5,
-				'show'        => true
-			)
-		)
+				'show'        => true,
+			),
+		),
 	);
 
 	?>

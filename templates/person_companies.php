@@ -1,14 +1,14 @@
 <div class="panel">
 	<header>
-		<h3><?php _e( 'Connected Companies', 'orbis' ); ?></h3>
+		<h3><?php esc_html_e( 'Connected Companies', 'orbis' ); ?></h3>
 	</header>
 
 	<?php
 
 	$query = new WP_Query( array(
-	  'connected_type'  => 'orbis_persons_to_companies',
-	  'connected_items' => get_queried_object(),
-	  'nopaging'        => true,
+		'connected_type'  => 'orbis_persons_to_companies',
+		'connected_items' => get_queried_object(),
+		'nopaging'        => true,
 	) );
 
 	if ( $query->have_posts() ) : ?>
@@ -36,13 +36,15 @@
 			<?php endwhile; ?>
 		</ul>
 
+		<?php wp_reset_postdata(); ?>
+
 	<?php else : ?>
 
 		<div class="content">
 			<p class="alt">
-				<?php _e( 'No companies connected.', 'orbis' ); ?>
+				<?php esc_html_e( 'No companies connected.', 'orbis' ); ?>
 			</p>
 		</div>
 
-	<?php endif; wp_reset_postdata(); ?>
+	<?php endif; ?>
 </div>

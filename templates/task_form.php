@@ -10,21 +10,21 @@ global $orbis_errors;
 <div class="panel">
 	<div class="content">
 		<form role="form" name="addTaskForm">
-			<legend><?php _e( 'Add task', 'orbis' ); ?></legend>
+			<legend><?php esc_html_e( 'Add task', 'orbis' ); ?></legend>
 
 			<?php $tabindex = 2; ?>
 
 			<div class="row">
 				<div class="col-md-6">
 					<div class="form-group">
-						<label><?php _e( 'Project', 'orbis' ); ?></label>
+						<label><?php esc_html_e( 'Project', 'orbis' ); ?></label>
 						<input placeholder="<?php esc_attr_e( 'Select project…', 'orbis' ); ?>" type="text" class="orbis-id-control orbis-project-id-control select-form-control" data-text="" tabindex="<?php echo esc_attr( $tabindex++ ); ?>" autofocus="autofocus" ng-model="formTaskProjectId" required />
 					</div>
 				</div>
 
 				<div class="col-md-6">
 					<div class="form-group">
-						<label><?php _e( 'Assignee', 'orbis' ); ?></label>
+						<label><?php esc_html_e( 'Assignee', 'orbis' ); ?></label>
 
 						<?php
 
@@ -46,7 +46,7 @@ global $orbis_errors;
 			<div class="row">
 				<div class="col-md-6">
 					<div class="form-group">
-						<label><?php _e( 'Task', 'orbis' ); ?></label>
+						<label><?php esc_html_e( 'Task', 'orbis' ); ?></label>
 						<textarea placeholder="<?php esc_attr_e( 'Task description', 'orbis' ); ?>" class="input-lg" cols="60" rows="5"  tabindex="<?php echo esc_attr( $tabindex++ ); ?>" ng-model="formTaskText" required></textarea>
 					</div>
 				</div>
@@ -54,7 +54,7 @@ global $orbis_errors;
 				<div class="col-md-6">
 
 					<div class="form-group">
-						<label><?php _e( 'Date', 'orbis' ); ?></label>
+						<label><?php esc_html_e( 'Date', 'orbis' ); ?></label>
 						<input type="date" class="form-control datepicker" tabindex="<?php echo esc_attr( $tabindex++ ); ?>" ng-model="formTaskDueAt" required />
 
 						<style>
@@ -72,16 +72,16 @@ global $orbis_errors;
 					</div>
 
 					<div class="form-group clearfix">
-						<label class="form-label"><?php _e( 'Time', 'orbis' ); ?></label>
+						<label class="form-label"><?php esc_html_e( 'Time', 'orbis' ); ?></label>
 
 						<div class="input-group inline-input-group">
 							<input class="form-control" size="2" type="number" tabindex="<?php echo esc_attr( $tabindex++ ); ?>" ng-model="formTaskHours" />
-							<span class="input-group-addon"><?php _e( 'hours', 'orbis' ); ?></span>
+							<span class="input-group-addon"><?php esc_html_e( 'hours', 'orbis' ); ?></span>
 						</div>
 
 						<div class="input-group inline-input-group">
 							<input class="form-control" size="2" type="number" tabindex="<?php echo esc_attr( $tabindex++ ); ?>" ng-model="formTaskMinutes" />
-							<span class="input-group-addon"><?php _e( 'minutes', 'orbis' ); ?></span>
+							<span class="input-group-addon"><?php esc_html_e( 'minutes', 'orbis' ); ?></span>
 						</div>
 					</div>
 				</div>

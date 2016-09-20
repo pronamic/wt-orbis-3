@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 $sections = apply_filters( 'orbis_company_sections', array() );
 
@@ -7,20 +7,26 @@ if ( ! empty( $sections ) ) : ?>
 	<div class="panel with-cols clearfix">
 		<header class="with-tabs">
 			<ul id="tabs" class="nav nav-tabs">
-				<?php $active = true; foreach ( $sections as $section ) : ?>
+				<?php $active = true; ?>
 
-					<li class="<?php echo $active ? 'active' : ''; ?>">
-						<a href="#<?php echo $section['id']; ?>"><?php echo $section['name']; ?></a>
+				<?php foreach ( $sections as $section ) : ?>
+
+					<li class="<?php echo esc_attr( $active ? 'active' : '' ); ?>">
+						<a href="#<?php echo esc_attr( $section['id'] ); ?>"><?php echo esc_html( $section['name'] ); ?></a>
 					</li>
 
-				<?php $active = false; endforeach; ?>
+					<?php $active = false; ?>
+
+				<?php endforeach; ?>
 			</ul>
 		</header>
 
 		<div class="tab-content">
-			<?php $active = true; foreach ( $sections as $section ) : ?>
+			<?php $active = true; ?>
 
-				<div id="<?php echo $section['id']; ?>" class="tab-pane <?php echo $active ? 'active' : ''; ?>">
+			<?php foreach ( $sections as $section ) : ?>
+
+				<div id="<?php echo esc_attr( $section['id'] ); ?>" class="tab-pane <?php echo esc_attr( $active ? 'active' : '' ); ?>">
 					<?php
 
 					if ( isset( $section['action'] ) ) {
@@ -38,7 +44,9 @@ if ( ! empty( $sections ) ) : ?>
 					?>
 				</div>
 
-			<?php $active = false; endforeach; ?>
+				<?php $active = false; ?>
+
+			<?php endforeach; ?>
 		</div>
 	</div>
 

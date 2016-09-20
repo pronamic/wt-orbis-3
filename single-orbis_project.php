@@ -6,7 +6,7 @@
 		<div class="col-md-8">
 			<div class="panel">
 				<header>
-					<h3><?php _e( 'Description', 'orbis' ); ?></h3>
+					<h3><?php esc_html_e( 'Description', 'orbis' ); ?></h3>
 				</header>
 
 				<div class="content">
@@ -26,25 +26,25 @@
 
 				<div class="panel">
 					<header>
-						<h3><?php _e( 'Project status', 'orbis' ); ?></h3>
+						<h3><?php esc_html_e( 'Project status', 'orbis' ); ?></h3>
 					</header>
 
 					<div class="content">
-						<span class="entry-meta"><?php _e( 'Project budget', 'orbis' ); ?></span> <br />
+						<span class="entry-meta"><?php esc_html_e( 'Project budget', 'orbis' ); ?></span> <br />
 
 						<p class="project-time">
 							<?php orbis_project_the_time(); ?>
 
 							<?php if ( function_exists( 'orbis_project_the_logged_time' ) ) : ?>
 
-								<?php 
+								<?php
 
 								$classes = array();
 								$classes[] = orbis_project_in_time() ? 'text-success' : 'text-error';
-	
+
 								?>
 
-								<span class="<?php echo implode( $classes, ' ' ); ?>"><?php orbis_project_the_logged_time(); ?></span>
+								<span class="<?php echo esc_attr( implode( $classes, ' ' ) ); ?>"><?php orbis_project_the_logged_time(); ?></span>
 
 							<?php endif; ?>
 						</p>
@@ -55,32 +55,32 @@
 
 			<div class="panel">
 				<header>
-					<h3><?php _e( 'Project Details', 'orbis' ); ?></h3>
+					<h3><?php esc_html_e( 'Project Details', 'orbis' ); ?></h3>
 				</header>
 
 				<div class="content">
 					<dl>
 						<?php if ( function_exists( 'orbis_project_has_principal' ) && orbis_project_has_principal() ) : ?>
 
-							<dt><?php _e( 'Client', 'orbis' ); ?></dt>
+							<dt><?php esc_html_e( 'Client', 'orbis' ); ?></dt>
 							<dd>
 								<?php
-			
-								printf( 
+
+								printf(
 									'<a href="%s">%s</a>',
 									esc_attr( orbis_project_principal_get_permalink() ),
-									orbis_project_principel_get_the_name()
+									esc_html( orbis_project_principel_get_the_name() )
 								);
-			
+
 								?>
 							</dd>
 
 						<?php endif; ?>
 
-						<dt><?php _e( 'Posted on', 'orbis' ); ?></dt>
+						<dt><?php esc_html_e( 'Posted on', 'orbis' ); ?></dt>
 						<dd><?php echo esc_html( get_the_date() ); ?></dd>
 
-						<dt><?php _e( 'Posted by', 'orbis' ); ?></dt>
+						<dt><?php esc_html_e( 'Posted by', 'orbis' ); ?></dt>
 						<dd><?php echo esc_html( get_the_author() ); ?></dd>
 
 						<?php
@@ -89,22 +89,22 @@
 
 						if ( ! empty( $agreement_id ) && $agreement = get_post( $agreement_id ) ) : ?>
 
-							<dt><?php _e( 'Agreement', 'orbis' ); ?></dt>
+							<dt><?php esc_html_e( 'Agreement', 'orbis' ); ?></dt>
 							<dd>
-								<a href="<?php echo get_permalink( $agreement ); ?>"><?php echo get_the_title( $agreement ); ?></a>
+								<a href="<?php echo esc_attr( get_permalink( $agreement ) ); ?>"><?php echo get_the_title( $agreement ); ?></a>
 							</dd>
 
 						<?php endif; ?>
 
-						<dt><?php _e( 'Status', 'orbis' ); ?></dt>
+						<dt><?php esc_html_e( 'Status', 'orbis' ); ?></dt>
 						<dd>
 							<?php if ( orbis_project_is_finished() ) : ?>
 
-								<span class="label label-success"><?php _e( 'Finished', 'orbis' ); ?></span>
+								<span class="label label-success"><?php esc_html_e( 'Finished', 'orbis' ); ?></span>
 
 							<?php else : ?>
 
-								<span class="label label-default"><?php _e( 'Not finished', 'orbis' ); ?></span>
+								<span class="label label-default"><?php esc_html_e( 'Not finished', 'orbis' ); ?></span>
 
 							<?php endif; ?>
 
@@ -112,36 +112,36 @@
 
 								<?php if ( orbis_project_is_invoiced() ) : ?>
 
-									<span class="label label-success"><?php _e( 'Invoiced', 'orbis' ); ?></span>
+									<span class="label label-success"><?php esc_html_e( 'Invoiced', 'orbis' ); ?></span>
 
 								<?php else : ?>
 
-									<span class="label label-default"><?php _e( 'Not invoiced', 'orbis' ); ?></span>
+									<span class="label label-default"><?php esc_html_e( 'Not invoiced', 'orbis' ); ?></span>
 
 								<?php endif; ?>
 
 								<?php if ( orbis_project_is_invoicable() ) : ?>
 
-									<span class="label label-success"><?php _e( 'Invoicable', 'orbis' ); ?></span>
+									<span class="label label-success"><?php esc_html_e( 'Invoicable', 'orbis' ); ?></span>
 
 								<?php else : ?>
 
-									<span class="label label-default"><?php _e( 'Not invoicable', 'orbis' ); ?></span>
+									<span class="label label-default"><?php esc_html_e( 'Not invoicable', 'orbis' ); ?></span>
 
 								<?php endif; ?>
 
 							<?php endif; ?>
 						</dd>
 
-						<?php 
+						<?php
 
 						$invoice_number = get_post_meta( get_the_ID(), '_orbis_project_invoice_number', true );
 
 						if ( ! empty( $invoice_number ) ) : ?>
 
-							<dt><?php _e( 'Invoice', 'orbis' ); ?></dt>
+							<dt><?php esc_html_e( 'Invoice', 'orbis' ); ?></dt>
 							<dd>
-								<?php 
+								<?php
 
 								$invoice_link = orbis_get_invoice_link( $invoice_number );
 
@@ -149,10 +149,10 @@
 									printf(
 										'<a href="%s" target="_blank">%s</a>',
 										esc_attr( $invoice_link ),
-										$invoice_number
+										esc_html( $invoice_number )
 									);
 								} else {
-									echo $invoice_number;
+									echo esc_html( $invoice_number );
 								}
 
 								?>
@@ -160,7 +160,7 @@
 
 						<?php endif; ?>
 
-						<dt><?php _e( 'Actions', 'orbis' ); ?></dt>
+						<dt><?php esc_html_e( 'Actions', 'orbis' ); ?></dt>
 						<dd><?php edit_post_link( __( 'Edit', 'orbis' ) ); ?></dd>
 					</dl>
 				</div>

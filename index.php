@@ -4,7 +4,7 @@
 
 	<div class="section-header clearfix">
 		<a class="btn btn-primary pull-right" href="<?php echo esc_url( orbis_get_url_post_new() ); ?>">
-			<span class="glyphicon glyphicon-plus"></span> <?php _e( 'Add new', 'orbis' ); ?>
+			<span class="glyphicon glyphicon-plus"></span> <?php esc_html_e( 'Add new', 'orbis' ); ?>
 		</a>
 	</div>
 
@@ -18,8 +18,8 @@
 		<table class="table table-striped table-condense table-hover">
 			<thead>
 				<tr>
-					<?php if ( is_search() ) : ?><th><?php _e( 'Type', 'orbis' ); ?></th><?php endif; ?>
-					<th><?php _e( 'Title', 'orbis' ); ?></th>
+					<?php if ( is_search() ) : ?><th><?php esc_html_e( 'Type', 'orbis' ); ?></th><?php endif; ?>
+					<th><?php esc_html_e( 'Title', 'orbis' ); ?></th>
 					<th></th>
 				</tr>
 			</thead>
@@ -34,7 +34,7 @@
 
 								$post_type = get_post_type_object( get_post_type( $post ) );
 
-								echo $post_type->labels->singular_name;
+								echo esc_html( $post_type->labels->singular_name );
 
 								?>
 							</td>
@@ -69,7 +69,7 @@
 
 		<div class="content">
 			<p class="alt">
-				<?php _e( 'No results found.', 'orbis' ); ?>
+				<?php esc_html_e( 'No results found.', 'orbis' ); ?>
 			</p>
 		</div>
 

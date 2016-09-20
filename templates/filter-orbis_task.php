@@ -10,5 +10,5 @@
 
 	?>
 
-	<button class="btn btn-default" type="submit"><?php _e( 'Filter', 'orbis' ); ?></button>
+	<button class="btn btn-default" type="submit"><?php esc_html_e( 'Filter', 'orbis' ); ?></button>
 </div>

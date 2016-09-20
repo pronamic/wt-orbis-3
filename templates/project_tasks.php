@@ -12,9 +12,9 @@ if ( $query->have_posts() ) : ?>
 		<table class="table table-striped table-bordered">
 			<thead>
 				<tr>
-					<th><?php _e( 'Description', 'orbis' ); ?></th>
-					<th><?php _e( 'Time', 'orbis' ); ?></th>
-					<th><?php _e( 'Comments', 'orbis' ); ?></th>
+					<th><?php esc_html_e( 'Description', 'orbis' ); ?></th>
+					<th><?php esc_html_e( 'Time', 'orbis' ); ?></th>
+					<th><?php esc_html_e( 'Comments', 'orbis' ); ?></th>
 				</tr>
 			</thead>
 
@@ -39,12 +39,14 @@ if ( $query->have_posts() ) : ?>
 		</table>
 	</div>
 
+	<?php wp_reset_postdata(); ?>
+
 <?php else : ?>
 
 	<div class="content">
 		<p class="alt">
-			<?php _e( 'No tasks found.', 'orbis' ); ?>
+			<?php esc_html_e( 'No tasks found.', 'orbis' ); ?>
 		</p>
 	</div>
 
-<?php endif; wp_reset_postdata(); ?>
+<?php endif; ?>

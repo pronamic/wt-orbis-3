@@ -1,14 +1,14 @@
 <div class="panel">
 	<header>
-		<h3><?php _e( 'Involved Persons', 'orbis' ); ?></h3>
+		<h3><?php esc_html_e( 'Involved Persons', 'orbis' ); ?></h3>
 	</header>
 
 	<?php
 
 	$query = new WP_Query( array(
-	  'connected_type'  => 'orbis_projects_to_persons',
-	  'connected_items' => get_queried_object(),
-	  'nopaging'        => true
+		'connected_type'  => 'orbis_projects_to_persons',
+		'connected_items' => get_queried_object(),
+		'nopaging'        => true,
 	) );
 
 	if ( $query->have_posts() ) : ?>
@@ -51,13 +51,15 @@
 			<?php endwhile; ?>
 		</ul>
 
+		<?php wp_reset_postdata(); ?>
+
 	<?php else : ?>
 
 		<div class="content">
 			<p class="alt">
-				<?php _e( 'No persons involved.', 'orbis' ); ?>
+				<?php esc_html_e( 'No persons involved.', 'orbis' ); ?>
 			</p>
 		</div>
 
-	<?php endif; wp_reset_postdata(); ?>
+	<?php endif; ?>
 </div>

@@ -1,9 +1,9 @@
-<?php 
+<?php
 
 $orderby_current = filter_input( INPUT_GET, 'orderby', FILTER_SANITIZE_STRING );
 
 $orderbys = array(
-	''                                => __( '', 'orbis' ),
+	''                                => '',
 	'author'                          => __( 'Author', 'orbis' ),
 	'title'                           => __( 'Title', 'orbis' ),
 	'date'                            => __( 'Date', 'orbis' ),
@@ -16,7 +16,7 @@ $orderbys = array(
 ?>
 <div class="pull-right">
 	<select name="orderby" class="form-control">
-		<?php 
+		<?php
 
 		foreach ( $orderbys as $orderby => $label ) {
 			printf(
@@ -30,5 +30,5 @@ $orderbys = array(
 		?>
 	</select>
 
-	<button class="btn btn-default" type="submit"><?php _ex( 'Order', 'sorting', 'orbis' ); ?></button>
+	<button class="btn btn-default" type="submit"><?php echo esc_html( _x( 'Order', 'sorting', 'orbis' ) ); ?></button>
 </div>

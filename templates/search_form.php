@@ -1,6 +1,6 @@
-<?php 
+<?php
 
-$s = filter_input( INPUT_GET, 's', FILTER_SANITIZE_STRING ); 
+$s = filter_input( INPUT_GET, 's', FILTER_SANITIZE_STRING );
 
 $has_advanced = is_post_type_archive( 'orbis_project' );
 
@@ -15,15 +15,15 @@ if ( is_post_type_archive() ) {
 	<form class="form-inline" method="get" action="<?php echo esc_attr( $action_url ); ?>">
 		<div class="form-search">
 			<div class="form-group">
-				<label for="orbis_search_query" class="sr-only"><?php _e( 'Search', 'orbis' ); ?></label>
+				<label for="orbis_search_query" class="sr-only"><?php esc_html_e( 'Search', 'orbis' ); ?></label>
 				<input id="orbis_search_query" type="search" class="form-control" name="s" placeholder="<?php esc_attr_e( 'Search', 'orbis' ); ?>" value="<?php echo esc_attr( $s ); ?>" />
 			</div>
 
-			<button type="submit" class="btn btn-default"><?php _e( 'Search', 'orbis' ); ?></button> 
+			<button type="submit" class="btn btn-default"><?php esc_html_e( 'Search', 'orbis' ); ?></button> 
 
-			<?php if ( $has_advanced) : ?>
+			<?php if ( $has_advanced ) : ?>
 
-				<small><a href="#" class="advanced-search-link" data-toggle="collapse" data-target="#advanced-search"><?php _e( 'Advanced Search', 'orbis' ); ?></a></small>
+				<small><a href="#" class="advanced-search-link" data-toggle="collapse" data-target="#advanced-search"><?php esc_html_e( 'Advanced Search', 'orbis' ); ?></a></small>
 
 			<?php endif; ?>
 

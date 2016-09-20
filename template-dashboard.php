@@ -1,4 +1,4 @@
-<?php 
+<?php
 /**
  * Template Name: Dashboard
  */
@@ -10,7 +10,7 @@ get_header(); ?>
 	<?php the_content(); ?>
 
 	<div class="dashboard-loader">
-		<?php _e( 'Loading...', 'orbis' ); ?>
+		<?php esc_html_e( 'Loading…', 'orbis' ); ?>
 	</div>
 
 	<div id="dashboard-content-holder">

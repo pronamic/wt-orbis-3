@@ -9,7 +9,7 @@
 
 				<div class="panel">
 					<header>
-						<h3><?php _e( 'Description', 'orbis' ); ?></h3>
+						<h3><?php esc_html_e( 'Description', 'orbis' ); ?></h3>
 					</header>
 
 					<div class="content">
@@ -31,15 +31,15 @@
 
 					<div class="panel">
 						<header>
-							<h3><?php _e(' Connected persons', 'orbis' ); ?></h3>
+							<h3><?php esc_html_e( 'Connected persons', 'orbis' ); ?></h3>
 						</header>
 
 						<?php
 
 						$connected = new WP_Query( array(
-						  'connected_type'  => 'orbis_persons_to_companies',
-						  'connected_items' => get_queried_object(),
-						  'nopaging'        => true,
+							'connected_type'  => 'orbis_persons_to_companies',
+							'connected_items' => get_queried_object(),
+							'nopaging'        => true,
 						) );
 
 						if ( $connected->have_posts() ) : ?>
@@ -86,7 +86,7 @@
 
 							<div class="content">
 								<p class="alt">
-									<?php _e( 'No persons connected.', 'orbis' ); ?>
+									<?php esc_html_e( 'No persons connected.', 'orbis' ); ?>
 								</p>
 							</div>
 
@@ -99,18 +99,18 @@
 
 				<div class="panel">
 					<header>
-						<h3><?php _e( 'Additional Information', 'orbis' ); ?></h3>
+						<h3><?php esc_html_e( 'Additional Information', 'orbis' ); ?></h3>
 					</header>
 
 					<div class="content">
 						<dl>
-							<dt><?php _e( 'Posted on', 'orbis' ); ?></dt>
+							<dt><?php esc_html_e( 'Posted on', 'orbis' ); ?></dt>
 							<dd><?php echo esc_html( get_the_date() ); ?></dd>
 
-							<dt><?php _e( 'Posted by', 'orbis' ); ?></dt>
+							<dt><?php esc_html_e( 'Posted by', 'orbis' ); ?></dt>
 							<dd><?php echo esc_html( get_the_author() ); ?></dd>
 
-							<dt><?php _e( 'Actions', 'orbis' ); ?></dt>
+							<dt><?php esc_html_e( 'Actions', 'orbis' ); ?></dt>
 							<dd><?php edit_post_link( __( 'Edit', 'orbis' ) ); ?></dd>
 						</dl>
 					</div>

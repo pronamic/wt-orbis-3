@@ -242,8 +242,8 @@ get_header();
 								</form>
 
 								<span class="label" ng-class="task.done ? 'label-default' : ( task.days_left <= 0 && ! task.done ) ? 'label-danger' : 'label-success'">
- 									<ng-pluralize count="task.days_left" when="{'1': '<?php esc_attr_e( '1 day', 'orbis' ); ?>', 'other': '<?php esc_attr_e( '{} days', 'orbis' ); ?>'}"></ng-pluralize>
- 								</span>
+									<ng-pluralize count="task.days_left" when="{'1': '<?php esc_attr_e( '1 day', 'orbis' ); ?>', 'other': '<?php esc_attr_e( '{} days', 'orbis' ); ?>'}"></ng-pluralize>
+								</span>
 							</td>
 						</tr>
 					</tbody>

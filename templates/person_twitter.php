@@ -14,8 +14,9 @@
 			<h3>
 				<?php
 
-				printf( __( '%1$s on Twitter', 'orbis' ),
-					get_the_title()
+				printf(
+					esc_html__( '%1$s on Twitter', 'orbis' ),
+					esc_html( get_the_title() )
 				);
 
 				?>
