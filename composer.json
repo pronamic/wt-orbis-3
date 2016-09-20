@@ -30,7 +30,8 @@
     },
 	"type": "wordpress-theme",
     "require": {
-    	"php": ">=5.2.0"
+    	"php": ">=5.2.0",
+		"abraham/twitteroauth": "^0.6.4"
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "^2.7",
