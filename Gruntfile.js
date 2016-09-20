@@ -13,7 +13,13 @@ module.exports = function( grunt ) {
 					'-lf': null
 				}
 			},
-			all: [ '**/*.php', '!node_modules/**', '!bower_components/**' ]
+			all: [
+				'**/*.php',
+				'!node_modules/**',
+				'!bower_components/**',
+				'!deploy/**',
+				'!vendor/**'
+			]
 		},
 		
 		// Check textdomain errors
@@ -102,7 +108,14 @@ module.exports = function( grunt ) {
 						cwd: 'bower_components/font-awesome/',
 						src: [ 'css/**', 'fonts/**' ],
 						dest: 'assets/fontawesome'
-					}
+					},
+					{ // Tether - http://tether.io/
+						expand: true,
+						cwd: 'bower_components/tether/dist/',
+						src: [ '**' ],
+						dest: 'assets/tether'
+					},
+
 				]
 			},
 

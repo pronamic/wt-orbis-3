@@ -67,6 +67,22 @@ function orbis_load_scripts() {
 	$suffix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
 	$min = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
 
+	// Tether - http://tether.io/
+	wp_enqueue_script(
+		'tether',
+		$uri . '/assets/tether/js/tether' . $min . '.js',
+		array( 'jquery' ),
+		'1.3.7',
+		true
+	);
+
+	wp_register_style(
+		'tether',
+		$uri . '/assets/tether/css/tether' . $min . '.css',
+		array(),
+		'1.3.7'
+	);
+
 	// Bootstrap
 	wp_enqueue_script(
 		'bootstrap',
@@ -95,8 +111,11 @@ function orbis_load_scripts() {
 	wp_enqueue_script(
 		'wt-orbis',
 		$uri . "/assets/orbis/js/orbis$suffix.js",
-		array( 'jquery', 'bootstrap' ),
-		'2.0.0',
+		array(
+			'jquery',
+			'bootstrap',
+		),
+		'3.0.0',
 		true
 	);
 
@@ -109,8 +128,11 @@ function orbis_load_scripts() {
 	wp_enqueue_style(
 		'wt-orbis',
 		$uri . '/css/orbis' . $suffix . '.css',
-		array( 'bootstrap' ),
-		'2.0.0'
+		array(
+			'bootstrap',
+			'fontawesome',
+		),
+		'3.0.0'
 	);
 
 }
@@ -153,7 +175,10 @@ function orbis_get_url_post_new( $post_type = null ) {
 
 if ( ! function_exists( 'orbis_price' ) ) {
 	function orbis_price( $price ) {
-		return '&euro;&nbsp;' . number_format( $price, 2, ',', '.' );
+		// @see https://en.wikipedia.org/wiki/Non-breaking_space#Keyboard_entry_methods
+		$non_breaking_space = ' ';
+
+		return '€' . $non_breaking_space . number_format_i18n( $price, 2 );
 	}
 }
 
@@ -188,7 +213,7 @@ function orbis_custom_excerpt( $excerpt, $charlength = 30 ) {
 	$excerpt = strip_tags( $excerpt );
 
 	if ( strlen( $excerpt ) > $charlength ) {
-		$excerpt = substr( $excerpt, 0, $charlength ) . '&hellip;';
+		$excerpt = substr( $excerpt, 0, $charlength ) . '…';
 	} else {
 		$excerpt = $excerpt;
 	}
