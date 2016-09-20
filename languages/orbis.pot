@@ -1,0 +1,781 @@
+# Copyright (C) 2015 Pronamic
+# This file is distributed under the GNU General Public License.
+msgid ""
+msgstr ""
+"Project-Id-Version: Orbis 2 2.0.0\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
+"POT-Creation-Date: 2015-06-09 14:02:09+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: grunt-wp-i18n 0.5.2\n"
+
+#: 404.php:5
+msgid "Houston, we have a problem"
+msgstr ""
+
+#: 404.php:10
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for."
+msgstr ""
+
+#: archive-orbis_company.php:5
+msgid "Add company"
+msgstr ""
+
+#: archive-orbis_company.php:18 archive-orbis_person.php:18
+msgid "Name"
+msgstr ""
+
+#: archive-orbis_company.php:19 templates/company_contact.php:26
+msgid "Address"
+msgstr ""
+
+#: archive-orbis_company.php:20
+msgid "Online"
+msgstr ""
+
+#: archive-orbis_company.php:102 archive-orbis_deal.php:76
+#: archive-orbis_hosting_group.php:68 archive-orbis_person.php:90
+#: archive-orbis_product.php:60 archive-orbis_project.php:91
+#: archive-orbis_subs_product.php:84 archive-orbis_subs_purchase.php:96
+#: archive-orbis_subscription.php:60 archive-orbis_task.php:79
+#: content-post.php:100 index.php:72
+msgid "No results found."
+msgstr ""
+
+#: archive-orbis_deal.php:5
+msgid "Add deal"
+msgstr ""
+
+#: archive-orbis_deal.php:18 templates/filter-orbis_project.php:9
+#: templates/task_form.php:57
+msgid "Date"
+msgstr ""
+
+#: archive-orbis_deal.php:19
+msgid "Company"
+msgstr ""
+
+#: archive-orbis_deal.php:20 archive-orbis_hosting_group.php:18
+#: archive-orbis_product.php:18 archive-orbis_subs_product.php:18
+#: archive-orbis_subs_purchase.php:18 archive-orbis_subscription.php:18
+#: index.php:22 templates/filter-orbis_project.php:8
+msgid "Title"
+msgstr ""
+
+#: archive-orbis_deal.php:21 archive-orbis_product.php:19
+#: archive-orbis_subs_product.php:19 archive-orbis_subscription.php:19
+#: templates/subscription_product_details.php:8
+msgid "Price"
+msgstr ""
+
+#: archive-orbis_deal.php:22 single-orbis_project.php:99
+msgid "Status"
+msgstr ""
+
+#: archive-orbis_deal.php:23 templates/filter-orbis_project.php:7
+msgid "Author"
+msgstr ""
+
+#: archive-orbis_hosting_group.php:5 archive-orbis_subscription.php:5
+msgid "Add subscription"
+msgstr ""
+
+#: archive-orbis_hosting_group.php:19
+msgid "IP address"
+msgstr ""
+
+#: archive-orbis_hosting_group.php:20
+msgid "Hostname"
+msgstr ""
+
+#: archive-orbis_hosting_group.php:21
+msgid "Hostname Provider"
+msgstr ""
+
+#: archive-orbis_person.php:5
+msgid "Add person"
+msgstr ""
+
+#: archive-orbis_person.php:19 single-orbis_person.php:32
+msgid "Phone number"
+msgstr ""
+
+#: archive-orbis_product.php:5
+msgid "Add product"
+msgstr ""
+
+#: archive-orbis_project.php:5
+msgid "Add project"
+msgstr ""
+
+#: archive-orbis_project.php:18 single-orbis_project.php:65
+#: templates/filter_advanced-orbis_project.php:14
+msgid "Client"
+msgstr ""
+
+#: archive-orbis_project.php:19 single-orbis_task.php:49
+#: templates/company_projects.php:15 templates/task_form.php:20
+msgid "Project"
+msgstr ""
+
+#: archive-orbis_project.php:20 templates/company_projects.php:16
+#: templates/project_tasks.php:16 templates/task_form.php:75
+msgid "Time"
+msgstr ""
+
+#: archive-orbis_subs_product.php:5 archive-orbis_subs_purchase.php:5
+msgid "Add subscription product"
+msgstr ""
+
+#: archive-orbis_subs_product.php:20
+#: templates/subscription_product_details.php:23
+msgid "Cost Price"
+msgstr ""
+
+#: archive-orbis_subs_purchase.php:19
+msgid "Costs"
+msgstr ""
+
+#: archive-orbis_subs_purchase.php:20
+msgid "Revenue"
+msgstr ""
+
+#: archive-orbis_subs_purchase.php:21
+msgid "Profit"
+msgstr ""
+
+#: archive-orbis_task.php:5 templates/task_form.php:13
+#: templates/task_form.php:91
+msgid "Add task"
+msgstr ""
+
+#: archive-orbis_task.php:18 templates/task_form.php:49
+msgid "Task"
+msgstr ""
+
+#: archive-orbis_task.php:19 single-orbis_task.php:52
+#: templates/task_form.php:27
+msgid "Assignee"
+msgstr ""
+
+#: archive-orbis_task.php:20
+msgid "Due At"
+msgstr ""
+
+#: archive-orbis_task.php:37
+msgid "<span class=\"label label-danger\">%d days</span>"
+msgstr ""
+
+#: comments.php:5
+msgid "This post is password protected. Enter the password to view any comments."
+msgstr ""
+
+#: comments.php:14
+msgid "One thought"
+msgid_plural "%1$s thoughts"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:20 comments.php:33
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: comments.php:21 comments.php:34
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: comments.php:42
+msgid "Comments are closed."
+msgstr ""
+
+#: comments.php:50
+msgid "Give a comment"
+msgstr ""
+
+#: content-post.php:5 functions.php:212
+msgid "News"
+msgstr ""
+
+#: content-post.php:15
+msgid "Permalink to %s"
+msgstr ""
+
+#: content-post.php:31
+msgid "Continue reading &rarr;"
+msgstr ""
+
+#: content-post.php:41 content-post.php:59
+msgid ",  "
+msgstr ""
+
+#: content-post.php:48
+msgid "<span class=\"%1$s\">Posted in</span> %2$s"
+msgstr ""
+
+#: content-post.php:70
+msgid "<span class=\"%1$s\">Tagged</span> %2$s"
+msgstr ""
+
+#: content-post.php:86
+msgid "Leave a reply"
+msgstr ""
+
+#: content-post.php:86
+msgid "1 reply"
+msgstr ""
+
+#: content-post.php:86
+msgid "% replies"
+msgstr ""
+
+#: content-post.php:113
+msgid "Categories"
+msgstr ""
+
+#: content-post.php:136
+msgid "Tags"
+msgstr ""
+
+#: footer.php:4
+msgid "&copy; %1$s %2$s. WordPress theme by <a href=\"%3$s\">Pronamic</a>."
+msgstr ""
+
+#: front-page.php:39 includes/widgets/orbis-widget-stats.php:47
+msgid "Companies"
+msgstr ""
+
+#: front-page.php:50 includes/projects.php:6
+#: includes/widgets/orbis-widget-stats.php:53
+msgid "Projects"
+msgstr ""
+
+#: front-page.php:61 includes/timesheets.php:12
+#: includes/widgets/orbis-widget-stats.php:59
+msgid "Persons"
+msgstr ""
+
+#: functions.php:47
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:157
+msgid "No description."
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Dashboard"
+msgstr ""
+
+#: functions.php:230 header.php:82
+#: templates/filter_advanced-orbis_project.php:28 templates/search_form.php:18
+#: templates/search_form.php:19 templates/search_form.php:22
+msgid "Search"
+msgstr ""
+
+#: functions.php:233
+msgid "404 - Page not found"
+msgstr ""
+
+#: functions.php:236
+msgid "Unknown"
+msgstr ""
+
+#: header.php:40
+msgid "Menu"
+msgstr ""
+
+#: header.php:53
+msgid "Collapse menu"
+msgstr ""
+
+#: header.php:70
+msgid "Help"
+msgstr ""
+
+#: header.php:71
+msgid "Edit profile"
+msgstr ""
+
+#: header.php:73
+msgid "Log out"
+msgstr ""
+
+#: home.php:5
+msgid "Add post"
+msgstr ""
+
+#: includes/customizer.php:12
+msgid "General"
+msgstr ""
+
+#: includes/customizer.php:22
+msgid "Logo"
+msgstr ""
+
+#: includes/customizer.php:35
+msgid "Primary color"
+msgstr ""
+
+#: includes/customizer.php:41
+msgid "Secondary color"
+msgstr ""
+
+#: includes/functions.php:9 single-orbis_company.php:114
+#: single-orbis_person.php:119 single-orbis_project.php:164
+#: single-orbis_task.php:59 single.php:50
+msgid "Edit"
+msgstr ""
+
+#: includes/tasks.php:6
+msgid "Tasks"
+msgstr ""
+
+#: includes/template-tags.php:28
+msgid "&larr; Previous"
+msgstr ""
+
+#: includes/template-tags.php:31
+msgid "Next &rarr;"
+msgstr ""
+
+#: includes/template-tags.php:63
+msgid "Pingback:"
+msgstr ""
+
+#: includes/template-tags.php:63 includes/template-tags.php:84
+msgid "(Edit)"
+msgstr ""
+
+#: includes/template-tags.php:74
+msgid "%s <span class=\"says\">says:</span>"
+msgstr ""
+
+#: includes/template-tags.php:79
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: includes/template-tags.php:84
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: includes/template-tags.php:105
+msgid ""
+"<span class=\"sep\">Posted on </span><a href=\"%1$s\" title=\"%2$s\" "
+"rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s\" "
+"pubdate>%4$s</time></a><span class=\"by-author\"> <span class=\"sep\"> by "
+"</span> <span class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" "
+"title=\"%6$s\" rel=\"author\">%7$s</a></span></span>"
+msgstr ""
+
+#: includes/template-tags.php:111
+msgid "View all posts by %s"
+msgstr ""
+
+#: includes/timesheets.php:6
+msgid "Activities"
+msgstr ""
+
+#: includes/widgets/orbis-widget-comments.php:20
+msgid "Orbis Comments"
+msgstr ""
+
+#: includes/widgets/orbis-widget-comments.php:58
+msgid "Keychain"
+msgstr ""
+
+#: includes/widgets/orbis-widget-comments.php:61
+msgid "Subscription"
+msgstr ""
+
+#: includes/widgets/orbis-widget-comments.php:64
+msgid "Comment"
+msgstr ""
+
+#: includes/widgets/orbis-widget-comments.php:80
+msgid "<span class=\"entry-meta\">Posted by %1$s on %2$s</span>"
+msgstr ""
+
+#: includes/widgets/orbis-widget-comments.php:121
+#: includes/widgets/orbis-widget-news.php:106
+#: includes/widgets/orbis-widget-posts.php:147
+#: includes/widgets/orbis-widget-stats.php:84
+#: includes/widgets/orbis-widget-twitter.php:83
+msgid "Title:"
+msgstr ""
+
+#: includes/widgets/orbis-widget-comments.php:128
+#: includes/widgets/orbis-widget-posts.php:172
+#: includes/widgets/orbis-widget-twitter.php:98
+msgid "Number:"
+msgstr ""
+
+#: includes/widgets/orbis-widget-news.php:20
+msgid "Orbis News"
+msgstr ""
+
+#: includes/widgets/orbis-widget-news.php:68
+msgid "More news"
+msgstr ""
+
+#: includes/widgets/orbis-widget-posts.php:20
+msgid "Orbis Posts List"
+msgstr ""
+
+#: includes/widgets/orbis-widget-posts.php:99
+msgid "Show all"
+msgstr ""
+
+#: includes/widgets/orbis-widget-posts.php:110
+msgid "No %3$s found. <a href=\"%1$s\">Add your first %2$s</a>."
+msgstr ""
+
+#: includes/widgets/orbis-widget-posts.php:155
+msgid "Post type:"
+msgstr ""
+
+#: includes/widgets/orbis-widget-stats.php:20
+msgid "Orbis Stats"
+msgstr ""
+
+#: includes/widgets/orbis-widget-stats.php:41
+msgid "Posts"
+msgstr ""
+
+#: includes/widgets/orbis-widget-twitter.php:20
+msgid "Orbis Twitter"
+msgstr ""
+
+#: includes/widgets/orbis-widget-twitter.php:91
+msgid "User:"
+msgstr ""
+
+#: includes/widgets.php:43
+msgid "Main Widget Area"
+msgstr ""
+
+#: includes/widgets.php:52
+msgid "Dashboard Widget Area"
+msgstr ""
+
+#: includes/widgets.php:61
+msgid "Frontpage Top Widget"
+msgstr ""
+
+#: includes/widgets.php:70
+msgid "Frontpage Left Widget"
+msgstr ""
+
+#: includes/widgets.php:79
+msgid "Frontpage Right Widget"
+msgstr ""
+
+#: includes/widgets.php:88
+msgid "Frontpage Bottom Widget"
+msgstr ""
+
+#: index.php:7
+msgid "Add new"
+msgstr ""
+
+#: index.php:21
+msgid "Type"
+msgstr ""
+
+#: single-orbis_company.php:12 single-orbis_project.php:9
+#: single-orbis_task.php:12 single.php:12 templates/project_tasks.php:15
+msgid "Description"
+msgstr ""
+
+#: single-orbis_company.php:34
+msgid " Connected persons"
+msgstr ""
+
+#: single-orbis_company.php:89
+msgid "No persons connected."
+msgstr ""
+
+#: single-orbis_company.php:102 single-orbis_task.php:38 single.php:38
+msgid "Additional Information"
+msgstr ""
+
+#: single-orbis_company.php:107 single-orbis_person.php:114
+#: single-orbis_project.php:80 single-orbis_task.php:43 single.php:43
+msgid "Posted on"
+msgstr ""
+
+#: single-orbis_company.php:110 single-orbis_person.php:116
+#: single-orbis_project.php:83 single-orbis_task.php:46 single.php:46
+msgid "Posted by"
+msgstr ""
+
+#: single-orbis_company.php:113 single-orbis_person.php:118
+#: single-orbis_project.php:163 single-orbis_task.php:58 single.php:49
+msgid "Actions"
+msgstr ""
+
+#: single-orbis_person.php:9
+msgid "About this person"
+msgstr ""
+
+#: single-orbis_person.php:33 single-orbis_person.php:40
+msgid "Call this number"
+msgstr ""
+
+#: single-orbis_person.php:39
+msgid "Mobile number"
+msgstr ""
+
+#: single-orbis_person.php:46
+msgid "E-mail address"
+msgstr ""
+
+#: single-orbis_person.php:56
+msgid "Social media"
+msgstr ""
+
+#: single-orbis_person.php:63
+msgid "Twitter"
+msgstr ""
+
+#: single-orbis_person.php:72
+msgid "Facebook"
+msgstr ""
+
+#: single-orbis_person.php:81
+msgid "LinkedIn"
+msgstr ""
+
+#: single-orbis_person.php:109
+msgid "Additional information"
+msgstr ""
+
+#: single-orbis_project.php:29
+msgid "Project status"
+msgstr ""
+
+#: single-orbis_project.php:33
+msgid "Project budget"
+msgstr ""
+
+#: single-orbis_project.php:58
+msgid "Project Details"
+msgstr ""
+
+#: single-orbis_project.php:92
+msgid "Agreement"
+msgstr ""
+
+#: single-orbis_project.php:103
+msgid "Finished"
+msgstr ""
+
+#: single-orbis_project.php:107
+msgid "Not finished"
+msgstr ""
+
+#: single-orbis_project.php:115
+msgid "Invoiced"
+msgstr ""
+
+#: single-orbis_project.php:119
+msgid "Not invoiced"
+msgstr ""
+
+#: single-orbis_project.php:125
+msgid "Invoicable"
+msgstr ""
+
+#: single-orbis_project.php:129
+msgid "Not invoicable"
+msgstr ""
+
+#: single-orbis_project.php:142
+msgid "Invoice"
+msgstr ""
+
+#: single-orbis_task.php:55
+msgid "Deadline"
+msgstr ""
+
+#: template-dashboard.php:13
+msgid "Loading..."
+msgstr ""
+
+#: template-my-tasks.php:245
+msgid "1 day"
+msgstr ""
+
+#: template-my-tasks.php:245
+msgid "{} days"
+msgstr ""
+
+#: templates/company_contact.php:19
+msgid "Contact Details"
+msgstr ""
+
+#: templates/company_contact.php:37
+msgid "Website"
+msgstr ""
+
+#: templates/company_contact.php:46
+msgid "E-Mail"
+msgstr ""
+
+#: templates/company_contact.php:55
+msgid "Electronic billing"
+msgstr ""
+
+#: templates/company_contact.php:56
+#: templates/subscription_product_details.php:44
+msgid "Yes"
+msgstr ""
+
+#: templates/company_contact.php:56
+#: templates/subscription_product_details.php:44
+msgid "No"
+msgstr ""
+
+#: templates/company_contact.php:62
+msgid "KvK Number"
+msgstr ""
+
+#: templates/company_projects.php:67
+msgid "No projects found."
+msgstr ""
+
+#: templates/company_twitter.php:8 templates/person_twitter.php:8
+msgid "Tweets from @%s"
+msgstr ""
+
+#: templates/company_twitter.php:17 templates/person_twitter.php:17
+msgid "%1$s on Twitter"
+msgstr ""
+
+#: templates/filter-orbis_deal.php:7
+msgid "&mdash; Select Status &mdash;"
+msgstr ""
+
+#: templates/filter-orbis_deal.php:23 templates/filter-orbis_task.php:13
+msgid "Filter"
+msgstr ""
+
+#: templates/filter-orbis_project.php:10
+msgid "Modified"
+msgstr ""
+
+#: templates/filter-orbis_project.php:11
+msgid "Finished Modified"
+msgstr ""
+
+#: templates/filter-orbis_project.php:12
+msgid "Invoice Number Modified"
+msgstr ""
+
+#: templates/filter-orbis_task.php:7 templates/task_form.php:34
+msgid "&mdash; Select Assignee &mdash;"
+msgstr ""
+
+#: templates/filter_advanced-orbis_project.php:11 templates/search_form.php:26
+msgid "Advanced Search"
+msgstr ""
+
+#: templates/filter_advanced-orbis_project.php:15
+msgid "Search on Client"
+msgstr ""
+
+#: templates/filter_advanced-orbis_project.php:21
+msgid "Invoice Number"
+msgstr ""
+
+#: templates/filter_advanced-orbis_project.php:22
+msgid "Search on Invoice Number"
+msgstr ""
+
+#: templates/filter_advanced-orbis_project.php:29
+msgid "Cancel"
+msgstr ""
+
+#: templates/person_companies.php:3
+msgid "Connected Companies"
+msgstr ""
+
+#: templates/person_companies.php:43
+msgid "No companies connected."
+msgstr ""
+
+#: templates/project_persons.php:3
+msgid "Involved Persons"
+msgstr ""
+
+#: templates/project_persons.php:58
+msgid "No persons involved."
+msgstr ""
+
+#: templates/project_tasks.php:17
+msgid "Comments"
+msgstr ""
+
+#: templates/project_tasks.php:46
+msgid "No tasks found."
+msgstr ""
+
+#: templates/subscription_product_details.php:3
+msgid "Subscription Product Details"
+msgstr ""
+
+#: templates/subscription_product_details.php:38
+msgid "Auto Renew"
+msgstr ""
+
+#: templates/task_form.php:21
+msgid "Select project…"
+msgstr ""
+
+#: templates/task_form.php:50
+msgid "Task description"
+msgstr ""
+
+#: templates/task_form.php:79
+msgid "hours"
+msgstr ""
+
+#: templates/task_form.php:84
+msgid "minutes"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Orbis 2"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "http://www.pronamic.eu/themes/orbis/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "The default WordPress theme for Orbis. Made by Pronamic."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Pronamic"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://www.pronamic.eu/"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "My Tasks"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Panel"
+msgstr ""
+
+#: templates/filter-orbis_project.php:32
+msgctxt "sorting"
+msgid "Order"
+msgstr ""
