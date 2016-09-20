@@ -2,6 +2,7 @@
   "name": "orbis",
   "version": "1.2.0",
   "dependencies": {
-    "bootstrap": "~3.1.1"
+    "bootstrap": "v4.0.0-alpha.4",
+    "font-awesome": "fontawesome#^4.6.3"
   }
 }

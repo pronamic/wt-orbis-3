@@ -65,6 +65,7 @@ function orbis_load_scripts() {
 	$uri = get_template_directory_uri();
 
 	$suffix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
+	$min = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
 
 	// Bootstrap
 	wp_enqueue_script(
@@ -83,10 +84,11 @@ function orbis_load_scripts() {
 	);
 
 	// Font Awesome - http://fortawesome.github.io/Font-Awesome/
-	wp_enqueue_style(
+	wp_register_style(
 		'fontawesome',
-		'//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css',
-		'4.2.0'
+		$uri . '/assets/fontawesome/css/font-awesome' . $min . '.css',
+		array(),
+		'4.6.3'
 	);
 
 	// Orbis

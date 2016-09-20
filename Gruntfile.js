@@ -97,6 +97,12 @@ module.exports = function( grunt ) {
 						src: [ '**' ],
 						dest: 'assets/bootstrap'
 					},
+					{ // Font Awesome - http://fontawesome.io/
+						expand: true,
+						cwd: 'bower_components/font-awesome/',
+						src: [ 'css/**', 'fonts/**' ],
+						dest: 'assets/fontawesome'
+					}
 				]
 			},
 
