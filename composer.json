@@ -1,7 +1,7 @@
 {
 	"name": "orbis",
 	"description": "The default WordPress theme for Orbis.",
-	"version": "1.2.0",
+	"version": "3.0.0",
 	"keywords": [
 		"orbis",
 		"wordpress",
@@ -29,7 +29,17 @@
         "source": "https://github.com/pronamic/wt-orbis2"
     },
 	"type": "wordpress-theme",
-	"require": {
-		
-	}
+    "require": {
+    	"php": ">=5.2.0"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^2.7",
+        "wp-coding-standards/wpcs": "0.10.0",
+        "phpmd/phpmd": "^2.4"
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "if [[ -d vendor/wp-coding-standards/wpcs ]]; then vendor/bin/phpcs --config-set installed_paths vendor/wp-coding-standards/wpcs; fi"
+        ]
+    }
 }
