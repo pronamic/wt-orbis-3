@@ -2,11 +2,13 @@
 	<?php if ( post_password_required() ) : ?>
 
 		<p class="nopassword">
-			<?php _e( 'This post is password protected. Enter the password to view any comments.', 'orbis' ); ?>
+			<?php esc_html_e( 'This post is password protected. Enter the password to view any comments.', 'orbis' ); ?>
 		</p>
 	</div>
 
-	<?php return; endif; ?>
+	<?php return; ?>
+
+	<?php endif; ?>
 
 	<?php if ( have_comments() ) : ?>
 
@@ -27,7 +29,7 @@
 			<?php wp_list_comments( array( 'callback' => 'orbis_comment' ) ); ?>
 		</ol>
 
-		<?php if ( get_comment_pages_count() > 1 && get_option('page_comments' ) ) : ?>
+		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
 
 			<nav id="comment-nav-below">
 				<div class="nav-previous"><?php previous_comments_link( __( '← Older Comments', 'orbis' ) ); ?></div>
@@ -39,14 +41,14 @@
 	<?php elseif ( ! comments_open() && ! is_page() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
 
 		<p class="nocomments">
-			<?php _e( 'Comments are closed.', 'orbis' ); ?>
+			<?php esc_html_e( 'Comments are closed.', 'orbis' ); ?>
 		</p>
 
 	<?php endif; ?>
 
-	<?php 
+	<?php
 
-	$comments_args = array( 
+	$comments_args = array(
 		'title_reply'         => '<h4>' . __( 'Give a comment', 'orbis' ) . '</h4>',
 		'comment_notes_after' => '',
 		'logged_in_as'        => '',

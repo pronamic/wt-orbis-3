@@ -2,7 +2,7 @@
 
 <header class="section-header clearfix">
 	<a class="btn btn-primary pull-right" href="<?php echo orbis_get_url_post_new(); ?>">
-		<span class="glyphicon glyphicon-plus"></span> <?php _e( 'Add subscription product', 'orbis' ); ?>
+		<span class="glyphicon glyphicon-plus"></span> <?php esc_html_e( 'Add subscription product', 'orbis' ); ?>
 	</a>
 </header>
 
@@ -15,10 +15,10 @@
 			<table class="table table-striped table-condense table-hover">
 				<thead>
 					<tr>
-						<th><?php _e( 'Title', 'orbis' ); ?></th>
-						<th><?php _e( 'Costs', 'orbis' ); ?></th>
-						<th><?php _e( 'Revenue', 'orbis' ); ?></th>
-						<th><?php _e( 'Profit', 'orbis' ); ?></th>
+						<th><?php esc_html_e( 'Title', 'orbis' ); ?></th>
+						<th><?php esc_html_e( 'Costs', 'orbis' ); ?></th>
+						<th><?php esc_html_e( 'Revenue', 'orbis' ); ?></th>
+						<th><?php esc_html_e( 'Profit', 'orbis' ); ?></th>
 						<th></th>
 					</tr>
 				</thead>
@@ -93,7 +93,7 @@
 
 		<div class="content">
 			<p class="alt">
-				<?php _e( 'No results found.', 'orbis' ); ?>
+				<?php esc_html_e( 'No results found.', 'orbis' ); ?>
 			</p>
 		</div>
 

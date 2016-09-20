@@ -39,10 +39,11 @@ function orbis_content_nav() {
  * Enqueue comment reply script
  */
 function orbis_enqueue_comments_reply() {
-	if ( get_option( 'thread_comments' ) )  {
+	if ( get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
+
 add_action( 'comment_form_before', 'orbis_enqueue_comments_reply' );
 
 /**
@@ -56,7 +57,7 @@ function orbis_comment( $comment, $args, $depth ) {
 		case 'trackback' :
 			?>
 			<li class="post pingback">
-				<p><?php _e( 'Pingback:', 'orbis' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'orbis' ), ' ' ); ?></p>
+				<p><?php esc_html_e( 'Pingback:', 'orbis' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'orbis' ), ' ' ); ?></p>
 			<?php
 			break;
 
@@ -67,29 +68,49 @@ function orbis_comment( $comment, $args, $depth ) {
 				<div class="comment-author vcard">
 					<?php echo get_avatar( $comment, 60 ); ?>
 		
-					<?php printf( __( '%s <span class="says">says:</span>', 'orbis' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
+					<?php
+
+					printf(
+						__( '%s <span class="says">says:</span>', 'orbis' ),
+						sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() )
+					);
+
+					?>
 				</div>
-		
+
 				<?php if ( $comment->comment_approved == '0' ) : ?>
-		
-				<em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'orbis' ); ?></em><br />
-		
+
+					<em class="comment-awaiting-moderation"><?php esc_html_e( 'Your comment is awaiting moderation.', 'orbis' ); ?></em><br />
+
 				<?php endif; ?>
-		
-				<div class="comment-meta commentmetadata"><a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
-					<?php printf( __( '%1$s at %2$s', 'orbis' ), get_comment_date(),  get_comment_time() ); ?></a><?php edit_comment_link( __( '(Edit)', 'orbis' ), ' '); ?>
+
+				<div class="comment-meta commentmetadata">
+					<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
+						<?php
+
+						printf(
+							esc_html__( '%1$s at %2$s', 'orbis' ),
+							get_comment_date(),
+							get_comment_time()
+						);
+
+						?>
+					</a>
+
+					<?php edit_comment_link( __( '(Edit)', 'orbis' ), ' ' ); ?>
 				</div>
-		
+
 				<div class="comment-body">
 					<?php comment_text(); ?>
 				</div>
-		
+
 				<div class="reply">
 					<?php comment_reply_link( array_merge( $args, array( 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
 				</div>
 			</div>
-		
+
 			<?php
+
 			break;
 	endswitch;
 }
@@ -98,7 +119,8 @@ function orbis_comment( $comment, $args, $depth ) {
  * Prints HTML with meta information for the current post-date/time and author.
  */
 function orbis_posted_on() {
-	printf( __( '<span class="sep">Posted on </span><a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="%5$s" title="%6$s" rel="author">%7$s</a></span></span>', 'orbis' ),
+	printf(
+		__( '<span class="sep">Posted on </span><a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="%5$s" title="%6$s" rel="author">%7$s</a></span></span>', 'orbis' ),
 		esc_url( get_permalink() ),
 		esc_attr( get_the_time() ),
 		esc_attr( get_the_date( 'c' ) ),

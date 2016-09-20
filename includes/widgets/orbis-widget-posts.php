@@ -10,26 +10,26 @@ class Orbis_List_Posts_Widget extends WP_Widget {
 
 	function widget( $args, $instance ) {
 		extract( $args );
-		
+
 		$title          = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
 		$number         = isset( $instance['number'] ) ? $instance['number'] : null;
-		$post_type_name = isset( $instance['post_type_name'] ) ? $instance['post_type_name'] : null; 
+		$post_type_name = isset( $instance['post_type_name'] ) ? $instance['post_type_name'] : null;
 
-		echo $before_widget;
+		echo $before_widget; // WPCS: XSS ok.
 
 		if ( ! empty( $title ) ) {
-			echo $before_title . $title . $after_title; 
+			echo $before_title . $title . $after_title; // WPCS: XSS ok.
 		}
 
-		$query = new WP_Query( array ( 
+		$query = new WP_Query( array(
 			'post_type'      => $post_type_name,
 			'posts_per_page' => $number,
 			'no_found_rows'  => true,
 		) );
-		
+
 		if ( $query->have_posts() ) : ?>
 
-			<?php if ( $post_type_name == 'orbis_person' ) : ?>
+			<?php if ( 'orbis_person' === $post_type_name ) : ?>
 
 				<ul class="post-list">
 					<?php while ( $query->have_posts() ) : $query->the_post(); ?>
@@ -42,7 +42,7 @@ class Orbis_List_Posts_Widget extends WP_Widget {
 	
 								<?php else : ?>
 	
-									<img class="avatar" src="<?php bloginfo('template_directory'); ?>/placeholders/avatar.png" alt="">
+									<img class="avatar" src="<?php bloginfo( 'template_directory' ); ?>/placeholders/avatar.png" alt="">
 	
 								<?php endif; ?>
 							</a>
@@ -53,13 +53,13 @@ class Orbis_List_Posts_Widget extends WP_Widget {
 								<p>
 									<?php if ( get_post_meta( get_the_ID(), '_orbis_person_email_address', true ) ) : ?>
 
-										<span class="entry-meta"><?php echo get_post_meta( get_the_ID(), '_orbis_person_email_address', true ); ?></span> <br />
+										<span class="entry-meta"><?php echo esc_html( get_post_meta( get_the_ID(), '_orbis_person_email_address', true ) ); ?></span> <br />
 		
 									<?php endif; ?>
 
 									<?php if ( get_post_meta( get_the_ID(), '_orbis_person_phone_number', true ) ) : ?>
 
-										<span class="entry-meta"><?php echo get_post_meta( get_the_ID(), '_orbis_person_phone_number', true ); ?></span>
+										<span class="entry-meta"><?php echo esc_html( get_post_meta( get_the_ID(), '_orbis_person_phone_number', true ) ); ?></span>
 	
 									<?php endif; ?>
 								</p>
@@ -84,7 +84,7 @@ class Orbis_List_Posts_Widget extends WP_Widget {
 			<?php endif; ?>
 
 			<footer>
-				<a href="<?php echo get_post_type_archive_link( $post_type_name ); ?>" class="btn btn-default"><?php _e( 'Show all', 'orbis' );  ?></a>
+				<a href="<?php echo esc_attr( get_post_type_archive_link( $post_type_name ) ); ?>" class="btn btn-default"><?php esc_html_e( 'Show all', 'orbis' );  ?></a>
 			</footer>
 
 		<?php wp_reset_postdata(); else : ?>
@@ -95,7 +95,8 @@ class Orbis_List_Posts_Widget extends WP_Widget {
 
 					$post_type_object = get_post_type_object( $post_type_name );
 
-					printf( __( 'No %3$s found. <a href="%1$s">Add your first %2$s</a>.', 'orbis' ),
+					printf(
+						__( 'No %3$s found. <a href="%1$s">Add your first %2$s</a>.', 'orbis' ),
 						esc_url( add_query_arg( 'post_type', $post_type_name, admin_url( 'post-new.php' ) ) ),
 						esc_html( strtolower( $post_type_object->labels->singular_name ) ),
 						esc_html( strtolower( $post_type_object->labels->name ) )
@@ -107,9 +108,9 @@ class Orbis_List_Posts_Widget extends WP_Widget {
 
 		<?php endif; ?>
 
-		<?php echo $after_widget; ?>
-		
 		<?php
+
+		echo $after_widget; // WPCS: XSS ok.
 	}
 
 	function update( $new_instance, $old_instance ) {
@@ -124,31 +125,34 @@ class Orbis_List_Posts_Widget extends WP_Widget {
 
 	function form( $instance ) {
 		$title          = isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : '';
-		$number         = isset( $instance['number'] ) ? esc_attr( $instance['number'] ) : '';
+		$number         = isset( $instance['number'] ) ? intval( $instance['number'] ) : '';
 		$post_type_name = isset( $instance['post_type_name'] ) ? esc_attr( $instance['post_type_name'] ) : '';
 
-		$i = 1; 
-		$post_types = get_post_types( array( 'public' => true ), 'object' ); ?>
+		$i = 1;
+
+		$post_types = get_post_types( array( 'public' => true ), 'object' );
+
+		?>
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'title' ); ?>">
-				<?php _e( 'Title:', 'orbis' ); ?>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>">
+				<?php esc_html_e( 'Title:', 'orbis' ); ?>
 			</label>
 
-			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
+			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
 		</p>
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'post_type_name' ); ?>">
-				<?php _e( 'Post type:', 'orbis' ); ?>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'post_type_name' ) ); ?>">
+				<?php esc_html_e( 'Post type:', 'orbis' ); ?>
 			</label>
 
-			<select class="widefat" id="<?php echo $this->get_field_id( 'post_type_name' ); ?>" name="<?php echo $this->get_field_name( 'post_type_name' ); ?>">
+			<select class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'post_type_name' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'post_type_name' ) ); ?>">
 				<option value=""></option>
 
 				<?php foreach ( $post_types as $post_type ) : ?>
 
-					<option value="<?php echo $post_type->name; ?>" <?php if ( $post_type->name == $post_type_name ) : ?>selected="selected"<?php endif; ?>>
+					<option value="<?php echo esc_attr( $post_type->name ); ?>" <?php selected( $post_type->name === $post_type_name ); ?>>
 						<?php echo esc_html( $post_type->label ); ?>
 					</option>
 
@@ -157,14 +161,16 @@ class Orbis_List_Posts_Widget extends WP_Widget {
 		</p>
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Number:', 'orbis' ); ?></label>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'number' ) ); ?>"><?php esc_html_e( 'Number:', 'orbis' ); ?></label>
 			
-			<select id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>">
+			<select id="<?php echo esc_attr( $this->get_field_id( 'number' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'number' ) ); ?>">
 				<?php while ( $i <= 10 ) : ?>
-    		
-				<option value="<?php echo $i; ?>"<?php if ( $number == $i ) echo ' selected'; ?>><?php echo $i; ?></option>
 
-				<?php $i++; endwhile; ?>
+					<option value="<?php echo esc_attr( $i ); ?>"<?php selected( $number === $i ); ?>><?php echo esc_html( $i ); ?></option>
+
+					<?php $i++; ?>
+
+				<?php endwhile; ?>
 			</select>
 		</p>
 		

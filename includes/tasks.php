@@ -6,7 +6,7 @@ function orbis_project_sections_tasks( $sections ) {
 		'name'          => __( 'Tasks', 'orbis' ),
 		'template_part' => 'templates/project_tasks',
 	);
-	
+
 	return $sections;
 }
 

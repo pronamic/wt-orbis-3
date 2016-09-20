@@ -2,7 +2,7 @@
 
 <header class="section-header clearfix">
 	<a class="btn btn-primary pull-right" href="<?php echo esc_url( orbis_get_url_post_new() ); ?>">
-		<span class="glyphicon glyphicon-plus"></span> <?php _e( 'Add subscription', 'orbis' ); ?>
+		<span class="glyphicon glyphicon-plus"></span> <?php esc_html_e( 'Add subscription', 'orbis' ); ?>
 	</a>
 </header>
 
@@ -15,10 +15,10 @@
 			<table class="table table-striped table-condense table-hover">
 				<thead>
 					<tr>
-						<th><?php _e( 'Title', 'orbis' ); ?></th>
-						<th><?php _e( 'IP address', 'orbis' ); ?></th>
-						<th><?php _e( 'Hostname', 'orbis' ); ?></th>
-						<th><?php _e( 'Hostname Provider', 'orbis' ); ?></th>
+						<th><?php esc_html_e( 'Title', 'orbis' ); ?></th>
+						<th><?php esc_html_e( 'IP address', 'orbis' ); ?></th>
+						<th><?php esc_html_e( 'Hostname', 'orbis' ); ?></th>
+						<th><?php esc_html_e( 'Hostname Provider', 'orbis' ); ?></th>
 						<th></th>
 					</tr>
 				</thead>
@@ -29,7 +29,7 @@
 							<td>
 								<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 
-								<?php if ( get_comments_number() != 0  ) : ?>
+								<?php if ( get_comments_number() !== 0  ) : ?>
 
 									<div class="comments-number">
 										<span class="glyphicon glyphicon-comment"></span>
@@ -65,7 +65,7 @@
 
 		<div class="content">
 			<p class="alt">
-				<?php _e( 'No results found.', 'orbis' ); ?>
+				<?php esc_html_e( 'No results found.', 'orbis' ); ?>
 			</p>
 		</div>
 

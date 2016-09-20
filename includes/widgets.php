@@ -45,7 +45,7 @@ function orbis_widgets_init() {
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>'
+		'after_title'   => '</h3>',
 	) );
 
 	register_sidebar( array(
@@ -54,7 +54,7 @@ function orbis_widgets_init() {
 		'before_widget' => '<div class="col-md-6"><div id="%1$s" class="panel %2$s">',
 		'after_widget'  => '</div></div>',
 		'before_title'  => '<header><h3 class="widget-title">',
-		'after_title'   => '</h3></header>'
+		'after_title'   => '</h3></header>',
 	) );
 
 	register_sidebar( array(
@@ -63,7 +63,7 @@ function orbis_widgets_init() {
 		'before_widget' => '<div class="col-md-12"><div id="%1$s" class="panel %2$s">',
 		'after_widget'  => '</div></div>',
 		'before_title'  => '<header><h3 class="widget-title">',
-		'after_title'   => '</h3></header>'
+		'after_title'   => '</h3></header>',
 	) );
 
 	register_sidebar( array(
@@ -72,7 +72,7 @@ function orbis_widgets_init() {
 		'before_widget' => '<div id="%1$s" class="panel %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<header><h3 class="widget-title">',
-		'after_title'   => '</h3></header>'
+		'after_title'   => '</h3></header>',
 	) );
 
 	register_sidebar( array(
@@ -81,7 +81,7 @@ function orbis_widgets_init() {
 		'before_widget' => '<div id="%1$s" class="panel %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<header><h3 class="widget-title">',
-		'after_title'   => '</h3></header>'
+		'after_title'   => '</h3></header>',
 	) );
 
 	register_sidebar( array(
@@ -90,7 +90,7 @@ function orbis_widgets_init() {
 		'before_widget' => '<div class="col-md-4"><div id="%1$s" class="panel %2$s">',
 		'after_widget'  => '</div></div>',
 		'before_title'  => '<header><h3 class="widget-title">',
-		'after_title'   => '</h3></header>'
+		'after_title'   => '</h3></header>',
 	) );
 }
 

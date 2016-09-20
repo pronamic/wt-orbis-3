@@ -43,7 +43,7 @@
 						<td>
 							<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 
-							<?php if ( get_comments_number() != 0  ) : ?>
+							<?php if ( get_comments_number() !== 0 ) : ?>
 
 								<div class="comments-number">
 									<span class="glyphicon glyphicon-comment"></span>

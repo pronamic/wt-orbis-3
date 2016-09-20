@@ -6,13 +6,13 @@ function orbis_project_sections_timesheet( $sections ) {
 		'name'          => __( 'Activities', 'orbis' ),
 		'template_part' => 'templates/project_flot_activities',
 	);
-	
+
 	$sections[] = array(
 		'id'            => 'persons',
 		'name'          => __( 'Persons', 'orbis' ),
 		'template_part' => 'templates/project_flot_persons',
 	);
-	
+
 	return $sections;
 }
 

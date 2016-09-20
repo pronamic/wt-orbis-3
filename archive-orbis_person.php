@@ -2,7 +2,7 @@
 
 <header class="section-header clearfix">
 	<a class="btn btn-primary pull-right" href="<?php echo esc_url( orbis_get_url_post_new() ); ?>">
-		<span class="glyphicon glyphicon-plus"></span> <?php _e( 'Add person', 'orbis' ); ?>
+		<span class="glyphicon glyphicon-plus"></span> <?php esc_html_e( 'Add person', 'orbis' ); ?>
 	</a>
 </header>
 
@@ -15,8 +15,8 @@
 			<table class="table table-striped table-condense table-hover">
 				<thead>
 					<tr>
-						<th><?php _e( 'Name', 'orbis' ); ?></th>
-						<th><?php _e( 'Phone number', 'orbis' ); ?></th>
+						<th><?php esc_html_e( 'Name', 'orbis' ); ?></th>
+						<th><?php esc_html_e( 'Phone number', 'orbis' ); ?></th>
 						<th></th>
 					</tr>
 				</thead>
@@ -34,7 +34,7 @@
 
 										<?php else : ?>
 
-											<img src="<?php bloginfo('template_directory'); ?>/placeholders/avatar.png" alt="">
+											<img src="<?php bloginfo( 'template_directory' ); ?>/placeholders/avatar.png" alt="">
 
 										<?php endif; ?>
 									</div>
@@ -62,7 +62,7 @@
 								<?php
 
 								$phone_number = get_post_meta( $post->ID, '_orbis_person_phone_number', true );
-	
+
 								if ( ! empty( $phone_number ) && function_exists( 'orbis_snom_call_form' ) ) {
 									orbis_snom_call_form( $phone_number );
 								}
@@ -87,7 +87,7 @@
 
 		<div class="content">
 			<p class="alt">
-				<?php _e( 'No results found.', 'orbis' ); ?>
+				<?php esc_html_e( 'No results found.', 'orbis' ); ?>
 			</p>
 		</div>
 

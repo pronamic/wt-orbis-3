@@ -185,7 +185,7 @@ if ( ! function_exists( 'orbis_price' ) ) {
 function orbis_the_content_empty( $content ) {
 	if ( is_singular( array( 'post', 'orbis_person', 'orbis_project' ) ) ) {
 		if ( empty( $content ) ) {
-			$content =  '<p class="alt">' . __( 'No description.', 'orbis' ) . '</p>';
+			$content = '<p class="alt">' . __( 'No description.', 'orbis' ) . '</p>';
 		}
 	}
 
@@ -218,7 +218,7 @@ function orbis_custom_excerpt( $excerpt, $charlength = 30 ) {
 		$excerpt = $excerpt;
 	}
 
-	echo $excerpt;
+	echo esc_html( $excerpt );
 }
 
 /**

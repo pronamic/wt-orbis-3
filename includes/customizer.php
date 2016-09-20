@@ -4,12 +4,11 @@
  * Customizer
  */
 function orbis_customize_register( $wp_customize ) {
-
 	/**
 	 * General
 	 */
 	$wp_customize->add_section( 'general', array(
-		'title' => __( 'General', 'orbis' )
+		'title' => __( 'General', 'orbis' ),
 	) );
 
 	// Settings

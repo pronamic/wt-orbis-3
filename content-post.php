@@ -2,7 +2,7 @@
 	<div class="col-md-8">
 		<div class="panel">
 			<header>
-				<h3><?php _e( 'News', 'orbis' ); ?></h3>
+				<h3><?php esc_html_e( 'News', 'orbis' ); ?></h3>
 			</header>
 
 			<?php if ( have_posts() ) : ?>
@@ -34,7 +34,7 @@
 							<div class="entry-meta">
 								<?php $show_sep = false; ?>
 
-								<?php if ( 'post' == get_post_type() ) : ?>
+								<?php if ( 'post' === get_post_type() ) : ?>
 
 									<?php
 
@@ -43,11 +43,15 @@
 									if ( $categories_list ) : ?>
 
 										<span class="cat-links">
-											<?php 
+											<?php
 
-											printf( __( '<span class="%1$s">Posted in</span> %2$s', 'orbis' ), 'entry-utility-prep entry-utility-prep-cat-links', $categories_list );
+											printf(
+												__( '<span class="%1$s">Posted in</span> %2$s', 'orbis' ),
+												'entry-utility-prep entry-utility-prep-cat-links',
+												$categories_list
+											);
 
-											$show_sep = true; 
+											$show_sep = true;
 
 											?>
 										</span>
@@ -65,11 +69,11 @@
 										<?php endif; ?>
 
 										<span class="tag-links">
-											<?php 
+											<?php
 
 											printf( __( '<span class="%1$s">Tagged</span> %2$s', 'orbis' ), 'entry-utility-prep entry-utility-prep-tag-links', $tags_list );
 
-											$show_sep = true; 
+											$show_sep = true;
 
 											?>
 										</span>
@@ -110,7 +114,7 @@
 	<div class="col-md-4">
 		<div class="panel">
 			<header>
-				<h3><?php _e( 'Categories', 'orbis' ); ?></h3>
+				<h3><?php esc_html_e( 'Categories', 'orbis' ); ?></h3>
 			</header>
 
 			<ul class="list">
@@ -119,31 +123,31 @@
 				wp_list_categories( array( 
 					'orderby'  => 'name',
 					'title_li' => '',
-				) ); 
+				) );
 
-				?> 
+				?>
 			</ul>
 		</div>
 
-		<?php 
+		<?php
 
-		$tags = get_tags(); 
+		$tags = get_tags();
 
 		if ( $tags ) : ?>
 
 			<div class="panel">
 				<header>
-					<h3><?php _e( 'Tags', 'orbis' ); ?></h3>
+					<h3><?php esc_html_e( 'Tags', 'orbis' ); ?></h3>
 				</header>
 
 				<div class="content">
 					<?php
 
-					 wp_tag_cloud( array( 
-						'smallest'  => 10, 
+					 wp_tag_cloud( array(
+						'smallest'  => 10,
 						'largest'   => 22,
 						'unit'      => 'px',
-					) ); 
+					) );
 
 					?>
 				</div>

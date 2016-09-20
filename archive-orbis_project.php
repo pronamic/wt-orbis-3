@@ -2,7 +2,7 @@
 
 <header class="section-header clearfix">
 	<a class="btn btn-primary pull-right" href="<?php echo esc_url( orbis_get_url_post_new() ); ?>">	
-		<span class="glyphicon glyphicon-plus"></span> <?php _e( 'Add project', 'orbis' ); ?>
+		<span class="glyphicon glyphicon-plus"></span> <?php esc_html_e( 'Add project', 'orbis' ); ?>
 	</a>
 </header>
 
@@ -15,9 +15,9 @@
 			<table class="table table-striped table-condense table-hover">
 				<thead>
 					<tr>
-						<th><?php _e( 'Client', 'orbis' ); ?></th>
-						<th><?php _e( 'Project', 'orbis' ); ?></th>
-						<th><?php _e( 'Time', 'orbis' ); ?></th>
+						<th><?php esc_html_e( 'Client', 'orbis' ); ?></th>
+						<th><?php esc_html_e( 'Project', 'orbis' ); ?></th>
+						<th><?php esc_html_e( 'Time', 'orbis' ); ?></th>
 						<th></th>
 					</tr>
 				</thead>
@@ -33,7 +33,7 @@
 										printf(
 											'<a href="%s">%s</a>',
 											esc_attr( orbis_project_principal_get_permalink() ),
-											orbis_project_principel_get_the_name()
+											esc_html( orbis_project_principel_get_the_name() )
 										);
 									}
 								}
@@ -53,7 +53,7 @@
 								<?php endif; ?>
 							</td>
 							<td class="project-time">
-								<?php 
+								<?php
 
 								if ( function_exists( 'orbis_project_the_time' ) ) {
 									orbis_project_the_time();
@@ -66,7 +66,7 @@
 
 									?>
 
-									<span class="<?php echo implode( $classes, ' ' ); ?>"><?php orbis_project_the_logged_time(); ?></span>
+									<span class="<?php echo esc_attr( implode( $classes, ' ' ) ); ?>"><?php orbis_project_the_logged_time(); ?></span>
 
 								<?php endif; ?>
 							</td>
@@ -88,7 +88,7 @@
 
 		<div class="content">
 			<p class="alt">
-				<?php _e( 'No results found.', 'orbis' ); ?>
+				<?php esc_html_e( 'No results found.', 'orbis' ); ?>
 			</p>
 		</div>
 

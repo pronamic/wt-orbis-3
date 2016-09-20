@@ -2,7 +2,7 @@
 
 <header class="section-header clearfix">
 	<a class="btn btn-primary pull-right" href="<?php echo esc_url( orbis_get_url_post_new() ); ?>">
-		<span class="glyphicon glyphicon-plus"></span> <?php _e( 'Add deal', 'orbis' ); ?>
+		<span class="glyphicon glyphicon-plus"></span> <?php esc_html_e( 'Add deal', 'orbis' ); ?>
 	</a>
 </header>
 
@@ -15,12 +15,12 @@
 			<table class="table table-striped table-condense table-hover">
 				<thead>
 					<tr>
-						<th><?php _e( 'Date', 'orbis' ); ?></th>
-						<th><?php _e( 'Company', 'orbis' ); ?></th>
-						<th><?php _e( 'Title'  , 'orbis' ); ?></th>
-						<th><?php _e( 'Price'  , 'orbis' ); ?></th>
-						<th><?php _e( 'Status' , 'orbis' ); ?></th>
-						<th><?php _e( 'Author' , 'orbis' ); ?></th>
+						<th><?php esc_html_e( 'Date', 'orbis' ); ?></th>
+						<th><?php esc_html_e( 'Company', 'orbis' ); ?></th>
+						<th><?php esc_html_e( 'Title'  , 'orbis' ); ?></th>
+						<th><?php esc_html_e( 'Price'  , 'orbis' ); ?></th>
+						<th><?php esc_html_e( 'Status' , 'orbis' ); ?></th>
+						<th><?php esc_html_e( 'Author' , 'orbis' ); ?></th>
 						<th></th>
 					</tr>
 				</thead>
@@ -37,7 +37,7 @@
 							<td>
 								<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 
-								<?php if ( get_comments_number() != 0  ) : ?>
+								<?php if ( get_comments_number() !== 0  ) : ?>
 
 									<div class="comments-number">
 										<span class="glyphicon glyphicon-comment"></span>
@@ -73,7 +73,7 @@
 
 		<div class="content">
 			<p class="alt">
-				<?php _e( 'No results found.', 'orbis' ); ?>
+				<?php esc_html_e( 'No results found.', 'orbis' ); ?>
 			</p>
 		</div>
 

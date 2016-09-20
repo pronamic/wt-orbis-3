@@ -23,7 +23,7 @@
 		<div class="page-wrapper">
 			<div class="sidebar-wrapper">
 				<div class="site-title">
-					<a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+					<a href="<?php echo esc_attr( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
 						<?php if ( get_theme_mod( 'orbis_logo' ) ) : ?>
 
 							<img src="<?php echo esc_url( get_theme_mod( 'orbis_logo' ) ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
@@ -37,7 +37,7 @@
 				</div>
 
 				<div class="primary-nav" role="navigation">
-					<h3><?php _e( 'Menu', 'orbis' ); ?></h3>
+					<h3><?php esc_html_e( 'Menu', 'orbis' ); ?></h3>
 
 					<?php
 
@@ -50,7 +50,7 @@
 
 					?>
 
-					<a class="toggle-nav"><span class="nav-label"><?php _e( 'Collapse menu', 'orbis' ); ?></span></a>
+					<a class="toggle-nav"><span class="nav-label"><?php esc_html_e( 'Collapse menu', 'orbis' ); ?></span></a>
 				</div>
 			</div>
 
@@ -60,17 +60,19 @@
 						<?php echo orbis_get_title(); ?>
 					</h1>
 
-					<?php if ( is_user_logged_in() ) : global $current_user; get_currentuserinfo(); ?>
+					<?php if ( is_user_logged_in() ) : ?>
+
+						<?php $current_user = wp_get_current_user(); ?>
 
 						<ul class="nav navbar-nav pull-right">
 							<li class="dropdown">
 								<a data-toggle="dropdown" class="dropdown-toggle" href="#"><?php echo get_avatar( $current_user->ID, 24 ); ?> <?php echo esc_html( $current_user->display_name ); ?> <b class="caret"></b></a>
 
 								<ul class="dropdown-menu">
-									<li><a href="http://orbiswp.com/help/"><i class="fa fa-question-circle"></i> <?php _e( 'Help', 'orbis' ); ?></a></li>
-									<li><a href="<?php echo admin_url( 'profile.php' ); ?>"><i class="fa fa-user"></i> <?php _e( 'Edit profile', 'orbis' ); ?></a></li>
+									<li><a href="http://orbiswp.com/help/"><i class="fa fa-question-circle"></i> <?php esc_html_e( 'Help', 'orbis' ); ?></a></li>
+									<li><a href="<?php echo esc_attr( admin_url( 'profile.php' ) ); ?>"><i class="fa fa-user"></i> <?php esc_html_e( 'Edit profile', 'orbis' ); ?></a></li>
 									<li class="divider"></li>
-									<li><a href="<?php echo wp_logout_url(); ?>"><i class="fa fa-power-off"></i> <?php _e( 'Log out', 'orbis' ); ?></a></li>
+									<li><a href="<?php echo esc_attr( wp_logout_url() ); ?>"><i class="fa fa-power-off"></i> <?php esc_html_e( 'Log out', 'orbis' ); ?></a></li>
 								</ul>
 							</li>
 							<li class="dropdown">

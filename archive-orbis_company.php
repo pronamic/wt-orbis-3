@@ -2,7 +2,7 @@
 
 <header class="section-header clearfix">
 	<a class="btn btn-primary pull-right" href="<?php echo esc_url( orbis_get_url_post_new() ); ?>">		
-		<span class="glyphicon glyphicon-plus"></span> <?php _e( 'Add company', 'orbis' ); ?>
+		<span class="glyphicon glyphicon-plus"></span> <?php esc_html_e( 'Add company', 'orbis' ); ?>
 	</a>
 </header>
 
@@ -15,9 +15,9 @@
 			<table class="table table-striped table-condense table-hover">
 				<thead>
 					<tr>
-						<th><?php _e( 'Name', 'orbis' ); ?></th>
-						<th><?php _e( 'Address', 'orbis' ); ?></th>
-						<th><?php _e( 'Online', 'orbis' ); ?></th>
+						<th><?php esc_html_e( 'Name', 'orbis' ); ?></th>
+						<th><?php esc_html_e( 'Address', 'orbis' ); ?></th>
+						<th><?php esc_html_e( 'Online', 'orbis' ); ?></th>
 						<th></th>
 					</tr>
 				</thead>
@@ -38,7 +38,7 @@
 
 								<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 
-								<?php if ( get_comments_number() != 0  ) : ?>
+								<?php if ( get_comments_number() !== 0  ) : ?>
 
 									<div class="comments-number">
 										<span class="glyphicon glyphicon-comment"></span>
@@ -54,7 +54,12 @@
 								$postcode = get_post_meta( $post->ID, '_orbis_company_postcode', true );
 								$city     = get_post_meta( $post->ID, '_orbis_company_city', true );
 
-								printf( '%s<br />%s %s', $address, $postcode, $city );
+								printf(
+									'%s<br />%s %s',
+									esc_html( $address ),
+									esc_htmL( $postcode ),
+									esc_htmL( $city )
+								);
 
 								?>
 							</td>
@@ -99,7 +104,7 @@
 
 		<div class="content">
 			<p class="alt">
-				<?php _e( 'No results found.', 'orbis' ); ?>
+				<?php esc_html_e( 'No results found.', 'orbis' ); ?>
 			</p>
 		</div>
 

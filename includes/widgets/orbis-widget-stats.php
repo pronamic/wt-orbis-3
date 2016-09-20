@@ -13,10 +13,10 @@ class Orbis_Stats_Widget extends WP_Widget {
 
 		$title = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
 
-		echo $before_widget;
+		echo $before_widget; // WPCS: XSS ok.
 
 		if ( ! empty( $title ) ) {
-			echo $before_title . $title . $after_title; 
+			echo $before_title . $title . $after_title; // WPCS: XSS ok.
 		}
 
 		?>
@@ -26,32 +26,32 @@ class Orbis_Stats_Widget extends WP_Widget {
 				<div class="col-md-3">
 					<?php $count_posts = wp_count_posts(); ?>
 
-					<span class="entry-meta"><?php _e( 'Posts', 'orbis' ); ?></span> <p class="important"><?php echo $count_posts->publish; ?></p>
+					<span class="entry-meta"><?php esc_html_e( 'Posts', 'orbis' ); ?></span> <p class="important"><?php echo esc_html( $count_posts->publish ); ?></p>
 				</div>
 
 				<div class="col-md-3">
 					<?php $count_posts = wp_count_posts( 'orbis_company' ); ?>
 
-					<span class="entry-meta"><?php _e( 'Companies', 'orbis' ); ?></span> <p class="important"><?php echo $count_posts->publish; ?></p>
+					<span class="entry-meta"><?php esc_html_e( 'Companies', 'orbis' ); ?></span> <p class="important"><?php echo esc_html( $count_posts->publish ); ?></p>
 				</div>
 
 				<div class="col-md-3">
 					<?php $count_posts = wp_count_posts( 'orbis_project' ); ?>
 
-					<span class="entry-meta"><?php _e( 'Projects', 'orbis' ); ?></span> <p class="important"><?php echo $count_posts->publish; ?></p>
+					<span class="entry-meta"><?php esc_html_e( 'Projects', 'orbis' ); ?></span> <p class="important"><?php echo esc_html( $count_posts->publish ); ?></p>
 				</div>
 
 				<div class="col-md-3">
 					<?php $count_posts = wp_count_posts( 'orbis_person' ); ?>
 
-					<span class="entry-meta"><?php _e( 'Persons', 'orbis' ); ?></span> <p class="important"><?php echo $count_posts->publish; ?></p>
+					<span class="entry-meta"><?php esc_html_e( 'Persons', 'orbis' ); ?></span> <p class="important"><?php echo esc_html( $count_posts->publish ); ?></p>
 				</div>
 			</div>
 		</div>
 
-		<?php echo $after_widget; ?>
-		
 		<?php
+
+		echo $after_widget; // WPCS: XSS ok.
 	}
 
 	function update( $new_instance, $old_instance ) {
@@ -68,11 +68,11 @@ class Orbis_Stats_Widget extends WP_Widget {
 		?>
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'title' ); ?>">
-				<?php _e( 'Title:', 'orbis' ); ?>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>">
+				<?php esc_html_e( 'Title:', 'orbis' ); ?>
 			</label>
 
-			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
+			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
 		</p>
 
 		<?php

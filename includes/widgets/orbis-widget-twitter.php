@@ -17,10 +17,10 @@ class Orbis_Twitter_Widget extends WP_Widget {
 		$number      = isset( $instance['number'] ) ? $instance['number'] : null;
 		$screen_name = isset( $instance['screen_name'] ) ? $instance['screen_name'] : null;
 
-		echo $before_widget;
+		echo $before_widget; // WPCS: XSS ok.
 
 		if ( ! empty( $title ) ) {
-			echo $before_title . $title . $after_title;
+			echo $before_title . $title . $after_title; // WPCS: XSS ok.
 		}
 
 		$consumer_key        = get_option( 'orbis_twitter_consumer_key' );
@@ -32,23 +32,21 @@ class Orbis_Twitter_Widget extends WP_Widget {
 
 		$tweets = $connection->get( 'https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=' . $screen_name . '&count=' . $number );
 
-			if ( $tweets && empty( $tweets->errors ) ) : ?>
+		if ( $tweets && empty( $tweets->errors ) ) : ?>
 
-				<ul class="post-list">
-					<?php foreach ( $tweets as $tweet ) : ?>
+			<ul class="post-list">
+				<?php foreach ( $tweets as $tweet ) : ?>
 
-						<li>
-							<?php echo $tweet->text; ?>
-						</li>
+					<li>
+						<?php echo esc_html( $tweet->text ); ?>
+					</li>
 
-					<?php endforeach; ?>
-				</ul>
+				<?php endforeach; ?>
+			</ul>
 
-			<?php endif; ?>
+		<?php endif;
 
-		<?php
-
-		echo $after_widget;
+		echo $after_widget; // WPCS: XSS ok.
 	}
 
 	function update( $new_instance, $old_instance ) {
@@ -63,36 +61,40 @@ class Orbis_Twitter_Widget extends WP_Widget {
 
 	function form( $instance ) {
 		$title       = isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : '';
-		$number      = isset( $instance['number'] ) ? esc_attr( $instance['number'] ) : '';
+		$number      = isset( $instance['number'] ) ? intval( $instance['number'] ) : '';
 		$screen_name = isset( $instance['screen_name'] ) ? esc_attr( $instance['screen_name'] ) : '';
 
 		?>
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'title' ); ?>">
-				<?php _e( 'Title:', 'orbis' ); ?>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>">
+				<?php esc_html_e( 'Title:', 'orbis' ); ?>
 			</label>
 
-			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
+			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
 		</p>
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'screen_name' ); ?>">
-				<?php _e( 'User:', 'orbis' ); ?>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'screen_name' ) ); ?>">
+				<?php esc_html_e( 'User:', 'orbis' ); ?>
 			</label>
 
-			<input class="widefat" id="<?php echo $this->get_field_id( 'screen_name' ); ?>" name="<?php echo $this->get_field_name( 'screen_name' ); ?>" type="text" value="<?php echo esc_attr( $screen_name ); ?>" />
+			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'screen_name' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'screen_name' ) ); ?>" type="text" value="<?php echo esc_attr( $screen_name ); ?>" />
 		</p>
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Number:', 'orbis' ); ?></label>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'number' ) ); ?>"><?php esc_html_e( 'Number:', 'orbis' ); ?></label>
 
-			<select id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>">
-				<?php $i = 1; while ( $i <= 10 ) : ?>
+			<select id="<?php echo esc_attr( $this->get_field_id( 'number' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'number' ) ); ?>">
+				<?php $i = 1; ?>
 
-					<option value="<?php echo $i; ?>"<?php if ( $number == $i ) echo ' selected'; ?>><?php echo $i; ?></option>
+				<?php while ( $i <= 10 ) : ?>
 
-				<?php $i++; endwhile; ?>
+					<option value="<?php echo esc_attr( $i ); ?>"<?php selected( $number === $i ); ?>><?php echo esc_html( $i ); ?></option>
+
+					<?php $i++; ?>
+
+				<?php endwhile; ?>
 			</select>
 		</p>
 
