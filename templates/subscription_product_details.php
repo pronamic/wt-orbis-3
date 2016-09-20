@@ -12,7 +12,7 @@
 				$price = get_post_meta( get_the_ID(), '_orbis_subscription_product_price', true );
 
 				if ( empty( $price ) ) {
-					echo '&mdash;';
+					echo '—';
 				} else {
 					echo orbis_price( $price );
 				}
@@ -27,7 +27,7 @@
 				$price = get_post_meta( get_the_ID(), '_orbis_subscription_product_cost_price', true );
 
 				if ( empty( $price ) ) {
-					echo '&mdash;';
+					echo '—';
 				} else {
 					echo orbis_price( $price );
 				}

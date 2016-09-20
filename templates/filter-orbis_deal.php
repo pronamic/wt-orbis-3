@@ -4,7 +4,7 @@
 
 		$statuses = orbis_deal_get_statuses();
 
-		array_unshift( $statuses, __( '&mdash; Select Status &mdash;', 'orbis' ) );
+		array_unshift( $statuses, __( '— Select Status —', 'orbis' ) );
 
 		$status = filter_input( INPUT_GET, 'orbis_deal_status', FILTER_SANITIZE_STRING );
 

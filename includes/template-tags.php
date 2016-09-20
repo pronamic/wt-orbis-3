@@ -11,9 +11,7 @@ function orbis_page_menu_args( $args ) {
 
 add_filter( 'wp_page_menu_args', 'orbis_page_menu_args' );
 
-
 ///////////////////////////////////////////////
-
 
 /**
  * Display navigation to next/previous pages when applicable
@@ -25,19 +23,17 @@ function orbis_content_nav() {
 
 		<ul class="pager">
 			<li>
-				<?php next_posts_link( __( '&larr; Previous', 'orbis' ) ); ?>
+				<?php next_posts_link( __( '← Previous', 'orbis' ) ); ?>
 			</li>
 			<li>
-				<?php previous_posts_link( __( 'Next &rarr;', 'orbis' ) ); ?>
+				<?php previous_posts_link( __( 'Next →', 'orbis' ) ); ?>
 			</li>
 		</ul>
 
 	<?php endif;
 }
 
-
 ///////////////////////////////////////////////
-
 
 /**
  * Enqueue comment reply script
