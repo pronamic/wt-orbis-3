@@ -7,7 +7,7 @@
 
 	<div class="content">
 		<p>
-			<?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for.', 'orbis' ); ?>
+			<?php _e( 'It seems we can’t find what you’re looking for.', 'orbis' ); ?>
 		</p>
 	</div>
 </div>

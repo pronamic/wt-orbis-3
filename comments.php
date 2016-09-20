@@ -17,8 +17,8 @@
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
 
 			<nav id="comment-nav-above">
-				<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'orbis' ) ); ?></div>
-				<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'orbis' ) ); ?></div>
+				<div class="nav-previous"><?php previous_comments_link( __( '← Older Comments', 'orbis' ) ); ?></div>
+				<div class="nav-next"><?php next_comments_link( __( 'Newer Comments →', 'orbis' ) ); ?></div>
 			</nav>
 
 		<?php endif; ?>
@@ -30,8 +30,8 @@
 		<?php if ( get_comment_pages_count() > 1 && get_option('page_comments' ) ) : ?>
 
 			<nav id="comment-nav-below">
-				<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'orbis' ) ); ?></div>
-				<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'orbis' ) ); ?></div>
+				<div class="nav-previous"><?php previous_comments_link( __( '← Older Comments', 'orbis' ) ); ?></div>
+				<div class="nav-next"><?php next_comments_link( __( 'Newer Comments →', 'orbis' ) ); ?></div>
 			</nav>
 
 		<?php endif; ?>

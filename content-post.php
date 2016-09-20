@@ -28,7 +28,7 @@
 		
 								<?php endif; ?>
 
-								<?php the_content( __( 'Continue reading &rarr;', 'orbis' ) ); ?>
+								<?php the_content( __( 'Continue reading →', 'orbis' ) ); ?>
 							</div>
 
 							<div class="entry-meta">

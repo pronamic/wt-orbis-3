@@ -27,7 +27,7 @@
 						$due_at = get_post_meta( get_the_ID(), '_orbis_task_due_at', true );
 
 						if ( empty( $due_at ) ) {
-								$due_at_ouput = '&mdash;';
+								$due_at_ouput = '—';
 						} else {
 							$seconds = strtotime( $due_at );
 							$delta   = $seconds - time();

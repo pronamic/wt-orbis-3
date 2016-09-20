@@ -46,7 +46,7 @@
 								$profit  = $revenue - $price;
 
 								if ( empty( $price ) ) {
-									echo '&mdash;';
+									echo '—';
 								} else {
 									echo esc_html( orbis_price( $price ) );
 								}
@@ -57,7 +57,7 @@
 								<?php
 
 								if ( empty( $revenue ) ) {
-									echo '&mdash;';
+									echo '—';
 								} else {
 									echo esc_html( orbis_price( $revenue ) );
 								}
@@ -68,7 +68,7 @@
 								<?php
 
 								if ( empty( $profit ) ) {
-									echo '&mdash;';
+									echo '—';
 								} else {
 									echo esc_html( orbis_price( $profit ) );
 								}
