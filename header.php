@@ -62,7 +62,7 @@
 
 					<?php if ( is_user_logged_in() ) : global $current_user; get_currentuserinfo(); ?>
 
-						<ul class="nav navbar-nav navbar-right">
+						<ul class="nav navbar-nav pull-right">
 							<li class="dropdown">
 								<a data-toggle="dropdown" class="dropdown-toggle" href="#"><?php echo get_avatar( $current_user->ID, 24 ); ?> <?php echo esc_html( $current_user->display_name ); ?> <b class="caret"></b></a>
 
