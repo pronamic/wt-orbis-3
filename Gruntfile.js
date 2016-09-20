@@ -1,6 +1,14 @@
 module.exports = function( grunt ) {
 	require( 'load-grunt-tasks' )( grunt );
 
+	var phpFiles = [
+		'**/*.php',
+		'!node_modules/**',
+		'!bower_components/**',
+		'!deploy/**',
+		'!vendor/**'
+	];
+
 	// Project configuration.
 	grunt.initConfig( {
 		// Package
@@ -13,13 +21,7 @@ module.exports = function( grunt ) {
 					'-lf': null
 				}
 			},
-			all: [
-				'**/*.php',
-				'!node_modules/**',
-				'!bower_components/**',
-				'!deploy/**',
-				'!vendor/**'
-			]
+			all: phpFiles
 		},
 		
 		// Check textdomain errors
@@ -44,13 +46,7 @@ module.exports = function( grunt ) {
 				]
 			},
 			files: {
-				src:  [
-					'**/*.php',
-					'!deploy/**',
-					'!node_modules/**',
-					'!tests/**',
-					'!wp-content/**'
-				],
+				src: phpFiles,
 				expand: true
 			}
 		},
@@ -73,13 +69,12 @@ module.exports = function( grunt ) {
 		// PHP Code Sniffer
 		phpcs: {
 			application: {
-				dir: [
-					'**/*.php',
-					'!node_modules/**'
-				],
+				src: phpFiles
 			},
 			options: {
-				standard: 'phpcs.ruleset.xml'
+				bin: 'vendor/bin/phpcs',
+				standard: 'phpcs.ruleset.xml',
+				showSniffCodes: true
 			}
 		},
 
