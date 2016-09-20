@@ -57,15 +57,17 @@ class Orbis_Comments_Widget extends WP_Widget {
 							<div class="comment-content">
 								<a href="<?php echo esc_attr( get_comments_link( $comment->comment_post_ID ) ); ?>"><?php echo esc_html( get_the_title( $comment->comment_post_ID ) ); ?></a> <?php echo esc_html( orbis_custom_excerpt( $comment->comment_content ) ); ?>
 
-								<?php
+								<span class="entry-meta">
+									<?php
 
-								printf(
-									__( '<span class="entry-meta">Posted by %1$s on %2$s</span>', 'orbis' ),
-									esc_html( $comment->comment_author ),
-									esc_html( get_comment_date( 'H:i',  $comment->comment_ID ) )
-								);
+									printf(
+										__( 'Posted by %1$s on %2$s', 'orbis' ),
+										esc_html( $comment->comment_author ),
+										esc_html( get_comment_date( 'H:i',  $comment->comment_ID ) )
+									);
 
-								?>
+									?>
+								</span>
 							</div>
 						</li>
 

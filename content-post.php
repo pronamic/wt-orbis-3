@@ -101,7 +101,7 @@
 
 				<div class="content">
 					<p class="alt">
-						<?php _e( 'No results found.', 'orbis' ); ?>
+						<?php esc_html_e( 'No results found.', 'orbis' ); ?>
 					</p>
 				</div>
 
@@ -118,9 +118,9 @@
 			</header>
 
 			<ul class="list">
-				<?php 
+				<?php
 
-				wp_list_categories( array( 
+				wp_list_categories( array(
 					'orderby'  => 'name',
 					'title_li' => '',
 				) );
@@ -144,9 +144,9 @@
 					<?php
 
 					 wp_tag_cloud( array(
-						'smallest'  => 10,
-						'largest'   => 22,
-						'unit'      => 'px',
+						'smallest' => 10,
+						'largest'  => 22,
+						'unit'     => 'px',
 					) );
 
 					?>

@@ -26,7 +26,7 @@
 
 						<tr id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 							<td>
-								<?php 
+								<?php
 
 								$favicon_url = orbis_get_favicon_url( get_post_meta( get_the_ID(), '_orbis_company_website', true ) );
 
@@ -57,8 +57,8 @@
 								printf(
 									'%s<br />%s %s',
 									esc_html( $address ),
-									esc_htmL( $postcode ),
-									esc_htmL( $city )
+									esc_html( $postcode ),
+									esc_html( $city )
 								);
 
 								?>
@@ -71,7 +71,11 @@
 								$website = get_post_meta( $post->ID, '_orbis_company_website', true );
 
 								if ( ! empty( $website ) ) {
-									printf( '<a href="%s" target="_blank">%s</a>', $website, $website );
+									printf(
+										'<a href="%s" target="_blank">%s</a>',
+										esc_attr( $website ),
+										esc_html( $website )
+									);
 
 									$break = '<br />';
 								}
@@ -81,7 +85,11 @@
 								if ( ! empty( $email ) ) {
 									printf( $break );
 
-									printf( '<a href="mailto:%s" target="_blank">%s</a>', $email, $email );
+									printf(
+										'<a href="mailto:%s" target="_blank">%s</a>',
+										esc_attr( $email ),
+										esc_html( $email )
+									);
 								}
 
 								?>

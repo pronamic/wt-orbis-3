@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <header class="section-header clearfix">
-	<a class="btn btn-primary pull-right" href="<?php echo orbis_get_url_post_new(); ?>">
+	<a class="btn btn-primary pull-right" href="<?php echo esc_attr( orbis_get_url_post_new() ); ?>">
 		<span class="glyphicon glyphicon-plus"></span> <?php esc_html_e( 'Add subscription product', 'orbis' ); ?>
 	</a>
 </header>
@@ -29,7 +29,7 @@
 							<td>
 								<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 
-								<?php if ( get_comments_number() != 0  ) : ?>
+								<?php if ( get_comments_number() !== 0 ) : ?>
 
 									<div class="comments-number">
 										<span class="glyphicon glyphicon-comment"></span>
@@ -39,7 +39,7 @@
 								<?php endif; ?>
 							</td>
 							<td>
-								<?php 
+								<?php
 
 								$price   = get_post_meta( get_the_ID(), '_orbis_subscription_purchase_price', true );
 								$revenue = get_post_meta( get_the_ID(), '_orbis_subscription_purchase_revenue', true );
