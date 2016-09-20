@@ -4,7 +4,7 @@
  * News widget
  */
 class Orbis_News_Widget extends WP_Widget {
-	function Orbis_News_Widget() {
+	public function __construct() {
 		parent::__construct( 'orbis-news', __( 'Orbis - News', 'orbis' ) );
 	}
 

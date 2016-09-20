@@ -4,7 +4,7 @@
  * List posts widget
  */
 class Orbis_List_Posts_Widget extends WP_Widget {
-	function Orbis_List_Posts_Widget() {
+	public function __construct() {
 		parent::__construct( 'orbis-list-posts', __( 'Orbis - Posts List', 'orbis' ) );
 	}
 

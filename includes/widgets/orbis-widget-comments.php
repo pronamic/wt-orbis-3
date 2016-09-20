@@ -4,7 +4,7 @@
  * List comments widget
  */
 class Orbis_Comments_Widget extends WP_Widget {
-	function Orbis_Comments_Widget() {
+	public function __construct() {
 		parent::__construct( 'orbis-comments', __( 'Orbis - Comments', 'orbis' ) );
 	}
 

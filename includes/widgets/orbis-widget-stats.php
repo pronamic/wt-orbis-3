@@ -4,7 +4,7 @@
  * Stats widget
  */
 class Orbis_Stats_Widget extends WP_Widget {
-	function Orbis_Stats_Widget() {
+	public function __construct() {
 		parent::__construct( 'orbis-stats', __( 'Orbis - Stats', 'orbis' ) );
 	}
 

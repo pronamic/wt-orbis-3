@@ -6,7 +6,7 @@ use Abraham\TwitterOAuth\TwitterOAuth;
  * Twitter widget
  */
 class Orbis_Twitter_Widget extends WP_Widget {
-	function Orbis_Twitter_Widget() {
+	public function __construct() {
 		parent::__construct( 'orbis_twitter', __( 'Orbis - Twitter', 'orbis' ) );
 	}
 
