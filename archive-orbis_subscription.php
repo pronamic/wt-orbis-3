@@ -6,8 +6,10 @@
 	</a>
 </header>
 
-<div class="panel">
-	<?php get_template_part( 'templates/search_form' ); ?>
+<div class="card">
+	<div class="card-block">
+		<?php get_template_part( 'templates/search_form' ); ?>
+	</div>
 
 	<?php if ( have_posts() ) : ?>
 

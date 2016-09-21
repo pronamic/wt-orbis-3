@@ -64,21 +64,28 @@
 
 						<?php $current_user = wp_get_current_user(); ?>
 
-						<ul class="nav navbar-nav pull-right">
-							<li class="dropdown">
+						<ul class="nav nav-inline pull-right">
+  							<li class="nav-item dropdown">
 								<a data-toggle="dropdown" class="dropdown-toggle" href="#"><?php echo get_avatar( $current_user->ID, 24 ); ?> <?php echo esc_html( $current_user->display_name ); ?> <b class="caret"></b></a>
 
-								<ul class="dropdown-menu">
-									<li><a href="http://orbiswp.com/help/"><i class="fa fa-question-circle"></i> <?php esc_html_e( 'Help', 'orbis' ); ?></a></li>
-									<li><a href="<?php echo esc_attr( admin_url( 'profile.php' ) ); ?>"><i class="fa fa-user"></i> <?php esc_html_e( 'Edit profile', 'orbis' ); ?></a></li>
-									<li class="divider"></li>
-									<li><a href="<?php echo esc_attr( wp_logout_url() ); ?>"><i class="fa fa-power-off"></i> <?php esc_html_e( 'Log out', 'orbis' ); ?></a></li>
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li class="dropdown-item">
+										<a href="http://orbiswp.com/help/"><i class="fa fa-question-circle"></i> <?php esc_html_e( 'Help', 'orbis' ); ?></a>
+									</li>
+									<li class="dropdown-item">
+										<a href="<?php echo esc_attr( admin_url( 'profile.php' ) ); ?>"><i class="fa fa-user"></i> <?php esc_html_e( 'Edit profile', 'orbis' ); ?></a>
+									</li>
+									<li class="dropdown-divider"></li>
+									<li class="dropdown-item">
+										<a href="<?php echo esc_attr( wp_logout_url() ); ?>"><i class="fa fa-power-off"></i> <?php esc_html_e( 'Log out', 'orbis' ); ?></a>
+										</li>
 								</ul>
 							</li>
-							<li class="dropdown">
+
+							<li class="nav-item dropdown">
 								<a data-toggle="dropdown" class="dropdown-toggle search-btn" href="#"><i class="fa fa-search"></i></a>
 
-								<div class="dropdown-menu">
+								<div class="dropdown-menu dropdown-menu-right">
 									<form method="get" class="navbar-form" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
 										<div class="form-group">
 											<input type="search" name="s" class="form-control search-input" placeholder="<?php esc_attr_e( 'Search', 'orbis' ); ?>" value="<?php echo esc_attr( $s ); ?>">
