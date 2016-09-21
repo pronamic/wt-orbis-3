@@ -201,15 +201,6 @@ ul.list li:after {
 	padding: 0;
 }
 
-blockquote p {
- 	font-size: 14px;
- 	font-weight: normal;
-  
-    line-height: 20px;
-
-	margin-bottom: 15px;
-}
-
 img {
 	max-width: 100%;
 	height: auto;
@@ -1125,4 +1116,17 @@ ul.social li.linkedin a { background: #0177b5; }
  */
 .twitter-timeline {
 	width: 100% !important;
+}
+
+/**
+ * Blockquotes
+ *
+ * @see https://github.com/twbs/bootstrap/blob/v4.0.0-alpha.4/scss/_type.scss#L105-L111
+ */
+blockquote {
+	padding: ( $spacer / 2 ) $spacer;
+
+	margin-bottom: $spacer;
+
+	border-left: $blockquote-border-width solid $blockquote-border-color;
 }

@@ -115,6 +115,22 @@ class Orbis_Theme_Admin {
 					),
 				),
 			),
+			// @see http://v4-alpha.getbootstrap.com/content/typography/#blockquotes
+			array(
+				'title'	=> __( 'Blockquotes', 'orbis' ),
+				'items'	=> array(
+					array(
+						'title'    => __( 'Default', 'orbis' ),
+						'selector' => 'blockquote',
+						'classes'  => 'blockquote',
+					),
+					array(
+						'title'    => __( 'Reverse Layout', 'orbis' ),
+						'selector' => '.blockquote',
+						'classes'  => 'blockquote-reverse',
+					),
+				),
+			),
 		);
 	}
 }

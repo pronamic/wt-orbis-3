@@ -198,7 +198,8 @@ module.exports = function( grunt ) {
 			build: {
 				options: {
 					sassDir: 'src/sass',
-					cssDir: 'src/css'
+					cssDir: 'src/css',
+					importPath: 'bower_components'
 				}
 			}
 		},
