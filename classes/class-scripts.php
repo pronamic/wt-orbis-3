@@ -63,7 +63,7 @@ class Orbis_Theme_Scripts {
 		// Orbis
 		wp_register_script(
 			'wt-orbis',
-			$uri . "/assets/orbis/js/orbis$suffix.js",
+			$uri . '/assets/orbis/js/script' . $min . '.js',
 			array(
 				'jquery',
 				'bootstrap',
@@ -83,7 +83,7 @@ class Orbis_Theme_Scripts {
 
 		wp_register_style(
 			'wt-orbis',
-			$uri . '/css/orbis' . $suffix . '.css',
+			$uri . '/css/style' . $min . '.css',
 			array(
 				'bootstrap',
 				'fontawesome',

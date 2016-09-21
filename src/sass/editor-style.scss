@@ -1,0 +1,26 @@
+/**
+ * Tables
+ */
+.table {
+	margin-bottom: 20px;
+
+	width: 100%;
+    max-width: 100%;
+}
+
+.table th,
+.table td {
+	padding: 8px;
+}
+
+.table-striped tr:nth-of-type(odd) {
+	background-color: #F9F9F9;
+}
+
+.table-bordered {
+	border: 1px solid #DDD;
+}
+
+.table-hover tr:hover {
+	background-color: #F5F5F5;
+}

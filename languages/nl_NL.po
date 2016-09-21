@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pronamic\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2016-09-21 09:18:51+00:00\n"
-"PO-Revision-Date: 2016-09-21 11:21+0100\n"
+"POT-Creation-Date: 2016-09-21 09:41:30+00:00\n"
+"PO-Revision-Date: 2016-09-21 11:44+0100\n"
 "Last-Translator: Remco Tolsma <info@remcotolsma.nl>\n"
 "Language-Team: Pronamic <info@pronamic.nl>\n"
 "Language: nl_NL\n"
@@ -232,6 +232,66 @@ msgstr "Verloopt op"
 msgid "<span class=\"label label-danger\">%d days</span>"
 msgstr "<span class=”label label-danger”>%d dagen</span>"
 
+#: classes/class-admin.php:43
+msgid "Buttons"
+msgstr "Buttons"
+
+#: classes/class-admin.php:46 classes/class-admin.php:87
+msgid "Default"
+msgstr "Standaard"
+
+#: classes/class-admin.php:51
+msgid "Primary"
+msgstr "Primair"
+
+#: classes/class-admin.php:56
+msgid "Success"
+msgstr "Succes"
+
+#: classes/class-admin.php:61
+msgid "Info"
+msgstr "Info"
+
+#: classes/class-admin.php:66
+msgid "Warning"
+msgstr "Waarschuwing"
+
+#: classes/class-admin.php:71
+msgid "Danger"
+msgstr "Gevaar"
+
+#: classes/class-admin.php:76
+msgid "Link"
+msgstr "Link"
+
+#: classes/class-admin.php:84
+msgid "Tables"
+msgstr "Tabellen"
+
+#: classes/class-admin.php:92
+msgid "Inverse"
+msgstr "Omgekeerd"
+
+#: classes/class-admin.php:97
+msgid "Striped Rows"
+msgstr "Gestreepte rijen"
+
+#: classes/class-admin.php:102
+msgid "Bordered Table"
+msgstr "Omlijnde tabel"
+
+#: classes/class-admin.php:107
+msgid "Hover Rows"
+msgstr "Hover rijen"
+
+#: classes/class-admin.php:112
+msgid "Small Table"
+msgstr "Kleine tabel"
+
+#: classes/class-theme.php:44 deploy/latest/functions.php:51
+msgid "Primary Menu"
+msgstr "Primair menu"
+
 #: comments.php:5 deploy/latest/comments.php:5
 msgid ""
 "This post is password protected. Enter the password to view any comments."
@@ -262,7 +322,7 @@ msgid "Give a comment"
 msgstr "Geef een reactie"
 
 #: content-post.php:5 deploy/latest/content-post.php:5
-#: deploy/latest/functions.php:234 functions.php:243
+#: deploy/latest/functions.php:234 functions.php:141
 msgid "News"
 msgstr "Nieuws"
 
@@ -345,11 +405,7 @@ msgstr "Projecten"
 msgid "Persons"
 msgstr "Personen"
 
-#: deploy/latest/functions.php:51 functions.php:51
-msgid "Primary Menu"
-msgstr "Primair menu"
-
-#: deploy/latest/functions.php:179 functions.php:188
+#: deploy/latest/functions.php:179 functions.php:86
 msgid "No description."
 msgstr "Geen beschrijving."
 
@@ -361,17 +417,17 @@ msgstr "Dashboard"
 #: deploy/latest/templates/filter_advanced-orbis_project.php:28
 #: deploy/latest/templates/search_form.php:18
 #: deploy/latest/templates/search_form.php:19
-#: deploy/latest/templates/search_form.php:22 functions.php:261 header.php:91
+#: deploy/latest/templates/search_form.php:22 functions.php:159 header.php:91
 #: templates/filter_advanced-orbis_project.php:28 templates/search_form.php:18
 #: templates/search_form.php:19 templates/search_form.php:22
 msgid "Search"
 msgstr "Zoeken"
 
-#: deploy/latest/functions.php:255 functions.php:264
+#: deploy/latest/functions.php:255 functions.php:162
 msgid "404 - Page not found"
 msgstr "404 - Pagina niet gevonden"
 
-#: deploy/latest/functions.php:258 functions.php:267
+#: deploy/latest/functions.php:258 functions.php:165
 msgid "Unknown"
 msgstr "Onbekend"
 
@@ -1401,9 +1457,6 @@ msgstr "Sorteer"
 
 #~ msgid "Link Color"
 #~ msgstr "Linkkleur"
-
-#~ msgid "Default Layout"
-#~ msgstr "Standaard layout"
 
 #~ msgid "Theme Options"
 #~ msgstr "Thema instellingen"

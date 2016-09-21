@@ -206,8 +206,8 @@ module.exports = function( grunt ) {
 		// Concat
 		concat: {
 			js: {
-				src: [ 'src/js/orbis.js' ],
-				dest: 'assets/orbis/js/orbis.js'
+				src: [ 'src/js/script.js' ],
+				dest: 'assets/orbis/js/script.js'
 			}
 		},
 
@@ -215,7 +215,8 @@ module.exports = function( grunt ) {
 		cssmin: {
 			combine: {
 				files: {
-					'css/orbis.min.css': [ 'css/orbis.css' ]
+					'css/editor-style.min.css': 'css/editor-style.css',
+					'css/style.min.css': 'css/style.css'
 				}
 			}
 		},
@@ -224,7 +225,7 @@ module.exports = function( grunt ) {
 		uglify: {
 			combine: {
 				files: {
-					'assets/orbis/js/orbis.min.js': [ 'assets/orbis/js/orbis.js' ]
+					'assets/orbis/js/script.min.js': [ 'assets/orbis/js/script.js' ]
 				}
 			}
 		},

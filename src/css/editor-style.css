@@ -1,8 +1,30 @@
-/*
-Theme Name: Orbis
-Description: Used to style the TinyMCE editor.
-*/
+/**
+ * Tables
+ */
+/* line 4, ../sass/editor-style.scss */
+.table {
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 100%;
+}
 
-table {
-	width: 100%;
+/* line 11, ../sass/editor-style.scss */
+.table th,
+.table td {
+  padding: 8px;
+}
+
+/* line 16, ../sass/editor-style.scss */
+.table-striped tr:nth-of-type(odd) {
+  background-color: #F9F9F9;
+}
+
+/* line 20, ../sass/editor-style.scss */
+.table-bordered {
+  border: 1px solid #DDD;
+}
+
+/* line 24, ../sass/editor-style.scss */
+.table-hover tr:hover {
+  background-color: #F5F5F5;
 }
