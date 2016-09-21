@@ -11,8 +11,8 @@ if ( ! empty( $sections ) ) : ?>
 
 				<?php foreach ( $sections as $section ) : ?>
 
-					<li class="<?php echo esc_attr( $active ? 'active' : '' ); ?>">
-						<a href="#<?php echo esc_attr( $section['id'] ); ?>"><?php echo esc_html( $section['name'] ); ?></a>
+					<li class="nav-item">
+						<a href="#<?php echo esc_attr( $section['id'] ); ?>" class="nav-link <?php echo esc_attr( $active ? 'active' : '' ); ?>" ><?php echo esc_html( $section['name'] ); ?></a>
 					</li>
 
 					<?php $active = false; ?>
