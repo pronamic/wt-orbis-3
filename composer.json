@@ -29,6 +29,9 @@
         "source": "https://github.com/pronamic/wt-orbis2"
     },
 	"type": "wordpress-theme",
+	"autoload": {
+		"classmap": ["classes/"]
+	},
     "require": {
     	"php": ">=5.2.0",
 		"abraham/twitteroauth": "^0.6.4"
