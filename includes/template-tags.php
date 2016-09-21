@@ -17,20 +17,9 @@ add_filter( 'wp_page_menu_args', 'orbis_page_menu_args' );
  * Display navigation to next/previous pages when applicable
  */
 function orbis_content_nav() {
-	global $wp_query;
-
-	if ( $wp_query->max_num_pages > 1 ) : ?>
-
-		<ul class="pager">
-			<li>
-				<?php next_posts_link( __( '← Previous', 'orbis' ) ); ?>
-			</li>
-			<li>
-				<?php previous_posts_link( __( 'Next →', 'orbis' ) ); ?>
-			</li>
-		</ul>
-
-	<?php endif;
+	the_posts_pagination( array(
+		'mid_size' => 2,
+	) );
 }
 
 ///////////////////////////////////////////////
