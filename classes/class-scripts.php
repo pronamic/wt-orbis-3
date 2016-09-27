@@ -20,27 +20,11 @@ class Orbis_Theme_Scripts {
 
 		$min = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
 
-		// Bootstrap
-		wp_register_script(
-			'bootstrap',
-			$uri . '/assets/bootstrap/js/bootstrap' . $min . '.js',
-			array( 'jquery' ),
-			'.0.0',
-			true
-		);
-
-		wp_register_style(
-			'bootstrap',
-			$uri . '/assets/bootstrap/css/bootstrap' . $min . '.css',
-			array(),
-			'.0.0'
-		);
-
 		// Tether - http://tether.io/
 		wp_register_script(
 			'tether',
 			$uri . '/assets/tether/js/tether' . $min . '.js',
-			array( 'jquery' ),
+			array(),
 			'1.3.7',
 			true
 		);
@@ -52,6 +36,21 @@ class Orbis_Theme_Scripts {
 			'1.3.7'
 		);
 
+		// Bootstrap
+		wp_register_script(
+			'bootstrap',
+			$uri . '/assets/bootstrap/js/bootstrap' . $min . '.js',
+			array( 'jquery', 'tether' ),
+			'.0.0',
+			true
+		);
+
+		wp_register_style(
+			'bootstrap',
+			$uri . '/assets/bootstrap/css/bootstrap' . $min . '.css',
+			array(),
+			'.0.0'
+		);
 		// Font Awesome - http://fortawesome.github.io/Font-Awesome/
 		wp_register_style(
 			'fontawesome',
