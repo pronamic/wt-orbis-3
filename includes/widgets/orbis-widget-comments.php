@@ -115,7 +115,7 @@ class Orbis_Comments_Widget extends WP_Widget {
 			<select id="<?php echo esc_attr( $this->get_field_id( 'number' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'number' ) ); ?>">
 				<?php while ( $i <= 10 ) : ?>
 
-					<option value="<?php echo esc_attr( $i ); ?>"<?php selcted( $number === $i ); ?>><?php echo esc_html( $i ); ?></option>
+					<option value="<?php echo esc_attr( $i ); ?>"<?php selected( $number === $i ); ?>><?php echo esc_html( $i ); ?></option>
 
 					<?php $i++; ?>
 
