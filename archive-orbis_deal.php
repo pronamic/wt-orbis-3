@@ -6,6 +6,10 @@
 	</a>
 </header>
 
+<?php get_template_part( 'templates/deals-stats' ); ?>
+
+<hr />
+
 <div class="card">
 	<div class="card-block">
 		<?php get_template_part( 'templates/search_form' ); ?>
