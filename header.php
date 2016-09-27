@@ -56,9 +56,13 @@
 
 			<div class="main-wrapper">
 				<div class="page-header clearfix">
-					<h1 class="orbis-page-title pull-left">
-						<?php echo esc_html( orbis_get_title() ); ?>
-					</h1>
+					<div class="pull-left">
+						<h1 class="orbis-page-title">
+							<?php echo esc_html( orbis_get_title() ); ?>
+						</h1>
+
+						<?php get_template_part( 'templates/breadcrumbs' ); ?>
+					</div>
 
 					<?php if ( is_user_logged_in() ) : ?>
 
