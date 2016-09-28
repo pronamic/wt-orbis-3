@@ -24,14 +24,7 @@ if ( $query->have_posts() ) : ?>
 						<td>
 							<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 
-							<?php if ( 0 !== get_comments_number() ) : ?>
-
-								<div class="comments-number">
-									<span class="glyphicon glyphicon-comment"></span>
-									<?php comments_number( '0', '1', '%' ); ?>
-								</div>
-
-							<?php endif; ?>
+							<?php get_template_part( 'templates/table-cell-comments' ); ?>
 						</td>
 						<td class="project-time">
 							<?php

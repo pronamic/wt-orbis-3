@@ -27,11 +27,7 @@
 								<?php the_content(); ?>
 							</td>
 							<td>
-								<div class="actions">
-									<div class="nubbin">
-										<?php orbis_edit_post_link(); ?>
-									</div>
-								</div>
+								<?php get_template_part( 'templates/table-cell-actions' ); ?>
 							</td>
 						</tr>
 	

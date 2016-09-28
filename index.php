@@ -37,21 +37,10 @@
 						<td>
 							<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 
-							<?php if ( get_comments_number() !== 0 ) : ?>
-
-								<div class="comments-number">
-									<span class="glyphicon glyphicon-comment"></span>
-									<?php comments_number( '0', '1', '%' ); ?>
-								</div>
-
-							<?php endif; ?>
+							<?php get_template_part( 'templates/table-cell-comments' ); ?>
 						</td>
 						<td>
-							<div class="actions">
-								<div class="nubbin">
-									<?php orbis_edit_post_link(); ?>
-								</div>
-							</div>
+							<?php get_template_part( 'templates/table-cell-actions' ); ?>
 						</td>
 					</tr>
 

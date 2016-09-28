@@ -53,13 +53,9 @@
 								<?php orbis_task_due_at(); ?> <?php echo $due_at_ouput; ?>
 							</td>
 							<td>
-								<div class="actions">
-									<div class="nubbin">
-										<?php orbis_edit_post_link(); ?>
+								<?php get_template_part( 'templates/table-cell-actions' ); ?>
 
-										<?php orbis_finish_task_link(); ?>
-									</div>
-								</div>
+								<?php orbis_finish_task_link(); ?>
 							</td>
 						</tr>
 
