@@ -102,7 +102,7 @@
 
 				<div class="main-content">
 
-					<?php if ( is_post_type_archive() ) : ?>
+					<?php if ( is_post_type_archive() || is_home() ) : ?>
 
 						<?php get_template_part( 'templates/add-new-post' ); ?>
 
