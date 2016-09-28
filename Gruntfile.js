@@ -140,6 +140,16 @@ module.exports = function( grunt ) {
 
 		// Clean
 		clean: {
+			build: {
+				src: [
+					'assets',
+					'css',
+					'images',
+					'js',
+					'screenshot.png'
+				]
+			},
+
 			deploy: {
 				src: [ 'deploy/latest' ]
 			},
@@ -233,7 +243,7 @@ module.exports = function( grunt ) {
 
 		// Image min
 		imagemin: {
-			dynamic: {
+			build: {
 				files: [
 					{ // Orbis
 						expand: true,
@@ -242,14 +252,32 @@ module.exports = function( grunt ) {
 						dest: 'assets/orbis/images'
 					}
 				]
+			},
+
+			theme: {
+				files: {
+					'screenshot.png': 'src/screenshot.png'
+				}
 			}
 		}
 	} );
 
 	// Default task(s).
-	grunt.registerTask( 'default', [ 'phplint', 'copy', 'compass', 'cssmin', 'uglify', 'concat', 'imagemin' ] );
-	grunt.registerTask( 'build', [] );
-	grunt.registerTask( 'pot', [ 'checktextdomain', 'makepot' ] );
+	grunt.registerTask( 'default', [
+		'clean',
+		'phplint',
+		'copy',
+		'concat',
+		'compass',
+		'cssmin',
+		'uglify',
+		'imagemin'
+	] );
+
+	grunt.registerTask( 'pot', [
+		'checktextdomain',
+		'makepot'
+	] );
 
 	grunt.registerTask( 'deploy', [
 		'default',
