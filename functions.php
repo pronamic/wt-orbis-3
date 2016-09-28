@@ -8,7 +8,6 @@ require get_template_directory() . '/vendor/autoload.php';
 /**
  * Includes
  */
-require_once get_template_directory() . '/includes/functions.php';
 require_once get_template_directory() . '/includes/projects.php';
 require_once get_template_directory() . '/includes/subscriptions.php';
 require_once get_template_directory() . '/includes/template-tags.php';
