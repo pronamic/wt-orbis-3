@@ -1,14 +1,6 @@
 <?php get_header(); ?>
 
-<?php if ( is_post_type_archive() ) : ?>
 
-	<div class="section-header clearfix">
-		<a class="btn btn-primary pull-right" href="<?php echo esc_url( orbis_get_url_post_new() ); ?>">
-			<span class="glyphicon glyphicon-plus"></span> <?php esc_html_e( 'Add new', 'orbis' ); ?>
-		</a>
-	</div>
-
-<?php endif; ?>
 
 <div class="card">
 	<div class="card-block">

@@ -1,11 +1,5 @@
 <?php get_header(); ?>
 
-<header class="section-header clearfix">
-	<a class="btn btn-primary pull-right" href="<?php echo esc_url( orbis_get_url_post_new() ); ?>">		
-		<span class="glyphicon glyphicon-plus"></span> <?php esc_html_e( 'Add company', 'orbis' ); ?>
-	</a>
-</header>
-
 <div class="card">
 	<div class="card-block">
 		<?php get_template_part( 'templates/search_form' ); ?>

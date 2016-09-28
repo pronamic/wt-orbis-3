@@ -101,3 +101,9 @@
 				</div>
 
 				<div class="main-content">
+
+					<?php if ( is_post_type_archive() ) : ?>
+
+						<?php get_template_part( 'templates/add-new-post' ); ?>
+
+					<?php endif; ?>
