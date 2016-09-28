@@ -43,7 +43,7 @@
 								<a class="title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a> <br />
 
 								<div class="entry-meta">
-									<span class="glyphicon glyphicon-file"></span> <?php orbis_task_project(); ?> <span class="glyphicon glyphicon-user"></span> <?php orbis_task_assignee(); ?> <span class="glyphicon glyphicon-time"></span> <?php orbis_task_time(); ?>
+									<i class="fa fa-file" aria-hidden="true"></i> <?php orbis_task_project(); ?> <i class="fa fa-user" aria-hidden="true"></i> <?php orbis_task_assignee(); ?> <i class="fa fa-clock-o" aria-hidden="true"></i> <?php orbis_task_time(); ?>
 								</div>
 							</td>
 							<td>
