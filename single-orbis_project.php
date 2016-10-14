@@ -100,11 +100,11 @@
 						<dd>
 							<?php if ( orbis_project_is_finished() ) : ?>
 
-								<span class="label label-success"><?php esc_html_e( 'Finished', 'orbis' ); ?></span>
+								<span class="tag tag-success"><?php esc_html_e( 'Finished', 'orbis' ); ?></span>
 
 							<?php else : ?>
 
-								<span class="label label-default"><?php esc_html_e( 'Not finished', 'orbis' ); ?></span>
+								<span class="tag tag-default"><?php esc_html_e( 'Not finished', 'orbis' ); ?></span>
 
 							<?php endif; ?>
 
@@ -112,21 +112,21 @@
 
 								<?php if ( orbis_project_is_invoiced() ) : ?>
 
-									<span class="label label-success"><?php esc_html_e( 'Invoiced', 'orbis' ); ?></span>
+									<span class="tag tag-success"><?php esc_html_e( 'Invoiced', 'orbis' ); ?></span>
 
 								<?php else : ?>
 
-									<span class="label label-default"><?php esc_html_e( 'Not invoiced', 'orbis' ); ?></span>
+									<span class="tag tag-default"><?php esc_html_e( 'Not invoiced', 'orbis' ); ?></span>
 
 								<?php endif; ?>
 
 								<?php if ( orbis_project_is_invoicable() ) : ?>
 
-									<span class="label label-success"><?php esc_html_e( 'Invoicable', 'orbis' ); ?></span>
+									<span class="tag tag-success"><?php esc_html_e( 'Invoicable', 'orbis' ); ?></span>
 
 								<?php else : ?>
 
-									<span class="label label-default"><?php esc_html_e( 'Not invoicable', 'orbis' ); ?></span>
+									<span class="tag tag-default"><?php esc_html_e( 'Not invoicable', 'orbis' ); ?></span>
 
 								<?php endif; ?>
 
