@@ -1,7 +1,5 @@
 <?php get_header(); ?>
 
-
-
 <div class="card">
 	<div class="card-block">
 		<?php get_template_part( 'templates/search_form' ); ?>
