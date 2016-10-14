@@ -65,7 +65,11 @@ function orbis_get_url_post_new( $post_type = null ) {
 		$post_type = orbis_get_archive_post_type();
 	}
 
-	$url = add_query_arg( 'post_type', $post_type, admin_url( 'post-new.php' ) );
+	$url = admin_url( 'post-new.php' );
+
+	if ( ! empty( $post_type ) ) {
+		$url = add_query_arg( 'post_type', $post_type, $url );
+	}	
 
 	return $url;
 }
