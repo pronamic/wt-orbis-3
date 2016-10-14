@@ -60,11 +60,7 @@
 
 	<?php else : ?>
 
-		<div class="content">
-			<p class="alt">
-				<?php esc_html_e( 'No results found.', 'orbis' ); ?>
-			</p>
-		</div>
+		<?php get_template_part( 'templates/content-none' ); ?>
 
 	<?php endif; ?>
 </div>
