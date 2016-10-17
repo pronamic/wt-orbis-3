@@ -26,6 +26,8 @@
 
 					<div class="col-md-5">
 						<div class="content">
+							<?php $orbis_person = new Orbis_Person(); ?>
+
 							<dl>
 								<?php if ( get_post_meta( $post->ID, '_orbis_person_phone_number', true ) ) : ?>
 
@@ -41,12 +43,28 @@
 
 								<?php endif; ?>
 
-								<?php if ( get_post_meta( $post->ID, '_orbis_person_email_address', true ) ) : ?>
+								<?php 
+
+								$email = $orbis_person->get_email();
+
+								if ( ! empty( $email ) ) : ?>
 
 									<dt><?php esc_html_e( 'E-mail address', 'orbis' ); ?></dt>
 									<dd>
-										<?php $email = get_post_meta( $post->ID, '_orbis_person_email_address', true ); ?>
 										<a href="mailto:<?php echo esc_attr( $email ); ?>"><?php echo esc_html( $email ); ?></a>
+									</dd>
+
+								<?php endif; ?>
+
+								<?php 
+
+								$gender = $orbis_person->get_gender();
+
+								if ( ! empty( $gender ) ) : ?>
+
+									<dt><?php esc_html_e( 'Gender', 'orbis' ); ?></dt>
+									<dd>
+										<?php echo esc_html( $gender->name ); ?>
 									</dd>
 
 								<?php endif; ?>
