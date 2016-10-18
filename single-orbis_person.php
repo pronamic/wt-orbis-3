@@ -29,6 +29,22 @@
 							<?php $orbis_person = new Orbis_Person(); ?>
 
 							<dl>
+								<?php
+
+								$data = array_filter( array(
+									$orbis_person->get_title(),
+									$orbis_person->get_organization(),
+								) );
+
+								if ( ! empty( $data ) ) : ?>
+
+									<dt><?php esc_html_e( 'Company', 'orbis' ); ?></dt>
+									<dd>
+										<?php echo esc_html( implode( ', ', $data ) ); ?>
+									</dd>
+
+								<?php endif; ?>
+
 								<?php if ( get_post_meta( $post->ID, '_orbis_person_phone_number', true ) ) : ?>
 
 									<dt><?php esc_html_e( 'Phone number', 'orbis' ); ?></dt>
@@ -65,6 +81,19 @@
 									<dt><?php esc_html_e( 'Gender', 'orbis' ); ?></dt>
 									<dd>
 										<?php echo esc_html( $gender->name ); ?>
+									</dd>
+
+								<?php endif; ?>
+
+								<?php 
+
+								$address = (string) $orbis_person->get_address();
+
+								if ( ! empty( $address ) ) : ?>
+
+									<dt><?php esc_html_e( 'Address', 'orbis' ); ?></dt>
+									<dd>
+										<?php echo nl2br( $address ); ?>
 									</dd>
 
 								<?php endif; ?>

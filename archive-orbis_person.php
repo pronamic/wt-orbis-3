@@ -12,13 +12,17 @@
 				<thead>
 					<tr>
 						<th><?php esc_html_e( 'Name', 'orbis' ); ?></th>
+						<th><?php esc_html_e( 'Company', 'orbis' ); ?></th>
+						<th><?php esc_html_e( 'Address', 'orbis' ); ?></th>
 						<th><?php esc_html_e( 'Phone number', 'orbis' ); ?></th>
 						<th></th>
 					</tr>
 				</thead>
 
 				<tbody>
-					<?php while ( have_posts() ) : the_post(); ?>
+					<?php while ( have_posts() ) : the_post(); 
+
+						$orbis_person = new Orbis_Person(); ?>
 
 						<tr>
 							<td>
@@ -53,6 +57,32 @@
 										</p>
 									</div>
 								</div>
+							</td>
+							<td>
+								<?php
+
+								$data = array_filter( array(
+									$orbis_person->get_title(),
+									$orbis_person->get_organization(),
+								) );
+
+								echo esc_html( implode( ', ', $data ) );
+
+								?>
+							</td>
+							<td>
+								<?php
+
+								$address  = $orbis_person->get_address();
+
+								printf(
+									'%s<br />%s %s',
+									esc_html( $address->get_address() ),
+									esc_html( $address->get_postcode() ),
+									esc_html( $address->get_city() )
+								);
+
+								?>
 							</td>
 							<td>
 								<?php
