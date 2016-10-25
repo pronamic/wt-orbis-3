@@ -85,6 +85,19 @@ $invoice_email = get_post_meta( $post->ID, '_orbis_invoice_email', true );
 				<dd><?php echo esc_html( $vat_number ); ?></dd>
 
 			<?php endif; ?>
+
+			<dt><?php esc_html_e( 'vCard', 'orbis' ); ?></dt>
+			<dd>
+				<?php
+
+				printf(
+					'<a href="%s">%s</a>',
+					esc_attr( get_permalink() . 'vcard/' ),
+					esc_html__( 'Download vCard', 'orbis' )
+				);
+
+				?>
+			</dd>
 		</dl>
 	</div>
 </div>

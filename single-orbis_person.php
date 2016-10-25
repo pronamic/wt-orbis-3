@@ -98,6 +98,19 @@
 
 								<?php endif; ?>
 
+								<dt><?php esc_html_e( 'vCard', 'orbis' ); ?></dt>
+								<dd>
+									<?php
+
+									printf(
+										'<a href="%s">%s</a>',
+										esc_attr( get_permalink() . 'vcard/' ),
+										esc_html__( 'Download vCard', 'orbis' )
+									);
+
+									?>
+								</dd>
+
 								<?php if ( get_post_meta( $post->ID, '_orbis_person_twitter', true ) || get_post_meta( $post->ID, '_orbis_person_facebook', true ) || get_post_meta( $post->ID, '_orbis_person_linkedin', true ) ) : ?>
 
 									<dt><?php esc_html_e( 'Social media', 'orbis' ); ?></dt>
