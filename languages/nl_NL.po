@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: Pronamic\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/style\n"
 "POT-Creation-Date: 2016-10-25 09:08:28+00:00\n"
-"PO-Revision-Date: 2016-10-25 11:09+0100\n"
+"PO-Revision-Date: 2016-10-25 11:25+0100\n"
 "Last-Translator: Remco Tolsma <info@remcotolsma.nl>\n"
 "Language-Team: Pronamic <info@pronamic.nl>\n"
 "Language: nl_NL\n"
@@ -37,7 +37,7 @@ msgstr "Naam"
 #: deploy/latest/templates/company_contact.php:28 single-orbis_person.php:94
 #: templates/company_contact.php:28
 msgid "Address"
-msgstr "Adres"
+msgstr "Verzendadres"
 
 #: archive-orbis_company.php:16 deploy/latest/archive-orbis_company.php:16
 msgid "Online"
