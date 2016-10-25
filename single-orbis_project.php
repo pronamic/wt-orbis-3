@@ -12,6 +12,8 @@
 				<div class="content">
 					<?php the_content(); ?>
 				</div>
+
+				<?php get_template_part( 'templates/post-card-footer' ); ?>
 			</div>
 
 			<?php get_template_part( 'templates/project_sections' ); ?>

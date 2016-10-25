@@ -23,6 +23,8 @@
 
 						<?php the_content(); ?>
 					</div>
+
+					<?php get_template_part( 'templates/post-card-footer' ); ?>
 				</div>
 
 				<?php do_action( 'orbis_after_main_content' ); ?>
