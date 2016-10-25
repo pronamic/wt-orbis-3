@@ -13,7 +13,7 @@ $postcode   = get_post_meta( $post->ID, '_orbis_company_postcode', true );
 $city       = get_post_meta( $post->ID, '_orbis_company_city', true );
 $country    = get_post_meta( $post->ID, '_orbis_company_country', true );
 
-$ebilling   = get_post_meta( $post->ID, '_orbis_company_ebilling', true );
+$invoice_email = get_post_meta( $post->ID, '_orbis_invoice_email', true );
 
 ?>
 <div class="panel">
@@ -52,10 +52,12 @@ $ebilling   = get_post_meta( $post->ID, '_orbis_company_ebilling', true );
 
 			<?php endif; ?>
 
-			<?php if ( function_exists( 'orbis_finance_bootstrap' ) ) : ?>
+			<?php if ( ! empty( $invoice_email ) ) : ?>
 
-				<dt><?php esc_html_e( 'Electronic billing', 'orbis' ); ?></dt>
-				<dd><?php echo esc_html( $ebilling ? __( 'Yes', 'orbis' ) :  __( 'No', 'orbis' ) ); ?></dd>
+				<dt><?php esc_html_e( 'Invoice E-Mail', 'orbis' ); ?></dt>
+				<dd>
+					<a href="mailto:<?php echo esc_attr( $invoice_email ); ?>" target="_blank"><?php echo esc_html( $invoice_email ); ?></a>
+				</dd>
 
 			<?php endif; ?>
 

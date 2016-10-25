@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pronamic\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2016-10-17 15:03:25+00:00\n"
-"PO-Revision-Date: 2016-10-17 17:03+0100\n"
+"POT-Creation-Date: 2016-10-25 09:08:28+00:00\n"
+"PO-Revision-Date: 2016-10-25 11:09+0100\n"
 "Last-Translator: Remco Tolsma <info@remcotolsma.nl>\n"
 "Language-Team: Pronamic <info@pronamic.nl>\n"
 "Language: nl_NL\n"
@@ -32,8 +32,9 @@ msgstr "Het lijkt erop dat we niet kunnen vinden waar je naar zoekt."
 msgid "Name"
 msgstr "Naam"
 
-#: archive-orbis_company.php:15 deploy/latest/archive-orbis_company.php:15
-#: deploy/latest/templates/company_contact.php:28
+#: archive-orbis_company.php:15 archive-orbis_person.php:16
+#: deploy/latest/archive-orbis_company.php:15
+#: deploy/latest/templates/company_contact.php:28 single-orbis_person.php:94
 #: templates/company_contact.php:28
 msgid "Address"
 msgstr "Adres"
@@ -49,7 +50,8 @@ msgstr "Online"
 msgid "Date"
 msgstr "Datum"
 
-#: archive-orbis_deal.php:19 deploy/latest/archive-orbis_deal.php:19
+#: archive-orbis_deal.php:19 archive-orbis_person.php:15
+#: deploy/latest/archive-orbis_deal.php:19 single-orbis_person.php:41
 msgid "Company"
 msgstr "Bedrijf"
 
@@ -80,7 +82,7 @@ msgid "Price"
 msgstr "Prijs"
 
 #: archive-orbis_deal.php:22 deploy/latest/archive-orbis_deal.php:22
-#: deploy/latest/single-orbis_project.php:99 single-orbis_project.php:99
+#: deploy/latest/single-orbis_project.php:99 single-orbis_project.php:101
 msgid "Status"
 msgstr "Status"
 
@@ -110,15 +112,15 @@ msgstr "Hostnaam"
 msgid "Hostname Provider"
 msgstr "Hostnaam leverancier"
 
-#: archive-orbis_person.php:15 deploy/latest/archive-orbis_person.php:15
-#: deploy/latest/single-orbis_person.php:32 single-orbis_person.php:34
+#: archive-orbis_person.php:17 deploy/latest/archive-orbis_person.php:15
+#: deploy/latest/single-orbis_person.php:32 single-orbis_person.php:50
 msgid "Phone number"
 msgstr "Telefoonnummer"
 
 #: archive-orbis_project.php:14 deploy/latest/archive-orbis_project.php:14
 #: deploy/latest/single-orbis_project.php:65
 #: deploy/latest/templates/filter_advanced-orbis_project.php:14
-#: single-orbis_project.php:65 templates/filter_advanced-orbis_project.php:14
+#: single-orbis_project.php:67 templates/filter_advanced-orbis_project.php:14
 msgid "Client"
 msgstr "Klant"
 
@@ -241,11 +243,11 @@ msgstr "Kleine tabel"
 
 #: classes/class-admin.php:120 deploy/latest/classes/class-admin.php:120
 msgid "Blockquotes"
-msgstr ""
+msgstr "Blockquotes"
 
 #: classes/class-admin.php:128 deploy/latest/classes/class-admin.php:128
 msgid "Reverse Layout"
-msgstr ""
+msgstr "Omgekeerde opmaak"
 
 #: classes/class-theme.php:44 deploy/latest/classes/class-theme.php:44
 msgid "Primary Menu"
@@ -619,7 +621,7 @@ msgstr "Geen personen verbonden."
 
 #: deploy/latest/single-orbis_company.php:102
 #: deploy/latest/single-orbis_task.php:38 deploy/latest/single.php:38
-#: single-orbis_company.php:102 single-orbis_task.php:38 single.php:38
+#: single-orbis_company.php:102 single-orbis_task.php:38 single.php:40
 msgid "Additional Information"
 msgstr "Aanvullende informatie"
 
@@ -627,8 +629,8 @@ msgstr "Aanvullende informatie"
 #: deploy/latest/single-orbis_person.php:126
 #: deploy/latest/single-orbis_project.php:80
 #: deploy/latest/single-orbis_task.php:43 deploy/latest/single.php:43
-#: single-orbis_company.php:107 single-orbis_person.php:144
-#: single-orbis_project.php:80 single-orbis_task.php:43 single.php:43
+#: single-orbis_company.php:107 single-orbis_person.php:173
+#: single-orbis_project.php:82 single-orbis_task.php:43 single.php:45
 msgid "Posted on"
 msgstr "Geplaatst op"
 
@@ -636,8 +638,8 @@ msgstr "Geplaatst op"
 #: deploy/latest/single-orbis_person.php:128
 #: deploy/latest/single-orbis_project.php:83
 #: deploy/latest/single-orbis_task.php:46 deploy/latest/single.php:46
-#: single-orbis_company.php:110 single-orbis_person.php:146
-#: single-orbis_project.php:83 single-orbis_task.php:46 single.php:46
+#: single-orbis_company.php:110 single-orbis_person.php:175
+#: single-orbis_project.php:85 single-orbis_task.php:46 single.php:48
 msgid "Posted by"
 msgstr "Aangemaakt door"
 
@@ -645,8 +647,8 @@ msgstr "Aangemaakt door"
 #: deploy/latest/single-orbis_person.php:130
 #: deploy/latest/single-orbis_project.php:163
 #: deploy/latest/single-orbis_task.php:58 deploy/latest/single.php:49
-#: single-orbis_company.php:113 single-orbis_person.php:148
-#: single-orbis_project.php:163 single-orbis_task.php:58 single.php:49
+#: single-orbis_company.php:113 single-orbis_person.php:177
+#: single-orbis_project.php:165 single-orbis_task.php:58 single.php:51
 msgid "Actions"
 msgstr "Acties"
 
@@ -655,8 +657,8 @@ msgstr "Acties"
 #: deploy/latest/single-orbis_project.php:164
 #: deploy/latest/single-orbis_task.php:59 deploy/latest/single.php:50
 #: deploy/latest/templates/table-cell-actions.php:8
-#: single-orbis_company.php:114 single-orbis_person.php:149
-#: single-orbis_project.php:164 single-orbis_task.php:59 single.php:50
+#: single-orbis_company.php:114 single-orbis_person.php:178
+#: single-orbis_project.php:166 single-orbis_task.php:59 single.php:52
 #: templates/table-cell-actions.php:8
 msgid "Edit"
 msgstr "Bewerken"
@@ -666,80 +668,80 @@ msgid "About this person"
 msgstr "Over deze persoon"
 
 #: deploy/latest/single-orbis_person.php:33
-#: deploy/latest/single-orbis_person.php:40 single-orbis_person.php:35
-#: single-orbis_person.php:42
+#: deploy/latest/single-orbis_person.php:40 single-orbis_person.php:51
+#: single-orbis_person.php:58
 msgid "Call this number"
 msgstr "Bel dit nummer"
 
-#: deploy/latest/single-orbis_person.php:39 single-orbis_person.php:41
+#: deploy/latest/single-orbis_person.php:39 single-orbis_person.php:57
 msgid "Mobile number"
 msgstr "Mobiel nummer"
 
-#: deploy/latest/single-orbis_person.php:46 single-orbis_person.php:52
+#: deploy/latest/single-orbis_person.php:46 single-orbis_person.php:68
 msgid "E-mail address"
 msgstr "E-mailadres"
 
-#: deploy/latest/single-orbis_person.php:56 single-orbis_person.php:74
+#: deploy/latest/single-orbis_person.php:56 single-orbis_person.php:103
 msgid "Social media"
 msgstr "Social media"
 
-#: deploy/latest/single-orbis_person.php:66 single-orbis_person.php:84
+#: deploy/latest/single-orbis_person.php:66 single-orbis_person.php:113
 msgid "Twitter"
 msgstr "Twitter"
 
-#: deploy/latest/single-orbis_person.php:79 single-orbis_person.php:97
+#: deploy/latest/single-orbis_person.php:79 single-orbis_person.php:126
 msgid "Facebook"
 msgstr "Facebook"
 
-#: deploy/latest/single-orbis_person.php:92 single-orbis_person.php:110
+#: deploy/latest/single-orbis_person.php:92 single-orbis_person.php:139
 msgid "LinkedIn"
 msgstr "Linkedin"
 
-#: deploy/latest/single-orbis_person.php:121 single-orbis_person.php:139
+#: deploy/latest/single-orbis_person.php:121 single-orbis_person.php:168
 msgid "Additional information"
 msgstr "Aanvullende informatie"
 
-#: deploy/latest/single-orbis_project.php:29 single-orbis_project.php:29
+#: deploy/latest/single-orbis_project.php:29 single-orbis_project.php:31
 msgid "Project status"
 msgstr "Project status"
 
-#: deploy/latest/single-orbis_project.php:33 single-orbis_project.php:33
+#: deploy/latest/single-orbis_project.php:33 single-orbis_project.php:35
 msgid "Project budget"
 msgstr "Project budget"
 
-#: deploy/latest/single-orbis_project.php:58 single-orbis_project.php:58
+#: deploy/latest/single-orbis_project.php:58 single-orbis_project.php:60
 msgid "Project Details"
 msgstr "Project details"
 
-#: deploy/latest/single-orbis_project.php:92 single-orbis_project.php:92
+#: deploy/latest/single-orbis_project.php:92 single-orbis_project.php:94
 msgid "Agreement"
 msgstr "Akkoord"
 
-#: deploy/latest/single-orbis_project.php:103 single-orbis_project.php:103
+#: deploy/latest/single-orbis_project.php:103 single-orbis_project.php:105
 msgid "Finished"
 msgstr "Afgerond"
 
-#: deploy/latest/single-orbis_project.php:107 single-orbis_project.php:107
+#: deploy/latest/single-orbis_project.php:107 single-orbis_project.php:109
 msgid "Not finished"
 msgstr "Niet afgerond"
 
-#: deploy/latest/single-orbis_project.php:115 single-orbis_project.php:115
+#: deploy/latest/single-orbis_project.php:115 single-orbis_project.php:117
 msgid "Invoiced"
 msgstr "Gefactureerd"
 
-#: deploy/latest/single-orbis_project.php:119 single-orbis_project.php:119
+#: deploy/latest/single-orbis_project.php:119 single-orbis_project.php:121
 msgid "Not invoiced"
 msgstr "Niet gefactureerd"
 
-#: deploy/latest/single-orbis_project.php:125 single-orbis_project.php:125
+#: deploy/latest/single-orbis_project.php:125 single-orbis_project.php:127
 msgid "Invoicable"
 msgstr "Facturabel"
 
-#: deploy/latest/single-orbis_project.php:129 single-orbis_project.php:129
+#: deploy/latest/single-orbis_project.php:129 single-orbis_project.php:131
 msgid "Not invoicable"
 msgstr "Niet facturabel"
 
-#: deploy/latest/single-orbis_project.php:142 single-orbis_project.php:142
+#: deploy/latest/single-orbis_project.php:142 single-orbis_project.php:144
 msgid "Invoice"
 msgstr "Factuur"
 
@@ -775,31 +777,28 @@ msgid "E-Mail"
 msgstr "E-mailadres"
 
 #: deploy/latest/templates/company_contact.php:57
-#: templates/company_contact.php:57
 msgid "Electronic billing"
 msgstr "Elektronische facturatie"
 
 #: deploy/latest/templates/company_contact.php:58
 #: deploy/latest/templates/subscription_product_details.php:44
-#: templates/company_contact.php:58
 #: templates/subscription_product_details.php:44
 msgid "Yes"
 msgstr "Ja"
 
 #: deploy/latest/templates/company_contact.php:58
 #: deploy/latest/templates/subscription_product_details.php:44
-#: templates/company_contact.php:58
 #: templates/subscription_product_details.php:44
 msgid "No"
 msgstr "Nee"
 
 #: deploy/latest/templates/company_contact.php:64
-#: templates/company_contact.php:64
+#: templates/company_contact.php:66
 msgid "KvK Number"
 msgstr "KvK nummer"
 
 #: deploy/latest/templates/company_contact.php:84
-#: templates/company_contact.php:82
+#: templates/company_contact.php:84
 msgid "VAT Number"
 msgstr "BTW-nmmer"
 
@@ -822,19 +821,19 @@ msgstr "%1$s op Twitter"
 
 #: deploy/latest/templates/deals-stats.php:129 templates/deals-stats.php:129
 msgid "Won deals"
-msgstr ""
+msgstr "Gewonnen deals"
 
 #: deploy/latest/templates/deals-stats.php:134 templates/deals-stats.php:134
 msgid "Lost deals"
-msgstr ""
+msgstr "Verloren deals"
 
 #: deploy/latest/templates/deals-stats.php:139 templates/deals-stats.php:139
 msgid "Pending deals"
-msgstr ""
+msgstr "In afwachting deals"
 
 #: deploy/latest/templates/deals-stats.php:144 templates/deals-stats.php:144
 msgid "Total amount open"
-msgstr ""
+msgstr "Totaal open bedrag"
 
 #: deploy/latest/templates/filter-orbis_deal.php:7
 #: templates/filter-orbis_deal.php:7
@@ -956,9 +955,17 @@ msgstr "uren"
 msgid "minutes"
 msgstr "minuten"
 
-#: single-orbis_person.php:65
+#: single-orbis_person.php:81
 msgid "Gender"
 msgstr "Geslacht"
+
+#: templates/company_contact.php:57
+msgid "Invoice E-Mail"
+msgstr "Factuur e-mailadres"
+
+#: templates/post-card-footer.php:8
+msgid "Respond"
+msgstr "Reageren"
 
 #. Theme Name of the plugin/theme
 msgid "Orbis 3"
