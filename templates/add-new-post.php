@@ -1,6 +1,12 @@
 <?php
 
-$labels = get_post_type_labels( get_queried_object() );
+$queried_object = get_queried_object();
+
+if ( ! is_object( $queried_object ) ) {
+	return;
+}
+
+$labels = get_post_type_labels( $queried_object );
 
 if ( $labels->add_new_item ) : ?>
 
