@@ -9,8 +9,11 @@
 
 		<div class="table-responsive">
 			<table class="table table-striped table-condense table-hover">
+				<col width="84" />
+
 				<thead>
 					<tr>
+						<th></th>
 						<th><?php esc_html_e( 'Name', 'orbis' ); ?></th>
 						<th><?php esc_html_e( 'Company', 'orbis' ); ?></th>
 						<th><?php esc_html_e( 'Address', 'orbis' ); ?></th>
@@ -26,37 +29,37 @@
 
 						<tr>
 							<td>
-								<div class="person-wrapper">
-									<div class="avatar">
-										<?php if ( has_post_thumbnail() ) : ?>
+								<?php
 
-											<?php the_post_thumbnail( 'avatar' ); ?>
+								$url = get_template_directory_uri() . '/placeholders/avatar.png';
 
-										<?php else : ?>
+								if ( has_post_thumbnail() ) {
+									$url = get_the_post_thumbnail_url( get_post(), 'avatar' );
+								}
 
-											<img src="<?php bloginfo( 'template_directory' ); ?>/placeholders/avatar.png" alt="">
+								printf(
+									'<img src="%s" alt="" class="rounded-circle" />',
+									esc_url( $url )
+								);
 
-										<?php endif; ?>
-									</div>
+								?>
+							</td>
+							<td>
+								<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> <br />
 
-									<div class="details">
-										<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> <br />
+								<span class="orbis-person-meta">
+									<?php if ( get_post_meta( $post->ID, '_orbis_person_email_address', true ) ) : ?>
 
-										<p>
-											<?php if ( get_post_meta( $post->ID, '_orbis_person_email_address', true ) ) : ?>
+										<?php echo esc_html( get_post_meta( $post->ID, '_orbis_person_email_address', true ) ); ?><br />
 
-												<span class="entry-meta"><?php echo esc_html( get_post_meta( $post->ID, '_orbis_person_email_address', true ) ); ?></span> <br />
+									<?php endif; ?>
 
-											<?php endif; ?>
+									<?php if ( get_post_meta( $post->ID, '_orbis_person_phone_number', true ) ) : ?>
 
-											<?php if ( get_post_meta( $post->ID, '_orbis_person_phone_number', true ) ) : ?>
+										<?php echo esc_html( get_post_meta( $post->ID, '_orbis_person_phone_number', true ) ); ?>
 
-												<span class="entry-meta"><?php echo esc_html( get_post_meta( $post->ID, '_orbis_person_phone_number', true ) ); ?></span>
-
-											<?php endif; ?>
-										</p>
-									</div>
-								</div>
+									<?php endif; ?>
+								</span>
 							</td>
 							<td>
 								<?php

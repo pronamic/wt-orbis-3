@@ -455,20 +455,10 @@ ul.list.persons li {
 	padding: 10px;
 }
 
-.person-wrapper {
-	display: table;
-}
+.orbis-person-meta {
+	color: #999;
 
-.person-wrapper img {
-	margin-right: 10px;
-}
-
-.person-wrapper p {
-	display: inline-block;
-
-	line-height: 16px;
-
-	margin: 0;
+	font-size: 12px;
 }
 
 ul.list.persons li .person-wrapper a,
@@ -478,13 +468,6 @@ ul.list.persons li .person-wrapper a,
 	font-size: 18px;
 
 	padding: 0;
-}
-
-.person-wrapper .avatar,
-.person-wrapper .details {
-	display: table-cell;
-
-	vertical-align: top;
 }
 
 /**
