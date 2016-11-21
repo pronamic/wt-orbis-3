@@ -458,7 +458,11 @@ ul.list.persons li {
 .orbis-person-meta {
 	color: #999;
 
+	display: inline-block;
+
 	font-size: 12px;
+
+	line-height: 1.5;
 }
 
 ul.list.persons li .person-wrapper a,
