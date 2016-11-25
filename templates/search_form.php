@@ -2,7 +2,7 @@
 
 $s = filter_input( INPUT_GET, 's', FILTER_SANITIZE_STRING );
 
-$has_advanced = is_post_type_archive( 'orbis_project' );
+$has_advanced = is_post_type_archive( 'orbis_person' ) || is_post_type_archive( 'orbis_project' );
 
 $action_url = '';
 

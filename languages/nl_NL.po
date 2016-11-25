@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pronamic\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2016-10-25 09:08:28+00:00\n"
-"PO-Revision-Date: 2016-10-25 11:25+0100\n"
+"POT-Creation-Date: 2016-11-25 09:11:25+00:00\n"
+"PO-Revision-Date: 2016-11-25 10:17+0100\n"
 "Last-Translator: Remco Tolsma <info@remcotolsma.nl>\n"
 "Language-Team: Pronamic <info@pronamic.nl>\n"
 "Language: nl_NL\n"
@@ -18,6 +18,11 @@ msgstr ""
 "esc_attr__;_nx:4c,1,2;_nx_noop:4c,1,2;esc_html_x:2c,1;esc_html__;_ex:2c,1\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
+#: templates/filter_advanced-orbis_person.php:15
+#: templates/filter_advanced-orbis_person.php:17
+msgid "1234"
+msgstr "1234"
+
 #: 404.php:5 deploy/latest/404.php:5
 msgid "Houston, we have a problem"
 msgstr "Houston, we hebben een probleem"
@@ -26,13 +31,13 @@ msgstr "Houston, we hebben een probleem"
 msgid "It seems we can’t find what you’re looking for."
 msgstr "Het lijkt erop dat we niet kunnen vinden waar je naar zoekt."
 
-#: archive-orbis_company.php:14 archive-orbis_person.php:14
+#: archive-orbis_company.php:14 archive-orbis_person.php:17
 #: deploy/latest/archive-orbis_company.php:14
 #: deploy/latest/archive-orbis_person.php:14
 msgid "Name"
 msgstr "Naam"
 
-#: archive-orbis_company.php:15 archive-orbis_person.php:16
+#: archive-orbis_company.php:15 archive-orbis_person.php:19
 #: deploy/latest/archive-orbis_company.php:15
 #: deploy/latest/templates/company_contact.php:28 single-orbis_person.php:94
 #: templates/company_contact.php:28
@@ -50,7 +55,7 @@ msgstr "Online"
 msgid "Date"
 msgstr "Datum"
 
-#: archive-orbis_deal.php:19 archive-orbis_person.php:15
+#: archive-orbis_deal.php:19 archive-orbis_person.php:18
 #: deploy/latest/archive-orbis_deal.php:19 single-orbis_person.php:41
 msgid "Company"
 msgstr "Bedrijf"
@@ -112,7 +117,7 @@ msgstr "Hostnaam"
 msgid "Hostname Provider"
 msgstr "Hostnaam leverancier"
 
-#: archive-orbis_person.php:17 deploy/latest/archive-orbis_person.php:15
+#: archive-orbis_person.php:20 deploy/latest/archive-orbis_person.php:15
 #: deploy/latest/single-orbis_person.php:32 single-orbis_person.php:50
 msgid "Phone number"
 msgstr "Telefoonnummer"
@@ -380,7 +385,8 @@ msgstr "Dashboard"
 #: deploy/latest/templates/search_form.php:18
 #: deploy/latest/templates/search_form.php:19
 #: deploy/latest/templates/search_form.php:22 functions.php:162 header.php:93
-#: templates/filter_advanced-orbis_project.php:28 templates/search_form.php:18
+#: templates/filter_advanced-orbis_person.php:21
+#: templates/filter_advanced-orbis_project.php:24 templates/search_form.php:18
 #: templates/search_form.php:19 templates/search_form.php:22
 msgid "Search"
 msgstr "Zoeken"
@@ -629,7 +635,7 @@ msgstr "Aanvullende informatie"
 #: deploy/latest/single-orbis_person.php:126
 #: deploy/latest/single-orbis_project.php:80
 #: deploy/latest/single-orbis_task.php:43 deploy/latest/single.php:43
-#: single-orbis_company.php:107 single-orbis_person.php:173
+#: single-orbis_company.php:107 single-orbis_person.php:186
 #: single-orbis_project.php:82 single-orbis_task.php:43 single.php:45
 msgid "Posted on"
 msgstr "Geplaatst op"
@@ -638,7 +644,7 @@ msgstr "Geplaatst op"
 #: deploy/latest/single-orbis_person.php:128
 #: deploy/latest/single-orbis_project.php:83
 #: deploy/latest/single-orbis_task.php:46 deploy/latest/single.php:46
-#: single-orbis_company.php:110 single-orbis_person.php:175
+#: single-orbis_company.php:110 single-orbis_person.php:188
 #: single-orbis_project.php:85 single-orbis_task.php:46 single.php:48
 msgid "Posted by"
 msgstr "Aangemaakt door"
@@ -647,7 +653,7 @@ msgstr "Aangemaakt door"
 #: deploy/latest/single-orbis_person.php:130
 #: deploy/latest/single-orbis_project.php:163
 #: deploy/latest/single-orbis_task.php:58 deploy/latest/single.php:49
-#: single-orbis_company.php:113 single-orbis_person.php:177
+#: single-orbis_company.php:113 single-orbis_person.php:190
 #: single-orbis_project.php:165 single-orbis_task.php:58 single.php:51
 msgid "Actions"
 msgstr "Acties"
@@ -657,7 +663,7 @@ msgstr "Acties"
 #: deploy/latest/single-orbis_project.php:164
 #: deploy/latest/single-orbis_task.php:59 deploy/latest/single.php:50
 #: deploy/latest/templates/table-cell-actions.php:8
-#: single-orbis_company.php:114 single-orbis_person.php:178
+#: single-orbis_company.php:114 single-orbis_person.php:191
 #: single-orbis_project.php:166 single-orbis_task.php:59 single.php:52
 #: templates/table-cell-actions.php:8
 msgid "Edit"
@@ -681,23 +687,23 @@ msgstr "Mobiel nummer"
 msgid "E-mail address"
 msgstr "E-mailadres"
 
-#: deploy/latest/single-orbis_person.php:56 single-orbis_person.php:103
+#: deploy/latest/single-orbis_person.php:56 single-orbis_person.php:116
 msgid "Social media"
 msgstr "Social media"
 
-#: deploy/latest/single-orbis_person.php:66 single-orbis_person.php:113
+#: deploy/latest/single-orbis_person.php:66 single-orbis_person.php:126
 msgid "Twitter"
 msgstr "Twitter"
 
-#: deploy/latest/single-orbis_person.php:79 single-orbis_person.php:126
+#: deploy/latest/single-orbis_person.php:79 single-orbis_person.php:139
 msgid "Facebook"
 msgstr "Facebook"
 
-#: deploy/latest/single-orbis_person.php:92 single-orbis_person.php:139
+#: deploy/latest/single-orbis_person.php:92 single-orbis_person.php:152
 msgid "LinkedIn"
 msgstr "Linkedin"
 
-#: deploy/latest/single-orbis_person.php:121 single-orbis_person.php:168
+#: deploy/latest/single-orbis_person.php:121 single-orbis_person.php:181
 msgid "Additional information"
 msgstr "Aanvullende informatie"
 
@@ -859,7 +865,7 @@ msgstr "Afgerond gewijzigd"
 #: deploy/latest/templates/filter-orbis_project.php:12
 #: deploy/latest/templates/filter_advanced-orbis_project.php:21
 #: templates/filter-orbis_project.php:12
-#: templates/filter_advanced-orbis_project.php:21
+#: templates/filter_advanced-orbis_project.php:19
 msgid "Invoice Number"
 msgstr "Factuurnummer"
 
@@ -876,6 +882,7 @@ msgstr "— Selecteer uitvoerder —"
 
 #: deploy/latest/templates/filter_advanced-orbis_project.php:11
 #: deploy/latest/templates/search_form.php:26
+#: templates/filter_advanced-orbis_person.php:11
 #: templates/filter_advanced-orbis_project.php:11 templates/search_form.php:26
 msgid "Advanced Search"
 msgstr "Geavanceerd zoeken"
@@ -886,12 +893,13 @@ msgid "Search on Client"
 msgstr "Zoek op klant"
 
 #: deploy/latest/templates/filter_advanced-orbis_project.php:22
-#: templates/filter_advanced-orbis_project.php:22
+#: templates/filter_advanced-orbis_project.php:20
 msgid "Search on Invoice Number"
 msgstr "Zoek op factuurnummer"
 
 #: deploy/latest/templates/filter_advanced-orbis_project.php:29
-#: templates/filter_advanced-orbis_project.php:29
+#: templates/filter_advanced-orbis_person.php:22
+#: templates/filter_advanced-orbis_project.php:25
 msgid "Cancel"
 msgstr "Annuleer"
 
@@ -959,9 +967,25 @@ msgstr "minuten"
 msgid "Gender"
 msgstr "Geslacht"
 
+#: single-orbis_person.php:101 templates/company_contact.php:89
+msgid "vCard"
+msgstr "vCard"
+
+#: single-orbis_person.php:108 templates/company_contact.php:96
+msgid "Download vCard"
+msgstr "Download vCard"
+
 #: templates/company_contact.php:57
 msgid "Invoice E-Mail"
 msgstr "Factuur e-mailadres"
+
+#: templates/filter_advanced-orbis_person.php:14
+msgid "Postcode from"
+msgstr "Postcode van"
+
+#: templates/filter_advanced-orbis_person.php:16
+msgid "to"
+msgstr "tot"
 
 #: templates/post-card-footer.php:8
 msgid "Respond"
