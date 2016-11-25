@@ -33,48 +33,54 @@
 	<div class="row">
 		<?php
 
-		the_widget(
-			'Orbis_List_Posts_Widget',
-			array(
-				'post_type_name' => 'orbis_company',
-				'number'         => 8,
-				'title'          => __( 'Companies', 'orbis' ),
-			),
-			array(
-				'before_widget'  => '<div class="col-md-4"><div class="panel">',
-				'after_widget'   => '</div></div>',
-				'before_title'   => '<header><h3 class="widget-title">',
-				'after_title'    => '</h3></header>',
-			)
-		);
+		if ( post_type_exists( 'orbis_company' ) ) {
+			the_widget(
+				'Orbis_List_Posts_Widget',
+				array(
+					'post_type_name' => 'orbis_company',
+					'number'         => 8,
+					'title'          => __( 'Companies', 'orbis' ),
+				),
+				array(
+					'before_widget'  => '<div class="col-md-4"><div class="panel">',
+					'after_widget'   => '</div></div>',
+					'before_title'   => '<header><h3 class="widget-title">',
+					'after_title'    => '</h3></header>',
+				)
+			);
+		}
 
-		the_widget(
-			'Orbis_List_Posts_Widget',
-			array(
-				'post_type_name' => 'orbis_project',
-				'number'         => 8,
-				'title'          => __( 'Projects', 'orbis' ),
-			), array(
-				'before_widget'  => '<div class="col-md-4"><div class="panel">',
-				'after_widget'   => '</div></div>',
-				'before_title'   => '<header><h3 class="widget-title">',
-				'after_title'    => '</h3></header>',
-			)
-		);
+		if ( post_type_exists( 'orbis_project' ) ) {
+			the_widget(
+				'Orbis_List_Posts_Widget',
+				array(
+					'post_type_name' => 'orbis_project',
+					'number'         => 8,
+					'title'          => __( 'Projects', 'orbis' ),
+				), array(
+					'before_widget'  => '<div class="col-md-4"><div class="panel">',
+					'after_widget'   => '</div></div>',
+					'before_title'   => '<header><h3 class="widget-title">',
+					'after_title'    => '</h3></header>',
+				)
+			);
+		}
 
-		the_widget(
-			'Orbis_List_Posts_Widget',
-			array(
-				'post_type_name' => 'orbis_person',
-				'number'         => 8,
-				'title'          => __( 'Persons', 'orbis' ),
-			), array(
-				'before_widget'  => '<div class="col-md-4"><div class="panel">',
-				'after_widget'   => '</div></div>',
-				'before_title'   => '<header><h3 class="widget-title">',
-				'after_title'    => '</h3></header>',
-			)
-		);
+		if ( post_type_exists( 'orbis_person' ) ) {
+			the_widget(
+				'Orbis_List_Posts_Widget',
+				array(
+					'post_type_name' => 'orbis_person',
+					'number'         => 8,
+					'title'          => __( 'Persons', 'orbis' ),
+				), array(
+					'before_widget'  => '<div class="col-md-4"><div class="panel">',
+					'after_widget'   => '</div></div>',
+					'before_title'   => '<header><h3 class="widget-title">',
+					'after_title'    => '</h3></header>',
+				)
+			);
+		}
 
 		?> 
 	</div>
