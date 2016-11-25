@@ -15,14 +15,10 @@ $is_advanced    = ! empty( $principal ) || ! empty( $invoice_number );
 			<input id="orbis_project_principal" class="form-control" name="orbis_project_principal" value="<?php echo esc_attr( $principal ); ?>" type="text" placeholder="<?php esc_html_e( 'Search on Client', 'orbis' ); ?>">
 		</div>
 
-		<?php if ( function_exists( 'orbis_finance_bootstrap' ) ) : ?>
-
-			<div class="form-group">
-				<label for="orbis_project_invoice_number"><?php esc_html_e( 'Invoice Number', 'orbis' ); ?></label>
-				<input id="orbis_project_invoice_number" class="form-control" name="orbis_project_invoice_number" value="<?php echo esc_attr( $invoice_number ); ?>" type="text" placeholder="<?php esc_html_e( 'Search on Invoice Number', 'orbis' ); ?>">
-			</div>
-
-		<?php endif; ?>
+		<div class="form-group">
+			<label for="orbis_project_invoice_number"><?php esc_html_e( 'Invoice Number', 'orbis' ); ?></label>
+			<input id="orbis_project_invoice_number" class="form-control" name="orbis_project_invoice_number" value="<?php echo esc_attr( $invoice_number ); ?>" type="text" placeholder="<?php esc_html_e( 'Search on Invoice Number', 'orbis' ); ?>">
+		</div>
 
 		<div class="form-footer">
 			<button type="submit" class="btn btn-primary"><?php esc_html_e( 'Search', 'orbis' ); ?></button>
