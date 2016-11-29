@@ -25,7 +25,7 @@
 				<tbody>
 					<?php while ( have_posts() ) : the_post(); 
 
-						$orbis_person = new Orbis_Person(); ?>
+						$contact = new Orbis_Contact(); ?>
 
 						<tr>
 							<td>
@@ -65,8 +65,8 @@
 								<?php
 
 								$data = array_filter( array(
-									$orbis_person->get_title(),
-									$orbis_person->get_organization(),
+									$contact->get_title(),
+									$contact->get_organization(),
 								) );
 
 								echo esc_html( implode( ', ', $data ) );
@@ -76,7 +76,7 @@
 							<td>
 								<?php
 
-								$address  = $orbis_person->get_address();
+								$address  = $contact->get_address();
 
 								printf(
 									'%s<br />%s %s',

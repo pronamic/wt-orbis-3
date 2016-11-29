@@ -6,7 +6,7 @@
 		<div class="col-md-8">
 			<div class="panel with-cols clearfix">
 				<header>
-					<h3><?php esc_html_e( 'About this person', 'orbis' ); ?></h3>
+					<h3><?php esc_html_e( 'About this contact', 'orbis' ); ?></h3>
 				</header>
 
 				<div class="row">
@@ -26,14 +26,14 @@
 
 					<div class="col-md-5">
 						<div class="content">
-							<?php $orbis_person = new Orbis_Person(); ?>
+							<?php $contact = new Orbis_Contact(); ?>
 
 							<dl>
 								<?php
 
 								$data = array_filter( array(
-									$orbis_person->get_title(),
-									$orbis_person->get_organization(),
+									$contact->get_title(),
+									$contact->get_organization(),
 								) );
 
 								if ( ! empty( $data ) ) : ?>
@@ -61,7 +61,7 @@
 
 								<?php 
 
-								$email = $orbis_person->get_email();
+								$email = $contact->get_email();
 
 								if ( ! empty( $email ) ) : ?>
 
@@ -74,7 +74,7 @@
 
 								<?php 
 
-								$gender = $orbis_person->get_gender();
+								$gender = $contact->get_gender();
 
 								if ( ! empty( $gender ) ) : ?>
 
@@ -87,7 +87,7 @@
 
 								<?php 
 
-								$address = (string) $orbis_person->get_address();
+								$address = (string) $contact->get_address();
 
 								if ( ! empty( $address ) ) : ?>
 
