@@ -34,6 +34,7 @@
 								$data = array_filter( array(
 									$contact->get_title(),
 									$contact->get_organization(),
+									$contact->get_department(),
 								) );
 
 								if ( ! empty( $data ) ) : ?>
