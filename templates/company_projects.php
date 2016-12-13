@@ -13,6 +13,7 @@ if ( $query->have_posts() ) : ?>
 			<thead>
 				<tr>
 					<th><?php esc_html_e( 'Project', 'orbis' ); ?></th>
+					<th><?php esc_html_e( 'Price', 'orbis' ); ?></th>
 					<th><?php esc_html_e( 'Time', 'orbis' ); ?></th>
 				</tr>
 			</thead>
@@ -21,10 +22,14 @@ if ( $query->have_posts() ) : ?>
 				<?php while ( $query->have_posts() ) : $query->the_post(); ?>
 
 					<tr id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+						<?php global $orbis_project; ?>
 						<td>
 							<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 
 							<?php get_template_part( 'templates/table-cell-comments' ); ?>
+						</td>
+						<td>
+							<?php echo esc_html( orbis_price( $orbis_project->get_price() ) ); ?>
 						</td>
 						<td class="project-time">
 							<?php
