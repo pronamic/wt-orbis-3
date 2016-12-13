@@ -29,9 +29,7 @@ if ( $query->have_posts() ) : ?>
 						<td class="project-time">
 							<?php
 
-							if ( function_exists( 'orbis_project_the_time' ) ) {
-								orbis_project_the_time();
-							}
+							echo esc_html( $orbis_project->get_available_time()->format() );
 
 							if ( function_exists( 'orbis_project_the_logged_time' ) ) : ?>
 
