@@ -42,7 +42,7 @@
 								<?php get_template_part( 'templates/table-cell-comments' ); ?>
 							</td>
 							<td>
-								<?php echo orbis_price( $orbis_project->get_price() ); ?>
+								<?php echo esc_html( orbis_price( $orbis_project->get_price() ) ); ?>
 							</td>
 							<td class="project-time">
 								<?php
