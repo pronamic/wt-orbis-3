@@ -13,6 +13,7 @@
 					<tr>
 						<th><?php esc_html_e( 'Client', 'orbis' ); ?></th>
 						<th><?php esc_html_e( 'Project', 'orbis' ); ?></th>
+						<th><?php esc_html_e( 'Price', 'orbis' ); ?></th>
 						<th><?php esc_html_e( 'Time', 'orbis' ); ?></th>
 						<th></th>
 					</tr>
@@ -25,14 +26,12 @@
 							<td>
 								<?php
 
-								if ( function_exists( 'orbis_project_has_principal' ) ) {
-									if ( orbis_project_has_principal() ) {
-										printf(
-											'<a href="%s">%s</a>',
-											esc_attr( orbis_project_principal_get_permalink() ),
-											esc_html( orbis_project_principel_get_the_name() )
-										);
-									}
+								if ( $orbis_project->has_principal() ) {
+									printf(
+										'<a href="%s">%s</a>',
+										esc_attr( get_permalink( $orbis_project->get_principal_post_id() ) ),
+										esc_html( $orbis_project->get_principal_name() )
+									);
 								}
 
 								?>
@@ -42,12 +41,13 @@
 
 								<?php get_template_part( 'templates/table-cell-comments' ); ?>
 							</td>
+							<td>
+								<?php echo orbis_price( $orbis_project->get_price() ); ?>
+							</td>
 							<td class="project-time">
 								<?php
 
-								if ( function_exists( 'orbis_project_the_time' ) ) {
-									orbis_project_the_time();
-								}
+								echo esc_html( $orbis_project->get_available_time()->format() );
 
 								if ( function_exists( 'orbis_project_the_logged_time' ) ) :
 
