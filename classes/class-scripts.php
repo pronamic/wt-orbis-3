@@ -25,7 +25,7 @@ class Orbis_Theme_Scripts {
 			'tether',
 			$uri . '/assets/tether/js/tether' . $min . '.js',
 			array(),
-			'1.3.7',
+			'1.4.0',
 			true
 		);
 
@@ -33,7 +33,7 @@ class Orbis_Theme_Scripts {
 			'tether',
 			$uri . '/assets/tether/css/tether' . $min . '.css',
 			array(),
-			'1.3.7'
+			'1.4.0'
 		);
 
 		// Bootstrap
