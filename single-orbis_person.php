@@ -99,6 +99,24 @@
 
 								<?php endif; ?>
 
+								<?php 
+
+								$birth_date = $contact->get_birth_date();
+
+								if ( $birth_date ) : ?>
+
+									<dt><?php esc_html_e( 'Birth Date', 'orbis' ); ?></dt>
+									<dd>
+										<?php echo esc_html( date_i18n( __( 'j F Y', 'orbis' ), $birth_date->getTimestamp() ) ); ?>
+									</dd>
+
+									<dt><?php esc_html_e( 'Age', 'orbis' ); ?></dt>
+									<dd>
+										<?php echo esc_html( $contact->get_age() ); ?>
+									</dd>
+
+								<?php endif; ?>
+
 								<dt><?php esc_html_e( 'vCard', 'orbis' ); ?></dt>
 								<dd>
 									<?php
