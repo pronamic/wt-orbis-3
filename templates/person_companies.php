@@ -1,17 +1,26 @@
+<?php
+
+if ( ! function_exists( 'p2p_connection_exists' ) ) {
+	return;
+}
+
+if ( ! p2p_connection_exists( 'orbis_persons_to_companies' ) ) {
+	return;
+}
+
+$query = new WP_Query( array(
+	'connected_type'  => 'orbis_persons_to_companies',
+	'connected_items' => get_queried_object(),
+	'nopaging'        => true,
+) );
+
+?>
 <div class="panel">
 	<header>
 		<h3><?php esc_html_e( 'Connected Companies', 'orbis' ); ?></h3>
 	</header>
 
-	<?php
-
-	$query = new WP_Query( array(
-		'connected_type'  => 'orbis_persons_to_companies',
-		'connected_items' => get_queried_object(),
-		'nopaging'        => true,
-	) );
-
-	if ( $query->have_posts() ) : ?>
+	<?php if ( $query->have_posts() ) : ?>
 
 		<ul class="list">
 			<?php while ( $query->have_posts() ) : $query->the_post(); ?>
