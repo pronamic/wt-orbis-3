@@ -10,7 +10,7 @@
 				</header>
 
 				<div class="row">
-					<div class="col-md-7">
+					<div class="col-md-6">
 						<div class="content">
 							<?php if ( has_post_thumbnail() ) : ?>
 
@@ -24,7 +24,7 @@
 						</div>
 					</div>
 
-					<div class="col-md-5">
+					<div class="col-md-6">
 						<div class="content">
 							<?php $contact = new Orbis_Contact(); ?>
 
@@ -113,6 +113,15 @@
 									<dt><?php esc_html_e( 'Age', 'orbis' ); ?></dt>
 									<dd>
 										<?php echo esc_html( $contact->get_age() ); ?>
+									</dd>
+
+								<?php endif; ?>
+
+								<?php if ( has_term( null, 'orbis_person_category' ) ) : ?>
+
+									<dt><?php esc_html_e( 'Categories', 'orbis' ); ?></dt>
+									<dd>
+										<?php the_terms( get_the_ID(), 'orbis_person_category' ); ?>
 									</dd>
 
 								<?php endif; ?>
