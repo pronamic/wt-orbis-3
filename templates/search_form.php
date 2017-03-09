@@ -21,6 +21,27 @@ if ( is_post_type_archive() ) {
 
 			<button type="submit" class="btn btn-default"><?php esc_html_e( 'Search', 'orbis' ); ?></button> 
 
+			<?php if ( is_post_type_archive( 'orbis_person' ) ) : ?>
+
+				<div class="form-group">
+					<?php
+
+					wp_dropdown_categories( array(
+						'show_option_all' => __( 'All Categories', 'orbis' ),
+						'name'            => 'orbis_person_category',
+						'class'           => 'form-control',
+						'selected'        => filter_input( INPUT_GET, 'orbis_person_category', FILTER_SANITIZE_STRING ),
+						'taxonomy'        => 'orbis_person_category',
+						'value_field'     => 'slug',
+					) );
+
+					?>
+				</div>
+
+				<button type="submit" class="btn btn-default"><?php esc_html_e( 'Filter', 'orbis' ); ?></button>
+
+			<?php endif; ?>
+
 			<?php if ( $has_advanced ) : ?>
 
 				<small><a href="#" class="advanced-search-link" data-toggle="collapse" data-target="#advanced-search"><?php esc_html_e( 'Advanced Search', 'orbis' ); ?></a></small>
