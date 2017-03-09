@@ -48,6 +48,24 @@ if ( is_post_type_archive() ) {
 
 			<?php endif; ?>
 
+			<?php if ( is_post_type_archive( 'orbis_person' ) ) : ?>
+
+				<div class="float-sm-right">
+					<?php
+
+					$url = add_query_arg( $_GET, get_post_type_archive_link( 'orbis_person' ) . 'csv' );
+
+					printf(
+						'<a href="%s" target="_blank" class="btn btn-secondary" role="button">%s</a>',
+						esc_url( $url ),
+						esc_html__( 'Download', 'orbis' )
+					);
+
+					?>
+				</div>
+
+			<?php endif; ?>
+
 			<?php get_template_part( 'templates/filter', get_query_var( 'post_type' ) ); ?>
 		</div>
 
