@@ -51,17 +51,21 @@ if ( is_post_type_archive() ) {
 			<?php if ( is_post_type_archive( 'orbis_person' ) ) : ?>
 
 				<div class="float-sm-right">
+
 					<?php
 
-					$url = add_query_arg( $_GET, get_post_type_archive_link( 'orbis_person' ) . 'csv' );
-
-					printf(
-						'<a href="%s" target="_blank" class="btn btn-secondary" role="button">%s</a>',
-						esc_url( $url ),
-						esc_html__( 'Download', 'orbis' )
-					);
+					$csv_url = add_query_arg( $_GET, get_post_type_archive_link( 'orbis_person' ) . 'csv' );
+					$xls_url = add_query_arg( $_GET, get_post_type_archive_link( 'orbis_person' ) . 'xls' );
 
 					?>
+					<div class="dropdown">
+						<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php esc_html_e( 'Download', 'orbis' ); ?></button>
+
+						<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+							<a class="dropdown-item" href="<?php echo esc_url( $xls_url ); ?>" target="_blank"><i class="fa fa-file-excel-o" aria-hidden="true"></i> <?php esc_html_e( 'Excel', 'orbis' ); ?></a>
+							<a class="dropdown-item" href="<?php echo esc_url( $csv_url ); ?>" target="_blank"><i class="fa fa-file-text-o" aria-hidden="true"></i> <?php esc_html_e( 'CSV', 'orbis' ); ?></a>
+						</div>
+					</div>
 				</div>
 
 			<?php endif; ?>
