@@ -14,6 +14,7 @@
 						<th><?php esc_html_e( 'Name', 'orbis' ); ?></th>
 						<th><?php esc_html_e( 'Address', 'orbis' ); ?></th>
 						<th><?php esc_html_e( 'Online', 'orbis' ); ?></th>
+						<th><?php esc_html_e( 'Author', 'orbis' ); ?></th>
 						<th></th>
 					</tr>
 				</thead>
@@ -82,6 +83,9 @@
 								}
 
 								?>
+							</td>
+							<td>
+								<?php the_author(); ?>
 							</td>
 							<td>
 								<?php get_template_part( 'templates/table-cell-actions' ); ?>
