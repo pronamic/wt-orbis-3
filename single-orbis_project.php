@@ -139,6 +139,13 @@
 							<?php endif; ?>
 						</dd>
 
+						<?php if ( has_term( null, 'orbis_payment_method' ) ) : ?>
+
+							<dt><?php esc_html_e( 'Payment Method', 'orbis' ); ?></dt>
+							<dd><?php the_terms( null, 'orbis_payment_method' ); ?></dd>
+
+						<?php endif; ?>
+
 						<?php
 
 						$invoice_number = get_post_meta( get_the_ID(), '_orbis_project_invoice_number', true );
