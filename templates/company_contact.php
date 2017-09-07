@@ -86,6 +86,20 @@ $invoice_email = get_post_meta( $post->ID, '_orbis_invoice_email', true );
 
 			<?php endif; ?>
 
+			<?php if ( has_term( null, 'orbis_payment_method' ) ) : ?>
+
+				<dt><?php esc_html_e( 'Payment Method', 'orbis' ); ?></dt>
+				<dd><?php the_terms( null, 'orbis_payment_method' ); ?></dd>
+
+			<?php endif; ?>
+
+			<?php if ( has_term( null, 'orbis_invoice_shipping_method' ) ) : ?>
+
+				<dt><?php esc_html_e( 'Invoice Shipping Method', 'orbis' ); ?></dt>
+				<dd><?php the_terms( null, 'orbis_invoice_shipping_method' ); ?></dd>
+
+			<?php endif; ?>
+
 			<dt><?php esc_html_e( 'vCard', 'orbis' ); ?></dt>
 			<dd>
 				<?php
