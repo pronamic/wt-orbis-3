@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pronamic\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2017-03-09 15:57:58+00:00\n"
-"PO-Revision-Date: 2017-03-09 16:59+0100\n"
+"POT-Creation-Date: 2017-09-07 12:36:19+00:00\n"
+"PO-Revision-Date: 2017-09-07 14:39+0100\n"
 "Last-Translator: Remco Tolsma <info@remcotolsma.nl>\n"
 "Language-Team: Pronamic <info@pronamic.nl>\n"
 "Language: nl_NL\n"
@@ -55,6 +55,13 @@ msgstr "Verzendadres"
 msgid "Online"
 msgstr "Online"
 
+#: archive-orbis_company.php:17 archive-orbis_deal.php:23
+#: archive-orbis_person.php:21 deploy/latest/archive-orbis_deal.php:23
+#: deploy/latest/templates/filter-orbis_project.php:7
+#: templates/filter-orbis_project.php:7
+msgid "Author"
+msgstr "Auteur"
+
 #: archive-orbis_deal.php:18 deploy/latest/archive-orbis_deal.php:18
 #: deploy/latest/templates/filter-orbis_project.php:9
 #: deploy/latest/templates/task_form.php:57
@@ -102,12 +109,6 @@ msgstr "Prijs"
 #: deploy/latest/single-orbis_project.php:109 single-orbis_project.php:109
 msgid "Status"
 msgstr "Status"
-
-#: archive-orbis_deal.php:23 deploy/latest/archive-orbis_deal.php:23
-#: deploy/latest/templates/filter-orbis_project.php:7
-#: templates/filter-orbis_project.php:7
-msgid "Author"
-msgstr "Auteur"
 
 #: archive-orbis_email_example.php:15
 #: deploy/latest/archive-orbis_email_example.php:15
@@ -266,7 +267,7 @@ msgstr "Blockquotes"
 msgid "Reverse Layout"
 msgstr "Omgekeerde opmaak"
 
-#: classes/class-theme.php:44 deploy/latest/classes/class-theme.php:44
+#: classes/class-theme.php:48 deploy/latest/classes/class-theme.php:44
 msgid "Primary Menu"
 msgstr "Primair menu"
 
@@ -666,7 +667,7 @@ msgstr "Aangemaakt door"
 #: deploy/latest/single-orbis_project.php:169
 #: deploy/latest/single-orbis_task.php:58 deploy/latest/single.php:51
 #: single-orbis_company.php:113 single-orbis_list.php:216
-#: single-orbis_person.php:218 single-orbis_project.php:169
+#: single-orbis_person.php:218 single-orbis_project.php:176
 #: single-orbis_task.php:58 single.php:51
 msgid "Actions"
 msgstr "Acties"
@@ -678,7 +679,7 @@ msgstr "Acties"
 #: deploy/latest/single-orbis_task.php:59 deploy/latest/single.php:52
 #: deploy/latest/templates/table-cell-actions.php:8
 #: single-orbis_company.php:114 single-orbis_list.php:217
-#: single-orbis_person.php:219 single-orbis_project.php:170
+#: single-orbis_person.php:219 single-orbis_project.php:177
 #: single-orbis_task.php:59 single.php:52 templates/table-cell-actions.php:8
 msgid "Edit"
 msgstr "Bewerken"
@@ -759,13 +760,13 @@ msgstr "Leeftijd"
 
 #: deploy/latest/single-orbis_person.php:129
 #: deploy/latest/templates/company_contact.php:89 single-orbis_person.php:129
-#: templates/company_contact.php:89
+#: templates/company_contact.php:103
 msgid "vCard"
 msgstr "vCard"
 
 #: deploy/latest/single-orbis_person.php:136
 #: deploy/latest/templates/company_contact.php:96 single-orbis_person.php:136
-#: templates/company_contact.php:96
+#: templates/company_contact.php:110
 msgid "Download vCard"
 msgstr "Download vCard"
 
@@ -829,7 +830,7 @@ msgstr "Facturabel"
 msgid "Not invoicable"
 msgstr "Niet facturabel"
 
-#: deploy/latest/single-orbis_project.php:148 single-orbis_project.php:148
+#: deploy/latest/single-orbis_project.php:148 single-orbis_project.php:155
 msgid "Invoice"
 msgstr "Factuur"
 
@@ -921,7 +922,7 @@ msgstr "— Selecteer status —"
 #: deploy/latest/templates/filter-orbis_task.php:13
 #: deploy/latest/templates/search_form.php:41
 #: templates/filter-orbis_deal.php:23 templates/filter-orbis_task.php:13
-#: templates/search_form.php:41
+#: templates/search_form.php:76
 msgid "Filter"
 msgstr "Filter"
 
@@ -957,7 +958,7 @@ msgstr "— Selecteer uitvoerder —"
 #: deploy/latest/templates/filter_advanced-orbis_project.php:11
 #: deploy/latest/templates/search_form.php:47
 #: templates/filter_advanced-orbis_person.php:11
-#: templates/filter_advanced-orbis_project.php:11 templates/search_form.php:47
+#: templates/filter_advanced-orbis_project.php:11 templates/search_form.php:82
 msgid "Advanced Search"
 msgstr "Geavanceerd zoeken"
 
@@ -1021,11 +1022,11 @@ msgstr "Reacties"
 msgid "No tasks found."
 msgstr "Geen taken gevonden."
 
-#: deploy/latest/templates/search_form.php:30 templates/search_form.php:30
+#: deploy/latest/templates/search_form.php:30 templates/search_form.php:43
 msgid "All Categories"
 msgstr "Alle categorieën"
 
-#: deploy/latest/templates/search_form.php:61 templates/search_form.php:61
+#: deploy/latest/templates/search_form.php:61 templates/search_form.php:97
 msgid "Download"
 msgstr "Download"
 
@@ -1060,6 +1061,22 @@ msgstr "uren"
 #: deploy/latest/templates/task_form.php:84 templates/task_form.php:84
 msgid "minutes"
 msgstr "minuten"
+
+#: single-orbis_project.php:144 templates/company_contact.php:91
+msgid "Payment Method"
+msgstr "Betaalmethode"
+
+#: templates/company_contact.php:98
+msgid "Invoice Shipping Method"
+msgstr "Factuur verzendmethode"
+
+#: templates/search_form.php:100
+msgid "Excel"
+msgstr "Excel"
+
+#: templates/search_form.php:101
+msgid "CSV"
+msgstr "CSV"
 
 #. Theme Name of the plugin/theme
 msgid "Orbis 3"

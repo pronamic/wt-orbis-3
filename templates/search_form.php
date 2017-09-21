@@ -26,16 +26,51 @@ if ( is_post_type_archive() ) {
 				<div class="form-group">
 					<?php
 
-					wp_dropdown_categories( array(
-						'show_option_all' => __( 'All Categories', 'orbis' ),
-						'name'            => 'orbis_person_category',
-						'class'           => 'form-control',
-						'selected'        => filter_input( INPUT_GET, 'orbis_person_category', FILTER_SANITIZE_STRING ),
-						'taxonomy'        => 'orbis_person_category',
-						'value_field'     => 'slug',
+					$slugs = filter_input( INPUT_GET, 'c', FILTER_SANITIZE_STRING );
+					$slugs = explode( ',', $slugs );
+
+					$terms = get_terms( array(
+						'taxonomy' => 'orbis_person_category',
 					) );
 
+					wp_enqueue_script( 'select2' );
+					wp_enqueue_style( 'select2' );
+					wp_enqueue_style( 'select2-bootstrap' );
+
+					printf(
+						'<select name="%s" class="select2" multiple="multiple" style="width: 30em;" placeholder="%s">',
+						esc_attr( 'c[]' ),
+						esc_attr__( 'All Categories', 'orbis' )
+					);
+
+					foreach ( $terms as $term ) {
+						printf(
+							'<option value="%s" %s">%s</option>',
+							esc_attr( $term->term_id ),
+							selected( in_array( $term->slug, $slugs, true ), true, false ),
+							esc_html( $term->name )
+						);
+					}
+
+					echo '</select>';
+
 					?>
+					<script type="text/javascript">
+						jQuery( document ).ready( function( $ ) {
+							$( '.select2' ).select2( {
+								theme: 'bootstrap',
+							});
+						} );
+					</script>
+
+					<style type="text/css">
+						.select2-choices {
+							background-image: none;
+
+							border: 1px solid rgba(0, 0, 0, 0.15);
+							border-radius: 0.25rem;
+						}
+					</style>
 				</div>
 
 				<button type="submit" class="btn btn-default"><?php esc_html_e( 'Filter', 'orbis' ); ?></button>

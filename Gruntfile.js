@@ -110,7 +110,12 @@ module.exports = function( grunt ) {
 						src: [ '**' ],
 						dest: 'assets/tether'
 					},
-
+					{ // Select2 Bootstrap - https://github.com/select2/select2-bootstrap-theme
+						expand: true,
+						cwd: 'bower_components/select2-bootstrap-theme/dist/',
+						src: [ '**' ],
+						dest: 'assets/select2-bootstrap'
+					},
 				]
 			},
 

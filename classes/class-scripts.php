@@ -41,7 +41,7 @@ class Orbis_Theme_Scripts {
 			'bootstrap',
 			$uri . '/assets/bootstrap/js/bootstrap' . $min . '.js',
 			array( 'jquery', 'tether' ),
-			'.0.0',
+			'4.0.0-beta',
 			true
 		);
 
@@ -49,8 +49,20 @@ class Orbis_Theme_Scripts {
 			'bootstrap',
 			$uri . '/assets/bootstrap/css/bootstrap' . $min . '.css',
 			array(),
-			'.0.0'
+			'4.0.0-beta'
 		);
+
+		// Select2
+		wp_register_style(
+			'select2-bootstrap',
+			$uri . '/assets/select2-bootstrap/select2-bootstrap' . $min . '.css',
+			array(
+				'select2',
+				'bootstrap',
+			),
+			'0.1.0-beta.10'
+		);
+
 		// Font Awesome - http://fortawesome.github.io/Font-Awesome/
 		wp_register_style(
 			'fontawesome',

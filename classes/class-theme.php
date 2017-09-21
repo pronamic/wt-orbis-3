@@ -18,6 +18,10 @@ class Orbis_Theme {
 
 		// Actions
 		add_action( 'after_setup_theme', array( $this, 'after_setup_theme' ) );
+
+		add_action( 'template_redirect', array( $this, 'template_redirect' ) );
+		add_filter( 'query_vars', array( $this, 'query_vars' ) );
+		add_action( 'pre_get_posts', array( $this, 'pre_get_posts' ) );
 	}
 
 	/**
@@ -47,5 +51,75 @@ class Orbis_Theme {
 		/* Image sizes */
 		add_image_size( 'featured', 244, 150, true );
 		add_image_size( 'avatar', 60, 60, true );
+	}
+
+	public function template_redirect() {
+		if ( ! is_post_type_archive( 'orbis_person' ) ) {
+			return;
+		}
+
+		$url = get_post_type_archive_linK( 'orbis_person' );
+
+		$args = $_GET;
+
+		$args = array_filter( $args );
+
+		if ( isset( $args['c'] ) && is_array( $args['c'] ) ) {
+			$terms = get_terms( array(
+				'taxonomy' => 'orbis_person_category',
+				'include'  => $args['c'],
+			) );
+
+			$args['c'] = implode( ',', wp_list_pluck( $terms, 'slug' ) );
+		}
+
+		if ( $args !== $_GET ) {
+			$url = add_query_arg( $args, $url );
+
+			wp_redirect( $url );
+
+			exit;
+		}
+	}
+
+	/**
+	 * Query vars.
+	 *
+	 * @see https://codex.wordpress.org/Plugin_API/Filter_Reference/query_vars
+	 * @param array $query_vars
+	 * @return array
+	 */
+	public function query_vars( $query_vars ) {
+		$query_vars[] = 'c';
+
+		return $query_vars;
+	}
+
+	/**
+	 * Pre get posts.
+	 *
+	 * @see https://codex.wordpress.org/Plugin_API/Action_Reference/pre_get_posts
+	 * @see https://codex.wordpress.org/Class_Reference/WP_Query
+	 * @param WP_Query $query
+	 */
+	public function pre_get_posts( $query ) {
+		$c = $query->get( 'c' );
+
+		if ( '' === $c ) {
+			return;
+		}
+
+		$slugs = explode( ',', $c );
+
+		$tax_query = $query->get( 'tax_query' );
+		$tax_query = is_array( $tax_query ) ? $tax_query : array();
+
+		$tax_query[] = array(
+			'taxonomy' => 'orbis_person_category',
+			'field'    => 'slug',
+			'terms'    => $slugs,
+		);
+
+		$query->set( 'tax_query', $tax_query );
 	}
 }
