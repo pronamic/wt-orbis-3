@@ -36,11 +36,20 @@ class Orbis_Theme_Scripts {
 			'1.4.0'
 		);
 
+		// Popper.js - https://popper.js.org/
+		wp_register_script(
+			'popper',
+			$uri . '/assets/popper/popper' . $min . '.js',
+			array(),
+			'1.12.5',
+			true
+		);
+
 		// Bootstrap
 		wp_register_script(
 			'bootstrap',
 			$uri . '/assets/bootstrap/js/bootstrap' . $min . '.js',
-			array( 'jquery', 'tether' ),
+			array( 'jquery', 'popper' ),
 			'4.0.0-beta',
 			true
 		);

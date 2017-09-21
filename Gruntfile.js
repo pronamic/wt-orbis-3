@@ -116,6 +116,12 @@ module.exports = function( grunt ) {
 						src: [ '**' ],
 						dest: 'assets/select2-bootstrap'
 					},
+					{ // Popper.js - https://popper.js.org/
+						expand: true,
+						cwd: 'bower_components/popper.js/dist/umd',
+						src: [ '**' ],
+						dest: 'assets/popper'
+					},
 				]
 			},
 
