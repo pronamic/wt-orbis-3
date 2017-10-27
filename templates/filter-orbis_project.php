@@ -14,21 +14,21 @@ $orderbys = array(
 );
 
 ?>
-<div class="pull-right">
-	<select name="orderby" class="form-control">
-		<?php
+<div class="form-inline">
+	<span>
+		<select name="orderby" class="form-control">
+			<?php
 
-		foreach ( $orderbys as $orderby => $label ) {
-			printf(
-				'<option value="%s" %s>%s</option>',
-				esc_attr( $orderby ),
-				selected( $orderby, $orderby_current, false ),
-				esc_html( $label )
-			);
-		}
+			foreach ( $orderbys as $orderby => $label ) {
+				printf(
+					'<option value="%s" %s>%s</option>',
+					esc_attr( $orderby ),
+					selected( $orderby, $orderby_current, false ),
+					esc_html( $label )
+				);
+			}
 
-		?>
-	</select>
-
-	<button class="btn btn-default" type="submit"><?php echo esc_html( _x( 'Order', 'sorting', 'orbis' ) ); ?></button>
+			?>
+		</select> <button class="btn btn-default" type="submit"><?php echo esc_html( _x( 'Order', 'sorting', 'orbis' ) ); ?></button>
+	</span>
 </div>
