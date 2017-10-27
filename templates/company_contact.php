@@ -73,8 +73,8 @@ $invoice_email = get_post_meta( $post->ID, '_orbis_invoice_email', true );
 					$url_kvk      = add_query_arg( 'q', $kvk_number, 'http://zoeken.kvk.nl/search.ashx' );
 
 					?>
-					<a class="tag tag-info" href="<?php echo esc_attr( $url_open_kvk ); ?>" target="_blank">openkvk.nl</a>
-					<a class="tag tag-info" href="<?php echo esc_attr( $url_kvk ); ?>" target="_blank">kvk.nl</a>
+					<a class="badge badge-info" href="<?php echo esc_attr( $url_open_kvk ); ?>" target="_blank">openkvk.nl</a>
+					<a class="badge badge-info" href="<?php echo esc_attr( $url_kvk ); ?>" target="_blank">kvk.nl</a>
 				</dd>
 
 			<?php endif; ?>
