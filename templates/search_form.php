@@ -19,7 +19,7 @@ if ( is_post_type_archive() ) {
 				<span>
 					<label for="orbis_search_query" class="sr-only"><?php esc_html_e( 'Search', 'orbis' ); ?></label>
 
-					<input id="orbis_search_query" type="search" class="form-control" name="s" placeholder="<?php esc_attr_e( 'Search', 'orbis' ); ?>" value="<?php echo esc_attr( $s ); ?>"> <button type="submit" class="btn btn-default"><?php esc_html_e( 'Search', 'orbis' ); ?></button> 
+					<input id="orbis_search_query" type="search" class="form-control" name="s" placeholder="<?php esc_attr_e( 'Search', 'orbis' ); ?>" value="<?php echo esc_attr( $s ); ?>"> <button type="submit" class="btn btn-secondary"><?php esc_html_e( 'Search', 'orbis' ); ?></button> 
 
 					<?php if ( is_post_type_archive( 'orbis_person' ) ) : ?>
 
@@ -71,7 +71,7 @@ if ( is_post_type_archive() ) {
 							}
 						</style>
 
-						<button type="submit" class="btn btn-default"><?php esc_html_e( 'Filter', 'orbis' ); ?></button>
+						<button type="submit" class="btn btn-secondary"><?php esc_html_e( 'Filter', 'orbis' ); ?></button>
 
 					<?php endif; ?>
 

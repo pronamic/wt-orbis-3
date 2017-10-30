@@ -1,5 +1,5 @@
-<div class="pull-right">
-	<select name="orbis_deal_status" class="form-control">
+<div class="form-inline">
+	<span><select name="orbis_deal_status" class="form-control">
 		<?php
 
 		$statuses = orbis_deal_get_statuses();
@@ -18,7 +18,5 @@
 		}
 
 		?>
-	</select>
-
-	<button class="btn btn-default" type="submit"><?php esc_html_e( 'Filter', 'orbis' ); ?></button>
+	</select> <button class="btn btn-secondary" type="submit"><?php esc_html_e( 'Filter', 'orbis' ); ?></button></span>
 </div>
