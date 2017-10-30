@@ -22,6 +22,8 @@ class Orbis_Theme {
 		add_action( 'template_redirect', array( $this, 'template_redirect' ) );
 		add_filter( 'query_vars', array( $this, 'query_vars' ) );
 		add_action( 'pre_get_posts', array( $this, 'pre_get_posts' ) );
+
+		add_filter( 'navigation_markup_template', array( $this, 'navigation_markup_template' ), 10, 2 );
 	}
 
 	/**
@@ -121,5 +123,17 @@ class Orbis_Theme {
 		);
 
 		$query->set( 'tax_query', $tax_query );
+	}
+
+	/**
+	 * Navigation markup template.
+	 *
+	 * @see https://getbootstrap.com/docs/4.0/components/pagination/
+	 * @see https://github.com/WordPress/WordPress/blob/4.8/wp-includes/link-template.php#L2567-L2610
+	 * @see https://codex.wordpress.org/Function_Reference/the_posts_pagination
+	 * @see https://codex.wordpress.org/Function_Reference/get_the_posts_pagination
+	 */
+	public function navigation_markup_template( $template, $class ) {
+		return '<nav aria-label="%2$s">%3$s</nav>';
 	}
 }

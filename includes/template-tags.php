@@ -17,9 +17,56 @@ add_filter( 'wp_page_menu_args', 'orbis_page_menu_args' );
  * Display navigation to next/previous pages when applicable
  */
 function orbis_content_nav() {
-	the_posts_pagination( array(
+	$html = get_the_posts_pagination( array(
 		'mid_size' => 2,
+		'type'     => 'list',
 	) );
+
+	$xml = simplexml_load_string( html_entity_decode( $html ) );
+
+	if ( false === $xml ) {
+		return $html;
+	}
+
+	$xml->ul['class'] = 'pagination';
+
+	foreach ( $xml->ul->li as $li ) {
+		$classes = array(
+			'page-item',
+		);
+
+		$child = null;
+
+		if ( isset( $li->a ) ) {
+			$child = $li->a;
+		}
+
+		if ( isset( $li->span ) ) {
+			$child = $li->span;
+		}
+
+		if ( empty( $child ) ) {
+			continue;
+		}
+
+		$child_classes = explode( ' ', $child['class'] );
+
+		if ( in_array( 'current', $child_classes, true ) ) {
+			$classes[] = 'active';
+		}
+
+		if ( in_array( 'dots', $child_classes, true ) ) {
+			$classes[] = 'disabled';
+		}
+
+		$child['class'] = 'page-link';
+
+		$li['class'] = implode( ' ', $classes );
+	}
+
+	echo '<div class="mt-3">';
+	echo $xml->asXML();
+	echo '</div>';
 }
 
 ///////////////////////////////////////////////
