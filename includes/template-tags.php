@@ -22,6 +22,10 @@ function orbis_content_nav() {
 		'type'     => 'list',
 	) );
 
+	if ( empty( $html ) ) {
+		return;
+	}
+
 	$document = new DOMDocument();
 
 	libxml_use_internal_errors( true );
