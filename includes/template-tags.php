@@ -22,50 +22,60 @@ function orbis_content_nav() {
 		'type'     => 'list',
 	) );
 
-	$xml = simplexml_load_string( html_entity_decode( $html ) );
+	$document = new DOMDocument();
 
-	if ( false === $xml ) {
-		return $html;
-	}
+	libxml_use_internal_errors( true );
 
-	$xml->ul['class'] = 'pagination';
+	$document->loadHTML( $html );
 
-	foreach ( $xml->ul->li as $li ) {
-		$classes = array(
-			'page-item',
-		);
+	libxml_clear_errors();
 
-		$child = null;
+	$simplexml = simplexml_import_dom( $document );
 
-		if ( isset( $li->a ) ) {
-			$child = $li->a;
+	if ( false !== $simplexml ) {
+		$nav = $simplexml->body->nav;
+
+		$nav->ul['class'] = 'pagination';
+
+		foreach ( $nav->ul->li as $li ) {
+			$classes = array(
+				'page-item',
+			);
+
+			$child = null;
+
+			if ( isset( $li->a ) ) {
+				$child = $li->a;
+			}
+
+			if ( isset( $li->span ) ) {
+				$child = $li->span;
+			}
+
+			if ( empty( $child ) ) {
+				continue;
+			}
+
+			$child_classes = explode( ' ', $child['class'] );
+
+			if ( in_array( 'current', $child_classes, true ) ) {
+				$classes[] = 'active';
+			}
+
+			if ( in_array( 'dots', $child_classes, true ) ) {
+				$classes[] = 'disabled';
+			}
+
+			$child['class'] = 'page-link';
+
+			$li['class'] = implode( ' ', $classes );
 		}
 
-		if ( isset( $li->span ) ) {
-			$child = $li->span;
-		}
-
-		if ( empty( $child ) ) {
-			continue;
-		}
-
-		$child_classes = explode( ' ', $child['class'] );
-
-		if ( in_array( 'current', $child_classes, true ) ) {
-			$classes[] = 'active';
-		}
-
-		if ( in_array( 'dots', $child_classes, true ) ) {
-			$classes[] = 'disabled';
-		}
-
-		$child['class'] = 'page-link';
-
-		$li['class'] = implode( ' ', $classes );
+		$html = $nav->asXML();
 	}
 
 	echo '<div class="mt-3">';
-	echo $xml->asXML();
+	echo $html;
 	echo '</div>';
 }
 
