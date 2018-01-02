@@ -22,7 +22,7 @@ $is_advanced    = ! empty( $principal ) || ! empty( $invoice_number );
 
 		<div class="form-footer">
 			<button type="submit" class="btn btn-primary"><?php esc_html_e( 'Search', 'orbis' ); ?></button>
-			<button type="button" class="btn btn-default" data-toggle="collapse" data-target="#advanced-search"><?php esc_html_e( 'Cancel', 'orbis' ); ?></button>
+			<button type="button" class="btn btn-secondary" data-toggle="collapse" data-target="#advanced-search"><?php esc_html_e( 'Cancel', 'orbis' ); ?></button>
 		</div>
 	</fieldset>
 </div>

@@ -29,6 +29,6 @@ $orderbys = array(
 			}
 
 			?>
-		</select> <button class="btn btn-default" type="submit"><?php echo esc_html( _x( 'Order', 'sorting', 'orbis' ) ); ?></button>
+		</select> <button class="btn btn-secondary" type="submit"><?php echo esc_html( _x( 'Order', 'sorting', 'orbis' ) ); ?></button>
 	</span>
 </div>
