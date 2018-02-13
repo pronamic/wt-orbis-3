@@ -26,7 +26,7 @@
 		<div class="col-md-4">
 			<div class="panel">
 				<header>
-					<h3><?php esc_html_e( 'Project status', 'orbis' ); ?></h3>
+					<h3><?php esc_html_e( 'Project Status', 'orbis' ); ?></h3>
 				</header>
 
 				<div class="content">
@@ -176,6 +176,16 @@
 						<dt><?php esc_html_e( 'Actions', 'orbis' ); ?></dt>
 						<dd><?php edit_post_link( __( 'Edit', 'orbis' ) ); ?></dd>
 					</dl>
+				</div>
+			</div>
+
+			<div class="panel" style="display: none;">
+				<header>
+					<h3><?php esc_html_e( 'Project Invoices', 'orbis' ); ?></h3>
+				</header>
+				<div class="content">
+					<dt><?php esc_html_e( 'Posted by', 'orbis' ); ?></dt>
+					<dd><?php echo esc_html( get_the_author() ); ?></dd>
 				</div>
 			</div>
 

@@ -15,6 +15,7 @@ require_once get_template_directory() . '/includes/widgets.php';
 require_once get_template_directory() . '/includes/nav.php';
 require_once get_template_directory() . '/includes/shortcodes.php';
 require_once get_template_directory() . '/includes/customizer.php';
+require_once get_template_directory() . '/includes/invoices.php';
 
 if ( function_exists( 'orbis_tasks_bootstrap' ) ) {
 	require_once get_template_directory() . '/includes/tasks.php';
