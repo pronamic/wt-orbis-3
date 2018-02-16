@@ -152,7 +152,7 @@
 
 						if ( ! empty( $invoice_number ) ) : ?>
 
-							<dt><?php esc_html_e( 'Invoice', 'orbis' ); ?></dt>
+							<dt><?php esc_html_e( 'Final Invoice', 'orbis' ); ?></dt>
 							<dd>
 								<?php
 

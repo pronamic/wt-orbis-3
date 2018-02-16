@@ -39,11 +39,14 @@ if ( $invoices ) : ?>
 							<?php echo esc_html( orbis_price( $invoice->amount ) ) ?>
 						</td>
 						<td>
-							<?php echo esc_html( orbis_time( $invoice->hours ) ) ?>
+							<?php
+								if ( $invoice->hours ) {
+									echo esc_html( orbis_time( $invoice->hours ) );
+								}
+							?>
 						</td>
 						<td>
 							<?php
-
 								$invoice_link = orbis_get_invoice_link( $invoice->invoice_number );
 
 								if ( ! empty( $invoice_link ) ) {
@@ -55,7 +58,6 @@ if ( $invoices ) : ?>
 								} else {
 									echo esc_html( $invoice->invoice_number );
 								}
-
 							?>
 						</td>
 						<td>
