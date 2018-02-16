@@ -2,7 +2,6 @@
 global $post;
 
 $orbis_project = new Orbis_Project( $post );
-
 $invoices = $orbis_project->get_invoices( get_the_ID() );
 
 if ( $invoices ) : ?>
@@ -21,6 +20,10 @@ if ( $invoices ) : ?>
 
 			<tbody>
 				<?php foreach ($invoices as $invoice) : ?>
+					<?php 
+						$amount_total += $invoice->amount;
+						$hours_total += $invoice->hours;
+					?>
 					<tr id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 						<td>
 							<?php echo esc_html( date_format( new DateTime( $invoice->create_date ), 'd-m-Y' ) ) ?>
@@ -56,7 +59,17 @@ if ( $invoices ) : ?>
 					</tr>
 
 				<?php endforeach; ?>
-
+					<tr>
+						<td>
+							<strong><?php esc_html_e( 'Total:', 'orbis' ) ?></strong>
+						</td>
+						<td>
+							<strong><?php echo esc_html( orbis_price( $amount_total ) ) ?></strong>
+						</td>
+						<td>
+							<strong><?php echo esc_html( orbis_time( $hours_total ) ) ?></strong>
+						</td>
+					</tr>
 			</tbody>
 		</table>
 	</div>
