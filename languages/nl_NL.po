@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pronamic\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2018-02-13 14:44:04+00:00\n"
-"PO-Revision-Date: 2018-02-13 15:46+0100\n"
+"POT-Creation-Date: 2018-02-16 10:18:31+00:00\n"
+"PO-Revision-Date: 2018-02-16 11:20+0100\n"
 "Last-Translator: Remco Tolsma <info@remcotolsma.nl>\n"
 "Language-Team: Pronamic <info@pronamic.nl>\n"
 "Language: nl_NL\n"
@@ -705,8 +705,8 @@ msgid "Payment Method"
 msgstr "Betaalmethode"
 
 #: single-orbis_project.php:155
-msgid "Invoice"
-msgstr "Factuur"
+msgid "Final Invoice"
+msgstr "Eindfactuur"
 
 #: single-orbis_project.php:184
 msgid "Project Invoices"
@@ -865,7 +865,7 @@ msgstr "Uren"
 msgid "User"
 msgstr "Gebruiker"
 
-#: templates/project_invoices.php:78
+#: templates/project_invoices.php:80
 msgid "No invoices found."
 msgstr "Geen facturen gevonden."
 
