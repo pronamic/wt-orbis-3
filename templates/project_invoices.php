@@ -1,19 +1,9 @@
 <?php
+global $post;
 
-$invoices = $wpdb->get_results( $wpdb->prepare( "
-	SELECT
-		*
-	FROM
-		$wpdb->orbis_projects AS projects
-			LEFT JOIN
-		$wpdb->orbis_projects_invoices AS invoices
-				ON projects.id = invoices.project_id
-			LEFT JOIN
-		$wpdb->users AS user
-				ON invoices.user_id = user.ID
-	WHERE
-		post_id = %d;
-	", get_the_ID() ) );
+$orbis_project = new Orbis_Project( $post );
+
+$invoices = $orbis_project->get_invoices( get_the_ID() );
 
 if ( $invoices ) : ?>
 
