@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pronamic\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2018-02-16 10:18:31+00:00\n"
-"PO-Revision-Date: 2018-02-16 11:20+0100\n"
+"POT-Creation-Date: 2018-02-16 14:28:58+00:00\n"
+"PO-Revision-Date: 2018-02-16 15:30+0100\n"
 "Last-Translator: Remco Tolsma <info@remcotolsma.nl>\n"
 "Language-Team: Pronamic <info@pronamic.nl>\n"
 "Language: nl_NL\n"
@@ -51,7 +51,7 @@ msgid "Author"
 msgstr "Auteur"
 
 #: archive-orbis_deal.php:18 templates/filter-orbis_project.php:9
-#: templates/project_invoices.php:24 templates/task_form.php:57
+#: templates/project_invoices.php:13 templates/task_form.php:57
 msgid "Date"
 msgstr "Datum"
 
@@ -803,7 +803,7 @@ msgstr "Afgerond gewijzigd"
 
 #: templates/filter-orbis_project.php:12
 #: templates/filter_advanced-orbis_project.php:19
-#: templates/project_invoices.php:27
+#: templates/project_invoices.php:16
 msgid "Invoice Number"
 msgstr "Factuurnummer"
 
@@ -853,19 +853,23 @@ msgstr "Geen bedrijven verbonden."
 msgid "Respond"
 msgstr "Reageren"
 
-#: templates/project_invoices.php:25
+#: templates/project_invoices.php:14
 msgid "Amount"
 msgstr "Bedrag"
 
-#: templates/project_invoices.php:26
+#: templates/project_invoices.php:15
 msgid "Hours"
 msgstr "Uren"
 
-#: templates/project_invoices.php:28
+#: templates/project_invoices.php:17
 msgid "User"
 msgstr "Gebruiker"
 
-#: templates/project_invoices.php:80
+#: templates/project_invoices.php:64
+msgid "Total:"
+msgstr "Totaal:"
+
+#: templates/project_invoices.php:83
 msgid "No invoices found."
 msgstr "Geen facturen gevonden."
 
@@ -1176,9 +1180,6 @@ msgstr "Sorteer"
 
 #~ msgid "Tasks from this user"
 #~ msgstr "Taken van deze gebruiker"
-
-#~ msgid "Total"
-#~ msgstr "Totaal"
 
 #~ msgid "Total tracked hours"
 #~ msgstr "Totaal geregistreerde uren"
