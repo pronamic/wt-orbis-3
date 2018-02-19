@@ -4,7 +4,7 @@ global $post;
 $orbis_project = new Orbis_Project( $post );
 $invoices = $orbis_project->get_invoices( get_the_ID() );
 
-if ( $invoices ) : ?>
+if ( $invoices && $invoices[0]->id ) : ?>
 
 	<div class="table-responsive">
 		<table class="table table-striped table-bordered">
