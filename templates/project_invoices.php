@@ -69,6 +69,8 @@ if ( $invoices && $invoices[0]->id ) : ?>
 						<td>
 							<strong><?php echo esc_html( orbis_time( $hours_total ) ) ?></strong>
 						</td>
+						<td></td>
+						<td></td>
 					</tr>
 			</tbody>
 		</table>
