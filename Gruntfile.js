@@ -94,31 +94,31 @@ module.exports = function( grunt ) {
 				files: [
 					{ // Bootstrap
 						expand: true,
-						cwd: 'bower_components/bootstrap/dist/',
+						cwd: 'node_modules/bootstrap/dist/',
 						src: [ '**' ],
 						dest: 'assets/bootstrap'
 					},
 					{ // Font Awesome - http://fontawesome.io/
 						expand: true,
-						cwd: 'bower_components/font-awesome/',
+						cwd: 'node_modules/font-awesome/',
 						src: [ 'css/**', 'fonts/**' ],
 						dest: 'assets/fontawesome'
 					},
 					{ // Tether - http://tether.io/
 						expand: true,
-						cwd: 'bower_components/tether/dist/',
+						cwd: 'node_modules/tether/dist/',
 						src: [ '**' ],
 						dest: 'assets/tether'
 					},
 					{ // Select2 Bootstrap - https://github.com/select2/select2-bootstrap-theme
 						expand: true,
-						cwd: 'bower_components/select2-bootstrap-theme/dist/',
+						cwd: 'node_modules/select2-bootstrap-theme/dist/',
 						src: [ '**' ],
 						dest: 'assets/select2-bootstrap'
 					},
 					{ // Popper.js - https://popper.js.org/
 						expand: true,
-						cwd: 'bower_components/popper.js/dist/umd',
+						cwd: 'node_modules/popper.js/dist/umd',
 						src: [ '**' ],
 						dest: 'assets/popper'
 					},

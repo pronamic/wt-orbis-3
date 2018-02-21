@@ -50,7 +50,7 @@ class Orbis_Theme_Scripts {
 			'bootstrap',
 			$uri . '/assets/bootstrap/js/bootstrap' . $min . '.js',
 			array( 'jquery', 'popper' ),
-			'4.0.0-beta',
+			'4.0.0',
 			true
 		);
 
@@ -58,7 +58,7 @@ class Orbis_Theme_Scripts {
 			'bootstrap',
 			$uri . '/assets/bootstrap/css/bootstrap' . $min . '.css',
 			array(),
-			'4.0.0-beta'
+			'4.0.0'
 		);
 
 		// Select2
