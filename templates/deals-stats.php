@@ -52,11 +52,17 @@ $pending_deals = $pending_deals_query->found_posts;
 /**
  * Open amount
  */
-$total_amount = '';
+$total_amount = 0;
 
 if ( $pending_deals_query->have_posts() ) {
 	while ( $pending_deals_query->have_posts() ) { $pending_deals_query->the_post();
-		$total_amount = $total_amount + get_post_meta( $post->ID, '_orbis_deal_price', true );
+		$deal_price = get_post_meta( $post->ID, '_orbis_deal_price', true );
+
+        if ( empty( $deal_price ) ) {
+            continue;
+        }
+
+        $total_amount += floatval( $deal_price );
 	}
 }
 
