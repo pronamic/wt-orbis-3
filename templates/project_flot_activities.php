@@ -1,4 +1,4 @@
-<div class="content">
+<div class="card-body">
 	<?php
 
 	$query = $wpdb->prepare( "

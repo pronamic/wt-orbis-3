@@ -24,7 +24,7 @@ if ( $invoices && $invoices[0]->id ) : ?>
 						$amount_total += $invoice->amount;
 						$hours_total += $invoice->seconds;
 					?>
-					<tr id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+					<tr id="post-<?php the_ID(); ?>">
 						<td>
 							<?php echo esc_html( date_format( new DateTime( $invoice->create_date ), 'd-m-Y' ) ) ?>
 						</td>

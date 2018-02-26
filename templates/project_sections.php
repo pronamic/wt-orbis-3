@@ -5,12 +5,12 @@ $tab = ( ! isset( $wp_query->query_vars[ 'tabs' ] ) ) ? 'timesheet' : $wp_query-
 
 if ( ! empty( $project_sections ) ) : ?>
 
-	<div class="panel with-cols clearfix">
+	<div class="card mt-3 with-cols clearfix">
 		<header class="with-tabs">
 			<ul class="nav nav-tabs">
 
 				<?php foreach ( $project_sections as $section ) : ?>
-					<?php $active = ( $section[ 'id'] === $tab); ?>
+					<?php $active = ( $section[ 'id' ] === $tab); ?>
 
 					<li class="">
 						<a href="<?php echo get_permalink(); ?>tabs/<?php echo esc_attr( $section['id'] ); ?>" class="nav-link <?php echo esc_attr( $active ? 'active' : '' ); ?>" ><?php echo esc_html( $section['name'] ); ?></a>
@@ -33,7 +33,7 @@ if ( ! empty( $project_sections ) ) : ?>
 				}
 			?>
 
-			<div id="<?php echo esc_attr( $section['id'] ); ?>" class="tab-pane <?php echo esc_attr( $active ? 'active' : '' ); ?>">
+			<div id="<?php echo esc_attr( $section[ 'id' ] ); ?>" class="tab-pane <?php echo esc_attr( $active ? 'active' : '' ); ?>">
 				<?php
 
 				if ( isset( $section['action'] ) ) {
