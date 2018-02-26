@@ -9,7 +9,7 @@ $query = new WP_Query( array(
 if ( $query->have_posts() ) : ?>
 
 	<div class="table-responsive">
-		<table class="table table-striped table-bordered">
+		<table class="table table-striped table-bordered mb-0">
 			<thead>
 				<tr>
 					<th><?php esc_html_e( 'Description', 'orbis' ); ?></th>
@@ -43,7 +43,7 @@ if ( $query->have_posts() ) : ?>
 
 <?php else : ?>
 
-	<div class="content">
+	<div class="content mt-3">
 		<p class="alt">
 			<?php esc_html_e( 'No tasks found.', 'orbis' ); ?>
 		</p>

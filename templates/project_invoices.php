@@ -7,7 +7,7 @@ $invoices = $orbis_project->get_invoices();
 if ( $invoices && $invoices[0]->id ) : ?>
 
 	<div class="table-responsive">
-		<table class="table table-striped table-bordered">
+		<table class="table table-striped table-bordered mb-0">
 			<thead>
 				<tr>
 					<th><?php esc_html_e( 'Date', 'orbis' ); ?></th>
@@ -80,7 +80,7 @@ if ( $invoices && $invoices[0]->id ) : ?>
 
 <?php else : ?>
 
-	<div class="content">
+	<div class="content mt-3">
 		<p class="alt">
 			<?php esc_html_e( 'No invoices found.', 'orbis' ); ?>
 		</p>

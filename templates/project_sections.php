@@ -5,7 +5,7 @@ $tab = ( ! isset( $wp_query->query_vars[ 'tabs' ] ) ) ? 'timesheet' : $wp_query-
 
 if ( ! empty( $project_sections ) ) : ?>
 
-	<div class="card mt-3 with-cols clearfix">
+	<div class="card my-3 with-cols clearfix">
 		<header class="with-tabs">
 			<ul class="nav nav-tabs">
 

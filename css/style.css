@@ -175,6 +175,7 @@ h6:first-child {
 
 /* line 173, ../sass/partials/_base.scss */
 p.alt {
+  padding-left: 1rem;
   color: #999;
 }
 
@@ -301,6 +302,7 @@ img {
 
 /* line 294, ../sass/partials/_base.scss */
 header.with-tabs {
+  border-bottom: 1px solid #ddd;
   padding: 10px 10px 0 10px;
 }
 

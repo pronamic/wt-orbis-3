@@ -9,9 +9,8 @@
 					<h3 class="card-title"><?php esc_html_e( 'Description', 'orbis' ); ?></h3>
 					<?php the_content(); ?>
 				</div>
-				
 			</div>
-
+			
 			<?php get_template_part( 'templates/project_sections' ); ?>
 
 			<?php do_action( 'orbis_after_main_content' ); ?>
