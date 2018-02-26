@@ -16,7 +16,6 @@ require_once get_template_directory() . '/includes/nav.php';
 require_once get_template_directory() . '/includes/shortcodes.php';
 require_once get_template_directory() . '/includes/customizer.php';
 require_once get_template_directory() . '/includes/invoices.php';
-require_once get_template_directory() . '/includes/initialize_endpoints.php';
 
 if ( function_exists( 'orbis_tasks_bootstrap' ) ) {
 	require_once get_template_directory() . '/includes/tasks.php';
@@ -96,6 +95,13 @@ function orbis_the_content_empty( $content ) {
 }
 
 add_filter( 'the_content', 'orbis_the_content_empty', 200 );
+
+function orbis_add_tabs_endpoint() {
+    add_rewrite_endpoint( 'tabs', EP_ALL );
+}
+
+add_action( 'init', 'orbis_add_tabs_endpoint' );
+
 
 /**
  * Orbis Companies

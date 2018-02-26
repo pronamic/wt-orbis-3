@@ -1,7 +1,7 @@
 <?php
 
 $project_sections = apply_filters( 'orbis_project_sections', array() );
-$tab = ( ! isset( $wp_query->query_vars[ 'tabs' ] ) ) ? 'timesheet' : $wp_query->query_vars[ 'tabs' ];
+$tab = get_query_var( 'tabs', 'timesheet' );
 
 if ( ! empty( $project_sections ) ) : ?>
 
@@ -13,7 +13,7 @@ if ( ! empty( $project_sections ) ) : ?>
 					<?php $active = ( $section[ 'id' ] === $tab); ?>
 
 					<li class="">
-						<a href="<?php echo get_permalink(); ?>tabs/<?php echo esc_attr( $section['id'] ); ?>" class="nav-link <?php echo esc_attr( $active ? 'active' : '' ); ?>" ><?php echo esc_html( $section['name'] ); ?></a>
+						<a href="<?php echo esc_url( get_permalink() . 'tabs/' . $section['id'] ); ?>" class="nav-link <?php echo esc_attr( $active ? 'active' : '' ); ?>" ><?php echo esc_html( $section['name'] ); ?></a>
 					</li>
 
 					<?php $active = false; ?>
