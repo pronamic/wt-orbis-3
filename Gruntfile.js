@@ -112,9 +112,9 @@ module.exports = function( grunt ) {
 					},
 					{ // Select2 Bootstrap - https://github.com/select2/select2-bootstrap-theme
 						expand: true,
-						cwd: 'node_modules/select2-bootstrap-theme/dist/',
+						cwd: 'node_modules/select2-bootstrap4-theme/dist/',
 						src: [ '**' ],
-						dest: 'assets/select2-bootstrap'
+						dest: 'assets/select2-bootstrap4'
 					},
 					{ // Popper.js - https://popper.js.org/
 						expand: true,

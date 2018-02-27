@@ -63,13 +63,13 @@ class Orbis_Theme_Scripts {
 
 		// Select2
 		wp_register_style(
-			'select2-bootstrap',
-			$uri . '/assets/select2-bootstrap/select2-bootstrap' . $min . '.css',
+			'select2-bootstrap4',
+			$uri . '/assets/select2-bootstrap/select2-bootstrap4' . $min . '.css',
 			array(
 				'select2',
 				'bootstrap',
 			),
-			'0.1.0-beta.10'
+			'1.0.0'
 		);
 
 		// Font Awesome - http://fortawesome.github.io/Font-Awesome/
