@@ -4,7 +4,7 @@ $sections = apply_filters( 'orbis_company_sections', array() );
 
 if ( ! empty( $sections ) ) : ?>
 
-	<div class="panel with-cols clearfix">
+	<div class="card my-3 with-cols clearfix">
 		<header class="with-tabs">
 			<ul id="tabs" class="nav nav-tabs">
 				<?php $active = true; ?>

@@ -51,46 +51,46 @@ function orbis_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Dashboard Widget Area', 'orbis' ),
 		'id'            => 'dashboard-sidebar',
-		'before_widget' => '<div class="col-md-6"><div id="%1$s" class="panel %2$s">',
-		'after_widget'  => '</div></div>',
-		'before_title'  => '<header><h3 class="widget-title">',
-		'after_title'   => '</h3></header>',
+		'before_widget' => '<div class="col-md-6"><div id="%1$s" class="card %2$s"><div class="card-body">',
+		'after_widget'  => '</div></div></div>',
+		'before_title'  => '<h3 class="card-title">',
+		'after_title'   => '</h3>',
 	) );
 
 	register_sidebar( array(
 		'name'          => __( 'Frontpage Top Widget', 'orbis' ),
 		'id'            => 'frontpage-top-widget',
-		'before_widget' => '<div class="col-md-12"><div id="%1$s" class="panel %2$s">',
-		'after_widget'  => '</div></div>',
-		'before_title'  => '<header><h3 class="widget-title">',
-		'after_title'   => '</h3></header>',
+		'before_widget' => '<div class="col-md-12"><div id="%1$s" class="card %2$s"><div class="card-body">',
+		'after_widget'  => '</div></div></div>',
+		'before_title'  => '<h3 class="card-title">',
+		'after_title'   => '</h3>',
 	) );
 
 	register_sidebar( array(
 		'name'          => __( 'Frontpage Left Widget', 'orbis' ),
 		'id'            => 'frontpage-left-widget',
-		'before_widget' => '<div id="%1$s" class="panel %2$s">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<header><h3 class="widget-title">',
-		'after_title'   => '</h3></header>',
+		'before_widget' => '<div id="%1$s" class="card %2$s"><div class="card-body">',
+		'after_widget'  => '</div></div>',
+		'before_title'  => '<h3 class="card-title">',
+		'after_title'   => '</h3>',
 	) );
 
 	register_sidebar( array(
 		'name'          => __( 'Frontpage Right Widget', 'orbis' ),
 		'id'            => 'frontpage-right-widget',
-		'before_widget' => '<div id="%1$s" class="panel %2$s">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<header><h3 class="widget-title">',
-		'after_title'   => '</h3></header>',
+		'before_widget' => '<div id="%1$s" class="card %2$s"><div class="card-body">',
+		'after_widget'  => '</div></div>',
+		'before_title'  => '<h3 class="card-title">',
+		'after_title'   => '</h3>',
 	) );
 
 	register_sidebar( array(
 		'name'          => __( 'Frontpage Bottom Widget', 'orbis' ),
 		'id'            => 'frontpage-bottom-widget',
-		'before_widget' => '<div class="col-md-4"><div id="%1$s" class="panel %2$s">',
-		'after_widget'  => '</div></div>',
-		'before_title'  => '<header><h3 class="widget-title">',
-		'after_title'   => '</h3></header>',
+		'before_widget' => '<div class="col-md-4"><div id="%1$s" class="card %2$s"><div class="card-body">',
+		'after_widget'  => '</div></div></div>',
+		'before_title'  => '<h3 class="card-title">',
+		'after_title'   => '</h3>',
 	) );
 }
 

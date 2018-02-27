@@ -9,9 +9,9 @@
 
 	?>
 
-	<div class="panel">
-		<header>
-			<h3>
+	<div class="card">
+		<div class="card-body">
+			<h3 class="card-title">
 				<?php
 
 				printf(
@@ -21,14 +21,15 @@
 
 				?>
 			</h3>
-		</header>
 
-		<div class="content">
-			<p class="alt">
-				<a class="twitter-timeline" href="<?php echo esc_attr( $twitter_url ); ?>" data-widget-id="<?php echo esc_attr( $twitter_widget_id ); ?>" data-screen-name="<?php echo esc_attr( $twitter_username ); ?>" height="300"><?php echo esc_html( $twitter_text ); ?></a>
-				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-			</p>
+			<div class="content">
+				<p class="alt">
+					<a class="twitter-timeline" href="<?php echo esc_attr( $twitter_url ); ?>" data-widget-id="<?php echo esc_attr( $twitter_widget_id ); ?>" data-screen-name="<?php echo esc_attr( $twitter_username ); ?>" height="300"><?php echo esc_html( $twitter_text ); ?></a>
+					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+				</p>
+			</div>
 		</div>
+	
 	</div>
 
 <?php endif; ?>

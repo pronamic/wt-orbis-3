@@ -118,36 +118,41 @@ if ( $total_deals ) {
 }
 
 ?>
-<div class="row">
-	<div class="col-md-12">
-		<h1><?php echo round( $percentage ) . '%'; ?> <span style="font-size: 16px; font-weight: normal;">of the deals have been won</span> </h1>
+<div class="card">
+	<div class="card-body">
+		<div class="row">
+			<div class="col-md-12">
+				<h1><?php echo round( $percentage ) . '%'; ?> <span style="font-size: 16px; font-weight: normal;">of the deals have been won</span> </h1>
 
-		<div class="progress progress-striped active">
-			<div class="progress-bar" role="progressbar" aria-valuenow="<?php echo round( $total ); ?>" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo round( $percentage ) . '%'; ?>;">
-				<span class="sr-only"><?php echo round( $percentage ) . '%'; ?> Complete</span>
+				<div class="progress progress-striped active">
+					<div class="progress-bar" role="progressbar" aria-valuenow="<?php echo round( $total ); ?>" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo round( $percentage ) . '%'; ?>;">
+						<span class="sr-only"><?php echo round( $percentage ) . '%'; ?> Complete</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-3">
+				<p><?php _e( 'Won deals', 'orbis' ); ?></p>
+				<h1><?php echo round( $won_deals, 2 ); ?></h1>
+			</div>
+
+			<div class="col-md-3">
+				<p><?php _e( 'Lost deals', 'orbis' ); ?></p>
+				<h1><?php echo round( $lost_deals, 2 ); ?></h1>
+			</div>
+
+			<div class="col-md-3">
+				<p><?php _e( 'Pending deals', 'orbis' ); ?></p>
+				<h1><?php echo round( $pending_deals, 2 ); ?></h1>
+			</div>
+
+			<div class="col-md-3">
+				<p><?php _e( 'Total amount open', 'orbis' ); ?></p>
+				<h1><?php echo orbis_price( $total_amount ); ?></h1>
 			</div>
 		</div>
 	</div>
 </div>
 
-<div class="row">
-	<div class="col-md-3">
-		<p><?php _e( 'Won deals', 'orbis' ); ?></p>
-		<h1><?php echo round( $won_deals, 2 ); ?></h1>
-	</div>
-
-	<div class="col-md-3">
-		<p><?php _e( 'Lost deals', 'orbis' ); ?></p>
-		<h1><?php echo round( $lost_deals, 2 ); ?></h1>
-	</div>
-
-	<div class="col-md-3">
-		<p><?php _e( 'Pending deals', 'orbis' ); ?></p>
-		<h1><?php echo round( $pending_deals, 2 ); ?></h1>
-	</div>
-
-	<div class="col-md-3">
-		<p><?php _e( 'Total amount open', 'orbis' ); ?></p>
-		<h1><?php echo orbis_price( $total_amount ); ?></h1>
-	</div>
-</div>

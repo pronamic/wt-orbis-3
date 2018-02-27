@@ -202,52 +202,52 @@ get_header();
 <?php while ( have_posts() ) : the_post(); ?>
 
 	<div ng-controller="OrbisTasksCtrl">
-		<div class="panel">
-			<header>
-				<h3>Overview</h3>
-			</header>
+		<div class="card">
+			<div class="card-body">
+				<h3 class="card-title">Overview</h3>
 
-			<div ng-show="tasks == null" class="well">
-				<span class="glyphicon glyphicon-refresh"></span>
-			</div>
+				<div ng-show="tasks == null" class="well">
+					<span class="glyphicon glyphicon-refresh"></span>
+				</div>
 
-			<div class="table-responsive" ng-show="tasks != null" ng-cloak>
-				<table class="table table-striped table-condense table-hover">
-					<col width="10">
-					<col width="50">
+				<div class="table-responsive" ng-show="tasks != null" ng-cloak>
+					<table class="table table-striped table-condense table-hover">
+						<col width="10">
+						<col width="50">
 
-					<tbody>
-						<tr class="orbis_task type-orbis_task status-publish hentry" ng-repeat="task in tasks" ng-class="{completed: task.done}">
-							<td class="centered">
-								<input type="checkbox" ng-model="task.done" ng-change="toggleTask( task );" />
-							</td>
-							<td>
-								<img width="50" height="50" class="avatar avatar-50 photo" ng-src="http://www.gravatar.com/avatar/{{task.assignee.gravatar_hash}}.jpg?s=200" alt="">
-							</td>
-							<td>
-								<a ng-href="{{task.url}}" class="title">{{task.text}}</a>
+						<tbody>
+							<tr class="orbis_task type-orbis_task status-publish hentry" ng-repeat="task in tasks" ng-class="{completed: task.done}">
+								<td class="centered">
+									<input type="checkbox" ng-model="task.done" ng-change="toggleTask( task );" />
+								</td>
+								<td>
+									<img width="50" height="50" class="avatar avatar-50 photo" ng-src="http://www.gravatar.com/avatar/{{task.assignee.gravatar_hash}}.jpg?s=200" alt="">
+								</td>
+								<td>
+									<a ng-href="{{task.url}}" class="title">{{task.text}}</a>
 
-								<span class="entry-meta">
-									<a ng-href="{{task.project.url}}">{{task.project.title}}</a>
-									<span class="glyphicon glyphicon-time"></span> {{task.time | orbis_time}}
-								</span>
-							</td>
-							<td class="right">
-								<div class="due-date" ng-hide="editing" ng-click="editing = true">{{task.due_at | date : 'd MMM yyyy'}}</div>
+									<span class="entry-meta">
+										<a ng-href="{{task.project.url}}">{{task.project.title}}</a>
+										<span class="glyphicon glyphicon-time"></span> {{task.time | orbis_time}}
+									</span>
+								</td>
+								<td class="right">
+									<div class="due-date" ng-hide="editing" ng-click="editing = true">{{task.due_at | date : 'd MMM yyyy'}}</div>
 
-								<form class="form-inline" role="form" ng-show="editing" ng-submit="updateTask( task ); editing = false;">
-									<input class="form-control" ui-date ng-model="task.due_at" ng-required="true">
+									<form class="form-inline" role="form" ng-show="editing" ng-submit="updateTask( task ); editing = false;">
+										<input class="form-control" ui-date ng-model="task.due_at" ng-required="true">
 
-									<button class="btn btn-default" type="submit">Update</button>
-								</form>
+										<button class="btn btn-default" type="submit">Update</button>
+									</form>
 
-								<span class="label" ng-class="task.done ? 'label-default' : ( task.days_left <= 0 && ! task.done ) ? 'label-danger' : 'label-success'">
-									<ng-pluralize count="task.days_left" when="{'1': '<?php esc_attr_e( '1 day', 'orbis' ); ?>', 'other': '<?php esc_attr_e( '{} days', 'orbis' ); ?>'}"></ng-pluralize>
-								</span>
-							</td>
-						</tr>
-					</tbody>
-				</table>
+									<span class="label" ng-class="task.done ? 'label-default' : ( task.days_left <= 0 && ! task.done ) ? 'label-danger' : 'label-success'">
+										<ng-pluralize count="task.days_left" when="{'1': '<?php esc_attr_e( '1 day', 'orbis' ); ?>', 'other': '<?php esc_attr_e( '{} days', 'orbis' ); ?>'}"></ng-pluralize>
+									</span>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
 			</div>
 		</div>
 

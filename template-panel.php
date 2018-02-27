@@ -7,8 +7,8 @@ get_header(); ?>
 
 <?php while ( have_posts() ) : the_post(); ?>
 
-	<div class="panel">
-		<div class="content">
+	<div class="card">
+		<div class="card-body">
 			<?php the_content(); ?>
 		</div>
 	</div>

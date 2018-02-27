@@ -23,171 +23,170 @@ if ( 'orbis_list_add' === filter_input( INPUT_GET, 'action', FILTER_SANITIZE_STR
 			<div class="col-md-8">
 				<?php do_action( 'orbis_before_main_content' ); ?>
 
-				<div class="panel">
-					<header>
-						<h3><?php esc_html_e( 'Description', 'orbis' ); ?></h3>
-					</header>
+				<div class="card">
+					<div class="card-body">
+						<h3 class="card-title"><?php esc_html_e( 'Description', 'orbis' ); ?></h3>
 
-					<div class="content clearfix">
-						<?php if ( has_post_thumbnail() ) : ?>
-				
-							<div class="thumbnail">
-								<?php the_post_thumbnail( 'thumbnail' ); ?>
-							</div>
+						<div class="content clearfix">
+							<?php if ( has_post_thumbnail() ) : ?>
+					
+								<div class="thumbnail">
+									<?php the_post_thumbnail( 'thumbnail' ); ?>
+								</div>
 
-						<?php endif; ?>
+							<?php endif; ?>
 
-						<?php the_content(); ?>
+							<?php the_content(); ?>
+						</div>
 					</div>
+					
 
 					<?php get_template_part( 'templates/post-card-footer' ); ?>
 				</div>
 
-				<div class="panel">
-					<header>
-						<h3><?php esc_html_e( 'On the list', 'orbis' ); ?></h3>
-					</header>
+				<div class="card">
+					<div class="card-body">
+						<h3 class="card-title"><?php esc_html_e( 'On the list', 'orbis' ); ?></h3>
 
-					<?php
+						<?php
 
-					$query = new WP_Query( array(
-						'connected_type'  => 'orbis_persons_to_lists',
-						'connected_items' => get_queried_object(),
-						'nopaging'        => true,
-					) );
+						$query = new WP_Query( array(
+							'connected_type'  => 'orbis_persons_to_lists',
+							'connected_items' => get_queried_object(),
+							'nopaging'        => true,
+						) );
 
-					if ( $query->have_posts() ) : ?>
+						if ( $query->have_posts() ) : ?>
 
-						<table class="table table-striped table-bordered">
-							<thead>
-								<tr>
-									<th scope="col"><?php esc_html_e( 'Name', 'orbis' ); ?></th>
-									<th scope="col"><?php esc_html_e( 'Active', 'orbis' ); ?></th>
-									<th scope="col"><?php esc_html_e( 'Note', 'orbis' ); ?></th>
-								</tr>
-							</thead>
-
-							<tbody>
-
-								<?php while ( $query->have_posts() ) : $query->the_post(); ?>
-
+							<table class="table table-striped table-bordered">
+								<thead>
 									<tr>
-										<td>
-											<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-										</td>
-										<td>
-											<?php
-
-											$active = p2p_get_meta( get_post()->p2p_id, 'active', true );
-
-											switch ( $active ) {
-												case 'yes' :
-													_e( 'Yes', 'orbis' );
-													break;
-												case 'no' :
-													_e( 'No', 'orbis' );
-													break;
-												case 'maybe' :
-													_e( 'Maybe', 'orbis' );
-													break;
-											}
-
-											?>
-										</td>
-										<td>
-											<?php echo p2p_get_meta( get_post()->p2p_id, 'note', true ); ?>
-										</td>
+										<th scope="col"><?php esc_html_e( 'Name', 'orbis' ); ?></th>
+										<th scope="col"><?php esc_html_e( 'Active', 'orbis' ); ?></th>
+										<th scope="col"><?php esc_html_e( 'Note', 'orbis' ); ?></th>
 									</tr>
+								</thead>
 
-								<?php endwhile; ?>
+								<tbody>
 
-							</tbody>
-						</table>
+									<?php while ( $query->have_posts() ) : $query->the_post(); ?>
 
-						<?php wp_reset_postdata(); ?>
+										<tr>
+											<td>
+												<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+											</td>
+											<td>
+												<?php
 
-					<?php endif; ?>
+												$active = p2p_get_meta( get_post()->p2p_id, 'active', true );
 
+												switch ( $active ) {
+													case 'yes' :
+														_e( 'Yes', 'orbis' );
+														break;
+													case 'no' :
+														_e( 'No', 'orbis' );
+														break;
+													case 'maybe' :
+														_e( 'Maybe', 'orbis' );
+														break;
+												}
+
+												?>
+											</td>
+											<td>
+												<?php echo p2p_get_meta( get_post()->p2p_id, 'note', true ); ?>
+											</td>
+										</tr>
+
+									<?php endwhile; ?>
+
+								</tbody>
+							</table>
+
+							<?php wp_reset_postdata(); ?>
+
+						<?php endif; ?>
+					</div>
 				</div>
 
-				<div class="panel">
-					<header>
-						<h3><?php esc_html_e( 'Not on the list', 'orbis' ); ?></h3>
-					</header>
+				<div class="card">
+					<div class="card-body">
+						<h3 class="card-title"><?php esc_html_e( 'Not on the list', 'orbis' ); ?></h3>
 
-					<?php 
+						<?php 
 
-					$link = add_query_arg( array(
-						'action' => 'orbis_list_add',
-						'from'   => get_the_ID(),
-					), get_permalink() );
+						$link = add_query_arg( array(
+							'action' => 'orbis_list_add',
+							'from'   => get_the_ID(),
+						), get_permalink() );
 
-					$query = $p2p_type->get_connectable( get_the_ID(), array(
-						'posts_per_page' => 10,
-					) );
+						$query = $p2p_type->get_connectable( get_the_ID(), array(
+							'posts_per_page' => 10,
+						) );
 
-					if ( $query->have_posts() ) : ?>
+						if ( $query->have_posts() ) : ?>
 
-						<table class="table table-striped table-bordered">
-							<thead>
-								<tr>
-									<th scope="col"><?php esc_html_e( 'Name', 'orbis' ); ?></th>
-									<th scope="col"><?php esc_html_e( 'Action', 'orbis' ); ?></th>
-								</tr>
-							</thead>
-
-							<tbody>
-
-								<?php while ( $query->have_posts() ) : $query->the_post(); ?>
-
+							<table class="table table-striped table-bordered">
+								<thead>
 									<tr>
-										<td>
-											<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-										</td>
-										<td>
-											<?php
+										<th scope="col"><?php esc_html_e( 'Name', 'orbis' ); ?></th>
+										<th scope="col"><?php esc_html_e( 'Action', 'orbis' ); ?></th>
+									</tr>
+								</thead>
 
-											$active_options = array(
-												'yes' => array(
-													'class' => 'success',
-													'icon'  => 'check',
-													'label' => __( 'Yes', 'orbis' ),
-												),
-												'no'  => array(
-													'class' => 'danger',
-													'icon'  => 'times',
-													'label' => __( 'No', 'orbis' ),
-												),
-											);
+								<tbody>
 
-											foreach ( $active_options as $active => $option ) {
-												printf(
-													'<a href="%s" class="btn btn-sm btn-outline-%s">%s %s</a>',
-													wp_nonce_url( add_query_arg( array(
-														'to'     => get_the_ID(),
-														'active' => $active,
-													), $link ), 'orbis_list_add' ),
-													$option['class'],
-													sprintf( '<i class="fa fa-%s" aria-hidden="true"></i>', esc_attr( $option['icon'] ) ),
-													esc_html( $option['label'] )
+									<?php while ( $query->have_posts() ) : $query->the_post(); ?>
+
+										<tr>
+											<td>
+												<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+											</td>
+											<td>
+												<?php
+
+												$active_options = array(
+													'yes' => array(
+														'class' => 'success',
+														'icon'  => 'check',
+														'label' => __( 'Yes', 'orbis' ),
+													),
+													'no'  => array(
+														'class' => 'danger',
+														'icon'  => 'times',
+														'label' => __( 'No', 'orbis' ),
+													),
 												);
 
-												echo ' ';
-											}
+												foreach ( $active_options as $active => $option ) {
+													printf(
+														'<a href="%s" class="btn btn-sm btn-outline-%s">%s %s</a>',
+														wp_nonce_url( add_query_arg( array(
+															'to'     => get_the_ID(),
+															'active' => $active,
+														), $link ), 'orbis_list_add' ),
+														$option['class'],
+														sprintf( '<i class="fa fa-%s" aria-hidden="true"></i>', esc_attr( $option['icon'] ) ),
+														esc_html( $option['label'] )
+													);
 
-											?>
-										</td>
-									</tr>
+													echo ' ';
+												}
 
-								<?php endwhile; ?>
+												?>
+											</td>
+										</tr>
 
-							</tbody>
-						</table>
+									<?php endwhile; ?>
 
-						<?php wp_reset_postdata(); ?>
+								</tbody>
+							</table>
 
-					<?php endif; ?>
+							<?php wp_reset_postdata(); ?>
 
+						<?php endif; ?>
+					</div>
 				</div>
 
 				<?php do_action( 'orbis_after_main_content' ); ?>
@@ -200,23 +199,24 @@ if ( 'orbis_list_add' === filter_input( INPUT_GET, 'action', FILTER_SANITIZE_STR
 			<div class="col-md-4">
 				<?php do_action( 'orbis_before_side_content' ); ?>
 
-				<div class="panel">
-					<header>
-						<h3><?php esc_html_e( 'Additional Information', 'orbis' ); ?></h3>
-					</header>
+				<div class="card">
+					<div class="card-body">
+						<h3 class="card-title"><?php esc_html_e( 'Additional Information', 'orbis' ); ?></h3>
 
-					<div class="content">
-						<dl>
-							<dt><?php esc_html_e( 'Posted on', 'orbis' ); ?></dt>
-							<dd><?php echo esc_html( get_the_date() ); ?></dd>
+						<div class="content">
+							<dl>
+								<dt><?php esc_html_e( 'Posted on', 'orbis' ); ?></dt>
+								<dd><?php echo esc_html( get_the_date() ); ?></dd>
 
-							<dt><?php esc_html_e( 'Posted by', 'orbis' ); ?></dt>
-							<dd><?php echo esc_html( get_the_author() ); ?></dd>
+								<dt><?php esc_html_e( 'Posted by', 'orbis' ); ?></dt>
+								<dd><?php echo esc_html( get_the_author() ); ?></dd>
 
-							<dt><?php esc_html_e( 'Actions', 'orbis' ); ?></dt>
-							<dd><?php edit_post_link( __( 'Edit', 'orbis' ) ); ?></dd>
-						</dl>
+								<dt><?php esc_html_e( 'Actions', 'orbis' ); ?></dt>
+								<dd><?php edit_post_link( __( 'Edit', 'orbis' ) ); ?></dd>
+							</dl>
+						</div>
 					</div>
+					
 				</div>
 
 				<?php do_action( 'orbis_after_side_content' ); ?>

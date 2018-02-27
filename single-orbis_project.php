@@ -172,14 +172,15 @@
 				</div>
 			</div>
 
-			<div class="panel" style="display: none;">
-				<header>
-					<h3><?php esc_html_e( 'Project Invoices', 'orbis' ); ?></h3>
-				</header>
-				<div class="content">
-					<dt><?php esc_html_e( 'Posted by', 'orbis' ); ?></dt>
-					<dd><?php echo esc_html( get_the_author() ); ?></dd>
+			<div class="card" style="display: none;">
+				<div class="card-body">
+					<h3 class="card-title"><?php esc_html_e( 'Project Invoices', 'orbis' ); ?></h3>
+					<div class="content">
+						<dt><?php esc_html_e( 'Posted by', 'orbis' ); ?></dt>
+						<dd><?php echo esc_html( get_the_author() ); ?></dd>
+					</div>
 				</div>
+				
 			</div>
 
 			<?php if ( function_exists( 'p2p_register_connection_type' ) ) : ?>
