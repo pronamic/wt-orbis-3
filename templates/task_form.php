@@ -37,7 +37,7 @@ global $orbis_errors;
 							'echo'             => false,
 						) );
 
-						echo str_replace( '<select ', '<select ng-model="formTaskAssigneeId" required ', $output );
+						echo balanceTags( str_replace( '<select ', '<select ng-model="formTaskAssigneeId" required ', $output ) );
 
 						?>
 					</div>

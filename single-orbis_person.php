@@ -59,7 +59,7 @@
 
 									<?php endif; ?>
 
-									<?php 
+									<?php
 
 									$email = $contact->get_email();
 
@@ -72,7 +72,7 @@
 
 									<?php endif; ?>
 
-									<?php 
+									<?php
 
 									$gender = $contact->get_gender();
 
@@ -85,7 +85,7 @@
 
 									<?php endif; ?>
 
-									<?php 
+									<?php
 
 									$address = (string) $contact->get_address();
 
@@ -93,12 +93,12 @@
 
 										<dt><?php esc_html_e( 'Address', 'orbis' ); ?></dt>
 										<dd>
-											<?php echo nl2br( $address ); ?>
+											<?php echo nl2br( esc_html( $address ) ); ?>
 										</dd>
 
 									<?php endif; ?>
 
-									<?php 
+									<?php
 
 									$birth_date = $contact->get_birth_date();
 

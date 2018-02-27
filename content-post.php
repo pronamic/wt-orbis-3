@@ -46,9 +46,9 @@
 											<?php
 
 											printf(
-												__( '<span class="%1$s">Posted in</span> %2$s', 'orbis' ),
+												esc_html__( '<span class="%1$s">Posted in</span> %2$s', 'orbis' ),
 												'entry-utility-prep entry-utility-prep-cat-links',
-												$categories_list
+												esc_html( $categories_list )
 											);
 
 											$show_sep = true;
@@ -71,14 +71,17 @@
 										<span class="tag-links">
 											<?php
 
-											printf( __( '<span class="%1$s">Tagged</span> %2$s', 'orbis' ), 'entry-utility-prep entry-utility-prep-tag-links', $tags_list );
+											printf( esc_html__( '<span class="%1$s">Tagged</span> %2$s', 'orbis' ), 'entry-utility-prep entry-utility-prep-tag-links', esc_html( $tags_list ) );
 
 											$show_sep = true;
 
 											?>
 										</span>
 
-									<?php endif; endif; ?>
+									<?php
+										endif;
+										endif;
+									?>
 
 									<?php if ( comments_open() ) : if ( $show_sep ) : ?>
 
@@ -135,22 +138,23 @@
 
 		if ( $tags ) : ?>
 
-			<div class="panel">
-				<header>
-					<h3><?php esc_html_e( 'Tags', 'orbis' ); ?></h3>
-				</header>
+			<div class="card">
+				<div class="card-body">
+					<h3 class="card-title"><?php esc_html_e( 'Tags', 'orbis' ); ?></h3>
 
-				<div class="content">
-					<?php
+					<div class="content">
+						<?php
 
-					 wp_tag_cloud( array(
-						'smallest' => 10,
-						'largest'  => 22,
-						'unit'     => 'px',
-					) );
+						 wp_tag_cloud( array(
+							'smallest'  => 10,
+							'largest'   => 22,
+							'unit'      => 'px',
+						) );
 
-					?>
+						?>
+					</div>
 				</div>
+				
 			</div>
 
 		<?php endif; ?>

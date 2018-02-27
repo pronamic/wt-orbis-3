@@ -11,8 +11,8 @@
 			<table class="table table-striped table-condense table-hover">
 				<thead>
 					<tr>
-						<th><?php _e( 'Title'  , 'orbis' ); ?></th>
-						<th><?php _e( 'Content'  , 'orbis' ); ?></th>
+						<th><?php esc_html_e( 'Title'  , 'orbis' ); ?></th>
+						<th><?php esc_html_e( 'Content'  , 'orbis' ); ?></th>
 						<th></th>
 					</tr>
 				</thead>

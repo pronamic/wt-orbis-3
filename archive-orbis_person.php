@@ -24,7 +24,7 @@
 				</thead>
 
 				<tbody>
-					<?php while ( have_posts() ) : the_post(); 
+					<?php while ( have_posts() ) : the_post();
 
 						$contact = new Orbis_Contact(); ?>
 

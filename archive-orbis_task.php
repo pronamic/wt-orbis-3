@@ -50,7 +50,7 @@
 								<?php echo get_avatar( get_post_meta( get_the_ID(), '_orbis_task_assignee_id', true ), 40 ); ?>
 							</td>
 							<td>
-								<?php orbis_task_due_at(); ?> <?php echo $due_at_ouput; ?>
+								<?php orbis_task_due_at(); ?> <?php echo esc_html( $due_at_ouput ); ?>
 							</td>
 							<td>
 								<?php get_template_part( 'templates/table-cell-actions' ); ?>

@@ -10,7 +10,7 @@ if ( ! empty( $project_sections ) ) : ?>
 			<ul class="nav nav-tabs">
 
 				<?php foreach ( $project_sections as $section ) : ?>
-					<?php $active = ( $section[ 'id' ] === $tab); ?>
+					<?php $active = ( $section['id'] === $tab); ?>
 
 					<li class="">
 						<a href="<?php echo esc_url( get_permalink() . 'tabs/' . $section['id'] ); ?>" class="nav-link <?php echo esc_attr( $active ? 'active' : '' ); ?>" ><?php echo esc_html( $section['name'] ); ?></a>
@@ -26,14 +26,14 @@ if ( ! empty( $project_sections ) ) : ?>
 			<?php $active = true; ?>
 
 			<?php
-				foreach ( $project_sections as $section ) {
-					if ( $section[ 'id' ] === $tab ) {
-						break;
-					}
+			foreach ( $project_sections as $section ) {
+				if ( $section['id'] === $tab ) {
+					break;
 				}
+			}
 			?>
 
-			<div id="<?php echo esc_attr( $section[ 'id' ] ); ?>" class="tab-pane <?php echo esc_attr( $active ? 'active' : '' ); ?>">
+			<div id="<?php echo esc_attr( $section['id'] ); ?>" class="tab-pane <?php echo esc_attr( $active ? 'active' : '' ); ?>">
 				<?php
 
 				if ( isset( $section['action'] ) ) {

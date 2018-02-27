@@ -67,7 +67,7 @@
 						<?php $current_user = wp_get_current_user(); ?>
 
 						<ul class="nav nav-inline pull-right">
-  							<li class="nav-item dropdown">
+							<li class="nav-item dropdown">
 								<a data-toggle="dropdown" class="dropdown-toggle" href="#"><?php echo get_avatar( $current_user->ID, 24 ); ?> <?php echo esc_html( $current_user->display_name ); ?> <b class="caret"></b></a>
 
 								<ul class="dropdown-menu dropdown-menu-right">

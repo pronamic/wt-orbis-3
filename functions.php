@@ -70,7 +70,7 @@ function orbis_get_url_post_new( $post_type = null ) {
 
 	if ( ! empty( $post_type ) ) {
 		$url = add_query_arg( 'post_type', $post_type, $url );
-	}	
+	}
 
 	return $url;
 }
@@ -97,7 +97,7 @@ function orbis_the_content_empty( $content ) {
 add_filter( 'the_content', 'orbis_the_content_empty', 200 );
 
 function orbis_add_tabs_endpoint() {
-    add_rewrite_endpoint( 'tabs', EP_ALL );
+	add_rewrite_endpoint( 'tabs', EP_ALL );
 }
 
 add_action( 'init', 'orbis_add_tabs_endpoint' );

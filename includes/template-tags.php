@@ -79,7 +79,7 @@ function orbis_content_nav() {
 	}
 
 	echo '<div class="mt-3">';
-	echo $html;
+	echo balanceTags( $html );
 	echo '</div>';
 }
 
@@ -128,7 +128,7 @@ function orbis_comment( $comment, $args, $depth ) {
 					?>
 				</div>
 
-				<?php if ( $comment->comment_approved == '0' ) : ?>
+				<?php if ( '0' === $comment->comment_approved ) : ?>
 
 					<em class="comment-awaiting-moderation"><?php esc_html_e( 'Your comment is awaiting moderation.', 'orbis' ); ?></em><br />
 
@@ -175,7 +175,7 @@ function orbis_posted_on() {
 		esc_attr( get_the_time() ),
 		esc_attr( get_the_date( 'c' ) ),
 		esc_html( get_the_date() ),
-		esc_url( get_author_posts_url(get_the_author_meta('ID') ) ),
+		esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
 		esc_attr( sprintf( __( 'View all posts by %s', 'orbis' ), get_the_author() ) ),
 		get_the_author()
 	);

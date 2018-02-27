@@ -8,8 +8,8 @@ if ( 'orbis_list_add' === filter_input( INPUT_GET, 'action', FILTER_SANITIZE_STR
 	$active = filter_input( INPUT_GET, 'active', FILTER_SANITIZE_STRING );
 
 	$p2p_type->connect( $from, $to, array(
-    	'active' => $active,
-    ) );
+		'active' => $active,
+	) );
 }
 
 ?>
@@ -82,20 +82,20 @@ if ( 'orbis_list_add' === filter_input( INPUT_GET, 'action', FILTER_SANITIZE_STR
 
 												switch ( $active ) {
 													case 'yes' :
-														_e( 'Yes', 'orbis' );
+														esc_html_e( 'Yes', 'orbis' );
 														break;
 													case 'no' :
-														_e( 'No', 'orbis' );
+														esc_html_e( 'No', 'orbis' );
 														break;
 													case 'maybe' :
-														_e( 'Maybe', 'orbis' );
+														esc_html_e( 'Maybe', 'orbis' );
 														break;
 												}
 
 												?>
 											</td>
 											<td>
-												<?php echo p2p_get_meta( get_post()->p2p_id, 'note', true ); ?>
+												<?php echo esc_html( p2p_get_meta( get_post()->p2p_id, 'note', true ) ); ?>
 											</td>
 										</tr>
 
@@ -114,7 +114,7 @@ if ( 'orbis_list_add' === filter_input( INPUT_GET, 'action', FILTER_SANITIZE_STR
 					<div class="card-body">
 						<h3 class="card-title"><?php esc_html_e( 'Not on the list', 'orbis' ); ?></h3>
 
-						<?php 
+						<?php
 
 						$link = add_query_arg( array(
 							'action' => 'orbis_list_add',
@@ -166,7 +166,7 @@ if ( 'orbis_list_add' === filter_input( INPUT_GET, 'action', FILTER_SANITIZE_STR
 															'to'     => get_the_ID(),
 															'active' => $active,
 														), $link ), 'orbis_list_add' ),
-														$option['class'],
+														esc_html( $option['class'] ),
 														sprintf( '<i class="fa fa-%s" aria-hidden="true"></i>', esc_attr( $option['icon'] ) ),
 														esc_html( $option['label'] )
 													);

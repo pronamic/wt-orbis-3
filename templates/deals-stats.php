@@ -58,11 +58,11 @@ if ( $pending_deals_query->have_posts() ) {
 	while ( $pending_deals_query->have_posts() ) { $pending_deals_query->the_post();
 		$deal_price = get_post_meta( $post->ID, '_orbis_deal_price', true );
 
-        if ( empty( $deal_price ) ) {
-            continue;
-        }
+		if ( empty( $deal_price ) ) {
+			continue;
+		}
 
-        $total_amount += floatval( $deal_price );
+		$total_amount += floatval( $deal_price );
 	}
 }
 
@@ -122,11 +122,11 @@ if ( $total_deals ) {
 	<div class="card-body">
 		<div class="row">
 			<div class="col-md-12">
-				<h1><?php echo round( $percentage ) . '%'; ?> <span style="font-size: 16px; font-weight: normal;">of the deals have been won</span> </h1>
+				<h1><?php echo esc_html( round( $percentage ) ) . '%'; ?> <span style="font-size: 16px; font-weight: normal;">of the deals have been won</span> </h1>
 
 				<div class="progress progress-striped active">
-					<div class="progress-bar" role="progressbar" aria-valuenow="<?php echo round( $total ); ?>" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo round( $percentage ) . '%'; ?>;">
-						<span class="sr-only"><?php echo round( $percentage ) . '%'; ?> Complete</span>
+					<div class="progress-bar" role="progressbar" aria-valuenow="<?php echo esc_html( round( $total ) ); ?>" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo esc_html( round( $percentage ) ) . '%'; ?>;">
+						<span class="sr-only"><?php echo esc_html( round( $percentage ) ) . '%'; ?> Complete</span>
 					</div>
 				</div>
 			</div>

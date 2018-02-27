@@ -19,8 +19,8 @@ if ( $invoices && $invoices[0]->id ) : ?>
 			</thead>
 
 			<tbody>
-				<?php foreach ($invoices as $invoice) : ?>
-					<?php 
+				<?php foreach ( $invoices as $invoice ) : ?>
+					<?php
 						$amount_total += $invoice->amount;
 						$hours_total += $invoice->seconds;
 					?>
@@ -33,24 +33,24 @@ if ( $invoices && $invoices[0]->id ) : ?>
 						</td>
 						<td>
 							<?php
-								if ( $invoice->seconds ) {
-									echo esc_html( orbis_time( $invoice->seconds ) );
-								}
-							?>
+							if ( $invoice->seconds ) {
+								echo esc_html( orbis_time( $invoice->seconds ) );
+							}
+						?>
 						</td>
 						<td>
 							<?php
 								$invoice_link = orbis_get_invoice_link( $invoice->invoice_number );
 
-								if ( ! empty( $invoice_link ) ) {
-									printf(
-										'<a href="%s" target="_blank">%s</a>',
-										esc_attr( $invoice_link ),
-										esc_html( $invoice->invoice_number )
-									);
-								} else {
-									echo esc_html( $invoice->invoice_number );
-								}
+							if ( ! empty( $invoice_link ) ) {
+								printf(
+									'<a href="%s" target="_blank">%s</a>',
+									esc_attr( $invoice_link ),
+									esc_html( $invoice->invoice_number )
+								);
+							} else {
+								echo esc_html( $invoice->invoice_number );
+							}
 							?>
 						</td>
 						<td>

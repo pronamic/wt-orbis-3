@@ -73,7 +73,7 @@
 								$email = get_post_meta( $post->ID, '_orbis_company_email', true );
 
 								if ( ! empty( $email ) ) {
-									printf( $break );
+									printf( esc_attr( $break ) );
 
 									printf(
 										'<a href="mailto:%s" target="_blank">%s</a>',

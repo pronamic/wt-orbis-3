@@ -2,4 +2,4 @@
 
 <?php get_template_part( 'content', 'post' ); ?>
 
-<?php get_footer(); ?>
+<?php get_footer();
