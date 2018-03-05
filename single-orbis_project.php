@@ -22,7 +22,7 @@
 			<div class="card">
 				<div class="card-body">
 					<h3 class="card-title"><?php esc_html_e( 'Project Status', 'orbis' ); ?></h3>
-					<h5 class="entry-meta card-subtitle"><?php esc_html_e( 'Project budget', 'orbis' ); ?></h5> <br />
+					<h5 class="entry-meta"><?php esc_html_e( 'Project budget', 'orbis' ); ?></h5>
 
 					<?php
 
