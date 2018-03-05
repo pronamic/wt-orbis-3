@@ -21,6 +21,8 @@ if ( $invoices && $invoices[0]->id ) : ?>
 			<tbody>
 				<?php foreach ( $invoices as $invoice ) : ?>
 					<?php
+						$amount_total = 0;
+						$hours_total  = 0;
 						$amount_total += $invoice->amount;
 						$hours_total += $invoice->seconds;
 					?>
