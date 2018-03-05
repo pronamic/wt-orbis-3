@@ -61,7 +61,7 @@ class Orbis_Comments_Widget extends WP_Widget {
 									<?php
 
 									printf(
-										__( 'Posted by %1$s on %2$s', 'orbis' ),
+										esc_html__( 'Posted by %1$s on %2$s', 'orbis' ),
 										esc_html( $comment->comment_author ),
 										esc_html( get_comment_date( 'H:i',  $comment->comment_ID ) )
 									);

@@ -134,23 +134,23 @@ if ( $total_deals ) {
 
 		<div class="row">
 			<div class="col-md-3">
-				<p><?php _e( 'Won deals', 'orbis' ); ?></p>
-				<h1><?php echo round( $won_deals, 2 ); ?></h1>
+				<p><?php esc_html_e( 'Won deals', 'orbis' ); ?></p>
+				<h1><?php echo esc_html( round( $won_deals, 2 ) ); ?></h1>
 			</div>
 
 			<div class="col-md-3">
-				<p><?php _e( 'Lost deals', 'orbis' ); ?></p>
-				<h1><?php echo round( $lost_deals, 2 ); ?></h1>
+				<p><?php esc_html_e( 'Lost deals', 'orbis' ); ?></p>
+				<h1><?php echo esc_html( round( $lost_deals, 2 ) ); ?></h1>
 			</div>
 
 			<div class="col-md-3">
-				<p><?php _e( 'Pending deals', 'orbis' ); ?></p>
-				<h1><?php echo round( $pending_deals, 2 ); ?></h1>
+				<p><?php esc_html_e( 'Pending deals', 'orbis' ); ?></p>
+				<h1><?php echo esc_html( round( $pending_deals, 2 ) ); ?></h1>
 			</div>
 
 			<div class="col-md-3">
-				<p><?php _e( 'Total amount open', 'orbis' ); ?></p>
-				<h1><?php echo orbis_price( $total_amount ); ?></h1>
+				<p><?php esc_html_e( 'Total amount open', 'orbis' ); ?></p>
+				<h1><?php echo esc_html( orbis_price( $total_amount ) ); ?></h1>
 			</div>
 		</div>
 	</div>

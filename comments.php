@@ -13,7 +13,7 @@
 	<?php if ( have_comments() ) : ?>
 
 		<h3 id="comments-title">
-			<?php printf( _n( 'One thought', '%1$s thoughts', get_comments_number(), 'orbis' ), number_format_i18n( get_comments_number() ) ); ?>
+			<?php printf( esc_html( _n( 'One thought', '%1$s thoughts', get_comments_number(), 'orbis' ) ), esc_html( number_format_i18n( get_comments_number() ) ) ); ?>
 		</h3>
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>

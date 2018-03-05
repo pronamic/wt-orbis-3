@@ -77,7 +77,7 @@ get_header();
 	img.avatar {
 		-webkit-border-radius: 100px;
 		   -moz-border-radius: 100px;
-		        border-radius: 100px;
+				border-radius: 100px;
 	}
 
 	.form-group.inline {
@@ -103,7 +103,7 @@ get_header();
 
 		-webkit-border-radius: 20px;
 		   -moz-border-radius: 20px;
-		        border-radius: 20px;
+				border-radius: 20px;
 
 		color: #999;
 
