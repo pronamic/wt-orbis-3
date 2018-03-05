@@ -64,7 +64,7 @@ class Orbis_Theme_Scripts {
 		// Select2
 		wp_register_style(
 			'select2-bootstrap4',
-			$uri . '/assets/select2-bootstrap/select2-bootstrap4' . $min . '.css',
+			$uri . '/assets/select2-bootstrap4/select2-bootstrap4' . $min . '.css',
 			array(
 				'select2',
 				'bootstrap',

@@ -34,7 +34,7 @@ if ( is_post_type_archive() ) {
 
 						wp_enqueue_script( 'select2' );
 						wp_enqueue_style( 'select2' );
-						wp_enqueue_style( 'select2-bootstrap' );
+						wp_enqueue_style( 'select2-bootstrap4' );
 
 						printf(
 							'<select name="%s" class="select2" multiple="multiple" style="width: 30em;" placeholder="%s">',
@@ -57,7 +57,7 @@ if ( is_post_type_archive() ) {
 						<script type="text/javascript">
 							jQuery( document ).ready( function( $ ) {
 								$( '.select2' ).select2( {
-									theme: 'bootstrap',
+									theme: 'bootstrap4',
 								});
 							} );
 						</script>
