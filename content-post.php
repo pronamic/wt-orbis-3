@@ -145,7 +145,7 @@
 					<div class="content">
 						<?php
 
-						 wp_tag_cloud( array(
+						wp_tag_cloud( array(
 							'smallest'  => 10,
 							'largest'   => 22,
 							'unit'      => 'px',
