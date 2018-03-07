@@ -151,7 +151,7 @@ function orbis_comment( $comment, $args, $depth ) {
 				</div>
 
 				<div class="comment-body">
-					<?php comment_text(); ?>
+					<?php echo wp_kses_post( get_comment_text() ); ?>
 				</div>
 
 				<div class="reply">
