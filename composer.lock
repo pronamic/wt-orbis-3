@@ -297,7 +297,7 @@
         },
         {
             "name": "symfony/config",
-            "version": "v3.4.5",
+            "version": "v3.4.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/config.git",
@@ -360,16 +360,16 @@
         },
         {
             "name": "symfony/dependency-injection",
-            "version": "v3.4.5",
+            "version": "v3.4.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dependency-injection.git",
-                "reference": "752c45dc831dc42a472f0ab8ae0450b63b840656"
+                "reference": "12e901abc1cb0d637a0e5abe9923471361d96b07"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/752c45dc831dc42a472f0ab8ae0450b63b840656",
-                "reference": "752c45dc831dc42a472f0ab8ae0450b63b840656",
+                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/12e901abc1cb0d637a0e5abe9923471361d96b07",
+                "reference": "12e901abc1cb0d637a0e5abe9923471361d96b07",
                 "shasum": ""
             },
             "require": {
@@ -427,11 +427,11 @@
             ],
             "description": "Symfony DependencyInjection Component",
             "homepage": "https://symfony.com",
-            "time": "2018-02-26T14:27:04+00:00"
+            "time": "2018-03-04T03:54:53+00:00"
         },
         {
             "name": "symfony/filesystem",
-            "version": "v3.4.5",
+            "version": "v3.4.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
