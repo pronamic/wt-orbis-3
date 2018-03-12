@@ -16,5 +16,6 @@
 		<exclude name="WordPress.VIP.SuperGlobalInputUsage.AccessDetected" />
 
 		<exclude name="WordPress.WP.PreparedSQL.NotPrepared" />
+		<exclude name="WordPress.VIP.SlowDBQuery.slow_db_query" />
 	</rule>
 </ruleset>

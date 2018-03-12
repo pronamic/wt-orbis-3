@@ -78,7 +78,7 @@ class Orbis_Theme {
 		if ( $args !== $_GET ) {
 			$url = add_query_arg( $args, $url );
 
-			wp_redirect( $url );
+			wp_safe_redirect( $url );
 
 			exit;
 		}

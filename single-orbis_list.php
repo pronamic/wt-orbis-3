@@ -160,7 +160,7 @@ if ( 'orbis_list_add' === filter_input( INPUT_GET, 'action', FILTER_SANITIZE_STR
 												);
 
 												foreach ( $active_options as $active => $option ) {
-													printf(
+													printf( // WPCS: XSS ok.
 														'<a href="%s" class="btn btn-sm btn-outline-%s">%s %s</a>',
 														wp_nonce_url( add_query_arg( array(
 															'to'     => get_the_ID(),

@@ -79,7 +79,7 @@ function orbis_content_nav() {
 	}
 
 	echo '<div class="mt-3">';
-	echo balanceTags( $html );
+	echo balanceTags( $html ); // WPCS: XSS ok.
 	echo '</div>';
 }
 
@@ -120,7 +120,7 @@ function orbis_comment( $comment, $args, $depth ) {
 		
 					<?php
 
-					printf(
+					printf( // WPCS: XSS ok.
 						__( '%s <span class="says">says:</span>', 'orbis' ),
 						sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() )
 					);
@@ -169,7 +169,7 @@ function orbis_comment( $comment, $args, $depth ) {
  * Prints HTML with meta information for the current post-date/time and author.
  */
 function orbis_posted_on() {
-	printf(
+	printf( // WPCS: XSS ok.
 		__( '<span class="sep">Posted on </span><a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="%5$s" title="%6$s" rel="author">%7$s</a></span></span>', 'orbis' ),
 		esc_url( get_permalink() ),
 		esc_attr( get_the_time() ),

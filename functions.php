@@ -191,7 +191,7 @@ function orbis_load_css() {
 	$style .= '.primary-nav > ul > li.active > a, .primary-nav > ul > li.current-menu-item > a, .primary-nav > ul > li.current-url-ancestor > a, .primary-nav > ul > li.current-menu-parent > a { border-color: ' . get_option( 'orbis_primary_color' ) . '; }';
 	$style .= '</style>';
 
-	echo $style;
+	echo $style; // WPCS: XSS ok.
 }
 
 add_action( 'wp_head', 'orbis_load_css' );

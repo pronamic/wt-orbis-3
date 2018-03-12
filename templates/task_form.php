@@ -36,7 +36,7 @@ global $orbis_errors;
 							'echo'             => false,
 						) );
 
-						echo balanceTags( str_replace( '<select ', '<select ng-model="formTaskAssigneeId" required ', $output ) );
+						echo balanceTags( str_replace( '<select ', '<select ng-model="formTaskAssigneeId" required ', $output ) ); // WPCS: XSS ok.
 
 						?>
 					</div>
