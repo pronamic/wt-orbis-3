@@ -13,7 +13,10 @@
 			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 			<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
 		<![endif]-->
-		<?php // @codingStandardsIgnoreEnd ?>
+		<?php 
+		// @codingStandardsIgnoreEnd
+		// Ignoring WordPress.WP.EnqueuedResources.NonEnqueuedScript: only loading script when IE9 is used.
+		?>
 
 		<?php wp_head(); ?>
 	</head>

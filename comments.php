@@ -17,6 +17,7 @@
 			// @codingStandardsIgnoreStart
 			printf( esc_html( _n( 'One thought', '%1$s thoughts', get_comments_number(), 'orbis' ) ), esc_html( number_format_i18n( get_comments_number() ) ) );
 			// @codingStandardsIgnoreEnd
+			// Ignoring WordPress.WP.I18n.MismatchedPlaceholders: Placeholder is fine.
 			?>
 		</h3>
 
