@@ -79,7 +79,7 @@ function orbis_content_nav() {
 	}
 
 	echo '<div class="mt-3">';
-	echo balanceTags( $html ); // WPCS: XSS ok.
+	echo $html; // WPCS: XSS ok.
 	echo '</div>';
 }
 
