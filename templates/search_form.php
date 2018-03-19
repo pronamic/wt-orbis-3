@@ -81,6 +81,14 @@ if ( is_post_type_archive() ) {
 
 					<?php endif; ?>
 				</span>
+				
+				<div class="input-group float-right">
+					<select class="custom-select float-right" onchange="javascript:handleSelect(this)">
+						<option selected><?php esc_html_e( 'Sort by...', 'orbis' ); ?></option>
+						<option value="?orderby=title&order=ASC"><?php esc_html_e( 'Title: Ascending', 'orbis' ); ?></option>
+						<option value="?orderby=title&order=DESC"><?php esc_html_e( 'Title: Descending', 'orbis' ); ?></option>
+					</select>
+				</div>
 			</div>
 
 			<?php if ( is_post_type_archive( 'orbis_person' ) ) : ?>
@@ -111,3 +119,10 @@ if ( is_post_type_archive() ) {
 		<?php get_template_part( 'templates/filter_advanced', get_query_var( 'post_type' ) ); ?>
 	</form>
 </div>
+
+<script type="text/javascript">
+	function handleSelect( select ) {
+		var baseUrl = window.location.href.split(/[?#]/)[0];
+		window.location = baseUrl + select.value;
+	}
+</script>
