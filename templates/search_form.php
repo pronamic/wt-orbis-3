@@ -81,12 +81,21 @@ if ( is_post_type_archive() ) {
 
 					<?php endif; ?>
 				</span>
-				
+			</div>
+
+			<div class="form-inline">
 				<div class="input-group float-right">
 					<select class="custom-select float-right" onchange="javascript:handleSelect(this)">
 						<option selected><?php esc_html_e( 'Sort by...', 'orbis' ); ?></option>
-						<option value="?orderby=title&order=ASC"><?php esc_html_e( 'Title: Ascending', 'orbis' ); ?></option>
-						<option value="?orderby=title&order=DESC"><?php esc_html_e( 'Title: Descending', 'orbis' ); ?></option>
+						<option value="orderby=date&order=ASC"><?php esc_html_e( 'Author - Ascending', 'orbis' ); ?></option>
+						<option value="orderby=date&order=DESC"><?php esc_html_e( 'Author - Descending', 'orbis' ); ?></option>
+						<option value="orderby=date&order=ASC"><?php esc_html_e( 'Date - Ascending', 'orbis' ); ?></option>
+						<option value="orderby=date&order=DESC"><?php esc_html_e( 'Date - Descending', 'orbis' ); ?></option>
+						<option value="orderby=modified&order=ASC"><?php esc_html_e( 'Modified - Ascending', 'orbis' ); ?></option>
+						<option value="orderby=modified&order=DESC"><?php esc_html_e( 'Modified - Descending', 'orbis' ); ?></option>
+						<option value="orderby=title&order=ASC"><?php esc_html_e( 'Title - Ascending', 'orbis' ); ?></option>
+						<option value="orderby=title&order=DESC"><?php esc_html_e( 'Title - Descending', 'orbis' ); ?></option>
+						<option value="orderby=last_comment_date&order=DESC"><?php esc_html_e( 'Last commented', 'orbis' ); ?></option>
 					</select>
 				</div>
 			</div>
@@ -123,6 +132,8 @@ if ( is_post_type_archive() ) {
 <script type="text/javascript">
 	function handleSelect( select ) {
 		var baseUrl = window.location.href.split(/[?#]/)[0];
-		window.location = baseUrl + select.value;
+		var char = '?';
+
+		window.location = baseUrl + char + select.value;
 	}
 </script>
