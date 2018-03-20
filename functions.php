@@ -197,6 +197,30 @@ function orbis_invert_sort_order( $sort_term ){
 }
 
 /**
+ * Echoes correct arrow for sorting where necessary
+ */
+function orbis_sorting_icon( $order, $sorting_term ){
+	$icon = '';
+
+	if ( isset( $_GET['orderby'] ) ) {
+		if ( $order === 'ASC' && $sorting_term === $_GET['orderby'] ) {
+			$icon = "<span class='dashicons dashicons-arrow-up'></span>";
+		}
+		elseif ( $order === 'DESC' && $sorting_term === $_GET['orderby'] ) {
+			$icon = "<span class='dashicons dashicons-arrow-down'></span>";
+		}
+	}
+
+	echo $icon;
+}
+
+function orbis_is_active( $sorting_term ){
+	if ( $sorting_term === $_GET['orderby'] ) {
+		echo 'active';
+	}
+}
+
+/**
  * Load custom CSS
  */
 function orbis_load_css() {
