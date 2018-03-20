@@ -10,6 +10,15 @@ if ( is_post_type_archive() ) {
 	$action_url = orbis_get_post_type_archive_link();
 }
 
+$orderby = ( isset( $_GET['orderby'] ) ) ? $_GET['orderby'] : __( 'Sort by...', 'orbis' );
+
+$sorting = Array(
+	'Author',
+	'Date',
+	'Modified',
+	'Title',
+);
+
 ?>
 <div class="card-body">
 	<form method="get" action="<?php echo esc_attr( $action_url ); ?>">
@@ -83,20 +92,19 @@ if ( is_post_type_archive() ) {
 				</span>
 			</div>
 
-			<div class="form-inline">
-				<div class="input-group float-right">
-					<select class="custom-select float-right" onchange="javascript:handleSelect(this)">
-						<option selected><?php esc_html_e( 'Sort by...', 'orbis' ); ?></option>
-						<option value="orderby=date&order=ASC"><?php esc_html_e( 'Author - Ascending', 'orbis' ); ?></option>
-						<option value="orderby=date&order=DESC"><?php esc_html_e( 'Author - Descending', 'orbis' ); ?></option>
-						<option value="orderby=date&order=ASC"><?php esc_html_e( 'Date - Ascending', 'orbis' ); ?></option>
-						<option value="orderby=date&order=DESC"><?php esc_html_e( 'Date - Descending', 'orbis' ); ?></option>
-						<option value="orderby=modified&order=ASC"><?php esc_html_e( 'Modified - Ascending', 'orbis' ); ?></option>
-						<option value="orderby=modified&order=DESC"><?php esc_html_e( 'Modified - Descending', 'orbis' ); ?></option>
-						<option value="orderby=title&order=ASC"><?php esc_html_e( 'Title - Ascending', 'orbis' ); ?></option>
-						<option value="orderby=title&order=DESC"><?php esc_html_e( 'Title - Descending', 'orbis' ); ?></option>
-						<option value="orderby=last_comment_date&order=DESC"><?php esc_html_e( 'Last commented', 'orbis' ); ?></option>
-					</select>
+			<div class="dropdown show">
+				<a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<?php esc_html_e( ucfirst( $orderby ), 'orbis' ); ?>
+				</a>
+
+				<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+					<?php foreach ($sorting as $sort) : ?>
+						<?php
+							$order = orbis_invert_sort_order( $sort );
+							
+						?>
+						<a class="dropdown-item" href="?orderby=<?php echo strtolower( $sort ) ?>&order=<?php echo $order ?>"><?php esc_html_e( $sort, 'orbis' ); ?></a>
+					<?php endforeach ?>
 				</div>
 			</div>
 
@@ -122,18 +130,9 @@ if ( is_post_type_archive() ) {
 
 			<?php endif; ?>
 
-			<?php get_template_part( 'templates/filter', get_query_var( 'post_type' ) ); ?>
+			<?php // get_template_part( 'templates/filter', get_query_var( 'post_type' ) ); ?>
 		</div>
 
 		<?php get_template_part( 'templates/filter_advanced', get_query_var( 'post_type' ) ); ?>
 	</form>
 </div>
-
-<script type="text/javascript">
-	function handleSelect( select ) {
-		var baseUrl = window.location.href.split(/[?#]/)[0];
-		var char = '?';
-
-		window.location = baseUrl + char + select.value;
-	}
-</script>

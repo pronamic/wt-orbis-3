@@ -48,7 +48,7 @@ add_filter( 'excerpt_length', 'orbis_excerpt_length' );
 
 function orbis_get_archive_post_type() {
 	$post_type_obj = get_queried_object();
-	$post_type = $post_type_obj->name;
+	$post_type     = $post_type_obj->name;
 
 	return $post_type;
 }
@@ -179,10 +179,28 @@ function orbis_get_title() {
 }
 
 /**
+ * Invert sorting order ASC<->DESC
+ */
+function orbis_invert_sort_order( $sort_term ){
+	$order = ( isset( $_GET['order'] ) && ( strtolower( $_GET['orderby'] ) === strtolower( $sort_term ) ) ) ? $_GET['order'] : 'ASC';
+
+	if ( isset( $_GET['order'] ) && ( strtolower( $_GET['orderby'] ) === strtolower( $sort_term ) ) ) {
+		if ( $_GET['order'] === 'ASC' ) {
+			$order = 'DESC';
+		}
+		elseif ( $_GET['order'] === 'DESC' ) {
+			$order = 'ASC';
+		}
+	}
+
+	return $order;
+}
+
+/**
  * Load custom CSS
  */
 function orbis_load_css() {
-	$style = '';
+	$style  = '';
 	$style .= '<style type="text/css" media="screen">';
 	$style .= 'a { color: ' . get_option( 'orbis_primary_color' ) . '; }';
 	$style .= '.btn-primary, .panel.panel-featured { border-color: ' . get_option( 'orbis_primary_color' ) . '; }';
