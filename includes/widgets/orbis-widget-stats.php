@@ -8,7 +8,7 @@ class Orbis_Stats_Widget extends WP_Widget {
 		parent::__construct( 'orbis-stats', __( 'Orbis - Stats', 'orbis' ) );
 	}
 
-	function widget( $args, $instance ) {
+	public function widget( $args, $instance ) {
 		extract( $args );
 
 		$title = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
@@ -54,7 +54,7 @@ class Orbis_Stats_Widget extends WP_Widget {
 		echo $after_widget; // WPCS: XSS ok.
 	}
 
-	function update( $new_instance, $old_instance ) {
+	public function update( $new_instance, $old_instance ) {
 		$instance = $old_instance;
 
 		$instance['title'] = $new_instance['title'];
@@ -62,7 +62,7 @@ class Orbis_Stats_Widget extends WP_Widget {
 		return $instance;
 	}
 
-	function form( $instance ) {
+	public function form( $instance ) {
 		$title = isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : '';
 
 		?>

@@ -62,7 +62,7 @@ class Orbis_Theme {
 
 		$url = get_post_type_archive_linK( 'orbis_person' );
 
-		$args = $_GET;
+		$args = $_GET; // WPCS: CSRF ok.
 
 		$args = array_filter( $args );
 
@@ -75,7 +75,7 @@ class Orbis_Theme {
 			$args['c'] = implode( ',', wp_list_pluck( $terms, 'slug' ) );
 		}
 
-		if ( $args !== $_GET ) {
+		if ( $args !== $_GET ) { // WPCS: CSRF ok.
 			$url = add_query_arg( $args, $url );
 
 			wp_safe_redirect( $url );

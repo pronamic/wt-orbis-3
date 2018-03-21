@@ -2,7 +2,7 @@
 global $post;
 
 $orbis_project = new Orbis_Project( $post );
-$invoices = $orbis_project->get_invoices();
+$invoices      = $orbis_project->get_invoices();
 
 if ( $invoices && $invoices[0]->id ) : ?>
 
@@ -19,20 +19,20 @@ if ( $invoices && $invoices[0]->id ) : ?>
 			</thead>
 				<?php
 					$amount_total = 0;
-					$hours_total = 0;
+					$hours_total  = 0;
 				?>
 			<tbody>
 				<?php foreach ( $invoices as $invoice ) : ?>
 					<?php
 						$amount_total += $invoice->amount;
-						$hours_total += $invoice->seconds;
+						$hours_total  += $invoice->seconds;
 					?>
 					<tr id="post-<?php the_ID(); ?>">
 						<td>
-							<?php echo esc_html( date_format( new DateTime( $invoice->create_date ), 'd-m-Y' ) ) ?>
+							<?php echo esc_html( date_format( new DateTime( $invoice->create_date ), 'd-m-Y' ) ); ?>
 						</td>
 						<td>
-							<?php echo esc_html( orbis_price( $invoice->amount ) ) ?>
+							<?php echo esc_html( orbis_price( $invoice->amount ) ); ?>
 						</td>
 						<td>
 							<?php
@@ -57,20 +57,20 @@ if ( $invoices && $invoices[0]->id ) : ?>
 							?>
 						</td>
 						<td>
-							<?php echo esc_html( $invoice->display_name ) ?>
+							<?php echo esc_html( $invoice->display_name ); ?>
 						</td>
 					</tr>
 
 				<?php endforeach; ?>
 					<tr>
 						<td>
-							<strong><?php esc_html_e( 'Total:', 'orbis' ) ?></strong>
+							<strong><?php esc_html_e( 'Total:', 'orbis' ); ?></strong>
 						</td>
 						<td>
-							<strong><?php echo esc_html( orbis_price( $amount_total ) ) ?></strong>
+							<strong><?php echo esc_html( orbis_price( $amount_total ) ); ?></strong>
 						</td>
 						<td>
-							<strong><?php echo esc_html( orbis_time( $hours_total ) ) ?></strong>
+							<strong><?php echo esc_html( orbis_time( $hours_total ) ); ?></strong>
 						</td>
 						<td></td>
 						<td></td>

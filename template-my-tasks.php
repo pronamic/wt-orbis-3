@@ -76,7 +76,7 @@ get_header();
 
 	img.avatar {
 		-webkit-border-radius: 100px;
-		   -moz-border-radius: 100px;
+		   -moz-border-radius: 100px;<?php // phpcs:ignore WordPress.WhiteSpace.PrecisionAlignment.Found ?>
 				border-radius: 100px;
 	}
 
@@ -102,7 +102,7 @@ get_header();
 		background: #f6f6f6;
 
 		-webkit-border-radius: 20px;
-		   -moz-border-radius: 20px;
+		   -moz-border-radius: 20px;<?php // phpcs:ignore WordPress.WhiteSpace.PrecisionAlignment.Found ?>
 				border-radius: 20px;
 
 		color: #999;
@@ -137,7 +137,7 @@ get_header();
 		border: 1px solid #ccc;
 
 		-webkit-border-radius: 3px;
-		   -moz-border-radius: 3px;
+		   -moz-border-radius: 3px;<?php // phpcs:ignore WordPress.WhiteSpace.PrecisionAlignment.Found ?>
 				border-radius: 3px;
 
 		display: none;
@@ -199,7 +199,10 @@ get_header();
 
 </style>
 
-<?php while ( have_posts() ) : the_post(); ?>
+<?php
+while ( have_posts() ) :
+	the_post();
+?>
 
 	<div ng-controller="OrbisTasksCtrl">
 		<div class="card">

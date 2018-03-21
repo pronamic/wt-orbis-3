@@ -24,7 +24,8 @@ $query = "
 
 ?>
 
-<?php foreach ( $users as $user ) :
+<?php
+foreach ( $users as $user ) :
 
 	$q = $wpdb->prepare( $query, $user->ID, date( 'Y-m-d' ) );
 

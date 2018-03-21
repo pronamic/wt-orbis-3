@@ -1,6 +1,7 @@
 <?php
 
 $project_sections = apply_filters( 'orbis_project_sections', array() );
+
 $tab = get_query_var( 'tabs', 'timesheet' );
 
 if ( ! empty( $project_sections ) ) : ?>
@@ -10,7 +11,7 @@ if ( ! empty( $project_sections ) ) : ?>
 			<ul class="nav nav-tabs">
 
 				<?php foreach ( $project_sections as $section ) : ?>
-					<?php $active = ( $section['id'] === $tab); ?>
+					<?php $active = ( $section['id'] === $tab ); ?>
 
 					<li class="">
 						<a href="<?php echo esc_url( get_permalink() . 'tabs/' . $section['id'] ); ?>" class="nav-link <?php echo esc_attr( $active ? 'active' : '' ); ?>" ><?php echo esc_html( $section['name'] ); ?></a>

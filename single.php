@@ -1,6 +1,9 @@
 <?php get_header(); ?>
 
-<?php while ( have_posts() ) : the_post(); ?>
+<?php
+while ( have_posts() ) :
+	the_post();
+?>
 
 	<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<div class="row">
@@ -13,7 +16,7 @@
 
 						<div class="content clearfix">
 							<?php if ( has_post_thumbnail() ) : ?>
-					
+
 								<div class="thumbnail">
 									<?php the_post_thumbnail( 'thumbnail' ); ?>
 								</div>
@@ -23,7 +26,6 @@
 							<?php the_content(); ?>
 						</div>
 					</div>
-					
 
 					<?php get_template_part( 'templates/post-card-footer' ); ?>
 				</div>
@@ -53,7 +55,7 @@
 							</dl>
 						</div>
 					</div>
-					
+
 				</div>
 
 				<?php do_action( 'orbis_after_side_content' ); ?>

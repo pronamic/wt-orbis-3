@@ -10,13 +10,17 @@
 		<table class="table table-striped table-condense table-hover">
 			<thead>
 				<tr>
-					<?php if ( is_search() ) : ?><th><?php esc_html_e( 'Type', 'orbis' ); ?></th><?php endif; ?>
+					<?php if ( is_search() ) : ?>
+					<th><?php esc_html_e( 'Type', 'orbis' ); ?></th><?php endif; ?>
 					<th><?php esc_html_e( 'Title', 'orbis' ); ?></th>
 					<th></th>
 				</tr>
 			</thead>
 			<tbody>
-				<?php while ( have_posts() ) : the_post(); ?>
+				<?php
+				while ( have_posts() ) :
+					the_post();
+				?>
 
 					<tr id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 						<?php if ( is_search() ) : ?>

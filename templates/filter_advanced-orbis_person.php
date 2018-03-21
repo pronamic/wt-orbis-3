@@ -2,7 +2,7 @@
 
 $min_postcode = get_query_var( 'min_postcode' );
 $max_postcode = get_query_var( 'max_postcode' );
-$is_advanced    = ! empty( $min_postcode ) || ! empty( $max_postcode );
+$is_advanced  = ! empty( $min_postcode ) || ! empty( $max_postcode );
 
 ?>
 

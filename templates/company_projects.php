@@ -19,7 +19,10 @@ if ( $query->have_posts() ) : ?>
 			</thead>
 
 			<tbody>
-				<?php while ( $query->have_posts() ) : $query->the_post(); ?>
+				<?php
+				while ( $query->have_posts() ) :
+					$query->the_post();
+				?>
 
 					<tr id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 						<?php global $orbis_project; ?>
@@ -36,11 +39,9 @@ if ( $query->have_posts() ) : ?>
 
 							echo esc_html( $orbis_project->get_available_time()->format() );
 
-							if ( function_exists( 'orbis_project_the_logged_time' ) ) : ?>
+							if ( function_exists( 'orbis_project_the_logged_time' ) ) :
 
-								<?php
-
-								$classes = array();
+								$classes   = array();
 								$classes[] = orbis_project_in_time() ? 'text-success' : 'text-error';
 
 								?>

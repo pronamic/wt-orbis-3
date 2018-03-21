@@ -1,6 +1,9 @@
 <?php get_header(); ?>
 
-<?php while ( have_posts() ) : the_post(); ?>
+<?php
+while ( have_posts() ) :
+	the_post();
+?>
 
 	<div class="row">
 		<div class="col-md-8">
@@ -10,7 +13,7 @@
 					<?php the_content(); ?>
 				</div>
 			</div>
-			
+
 			<?php get_template_part( 'templates/project_sections' ); ?>
 
 			<?php do_action( 'orbis_after_main_content' ); ?>
@@ -28,7 +31,8 @@
 
 					$price = $orbis_project->get_price();
 
-					if ( $price ) : ?>
+					if ( $price ) :
+					?>
 
 						<p class="project-time">
 							<?php echo esc_html( orbis_price( $price ) ); ?>
@@ -43,7 +47,7 @@
 
 							<?php
 
-							$classes = array();
+							$classes   = array();
 							$classes[] = orbis_project_in_time() ? 'text-success' : 'text-error';
 
 							?>
@@ -53,7 +57,7 @@
 						<?php endif; ?>
 					</p>
 				</div>
-				
+
 			</div>
 
 			<div class="card mt-3">
@@ -89,7 +93,9 @@
 
 							$agreement_id = get_post_meta( get_the_ID(), '_orbis_project_agreement_id', true );
 
-							if ( ! empty( $agreement_id ) && $agreement = get_post( $agreement_id ) ) : ?>
+							if ( ! empty( $agreement_id ) ) :
+								$agreement = get_post( $agreement_id );
+							?>
 
 								<dt><?php esc_html_e( 'Agreement', 'orbis' ); ?></dt>
 								<dd>
@@ -142,7 +148,8 @@
 
 							$invoice_number = get_post_meta( get_the_ID(), '_orbis_project_invoice_number', true );
 
-							if ( ! empty( $invoice_number ) ) : ?>
+							if ( ! empty( $invoice_number ) ) :
+							?>
 
 								<dt><?php esc_html_e( 'Final Invoice', 'orbis' ); ?></dt>
 								<dd>
@@ -180,7 +187,7 @@
 						<dd><?php echo esc_html( get_the_author() ); ?></dd>
 					</div>
 				</div>
-				
+
 			</div>
 
 			<?php if ( function_exists( 'p2p_register_connection_type' ) ) : ?>

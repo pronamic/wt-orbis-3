@@ -18,7 +18,9 @@
 					</tr>
 				</thead>
 				<tbody>
-					<?php while ( have_posts() ) : the_post();
+					<?php
+					while ( have_posts() ) :
+						the_post();
 
 						$due_at = get_post_meta( get_the_ID(), '_orbis_task_due_at', true );
 
@@ -30,7 +32,7 @@
 							$days    = round( $delta / ( 3600 * 24 ) );
 
 							if ( $days < 0 ) {
-								$due_at_ouput = sprintf( __( '<span class="label label-danger">%d days</span>', 'orbis' ), $days );
+								$due_at_ouput = sprintf( __( '<span class="label label-danger">%d days</span>', 'orbis' ), $days ); //phpcs:ignore WordPress.WP.I18n.MissingTranslatorsComment
 							} else {
 								$due_at_ouput = '';
 							}

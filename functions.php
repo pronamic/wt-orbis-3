@@ -181,41 +181,49 @@ function orbis_get_title() {
 /**
  * Invert sorting order ASC<->DESC
  */
-function orbis_invert_sort_order( $sort_term ){
-	$order = ( isset( $_GET['order'] ) && ( strtolower( $_GET['orderby'] ) === strtolower( $sort_term ) ) ) ? $_GET['order'] : 'ASC';
+function orbis_invert_sort_order( $sort_term ) {
+	// phpcs:disable
+	$orderby = ( isset( $_GET['orderby'] ) ) ? $_GET['orderby'] : '';
+	$order   = ( isset( $_GET['order'] ) ) ? $_GET['order'] : '';
+	// phpcs:enable
 
-	if ( isset( $_GET['order'] ) && ( strtolower( $_GET['orderby'] ) === strtolower( $sort_term ) ) ) {
-		if ( $_GET['order'] === 'ASC' ) {
-			$order = 'DESC';
-		}
-		elseif ( $_GET['order'] === 'DESC' ) {
-			$order = 'ASC';
+	$order_inverted = ( isset( $order ) && ( strtolower( $orderby ) === strtolower( $sort_term ) ) ) ? $order : 'ASC';
+
+	if ( isset( $order ) && ( strtolower( $orderby ) === strtolower( $sort_term ) ) ) {
+		if ( 'ASC' === $order ) {
+			$order_inverted = 'DESC';
+		} elseif ( 'DESC' === $order ) {
+			$order_inverted = 'ASC';
 		}
 	}
 
-	return $order;
+	return $order_inverted;
 }
 
 /**
  * Echoes correct arrow for sorting where necessary
  */
-function orbis_sorting_icon( $order, $sorting_term ){
+function orbis_sorting_icon( $order, $sorting_term ) {
 	$icon = '';
 
-	if ( isset( $_GET['orderby'] ) ) {
-		if ( $order === 'ASC' && $sorting_term === $_GET['orderby'] ) {
+	$orderby = ( isset( $_GET['orderby'] ) ) ? $_GET['orderby'] : ''; // phpcs:ignore
+
+	if ( isset( $orderby ) ) {
+		if ( 'ASC' === $order && $sorting_term === $orderby ) {
 			$icon = "<span class='dashicons dashicons-arrow-up'></span>";
-		}
-		elseif ( $order === 'DESC' && $sorting_term === $_GET['orderby'] ) {
+		} elseif ( 'DESC' === $order && $sorting_term === $orderby ) {
 			$icon = "<span class='dashicons dashicons-arrow-down'></span>";
 		}
 	}
 
-	echo $icon;
+	echo $icon; // WPCS: XSS ok.
 }
 
-function orbis_is_active( $sorting_term ){
-	if ( $sorting_term === $_GET['orderby'] ) {
+/**
+ * Echoes active when term matches current sort
+ */
+function orbis_is_active( $sorting_term ) {
+	if ( $sorting_term === $_GET['orderby'] ) { // phpcs:ignore
 		echo 'active';
 	}
 }

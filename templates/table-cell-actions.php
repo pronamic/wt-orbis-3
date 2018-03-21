@@ -1,6 +1,6 @@
 <?php
 
-$text  = '';
+$text = '';
 
 $text .= '<i class="fa fa-pencil" aria-hidden="true"></i>';
 $text .= sprintf(

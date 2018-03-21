@@ -10,7 +10,7 @@ class Orbis_Twitter_Widget extends WP_Widget {
 		parent::__construct( 'orbis_twitter', __( 'Orbis - Twitter', 'orbis' ) );
 	}
 
-	function widget( $args, $instance ) {
+	public function widget( $args, $instance ) {
 		extract( $args );
 
 		$title       = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
@@ -44,12 +44,13 @@ class Orbis_Twitter_Widget extends WP_Widget {
 				<?php endforeach; ?>
 			</ul>
 
-		<?php endif;
+		<?php
+		endif;
 
 		echo $after_widget; // WPCS: XSS ok.
 	}
 
-	function update( $new_instance, $old_instance ) {
+	public function update( $new_instance, $old_instance ) {
 		$instance = $old_instance;
 
 		$instance['title']       = $new_instance['title'];
@@ -59,7 +60,7 @@ class Orbis_Twitter_Widget extends WP_Widget {
 		return $instance;
 	}
 
-	function form( $instance ) {
+	public function form( $instance ) {
 		$title       = isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : '';
 		$number      = isset( $instance['number'] ) ? intval( $instance['number'] ) : '';
 		$screen_name = isset( $instance['screen_name'] ) ? esc_attr( $instance['screen_name'] ) : '';

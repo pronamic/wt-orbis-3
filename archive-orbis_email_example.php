@@ -11,13 +11,16 @@
 			<table class="table table-striped table-condense table-hover">
 				<thead>
 					<tr>
-						<th><?php esc_html_e( 'Title'  , 'orbis' ); ?></th>
-						<th><?php esc_html_e( 'Content'  , 'orbis' ); ?></th>
+						<th><?php esc_html_e( 'Title', 'orbis' ); ?></th>
+						<th><?php esc_html_e( 'Content', 'orbis' ); ?></th>
 						<th></th>
 					</tr>
 				</thead>
 				<tbody>
-					<?php while ( have_posts() ) : the_post(); ?>
+					<?php
+					while ( have_posts() ) :
+						the_post();
+					?>
 
 						<tr id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 							<td>
@@ -30,7 +33,7 @@
 								<?php get_template_part( 'templates/table-cell-actions' ); ?>
 							</td>
 						</tr>
-	
+
 					<?php endwhile; ?>
 				</tbody>
 			</table>

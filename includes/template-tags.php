@@ -103,21 +103,21 @@ function orbis_comment( $comment, $args, $depth ) {
 	$GLOBALS['comment'] = $comment;
 
 	switch ( $comment->comment_type ) :
-		case 'pingback'  :
-		case 'trackback' :
+		case 'pingback':
+		case 'trackback':
 			?>
 			<li class="post pingback">
 				<p><?php esc_html_e( 'Pingback:', 'orbis' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'orbis' ), ' ' ); ?></p>
 			<?php
 			break;
 
-		default :
+		default:
 			?>
 			<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
 				<div id="comment-<?php comment_ID(); ?>" class="comment-content">
 				<div class="comment-author vcard">
 					<?php echo get_avatar( $comment, 60 ); ?>
-		
+
 					<?php
 
 					printf( // WPCS: XSS ok.
@@ -155,14 +155,19 @@ function orbis_comment( $comment, $args, $depth ) {
 				</div>
 
 				<div class="reply">
-					<?php comment_reply_link( array_merge( $args, array( 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+					<?php
+					comment_reply_link( array_merge( $args, array(
+						'depth'     => $depth,
+						'max_depth' => $args['max_depth'],
+					) ) );
+					?>
 				</div>
 			</div>
 
 			<?php
 
 			break;
-	endswitch;
+	endswitch; // phpcs:ignore Squiz.PHP.NonExecutableCode.Unreachable
 }
 
 /**

@@ -8,7 +8,7 @@ class Orbis_News_Widget extends WP_Widget {
 		parent::__construct( 'orbis-news', __( 'Orbis - News', 'orbis' ) );
 	}
 
-	function widget( $args, $instance ) {
+	public function widget( $args, $instance ) {
 		extract( $args );
 
 		$title = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
@@ -32,7 +32,10 @@ class Orbis_News_Widget extends WP_Widget {
 			<div class="news with-cols clearfix">
 				<div class="row">
 					<div class="col-md-6">
-						<?php if ( $query->have_posts() ) : $query->the_post(); ?>
+						<?php
+						if ( $query->have_posts() ) :
+							$query->the_post();
+						?>
 
 							<div class="content">
 								<?php if ( has_post_thumbnail() ) : ?>
@@ -46,7 +49,7 @@ class Orbis_News_Widget extends WP_Widget {
 								<h4>
 									<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 								</h4>
-			
+
 								<?php the_excerpt(); ?>
 							</div>
 
@@ -58,7 +61,10 @@ class Orbis_News_Widget extends WP_Widget {
 							<h4><?php esc_html_e( 'More news', 'orbis' ); ?></h4>
 
 							<ul class="no-disc">
-								<?php while ( $query->have_posts() ) : $query->the_post(); ?>
+								<?php
+								while ( $query->have_posts() ) :
+									$query->the_post();
+								?>
 
 									<li>
 										<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
@@ -71,14 +77,15 @@ class Orbis_News_Widget extends WP_Widget {
 				</div>
 			</div>
 
-		<?php endif;
+		<?php
+		endif;
 
 		wp_reset_postdata();
 
 		echo $after_widget; // WPCS: XSS ok.
 	}
 
-	function update( $new_instance, $old_instance ) {
+	public function update( $new_instance, $old_instance ) {
 		$instance = $old_instance;
 
 		$instance['title'] = $new_instance['title'];
@@ -86,7 +93,7 @@ class Orbis_News_Widget extends WP_Widget {
 		return $instance;
 	}
 
-	function form( $instance ) {
+	public function form( $instance ) {
 		$title = isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : '';
 
 		?>
@@ -98,7 +105,7 @@ class Orbis_News_Widget extends WP_Widget {
 
 			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
 		</p>
-		
+
 		<?php
 	}
 }

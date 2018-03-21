@@ -7,17 +7,14 @@
 	</div>
 
 	<?php return; ?>
+	<?php endif; // phpcs:ignore Squiz.PHP.NonExecutableCode.Unreachable ?>
 
-	<?php endif; ?>
 
 	<?php if ( have_comments() ) : ?>
 
 		<h3 id="comments-title">
 			<?php
-			// @codingStandardsIgnoreStart
-			printf( esc_html( _n( 'One thought', '%1$s thoughts', get_comments_number(), 'orbis' ) ), esc_html( number_format_i18n( get_comments_number() ) ) );
-			// @codingStandardsIgnoreEnd
-			// Ignoring WordPress.WP.I18n.MismatchedPlaceholders: Placeholder is fine.
+			printf( esc_html( _n( 'One thought', '%1$s thoughts', get_comments_number(), 'orbis' ) ), esc_html( number_format_i18n( get_comments_number() ) ) ); // phpcs:ignore WordPress.WP.I18n.MismatchedPlaceholders
 			?>
 		</h3>
 

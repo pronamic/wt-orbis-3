@@ -7,7 +7,10 @@
 
 			<?php if ( have_posts() ) : ?>
 
-				<?php while ( have_posts() ) : the_post(); ?>
+				<?php
+				while ( have_posts() ) :
+					the_post();
+				?>
 
 					<article id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix' ); ?>>
 						<div class="content">
@@ -21,11 +24,11 @@
 
 							<div class="entry-content clearfix">
 								<?php if ( has_post_thumbnail() ) : ?>
-							
+
 									<div class="thumbnail">
 										<?php the_post_thumbnail( 'thumbnail' ); ?>
 									</div>
-		
+
 								<?php endif; ?>
 
 								<?php the_content( __( 'Continue reading →', 'orbis' ) ); ?>
@@ -40,7 +43,8 @@
 
 									$categories_list = get_the_category_list( __( ',  ', 'orbis' ) );
 
-									if ( $categories_list ) : ?>
+									if ( $categories_list ) :
+									?>
 
 										<span class="cat-links">
 											<?php
@@ -62,7 +66,9 @@
 
 									$tags_list = get_the_tag_list( '', __( ',  ', 'orbis' ) );
 
-									if ( $tags_list ) : if ( $show_sep ) : ?>
+									if ( $tags_list ) :
+										if ( $show_sep ) :
+									?>
 
 										<span class="sep"> | </span>
 
@@ -83,7 +89,10 @@
 										endif;
 									?>
 
-									<?php if ( comments_open() ) : if ( $show_sep ) : ?>
+									<?php
+									if ( comments_open() ) :
+										if ( $show_sep ) :
+									?>
 
 										<span class="sep"> | </span>
 
@@ -136,7 +145,8 @@
 
 		$tags = get_tags();
 
-		if ( $tags ) : ?>
+		if ( $tags ) :
+		?>
 
 			<div class="card">
 				<div class="card-body">
@@ -146,15 +156,15 @@
 						<?php
 
 						wp_tag_cloud( array(
-							'smallest'  => 10,
-							'largest'   => 22,
-							'unit'      => 'px',
+							'smallest' => 10,
+							'largest'  => 22,
+							'unit'     => 'px',
 						) );
 
 						?>
 					</div>
 				</div>
-				
+
 			</div>
 
 		<?php endif; ?>

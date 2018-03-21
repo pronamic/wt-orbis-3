@@ -19,7 +19,10 @@ if ( $query->have_posts() ) : ?>
 			</thead>
 
 			<tbody>
-				<?php while ( $query->have_posts() ) : $query->the_post(); ?>
+				<?php
+				while ( $query->have_posts() ) :
+					$query->the_post();
+				?>
 
 					<tr id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 						<td>

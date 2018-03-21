@@ -11,7 +11,7 @@ if ( ! p2p_connection_exists( 'orbis_persons_to_companies' ) ) {
 $query = new WP_Query( array(
 	'connected_type'  => 'orbis_persons_to_companies',
 	'connected_items' => get_queried_object(),
-	'nopaging'        => true,
+	'nopaging'        => true, // phpcs:ignore WordPress.VIP.PostsPerPage.posts_per_page_nopaging
 ) );
 
 ?>
@@ -22,7 +22,10 @@ $query = new WP_Query( array(
 		<?php if ( $query->have_posts() ) : ?>
 
 			<ul class="list">
-				<?php while ( $query->have_posts() ) : $query->the_post(); ?>
+				<?php
+				while ( $query->have_posts() ) :
+					$query->the_post();
+				?>
 
 					<li>
 						<?php
@@ -56,5 +59,5 @@ $query = new WP_Query( array(
 
 		<?php endif; ?>
 	</div>
-	
+
 </div>

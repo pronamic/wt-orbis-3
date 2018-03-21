@@ -1,6 +1,9 @@
 <?php get_header(); ?>
 
-<?php while ( have_posts() ) : the_post(); ?>
+<?php
+while ( have_posts() ) :
+	the_post();
+?>
 
 	<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<div class="row">
@@ -15,7 +18,7 @@
 							<?php the_content(); ?>
 						</div>
 					</div>
-					
+
 				</div>
 
 				<?php get_template_part( 'templates/company_sections' ); ?>
@@ -39,13 +42,17 @@
 							$connected = new WP_Query( array(
 								'connected_type'  => 'orbis_persons_to_companies',
 								'connected_items' => get_queried_object(),
-								'nopaging'        => true,
+								'nopaging'        => true, // phpcs:ignore WordPress.VIP.PostsPerPage.posts_per_page_nopaging
 							) );
 
-							if ( $connected->have_posts() ) : ?>
+							if ( $connected->have_posts() ) :
+							?>
 
 								<ul class="post-list">
-									<?php while ( $connected->have_posts() ) : $connected->the_post(); ?>
+									<?php
+									while ( $connected->have_posts() ) :
+										$connected->the_post();
+									?>
 
 										<li>
 											<a href="<?php the_permalink(); ?>" class="post-image">
@@ -115,7 +122,7 @@
 							</dl>
 						</div>
 					</div>
-					
+
 				</div>
 
 				<?php do_action( 'orbis_after_side_content' ); ?>

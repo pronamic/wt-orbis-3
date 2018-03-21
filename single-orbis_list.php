@@ -16,7 +16,10 @@ if ( 'orbis_list_add' === filter_input( INPUT_GET, 'action', FILTER_SANITIZE_STR
 
 <?php get_header(); ?>
 
-<?php while ( have_posts() ) : the_post(); ?>
+<?php
+while ( have_posts() ) :
+	the_post();
+?>
 
 	<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<div class="row">
@@ -29,7 +32,7 @@ if ( 'orbis_list_add' === filter_input( INPUT_GET, 'action', FILTER_SANITIZE_STR
 
 						<div class="content clearfix">
 							<?php if ( has_post_thumbnail() ) : ?>
-					
+
 								<div class="thumbnail">
 									<?php the_post_thumbnail( 'thumbnail' ); ?>
 								</div>
@@ -39,7 +42,7 @@ if ( 'orbis_list_add' === filter_input( INPUT_GET, 'action', FILTER_SANITIZE_STR
 							<?php the_content(); ?>
 						</div>
 					</div>
-					
+
 
 					<?php get_template_part( 'templates/post-card-footer' ); ?>
 				</div>
@@ -56,7 +59,8 @@ if ( 'orbis_list_add' === filter_input( INPUT_GET, 'action', FILTER_SANITIZE_STR
 							'nopaging'        => true,
 						) );
 
-						if ( $query->have_posts() ) : ?>
+						if ( $query->have_posts() ) :
+						?>
 
 							<table class="table table-striped table-bordered">
 								<thead>
@@ -69,7 +73,10 @@ if ( 'orbis_list_add' === filter_input( INPUT_GET, 'action', FILTER_SANITIZE_STR
 
 								<tbody>
 
-									<?php while ( $query->have_posts() ) : $query->the_post(); ?>
+									<?php
+									while ( $query->have_posts() ) :
+										$query->the_post();
+									?>
 
 										<tr>
 											<td>
@@ -81,13 +88,13 @@ if ( 'orbis_list_add' === filter_input( INPUT_GET, 'action', FILTER_SANITIZE_STR
 												$active = p2p_get_meta( get_post()->p2p_id, 'active', true );
 
 												switch ( $active ) {
-													case 'yes' :
+													case 'yes':
 														esc_html_e( 'Yes', 'orbis' );
 														break;
-													case 'no' :
+													case 'no':
 														esc_html_e( 'No', 'orbis' );
 														break;
-													case 'maybe' :
+													case 'maybe':
 														esc_html_e( 'Maybe', 'orbis' );
 														break;
 												}
@@ -125,7 +132,9 @@ if ( 'orbis_list_add' === filter_input( INPUT_GET, 'action', FILTER_SANITIZE_STR
 							'posts_per_page' => 10,
 						) );
 
-						if ( $query->have_posts() ) : ?>
+						if ( $query->have_posts() ) :
+
+						?>
 
 							<table class="table table-striped table-bordered">
 								<thead>
@@ -137,7 +146,10 @@ if ( 'orbis_list_add' === filter_input( INPUT_GET, 'action', FILTER_SANITIZE_STR
 
 								<tbody>
 
-									<?php while ( $query->have_posts() ) : $query->the_post(); ?>
+									<?php
+									while ( $query->have_posts() ) :
+										$query->the_post();
+									?>
 
 										<tr>
 											<td>
@@ -216,7 +228,7 @@ if ( 'orbis_list_add' === filter_input( INPUT_GET, 'action', FILTER_SANITIZE_STR
 							</dl>
 						</div>
 					</div>
-					
+
 				</div>
 
 				<?php do_action( 'orbis_after_side_content' ); ?>

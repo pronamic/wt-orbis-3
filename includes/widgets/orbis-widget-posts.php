@@ -8,7 +8,7 @@ class Orbis_List_Posts_Widget extends WP_Widget {
 		parent::__construct( 'orbis-list-posts', __( 'Orbis - Posts List', 'orbis' ) );
 	}
 
-	function widget( $args, $instance ) {
+	public function widget( $args, $instance ) {
 		extract( $args );
 
 		$title          = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
@@ -32,18 +32,21 @@ class Orbis_List_Posts_Widget extends WP_Widget {
 			<?php if ( 'orbis_person' === $post_type_name ) : ?>
 
 				<ul class="post-list">
-					<?php while ( $query->have_posts() ) : $query->the_post(); ?>
+					<?php
+					while ( $query->have_posts() ) :
+						$query->the_post();
+					?>
 
 						<li>
 							<a href="<?php the_permalink(); ?>" class="post-image">
 								<?php if ( has_post_thumbnail() ) : ?>
-	
+
 									<?php the_post_thumbnail( 'avatar', array( 'class' => 'avatar' ) ); ?>
-	
+
 								<?php else : ?>
-	
+
 									<img class="avatar" src="<?php bloginfo( 'template_directory' ); ?>/placeholders/avatar.png" alt="">
-	
+
 								<?php endif; ?>
 							</a>
 
@@ -54,13 +57,13 @@ class Orbis_List_Posts_Widget extends WP_Widget {
 									<?php if ( get_post_meta( get_the_ID(), '_orbis_person_email_address', true ) ) : ?>
 
 										<span class="entry-meta"><?php echo esc_html( get_post_meta( get_the_ID(), '_orbis_person_email_address', true ) ); ?></span> <br />
-		
+
 									<?php endif; ?>
 
 									<?php if ( get_post_meta( get_the_ID(), '_orbis_person_phone_number', true ) ) : ?>
 
 										<span class="entry-meta"><?php echo esc_html( get_post_meta( get_the_ID(), '_orbis_person_phone_number', true ) ); ?></span>
-	
+
 									<?php endif; ?>
 								</p>
 							</div>
@@ -72,7 +75,10 @@ class Orbis_List_Posts_Widget extends WP_Widget {
 			<?php else : ?>
 
 				<ul class="list">
-					<?php while ( $query->have_posts() ) : $query->the_post(); ?>
+					<?php
+					while ( $query->have_posts() ) :
+						$query->the_post();
+					?>
 
 						<li>
 							<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
@@ -84,7 +90,7 @@ class Orbis_List_Posts_Widget extends WP_Widget {
 			<?php endif; ?>
 
 			<footer>
-				<a href="<?php echo esc_attr( get_post_type_archive_link( $post_type_name ) ); ?>" class="btn btn-default"><?php esc_html_e( 'Show all', 'orbis' );  ?></a>
+				<a href="<?php echo esc_attr( get_post_type_archive_link( $post_type_name ) ); ?>" class="btn btn-default"><?php esc_html_e( 'Show all', 'orbis' ); ?></a>
 			</footer>
 
 		<?php wp_reset_postdata(); else : ?>
@@ -113,7 +119,7 @@ class Orbis_List_Posts_Widget extends WP_Widget {
 		echo $after_widget; // WPCS: XSS ok.
 	}
 
-	function update( $new_instance, $old_instance ) {
+	public function update( $new_instance, $old_instance ) {
 		$instance = $old_instance;
 
 		$instance['title']          = $new_instance['title'];
@@ -123,7 +129,7 @@ class Orbis_List_Posts_Widget extends WP_Widget {
 		return $instance;
 	}
 
-	function form( $instance ) {
+	public function form( $instance ) {
 		$title          = isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : '';
 		$number         = isset( $instance['number'] ) ? intval( $instance['number'] ) : '';
 		$post_type_name = isset( $instance['post_type_name'] ) ? esc_attr( $instance['post_type_name'] ) : '';
@@ -162,7 +168,7 @@ class Orbis_List_Posts_Widget extends WP_Widget {
 
 		<p>
 			<label for="<?php echo esc_attr( $this->get_field_id( 'number' ) ); ?>"><?php esc_html_e( 'Number:', 'orbis' ); ?></label>
-			
+
 			<select id="<?php echo esc_attr( $this->get_field_id( 'number' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'number' ) ); ?>">
 				<?php while ( $i <= 10 ) : ?>
 
@@ -173,7 +179,7 @@ class Orbis_List_Posts_Widget extends WP_Widget {
 				<?php endwhile; ?>
 			</select>
 		</p>
-		
+
 		<?php
 	}
 }

@@ -8,7 +8,7 @@ $date_query = array();
 $date = filter_input( INPUT_GET, 'date', FILTER_SANITIZE_STRING );
 
 if ( ! empty( $date ) ) {
-	$date  = explode( '-', $date );
+	$date = explode( '-', $date );
 
 	$year  = $date[0];
 	$month = $date[1];
@@ -35,9 +35,9 @@ if ( ! empty( $date ) ) {
 $pending_deals_query = new WP_Query(
 	array(
 		'post_type'      => 'orbis_deal',
-		'posts_per_page' => -1,
+		'posts_per_page' => 50,
 		'date_query'     => $date_query,
-		'meta_query' => array(
+		'meta_query'     => array( // WPCS: slow query ok.
 			array(
 				'key'     => '_orbis_deal_status',
 				'value'   => 'pending',
@@ -55,7 +55,8 @@ $pending_deals = $pending_deals_query->found_posts;
 $total_amount = 0;
 
 if ( $pending_deals_query->have_posts() ) {
-	while ( $pending_deals_query->have_posts() ) { $pending_deals_query->the_post();
+	while ( $pending_deals_query->have_posts() ) {
+		$pending_deals_query->the_post();
 		$deal_price = get_post_meta( $post->ID, '_orbis_deal_price', true );
 
 		if ( empty( $deal_price ) ) {
@@ -72,9 +73,9 @@ if ( $pending_deals_query->have_posts() ) {
 $won_deals_query = new WP_Query(
 	array(
 		'post_type'      => 'orbis_deal',
-		'posts_per_page' => -1,
+		'posts_per_page' => 50,
 		'date_query'     => $date_query,
-		'meta_query' => array(
+		'meta_query'     => array( // WPCS: slow query ok.
 			array(
 				'key'     => '_orbis_deal_status',
 				'value'   => 'won',
@@ -92,9 +93,9 @@ $won_deals = $won_deals_query->found_posts;
 $lost_deals_query = new WP_Query(
 	array(
 		'post_type'      => 'orbis_deal',
-		'posts_per_page' => -1,
+		'posts_per_page' => 50,
 		'date_query'     => $date_query,
-		'meta_query' => array(
+		'meta_query'     => array( // WPCS: slow query ok.
 			array(
 				'key'     => '_orbis_deal_status',
 				'value'   => 'lost',
@@ -104,7 +105,7 @@ $lost_deals_query = new WP_Query(
 	)
 );
 
-$lost_deals    = $lost_deals_query->found_posts;
+$lost_deals = $lost_deals_query->found_posts;
 
 /**
  * Total deals

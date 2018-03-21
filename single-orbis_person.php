@@ -1,6 +1,9 @@
 <?php get_header(); ?>
 
-<?php while ( have_posts() ) : the_post(); ?>
+<?php
+while ( have_posts() ) :
+	the_post();
+?>
 
 	<div class="row">
 		<div class="col-md-8">
@@ -36,7 +39,8 @@
 										$contact->get_department(),
 									) );
 
-									if ( ! empty( $data ) ) : ?>
+									if ( ! empty( $data ) ) :
+									?>
 
 										<dt><?php esc_html_e( 'Company', 'orbis' ); ?></dt>
 										<dd>
@@ -63,7 +67,8 @@
 
 									$email = $contact->get_email();
 
-									if ( ! empty( $email ) ) : ?>
+									if ( ! empty( $email ) ) :
+									?>
 
 										<dt><?php esc_html_e( 'E-mail address', 'orbis' ); ?></dt>
 										<dd>
@@ -76,7 +81,8 @@
 
 									$gender = $contact->get_gender();
 
-									if ( ! empty( $gender ) ) : ?>
+									if ( ! empty( $gender ) ) :
+									?>
 
 										<dt><?php esc_html_e( 'Gender', 'orbis' ); ?></dt>
 										<dd>
@@ -89,7 +95,8 @@
 
 									$address = (string) $contact->get_address();
 
-									if ( ! empty( $address ) ) : ?>
+									if ( ! empty( $address ) ) :
+									?>
 
 										<dt><?php esc_html_e( 'Address', 'orbis' ); ?></dt>
 										<dd>
@@ -102,7 +109,8 @@
 
 									$birth_date = $contact->get_birth_date();
 
-									if ( $birth_date ) : ?>
+									if ( $birth_date ) :
+									?>
 
 										<dt><?php esc_html_e( 'Birth Date', 'orbis' ); ?></dt>
 										<dd>
@@ -190,7 +198,7 @@
 						</div>
 					</div>
 				</div>
-				
+
 			</div>
 
 			<?php comments_template( '', true ); ?>
@@ -220,7 +228,7 @@
 						</dl>
 					</div>
 				</div>
-				
+
 			</div>
 		</div>
 	</div>

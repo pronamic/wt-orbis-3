@@ -20,7 +20,10 @@
 				</thead>
 				<tbody>
 
-					<?php while ( have_posts() ) : the_post(); ?>
+					<?php
+					while ( have_posts() ) :
+						the_post();
+					?>
 
 						<tr id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 							<td>
@@ -51,7 +54,7 @@
 
 								if ( function_exists( 'orbis_project_the_logged_time' ) ) :
 
-									$classes = array();
+									$classes   = array();
 									$classes[] = orbis_project_in_time() ? 'text-success' : 'text-error';
 
 									?>

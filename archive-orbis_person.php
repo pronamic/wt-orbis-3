@@ -24,9 +24,11 @@
 				</thead>
 
 				<tbody>
-					<?php while ( have_posts() ) : the_post();
-
-						$contact = new Orbis_Contact(); ?>
+					<?php
+					while ( have_posts() ) :
+						the_post();
+						$contact = new Orbis_Contact();
+					?>
 
 						<tr>
 							<td>
@@ -77,7 +79,7 @@
 							<td>
 								<?php
 
-								$address  = $contact->get_address();
+								$address = $contact->get_address();
 
 								printf(
 									'%s<br />%s %s',
@@ -106,7 +108,7 @@
 								<?php get_template_part( 'templates/table-cell-actions' ); ?>
 							</td>
 						</tr>
-				
+
 					<?php endwhile; ?>
 				</tbody>
 			</table>

@@ -29,7 +29,7 @@
 				</p>
 			</div>
 		</div>
-		
+
 	</div>
 
 <?php endif; ?>

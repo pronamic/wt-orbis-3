@@ -8,7 +8,7 @@ class Orbis_Comments_Widget extends WP_Widget {
 		parent::__construct( 'orbis-comments', __( 'Orbis - Comments', 'orbis' ) );
 	}
 
-	function widget( $args, $instance ) {
+	public function widget( $args, $instance ) {
 		extract( $args );
 
 		$number = isset( $instance['number'] ) ? $instance['number'] : null;
@@ -25,7 +25,7 @@ class Orbis_Comments_Widget extends WP_Widget {
 		) );
 
 		?>
-		
+
 		<div class="content">
 			<?php if ( $comments ) : ?>
 
@@ -47,8 +47,8 @@ class Orbis_Comments_Widget extends WP_Widget {
 							$class = 'label-default';
 						}
 
-						?> 
-							
+						?>
+
 						<li>
 							<div class="comment-label">
 								<span class="label <?php echo esc_attr( $class ); ?>"><?php echo esc_html( $label ); ?></span> 
@@ -63,7 +63,7 @@ class Orbis_Comments_Widget extends WP_Widget {
 									printf(
 										esc_html__( 'Posted by %1$s on %2$s', 'orbis' ),
 										esc_html( $comment->comment_author ),
-										esc_html( get_comment_date( 'H:i',  $comment->comment_ID ) )
+										esc_html( get_comment_date( 'H:i', $comment->comment_ID ) )
 									);
 
 									?>
@@ -84,7 +84,7 @@ class Orbis_Comments_Widget extends WP_Widget {
 		echo $after_widget; // WPCS: XSS ok.
 	}
 
-	function update( $new_instance, $old_instance ) {
+	public function update( $new_instance, $old_instance ) {
 		$instance = $old_instance;
 
 		$instance['title']  = $new_instance['title'];
@@ -93,7 +93,7 @@ class Orbis_Comments_Widget extends WP_Widget {
 		return $instance;
 	}
 
-	function form( $instance ) {
+	public function form( $instance ) {
 		$title  = isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : '';
 		$number = isset( $instance['number'] ) ? intval( $instance['number'] ) : '';
 
@@ -111,7 +111,7 @@ class Orbis_Comments_Widget extends WP_Widget {
 
 		<p>
 			<label for="<?php echo esc_attr( $this->get_field_id( 'number' ) ); ?>"><?php esc_html_e( 'Number:', 'orbis' ); ?></label>
-			
+
 			<select id="<?php echo esc_attr( $this->get_field_id( 'number' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'number' ) ); ?>">
 				<?php while ( $i <= 10 ) : ?>
 

@@ -40,8 +40,8 @@ class Orbis_Theme_Admin {
 		return array(
 			// @see http://v4-alpha.getbootstrap.com/components/buttons/
 			array(
-				'title'	=> __( 'Buttons', 'orbis' ),
-				'items'	=> array(
+				'title' => __( 'Buttons', 'orbis' ),
+				'items' => array(
 					array(
 						'title'    => __( 'Default', 'orbis' ),
 						'selector' => 'a',
@@ -81,8 +81,8 @@ class Orbis_Theme_Admin {
 			),
 			// @see http://v4-alpha.getbootstrap.com/content/tables/
 			array(
-				'title'	=> __( 'Tables', 'orbis' ),
-				'items'	=> array(
+				'title' => __( 'Tables', 'orbis' ),
+				'items' => array(
 					array(
 						'title'    => __( 'Default', 'orbis' ),
 						'selector' => 'table',
@@ -117,8 +117,8 @@ class Orbis_Theme_Admin {
 			),
 			// @see http://v4-alpha.getbootstrap.com/content/typography/#blockquotes
 			array(
-				'title'	=> __( 'Blockquotes', 'orbis' ),
-				'items'	=> array(
+				'title' => __( 'Blockquotes', 'orbis' ),
+				'items' => array(
 					array(
 						'title'    => __( 'Default', 'orbis' ),
 						'selector' => 'blockquote',

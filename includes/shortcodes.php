@@ -76,7 +76,7 @@ add_shortcode( 'table', 'orbis_table_shortcode' );
  */
 function orbis_icon_shortcode( $atts, $content = null ) {
 	$atts = shortcode_atts( array(
-		'type'  => 'phone',
+		'type' => 'phone',
 	), $atts );
 
 	return '<i class="fa fa-' . $atts['type'] . '"></i>';

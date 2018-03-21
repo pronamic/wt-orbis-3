@@ -1,6 +1,9 @@
 <?php get_header(); ?>
 
-<?php while ( have_posts() ) : the_post(); ?>
+<?php
+while ( have_posts() ) :
+	the_post();
+?>
 
 	<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<div class="row">
@@ -59,7 +62,7 @@
 							</dl>
 						</div>
 					</div>
-					
+
 				</div>
 
 				<?php do_action( 'orbis_after_side_content' ); ?>
