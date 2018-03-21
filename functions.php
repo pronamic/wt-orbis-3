@@ -208,11 +208,10 @@ function orbis_sorting_icon( $order, $sorting_term ) {
 
 	if ( isset( $orderby ) && $sorting_term === $orderby ) {
 		$icon_format = "<span class='dashicons dashicons-arrow-%s'></span>";
-		$direction = ( 'asc' === $order ) ? 'desc' : 'asc';
+		$direction   = ( 'asc' === $order ) ? 'desc' : 'asc';
+
 		return sprintf( $icon_format, $direction ); // WPCS: XSS ok.
 	}
-
-	return;
 }
 
 /**
