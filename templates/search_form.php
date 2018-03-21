@@ -21,21 +21,17 @@ $sorting_keys = array_keys( $sorting_terms );
 
 switch ( get_query_var( 'post_type' ) ) {
 	case 'orbis_subscription':
-		$specific_sorting = array(
-			'active_subscriptions' => esc_html__( 'Active Subscriptions', 'orbis' ),
-		);
+		$sorting_terms[] = '-';
 
-		$specific_sorting_keys = array_keys( $specific_sorting );
+		$sorting_terms['active_subscriptions'] = esc_html__( 'Active Subscriptions', 'orbis' );
 		break;
 
 	case 'orbis_project':
-		$specific_sorting = array(
-			'project_finished_modified'       => esc_html__( 'Modified and Finished', 'orbis' ),
-			'project_invoice_number'          => esc_html__( 'Invoice Number', 'orbis' ),
-			'project_invoice_number_modified' => esc_html__( 'Invoice Number Modified', 'orbis' ),
-		);
+		$sorting_terms[] = '-';
 
-		$specific_sorting_keys = array_keys( $specific_sorting );
+		$sorting_terms['project_finished_modified']       = esc_html__( 'Modified and Finished', 'orbis' );
+		$sorting_terms['project_invoice_number']          = esc_html__( 'Invoice Number', 'orbis' );
+		$sorting_terms['project_invoice_number_modified'] = esc_html__( 'Invoice Number Modified', 'orbis' );
 		break;
 
 	default:
@@ -122,32 +118,43 @@ switch ( get_query_var( 'post_type' ) ) {
 
 				<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
 
-					<?php $num = 0; ?>
-					<?php foreach ( $sorting_terms as $sort ) : ?>
-						<?php $order = orbis_invert_sort_order( $sorting_keys[ $num ] ); ?>
-						<a class="dropdown-item clearfix <?php orbis_is_active( $sorting_keys[ $num ] ); ?>" href="?orderby=<?php echo esc_html( $sorting_keys[ $num ] ); ?>&order=<?php echo esc_html( $order ); ?>">
-							<?php echo esc_html( $sort ); ?>
-							<?php orbis_sorting_icon( $order, $sorting_keys[ $num ] ); ?>
-						</a>
 					<?php
-						$num++;
-						endforeach;
-					?>
 
-					<?php $num = 0; ?>
-					<?php if ( isset( $specific_sorting ) ) : ?>
-						<div class="dropdown-divider"></div>
-						<?php foreach ( $specific_sorting as $sort ) : ?>
-							<?php $order = orbis_invert_sort_order( $specific_sorting_keys[ $num ] ); ?>
-							<a class="dropdown-item clearfix <?php orbis_is_active( $specific_sorting_keys[ $num ] ); ?>" href="?orderby=<?php echo esc_html( $specific_sorting_keys[ $num ] ); ?>&order=<?php echo esc_html( $order ); ?>">
-								<?php echo esc_html( $sort ); ?>
-								<?php orbis_sorting_icon( $order, $specific_sorting_keys[ $num ] ); ?>
-							</a>
-						<?php
-							$num++;
-							endforeach;
-						?>
-					<?php endif; ?>
+					foreach ( $sorting_terms as $sorting_term => $label ) {
+						if ( '-' === $label ) {
+							echo '<div class="dropdown-divider"></div>';
+
+							continue;
+						}
+
+						$classes = array(
+							'dropdown-item',
+							'clearfix',
+						);
+
+						$orderby = ( isset( $_GET['orderby'] ) ) ? $_GET['orderby'] : ''; // phpcs:ignore
+						if ( $sorting_term === $orderby ) {
+							$classes[] = 'active';
+						}
+
+						$order = orbis_invert_sort_order( $sorting_term );
+
+						$link = add_query_arg( array(
+							'orderby' => $sorting_term,
+							'order'   => $order,
+						) );
+
+						$icon = orbis_sorting_icon( $order, $sorting_term );
+
+						echo sprintf(
+							"<a class='%s' href='%s'> %s %s </a>",
+							esc_attr( implode( ' ', $classes ) ),
+							esc_url( $link ),
+							esc_html( $label ),
+							wp_kses_post( $icon )
+						);
+					}
+					?>
 
 				</div>
 			</div>
