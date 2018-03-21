@@ -204,19 +204,15 @@ function orbis_invert_sort_order( $sort_term ) {
  * Echoes correct arrow for sorting where necessary
  */
 function orbis_sorting_icon( $order, $sorting_term ) {
-	$icon = '';
-
 	$orderby = ( isset( $_GET['orderby'] ) ) ? $_GET['orderby'] : ''; // phpcs:ignore
 
-	if ( isset( $orderby ) ) {
-		if ( 'asc' === $order && $sorting_term === $orderby ) {
-			$icon = "<span class='dashicons dashicons-arrow-up'></span>";
-		} elseif ( 'desc' === $order && $sorting_term === $orderby ) {
-			$icon = "<span class='dashicons dashicons-arrow-down'></span>";
-		}
+	if ( isset( $orderby ) && $sorting_term === $orderby ) {
+		$icon_format = "<span class='dashicons dashicons-arrow-%s'></span>";
+		$direction = ( 'asc' === $order ) ? 'desc' : 'asc';
+		return sprintf( $icon_format, $direction ); // WPCS: XSS ok.
 	}
 
-	return $icon; // WPCS: XSS ok.
+	return;
 }
 
 /**
