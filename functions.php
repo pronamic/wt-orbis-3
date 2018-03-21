@@ -187,13 +187,13 @@ function orbis_invert_sort_order( $sort_term ) {
 	$order   = ( isset( $_GET['order'] ) ) ? $_GET['order'] : '';
 	// phpcs:enable
 
-	$order_inverted = ( isset( $order ) && ( strtolower( $orderby ) === strtolower( $sort_term ) ) ) ? $order : 'ASC';
+	$order_inverted = ( isset( $order ) && ( strtolower( $orderby ) === strtolower( $sort_term ) ) ) ? $order : 'asc';
 
 	if ( isset( $order ) && ( strtolower( $orderby ) === strtolower( $sort_term ) ) ) {
-		if ( 'ASC' === $order ) {
-			$order_inverted = 'DESC';
-		} elseif ( 'DESC' === $order ) {
-			$order_inverted = 'ASC';
+		if ( 'asc' === $order ) {
+			$order_inverted = 'desc';
+		} elseif ( 'desc' === $order ) {
+			$order_inverted = 'asc';
 		}
 	}
 
@@ -209,23 +209,14 @@ function orbis_sorting_icon( $order, $sorting_term ) {
 	$orderby = ( isset( $_GET['orderby'] ) ) ? $_GET['orderby'] : ''; // phpcs:ignore
 
 	if ( isset( $orderby ) ) {
-		if ( 'ASC' === $order && $sorting_term === $orderby ) {
+		if ( 'asc' === $order && $sorting_term === $orderby ) {
 			$icon = "<span class='dashicons dashicons-arrow-up'></span>";
-		} elseif ( 'DESC' === $order && $sorting_term === $orderby ) {
+		} elseif ( 'desc' === $order && $sorting_term === $orderby ) {
 			$icon = "<span class='dashicons dashicons-arrow-down'></span>";
 		}
 	}
 
-	echo $icon; // WPCS: XSS ok.
-}
-
-/**
- * Echoes active when term matches current sort
- */
-function orbis_is_active( $sorting_term ) {
-	if ( $sorting_term === $_GET['orderby'] ) { // phpcs:ignore
-		echo 'active';
-	}
+	return $icon; // WPCS: XSS ok.
 }
 
 /**
