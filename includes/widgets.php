@@ -51,7 +51,7 @@ function orbis_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Dashboard Widget Area', 'orbis' ),
 		'id'            => 'dashboard-sidebar',
-		'before_widget' => '<div class="col-md-6"><div id="%1$s" class="card %2$s"><div class="card-body">',
+		'before_widget' => '<div class="col-md-6"><div id="%1$s" class="mb-3 card %2$s"><div class="card-body">',
 		'after_widget'  => '</div></div></div>',
 		'before_title'  => '<h3 class="card-title">',
 		'after_title'   => '</h3>',
@@ -60,7 +60,7 @@ function orbis_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Frontpage Top Widget', 'orbis' ),
 		'id'            => 'frontpage-top-widget',
-		'before_widget' => '<div class="col-md-12"><div id="%1$s" class="card %2$s"><div class="card-body">',
+		'before_widget' => '<div class="col-md-12"><div id="%1$s" class="mb-3 card %2$s"><div class="card-body">',
 		'after_widget'  => '</div></div></div>',
 		'before_title'  => '<h3 class="card-title">',
 		'after_title'   => '</h3>',
@@ -69,7 +69,7 @@ function orbis_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Frontpage Left Widget', 'orbis' ),
 		'id'            => 'frontpage-left-widget',
-		'before_widget' => '<div id="%1$s" class="card %2$s"><div class="card-body">',
+		'before_widget' => '<div id="%1$s" class="mb-3 card %2$s"><div class="card-body">',
 		'after_widget'  => '</div></div>',
 		'before_title'  => '<h3 class="card-title">',
 		'after_title'   => '</h3>',
@@ -78,7 +78,7 @@ function orbis_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Frontpage Right Widget', 'orbis' ),
 		'id'            => 'frontpage-right-widget',
-		'before_widget' => '<div id="%1$s" class="card %2$s"><div class="card-body">',
+		'before_widget' => '<div id="%1$s" class="mb-3 card %2$s"><div class="card-body">',
 		'after_widget'  => '</div></div>',
 		'before_title'  => '<h3 class="card-title">',
 		'after_title'   => '</h3>',
@@ -87,7 +87,7 @@ function orbis_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Frontpage Bottom Widget', 'orbis' ),
 		'id'            => 'frontpage-bottom-widget',
-		'before_widget' => '<div class="col-md-4"><div id="%1$s" class="card %2$s"><div class="card-body">',
+		'before_widget' => '<div class="col-md-4"><div id="%1$s" class="mb-3 card %2$s"><div class="card-body">',
 		'after_widget'  => '</div></div></div>',
 		'before_title'  => '<h3 class="card-title">',
 		'after_title'   => '</h3>',
