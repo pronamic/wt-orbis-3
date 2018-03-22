@@ -213,7 +213,7 @@ while ( have_posts() ) :
 
 			<?php endif; ?>
 
-			<div class="card">
+			<div class="card mt-3">
 				<div class="card-body">
 					<h3 class="card-title"><?php esc_html_e( 'Additional information', 'orbis' ); ?></h3>
 

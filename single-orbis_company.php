@@ -10,7 +10,7 @@ while ( have_posts() ) :
 			<div class="col-md-8">
 				<?php do_action( 'orbis_before_main_content' ); ?>
 
-				<div class="card">
+				<div class="card mb-3">
 					<div class="card-body">
 						<h3 class="card-title"><?php esc_html_e( 'Description', 'orbis' ); ?></h3>
 
@@ -33,7 +33,7 @@ while ( have_posts() ) :
 
 				<?php if ( function_exists( 'p2p_register_connection_type' ) ) : ?>
 
-					<div class="card">
+					<div class="card my-3">
 						<div class="card-body">
 							<h3 class="card-title"><?php esc_html_e( 'Connected persons', 'orbis' ); ?></h3>
 
