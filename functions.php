@@ -187,7 +187,7 @@ function orbis_invert_sort_order( $sort_term ) {
 	$order   = ( isset( $_GET['order'] ) ) ? $_GET['order'] : '';
 	// phpcs:enable
 
-	$order_inverted = ( isset( $order ) && ( strtolower( $orderby ) === strtolower( $sort_term ) ) ) ? $order : 'asc';
+	$order_inverted = ( isset( $order ) && ( strtolower( $orderby ) === strtolower( $sort_term ) ) ) ? $order : 'desc';
 
 	if ( isset( $order ) && ( strtolower( $orderby ) === strtolower( $sort_term ) ) ) {
 		if ( 'asc' === $order ) {
