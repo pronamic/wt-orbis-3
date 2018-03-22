@@ -1,69 +1,69 @@
-<div class="panel">
-	<header>
-		<h3><?php esc_html_e( 'Involved Persons', 'orbis' ); ?></h3>
-	</header>
+<div class="card mt-3">
+	<div class="card-body">
+		<h3 class="card-title"><?php esc_html_e( 'Involved Persons', 'orbis' ); ?></h3>
 
-	<?php
+		<?php
 
-	$query = new WP_Query( array(
-		'connected_type'  => 'orbis_projects_to_persons',
-		'connected_items' => get_queried_object(),
-		'nopaging'        => true, // phpcs:ignore WordPress.VIP.PostsPerPage.posts_per_page_nopaging
-	) );
+		$query = new WP_Query( array(
+			'connected_type'  => 'orbis_projects_to_persons',
+			'connected_items' => get_queried_object(),
+			'nopaging'        => true, // phpcs:ignore WordPress.VIP.PostsPerPage.posts_per_page_nopaging
+		) );
 
-	if ( $query->have_posts() ) :
-	?>
+		if ( $query->have_posts() ) :
+		?>
 
-		<ul class="post-list">
-			<?php
-			while ( $query->have_posts() ) :
-				$query->the_post();
-			?>
+			<ul class="post-list">
+				<?php
+				while ( $query->have_posts() ) :
+					$query->the_post();
+				?>
 
-				<li>
-					<a href="<?php the_permalink(); ?>" class="post-image">
-						<?php if ( has_post_thumbnail() ) : ?>
+					<li>
+						<a href="<?php the_permalink(); ?>" class="post-image">
+							<?php if ( has_post_thumbnail() ) : ?>
 
-							<?php the_post_thumbnail( 'avatar' ); ?>
+								<?php the_post_thumbnail( 'avatar' ); ?>
 
-						<?php else : ?>
+							<?php else : ?>
 
-							<img src="<?php bloginfo( 'template_directory' ); ?>/placeholders/avatar.png" alt="">
-
-						<?php endif; ?>
-					</a>
-
-					<div class="post-content">
-						<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> <br />
-
-						<p>
-							<?php if ( get_post_meta( $post->ID, '_orbis_person_email_address', true ) ) : ?>
-
-								<span class="entry-meta"><?php echo esc_html( get_post_meta( $post->ID, '_orbis_person_email_address', true ) ); ?></span> <br />
+								<img src="<?php bloginfo( 'template_directory' ); ?>/placeholders/avatar.png" alt="">
 
 							<?php endif; ?>
+						</a>
 
-							<?php if ( get_post_meta( $post->ID, '_orbis_person_phone_number', true ) ) : ?>
+						<div class="post-content">
+							<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> <br />
 
-								<span class="entry-meta"><?php echo esc_html( get_post_meta( $post->ID, '_orbis_person_phone_number', true ) ); ?></span>
+							<p>
+								<?php if ( get_post_meta( $post->ID, '_orbis_person_email_address', true ) ) : ?>
 
-							<?php endif; ?>
-						</p>
-					</div>
-				</li>
+									<span class="entry-meta"><?php echo esc_html( get_post_meta( $post->ID, '_orbis_person_email_address', true ) ); ?></span> <br />
 
-			<?php endwhile; ?>
-		</ul>
+								<?php endif; ?>
 
-		<?php wp_reset_postdata(); ?>
+								<?php if ( get_post_meta( $post->ID, '_orbis_person_phone_number', true ) ) : ?>
 
-	<?php else : ?>
+									<span class="entry-meta"><?php echo esc_html( get_post_meta( $post->ID, '_orbis_person_phone_number', true ) ); ?></span>
 
-		<div class="content">
-			<p class="alt">
-				<?php esc_html_e( 'No persons involved.', 'orbis' ); ?>
-			</p>
-		</div>
+								<?php endif; ?>
+							</p>
+						</div>
+					</li>
 
-	<?php endif; ?>
+				<?php endwhile; ?>
+			</ul>
+
+			<?php wp_reset_postdata(); ?>
+
+		<?php else : ?>
+
+			<div class="content">
+				<p class="alt">
+					<?php esc_html_e( 'No persons involved.', 'orbis' ); ?>
+				</p>
+			</div>
+
+		<?php endif; ?>
+	</div>
 </div>
