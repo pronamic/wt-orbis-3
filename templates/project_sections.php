@@ -13,7 +13,7 @@ if ( ! empty( $project_sections ) ) : ?>
 				<?php foreach ( $project_sections as $section ) : ?>
 					<?php $active = ( $section['id'] === $tab ); ?>
 
-					<li class="">
+					<li class="nav-item">
 						<a href="<?php echo esc_url( get_permalink() . 'tabs/' . $section['id'] ); ?>" class="nav-link <?php echo esc_attr( $active ? 'active' : '' ); ?>" ><?php echo esc_html( $section['name'] ); ?></a>
 					</li>
 

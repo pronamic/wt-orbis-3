@@ -7,14 +7,14 @@ $invoices      = $orbis_project->get_invoices();
 if ( $invoices && $invoices[0]->id ) : ?>
 
 	<div class="table-responsive">
-		<table class="table table-striped table-bordered mb-0">
+		<table class="table table-striped mb-0">
 			<thead>
 				<tr>
-					<th><?php esc_html_e( 'Date', 'orbis' ); ?></th>
-					<th><?php esc_html_e( 'Amount', 'orbis' ); ?></th>
-					<th><?php esc_html_e( 'Hours', 'orbis' ); ?></th>
-					<th><?php esc_html_e( 'Invoice Number', 'orbis' ); ?></th>
-					<th><?php esc_html_e( 'User', 'orbis' ); ?></th>
+					<th class="border-top-0"><?php esc_html_e( 'Date', 'orbis' ); ?></th>
+					<th class="border-top-0"><?php esc_html_e( 'Amount', 'orbis' ); ?></th>
+					<th class="border-top-0"><?php esc_html_e( 'Hours', 'orbis' ); ?></th>
+					<th class="border-top-0"><?php esc_html_e( 'Invoice Number', 'orbis' ); ?></th>
+					<th class="border-top-0"><?php esc_html_e( 'User', 'orbis' ); ?></th>
 				</tr>
 			</thead>
 				<?php

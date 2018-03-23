@@ -9,12 +9,12 @@ $query = new WP_Query( array(
 if ( $query->have_posts() ) : ?>
 
 	<div class="table-responsive">
-		<table class="table table-striped table-bordered mb-0">
+		<table class="table table-striped mb-0">
 			<thead>
 				<tr>
-					<th><?php esc_html_e( 'Description', 'orbis' ); ?></th>
-					<th><?php esc_html_e( 'Time', 'orbis' ); ?></th>
-					<th><?php esc_html_e( 'Comments', 'orbis' ); ?></th>
+					<th class="border-top-0"><?php esc_html_e( 'Description', 'orbis' ); ?></th>
+					<th class="border-top-0"><?php esc_html_e( 'Time', 'orbis' ); ?></th>
+					<th class="border-top-0"><?php esc_html_e( 'Comments', 'orbis' ); ?></th>
 				</tr>
 			</thead>
 
