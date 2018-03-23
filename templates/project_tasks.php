@@ -46,7 +46,7 @@ if ( $query->have_posts() ) : ?>
 
 <?php else : ?>
 
-	<div class="content mt-3">
+	<div class="content">
 		<p class="alt">
 			<?php esc_html_e( 'No tasks found.', 'orbis' ); ?>
 		</p>

@@ -6,7 +6,7 @@ $tab = get_query_var( 'tabs', 'timesheet' );
 
 if ( ! empty( $project_sections ) ) : ?>
 
-	<div class="card my-3 with-cols clearfix">
+	<div class="card mb-3 with-cols clearfix">
 		<header class="with-tabs">
 			<ul class="nav nav-tabs">
 

@@ -83,7 +83,7 @@ if ( $invoices && $invoices[0]->id ) : ?>
 
 <?php else : ?>
 
-	<div class="content mt-3">
+	<div class="content">
 		<p class="alt">
 			<?php esc_html_e( 'No invoices found.', 'orbis' ); ?>
 		</p>
