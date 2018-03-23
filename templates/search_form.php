@@ -86,6 +86,7 @@ switch ( get_query_var( 'post_type' ) ) {
 							jQuery( document ).ready( function( $ ) {
 								$( '.select2' ).select2( {
 									theme: 'bootstrap4',
+									width: '30em',
 								});
 							} );
 						</script>
