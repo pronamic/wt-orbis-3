@@ -7,12 +7,20 @@ while ( have_posts() ) :
 
 	<div class="row">
 		<div class="col-md-8">
-			<div class="card">
+
+			<?php if ( ! empty( get_the_content() ) ) : ?>
+
+			<div class="card mb-3">
 				<div class="card-body">
 					<h3 class="card-title"><?php esc_html_e( 'Description', 'orbis' ); ?></h3>
-					<?php the_content(); ?>
+
+					<div class="content">
+						<?php the_content(); ?>
+					</div>
 				</div>
 			</div>
+
+			<?php endif; ?>
 
 			<?php get_template_part( 'templates/project_sections' ); ?>
 
