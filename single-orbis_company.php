@@ -10,6 +10,8 @@ while ( have_posts() ) :
 			<div class="col-md-8">
 				<?php do_action( 'orbis_before_main_content' ); ?>
 
+				<?php if ( ! empty( get_the_content() ) ) : ?>
+
 				<div class="card mb-3">
 					<div class="card-body">
 						<h3 class="card-title"><?php esc_html_e( 'Description', 'orbis' ); ?></h3>
@@ -18,8 +20,9 @@ while ( have_posts() ) :
 							<?php the_content(); ?>
 						</div>
 					</div>
-
 				</div>
+
+				<?php endif; ?>
 
 				<?php get_template_part( 'templates/company_sections' ); ?>
 
