@@ -15,6 +15,8 @@ $country  = get_post_meta( $post->ID, '_orbis_company_country', true );
 
 $invoice_email = get_post_meta( $post->ID, '_orbis_invoice_email', true );
 
+$twinfield_customer_id = get_post_meta( $post->ID, '_twinfield_customer_id', true );
+
 ?>
 <div class="card mb-3">
 	<div class="card-body">
@@ -111,6 +113,26 @@ $invoice_email = get_post_meta( $post->ID, '_orbis_invoice_email', true );
 
 					?>
 				</dd>
+
+				<?php if ( ! empty( $twinfield_customer_id ) ) : ?>
+
+				<dt><?php esc_html_e( 'Twinfield', 'orbis_twinfield' ); ?></dt>
+				<dd>
+					<?php
+
+					$url = home_url( sprintf( '/debiteuren/%s/', $twinfield_customer_id ) );
+
+					printf(
+						'<a href="%s" target="_blank">%s</a>',
+						esc_attr( $url ),
+						esc_html( $twinfield_customer_id )
+					);
+
+					?>
+				</dd>
+
+				<?php endif; ?>
+
 			</dl>
 		</div>
 	</div>
