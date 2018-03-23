@@ -16,7 +16,7 @@ $country  = get_post_meta( $post->ID, '_orbis_company_country', true );
 $invoice_email = get_post_meta( $post->ID, '_orbis_invoice_email', true );
 
 ?>
-<div class="card">
+<div class="card mb-3">
 	<div class="card-body">
 		<h3 class="card-title"><?php esc_html_e( 'Contact Details', 'orbis' ); ?></h3>
 
