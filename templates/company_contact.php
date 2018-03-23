@@ -116,7 +116,7 @@ $twinfield_customer_id = get_post_meta( $post->ID, '_twinfield_customer_id', tru
 
 				<?php if ( ! empty( $twinfield_customer_id ) ) : ?>
 
-				<dt><?php esc_html_e( 'Twinfield', 'orbis_twinfield' ); ?></dt>
+				<dt><?php esc_html_e( 'Twinfield ID', 'orbis' ); ?></dt>
 				<dd>
 					<?php
 
