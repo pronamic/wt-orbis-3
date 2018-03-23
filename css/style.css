@@ -175,6 +175,7 @@ h6:first-child {
 
 /* line 173, ../sass/partials/_base.scss */
 p.alt {
+  padding: 1rem 0 0 1rem;
   color: #999;
 }
 
