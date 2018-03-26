@@ -17,7 +17,7 @@
 			$( this ).next( '.sub-menu' ).toggle();
 		} );
 
-		$( '.toggle-nav' ).click( function( e ) {
+		$( '.orbis-toggle-nav' ).click( function( e ) {
 			$( '.page-wrapper' ).toggleClass( 'mobile-menu' );
 		} );
 

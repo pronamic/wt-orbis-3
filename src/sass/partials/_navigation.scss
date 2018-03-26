@@ -109,13 +109,17 @@
 	display: none;
 }
 
-a.toggle-nav {
+.orbis-toggle-nav {
 	cursor: pointer;
-
 	display: block;
+	padding-left: 1rem;
 }
 
-a.toggle-nav:before {
+.orbis-toggle-nav span {
+ 	padding-left: 1rem;
+}
+
+.orbis-toggle-nav:before {
 	content: "\f137";
 
 	font-family: "FontAwesome";
@@ -136,12 +140,12 @@ a.toggle-nav:before {
 }
 
 .mobile-menu .primary-nav > ul > li > a,
-.mobile-menu a.toggle-nav {
+.mobile-menu .orbis-toggle-nav {
 	text-align: center;
 }
 
 .mobile-menu .primary-nav a i.fa,
-.mobile-menu a.toggle-nav:before {
+.mobile-menu .orbis-toggle-nav:before {
 	font-size: 24px;
 	
 	margin: 0;
@@ -152,7 +156,7 @@ a.toggle-nav:before {
 	display: none;
 }
 
-.mobile-menu a.toggle-nav:before {
+.mobile-menu .orbis-toggle-nav:before {
 	content: "\f138";
 }
 
@@ -171,7 +175,7 @@ a.toggle-nav:before {
 }
 
 @media only screen and (max-width: 782px) {
-	a.toggle-nav {
+	.orbis-toggle-nav {
 		display: none;	
 	}
 
