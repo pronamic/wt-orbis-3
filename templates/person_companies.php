@@ -16,48 +16,46 @@ $query = new WP_Query( array(
 
 ?>
 <div class="card">
-	<div class="card-body">
-		<h3 class="card-title"><?php esc_html_e( 'Connected Companies', 'orbis' ); ?></h3>
+	<div class="card-header"><?php esc_html_e( 'Connected Companies', 'orbis' ); ?></div>
 
-		<?php if ( $query->have_posts() ) : ?>
+	<?php if ( $query->have_posts() ) : ?>
 
-			<ul class="list">
-				<?php
-				while ( $query->have_posts() ) :
-					$query->the_post();
-				?>
+		<ul class="list">
+			<?php
+			while ( $query->have_posts() ) :
+				$query->the_post();
+			?>
 
-					<li>
-						<?php
+				<li>
+					<?php
 
-						$favicon_url = orbis_get_favicon_url( get_post_meta( get_the_ID(), '_orbis_company_website', true ) );
+					$favicon_url = orbis_get_favicon_url( get_post_meta( get_the_ID(), '_orbis_company_website', true ) );
 
-						?>
-						<a href="<?php the_permalink(); ?>">
-							<?php if ( ! empty( $favicon_url ) ) : ?>
+					?>
+					<a href="<?php the_permalink(); ?>">
+						<?php if ( ! empty( $favicon_url ) ) : ?>
 
-								<img src="<?php echo esc_attr( $favicon_url ); ?>" alt="" />
+							<img src="<?php echo esc_attr( $favicon_url ); ?>" alt="" />
 
-							<?php endif; ?>
+						<?php endif; ?>
 
-							<?php the_title(); ?>
-						</a>
-					</li>
+						<?php the_title(); ?>
+					</a>
+				</li>
 
-				<?php endwhile; ?>
-			</ul>
+			<?php endwhile; ?>
+		</ul>
 
-			<?php wp_reset_postdata(); ?>
+		<?php wp_reset_postdata(); ?>
 
-		<?php else : ?>
+	<?php else : ?>
 
-			<div class="content">
-				<p class="alt">
-					<?php esc_html_e( 'No companies connected.', 'orbis' ); ?>
-				</p>
-			</div>
+		<div class="card-body">
+			<p class="alt">
+				<?php esc_html_e( 'No companies connected.', 'orbis' ); ?>
+			</p>
+		</div>
 
-		<?php endif; ?>
-	</div>
+	<?php endif; ?>
 
 </div>
