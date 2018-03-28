@@ -47,7 +47,7 @@
     "font-awesome": "^4.7.0",
     "tether": "^1.4.3",
     "select2-bootstrap4-theme": "1.0.0",
-    "popper.js": "^1.12.9"
+    "popper.js": "^1.14.1"
   },
   "dependencies": {
     "select2-bootstrap4-theme": "^1.0.0"

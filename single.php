@@ -11,20 +11,18 @@ while ( have_posts() ) :
 				<?php do_action( 'orbis_before_main_content' ); ?>
 
 				<div class="card mb-3">
+					<div class="card-header"><?php esc_html_e( 'Description', 'orbis' ); ?></div>
+
 					<div class="card-body">
-						<h3 class="card-title"><?php esc_html_e( 'Description', 'orbis' ); ?></h3>
+						<?php if ( has_post_thumbnail() ) : ?>
 
-						<div class="content clearfix">
-							<?php if ( has_post_thumbnail() ) : ?>
+							<div class="thumbnail">
+								<?php the_post_thumbnail( 'thumbnail' ); ?>
+							</div>
 
-								<div class="thumbnail">
-									<?php the_post_thumbnail( 'thumbnail' ); ?>
-								</div>
+						<?php endif; ?>
 
-							<?php endif; ?>
-
-							<?php the_content(); ?>
-						</div>
+						<?php the_content(); ?>
 					</div>
 
 					<?php get_template_part( 'templates/post-card-footer' ); ?>
@@ -39,21 +37,19 @@ while ( have_posts() ) :
 				<?php do_action( 'orbis_before_side_content' ); ?>
 
 				<div class="card">
+					<div class="card-header"><?php esc_html_e( 'Additional Information', 'orbis' ); ?></div>
+
 					<div class="card-body">
-						<h3 class="card-title"><?php esc_html_e( 'Additional Information', 'orbis' ); ?></h3>
+						<dl>
+							<dt><?php esc_html_e( 'Posted on', 'orbis' ); ?></dt>
+							<dd><?php echo esc_html( get_the_date() ); ?></dd>
 
-						<div class="content">
-							<dl>
-								<dt><?php esc_html_e( 'Posted on', 'orbis' ); ?></dt>
-								<dd><?php echo esc_html( get_the_date() ); ?></dd>
+							<dt><?php esc_html_e( 'Posted by', 'orbis' ); ?></dt>
+							<dd><?php echo esc_html( get_the_author() ); ?></dd>
 
-								<dt><?php esc_html_e( 'Posted by', 'orbis' ); ?></dt>
-								<dd><?php echo esc_html( get_the_author() ); ?></dd>
-
-								<dt><?php esc_html_e( 'Actions', 'orbis' ); ?></dt>
-								<dd><?php edit_post_link( __( 'Edit', 'orbis' ) ); ?></dd>
-							</dl>
-						</div>
+							<dt><?php esc_html_e( 'Actions', 'orbis' ); ?></dt>
+							<dd><?php edit_post_link( __( 'Edit', 'orbis' ) ); ?></dd>
+						</dl>
 					</div>
 
 				</div>

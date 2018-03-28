@@ -8,9 +8,9 @@ while ( have_posts() ) :
 	<div class="row">
 		<div class="col-md-8">
 			<div class="card with-cols clearfix mb-3">
-				<div class="card-body">
-					<h3 class="card-title"><?php esc_html_e( 'About this contact', 'orbis' ); ?></h3>
+				<div class="card-header"><?php esc_html_e( 'About this contact', 'orbis' ); ?></div>
 
+				<div class="card-body">
 					<div class="row">
 						<div class="col-md-6">
 							<div class="content">
@@ -214,21 +214,18 @@ while ( have_posts() ) :
 			<?php endif; ?>
 
 			<div class="card mt-3">
+				<div class="card-header"><?php esc_html_e( 'Additional information', 'orbis' ); ?></div>
+
 				<div class="card-body">
-					<h3 class="card-title"><?php esc_html_e( 'Additional information', 'orbis' ); ?></h3>
-
-					<div class="card-text">
-						<dl>
-							<dt><?php esc_html_e( 'Posted on', 'orbis' ); ?></dt>
-							<dd><?php echo esc_html( get_the_date() ); ?></dd>
-							<dt><?php esc_html_e( 'Posted by', 'orbis' ); ?></dt>
-							<dd><?php echo esc_html( get_the_author() ); ?></dd>
-							<dt><?php esc_html_e( 'Actions', 'orbis' ); ?></dt>
-							<dd><?php edit_post_link( __( 'Edit', 'orbis' ) ); ?></dd>
-						</dl>
-					</div>
+					<dl>
+						<dt><?php esc_html_e( 'Posted on', 'orbis' ); ?></dt>
+						<dd><?php echo esc_html( get_the_date() ); ?></dd>
+						<dt><?php esc_html_e( 'Posted by', 'orbis' ); ?></dt>
+						<dd><?php echo esc_html( get_the_author() ); ?></dd>
+						<dt><?php esc_html_e( 'Actions', 'orbis' ); ?></dt>
+						<dd><?php edit_post_link( __( 'Edit', 'orbis' ) ); ?></dd>
+					</dl>
 				</div>
-
 			</div>
 		</div>
 	</div>
