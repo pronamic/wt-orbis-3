@@ -651,6 +651,19 @@ table tr.canceled {
   text-decoration: line-through;
 }
 
+.orbis-status{
+  transition: ease-in-out 0.1s;
+}
+
+.orbis-status:hover{
+  opacity: .6;
+  cursor: pointer;
+}
+
+.orbis-status:hover::after{
+  content: " -";
+}
+
 /**
  * Well
  */
