@@ -43,7 +43,7 @@ if ( $invoices && $invoices[0]->id ) : ?>
 						</td>
 						<td>
 							<?php
-								$invoice_link = orbis_get_invoice_link( $invoice->invoice_number );
+							$invoice_link = orbis_get_invoice_link( $invoice->invoice_number );
 
 							if ( ! empty( $invoice_link ) ) {
 								printf(
@@ -54,6 +54,7 @@ if ( $invoices && $invoices[0]->id ) : ?>
 							} else {
 								echo esc_html( $invoice->invoice_number );
 							}
+							echo ( $invoice->invoice_number === get_post_meta( $post->ID, '_orbis_project_invoice_number', true ) ) ? ' <span class="dashicons dashicons-yes"></span>' : '';
 							?>
 						</td>
 						<td>
