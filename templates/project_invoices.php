@@ -54,7 +54,7 @@ if ( $invoices && $invoices[0]->id ) : ?>
 							} else {
 								echo esc_html( $invoice->invoice_number );
 							}
-							echo ( $invoice->invoice_number === get_post_meta( $post->ID, '_orbis_project_invoice_number', true ) ) ? ' <span class="dashicons dashicons-yes"></span>' : '';
+							echo ( get_post_meta( $post->ID, '_orbis_project_invoice_number', true ) === $invoice->invoice_number ) ? ' <span class="dashicons dashicons-yes"></span>' : '';
 							?>
 						</td>
 						<td>
