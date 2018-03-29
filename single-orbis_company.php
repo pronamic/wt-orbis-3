@@ -45,11 +45,13 @@ while ( have_posts() ) :
 							'nopaging'        => true, // phpcs:ignore WordPress.VIP.PostsPerPage.posts_per_page_nopaging
 						) );
 
-						if ( $connected->have_posts() ) : ?>
+						if ( $connected->have_posts() ) :
+
+						?>
 
 							<ul class="post-list">
 								<?php while ( $connected->have_posts() ) : ?>
-									
+
 									<?php $connected->the_post(); ?>
 
 									<li>

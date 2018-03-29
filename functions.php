@@ -34,7 +34,7 @@ function orbis_status_taxonomy_add_field() {
 
 	<tr class="form-field">  
 		<th scope="row" valign="top">  
-			<label for="status_type"><?php _e('Status type.'); ?></label>  
+			<label for="status_type"><?php esc_html_e( 'Status type.' ); ?></label>
 		</th>  
 		<td>
 			<select name="status_type" id="status_type" >
@@ -47,7 +47,7 @@ function orbis_status_taxonomy_add_field() {
 				<option value="light">Light</option>
 				<option value="dark">Dark</option>
 			</select>
-			<span class="description"><?php _e('The type of status to show.', 'orbis' ); ?></span>
+			<span class="description"><?php esc_html_e( 'The type of status to show.', 'orbis' ); ?></span>
 		</td>
 	</tr>
 	<br /><br />
@@ -60,7 +60,7 @@ function orbis_status_taxonomy_add_field() {
  */
 function save_taxonomy_custom_fields( $term_id ) {
 	if ( isset( $_POST['status_type'] ) ) {
-		add_term_meta( $term_id, 'orbis_status_type', $_POST['status_type'] );
+		add_term_meta( $term_id, 'orbis_status_type', $_POST['status_type'] ); // WPCS: sanitization ok.
 	}
 }
 

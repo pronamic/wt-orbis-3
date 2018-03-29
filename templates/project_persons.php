@@ -9,11 +9,13 @@
 		'nopaging'        => true, // phpcs:ignore WordPress.VIP.PostsPerPage.posts_per_page_nopaging
 	) );
 
-	if ( $query->have_posts() ) : ?>
+	if ( $query->have_posts() ) :
+
+	?>
 
 		<ul class="post-list">
 			<?php while ( $query->have_posts() ) : ?>
-				
+
 				<?php $query->the_post(); ?>
 
 				<li>
