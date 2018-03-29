@@ -34,7 +34,7 @@ function orbis_status_taxonomy_add_field() {
 
 	<tr class="form-field">  
 		<th scope="row" valign="top">  
-			<label for="status_type"><?php esc_html_e( 'Status type.' ); ?></label>
+			<label for="status_type"><?php esc_html_e( 'Status type.', 'orbis' ); ?></label>
 		</th>  
 		<td>
 			<select name="status_type" id="status_type" >
@@ -62,7 +62,7 @@ function orbis_status_taxonomy_edit_field( $term ) {
 
 	<tr class="form-field">
 		<th scope="row" valign="top">
-			<label for="status_type"><?php esc_html_e( 'Status type.' ); ?></label>
+			<label for="status_type"><?php esc_html_e( 'Status type.', 'orbis' ); ?></label>
 		</th>
 		<td>
 			<select name="status_type" id="status_type" >

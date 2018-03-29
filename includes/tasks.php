@@ -3,6 +3,7 @@
 function orbis_project_sections_tasks( $sections ) {
 	$sections[] = array(
 		'id'            => 'tasks',
+		'slug'          => __( 'tasks', 'orbis' ),
 		'name'          => __( 'Tasks', 'orbis' ),
 		'template_part' => 'templates/project_tasks',
 	);
