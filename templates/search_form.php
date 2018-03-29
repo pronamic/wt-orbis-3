@@ -114,7 +114,13 @@ switch ( get_query_var( 'post_type' ) ) {
 
 			<div class="dropdown show">
 				<a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					<?php esc_html_e( 'Sort by…', 'orbis' ); ?>
+					<?php
+
+					$sort_text = ( isset( $_GET['orderby'] ) ) ? ucfirst( $_GET['orderby'] ) : esc_html__( 'Sort by…', 'orbis' );
+
+					echo esc_html( $sort_text );
+
+					?>
 				</a>
 
 				<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
