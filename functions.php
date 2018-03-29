@@ -55,19 +55,63 @@ function orbis_status_taxonomy_add_field() {
 	<?php
 }
 
+function orbis_status_taxonomy_edit_field( $term ) {
+	$term_id   = $term->term_id;
+	$term_meta = get_term_meta( $term_id, 'orbis_status_type', true );
+	?>
+
+	<tr class="form-field">
+		<th scope="row" valign="top">
+			<label for="status_type"><?php esc_html_e( 'Status type.' ); ?></label>
+		</th>
+		<td>
+			<select name="status_type" id="status_type" >
+				<?php
+
+				printf(
+					'<option selected disabled hidden value="%s">%s</option>',
+					$term_meta,
+					ucfirst( $term_meta )
+				);
+
+				?>
+				<option value="primary">Primary</option>
+				<option value="secondary">Secondary</option>
+				<option value="success">Success</option>
+				<option value="danger">Danger</option>
+				<option value="warning">Warning</option>
+				<option value="info">Info</option>
+				<option value="light">Light</option>
+				<option value="dark">Dark</option>
+			</select>
+			<span class="description"><?php esc_html_e( 'The type of status to show.', 'orbis' ); ?></span>
+		</td>
+	</tr>
+	<br /><br />
+
+	<?php
+}
+
 /**
  * Save custom fields for any taxonomy
  */
 function save_taxonomy_custom_fields( $term_id ) {
 	if ( isset( $_POST['status_type'] ) ) {
-		add_term_meta( $term_id, 'orbis_status_type', $_POST['status_type'] ); // WPCS: sanitization ok.
+		if ( get_term_meta( $term_id, 'orbis_status_type', true ) ) {
+			update_term_meta( $term_id, 'orbis_status_type', $_POST['status_type'] ); // WPCS: sanitization ok.
+		} else{
+			add_term_meta( $term_id, 'orbis_status_type', $_POST['status_type'], true ); // WPCS: sanitization ok.
+		}
+		
 	}
 }
 
 add_action( 'orbis_project_status_add_form_fields', 'orbis_status_taxonomy_add_field', 10, 2 );
+add_action( 'orbis_project_status_edit_form_fields', 'orbis_status_taxonomy_edit_field', 10, 2 );
 
 // Save the changes made on the "statuses" taxonomy, using our callback function
 add_action( 'create_orbis_project_status', 'save_taxonomy_custom_fields', 10, 2 );
+add_action( 'edited_orbis_project_status', 'save_taxonomy_custom_fields', 10, 2 );
 
 /**
  * Set the content width based on the theme's design and stylesheet.
