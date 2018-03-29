@@ -70,8 +70,8 @@ function orbis_status_taxonomy_edit_field( $term ) {
 
 				printf(
 					'<option selected disabled hidden value="%s">%s</option>',
-					$term_meta,
-					ucfirst( $term_meta )
+					esc_attr( $term_meta ),
+					esc_attr( ucfirst( $term_meta ) )
 				);
 
 				?>
@@ -99,10 +99,9 @@ function save_taxonomy_custom_fields( $term_id ) {
 	if ( isset( $_POST['status_type'] ) ) {
 		if ( get_term_meta( $term_id, 'orbis_status_type', true ) ) {
 			update_term_meta( $term_id, 'orbis_status_type', $_POST['status_type'] ); // WPCS: sanitization ok.
-		} else{
+		} else {
 			add_term_meta( $term_id, 'orbis_status_type', $_POST['status_type'], true ); // WPCS: sanitization ok.
 		}
-		
 	}
 }
 
