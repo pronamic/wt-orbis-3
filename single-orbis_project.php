@@ -140,6 +140,20 @@ while ( have_posts() ) :
 								<span class="badge badge-secondary"><?php esc_html_e( 'Not invoicable', 'orbis' ); ?></span>
 
 							<?php endif; ?>
+							<?php
+
+							$project_statuses = wp_get_post_terms( $orbis_project->post->ID, 'orbis_project_status' );
+
+							foreach ( $project_statuses as $project_status ) {
+								$status_type = get_term_meta( $project_status->term_id, 'orbis_status_type', true ) ? get_term_meta( $project_status->term_id, 'orbis_status_type', true ) : 'primary';
+								printf(
+									'<span class="badge badge-%s orbis-status">%s</span>',
+									esc_attr( $status_type ),
+									esc_attr( $project_status->name )
+								);
+							}
+
+							?>
 						</dd>
 
 						<?php if ( has_term( null, 'orbis_payment_method' ) ) : ?>
