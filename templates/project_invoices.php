@@ -54,7 +54,13 @@ if ( $invoices && $invoices[0]->id ) : ?>
 							} else {
 								echo esc_html( $invoice->invoice_number );
 							}
-							echo ( get_post_meta( $post->ID, '_orbis_project_invoice_number', true ) === $invoice->invoice_number ) ? ' <span class="dashicons dashicons-yes"></span>' : '';
+
+							if ( get_post_meta( $post->ID, '_orbis_project_invoice_number', true ) === $invoice->invoice_number ) {
+								printf(
+									' <span title="%s" class="dashicons dashicons-yes"></span>',
+									esc_html__( 'This is the final invoice.', 'orbis' )
+								);
+							}
 							?>
 						</td>
 						<td>

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Orbis 3 3.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2018-03-29 12:26:17+00:00\n"
+"POT-Creation-Date: 2018-03-29 14:18:42+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -650,7 +650,7 @@ msgstr ""
 #: deploy/latest/single-orbis_task.php:48 deploy/latest/single.php:50
 #: single-orbis_company.php:116 single-orbis_list.php:223
 #: single-orbis_person.php:223 single-orbis_project.php:94
-#: single-orbis_project.php:191 single-orbis_task.php:48 single.php:47
+#: single-orbis_project.php:205 single-orbis_task.php:48 single.php:47
 msgid "Posted by"
 msgstr ""
 
@@ -660,7 +660,7 @@ msgstr ""
 #: deploy/latest/single-orbis_project.php:183
 #: deploy/latest/single-orbis_task.php:60 deploy/latest/single.php:53
 #: single-orbis_company.php:119 single-orbis_list.php:226
-#: single-orbis_person.php:225 single-orbis_project.php:180
+#: single-orbis_person.php:225 single-orbis_project.php:194
 #: single-orbis_task.php:60 single.php:50
 msgid "Actions"
 msgstr ""
@@ -672,7 +672,7 @@ msgstr ""
 #: deploy/latest/single-orbis_task.php:61 deploy/latest/single.php:54
 #: deploy/latest/templates/table-cell-actions.php:8
 #: single-orbis_company.php:120 single-orbis_list.php:227
-#: single-orbis_person.php:226 single-orbis_project.php:181
+#: single-orbis_person.php:226 single-orbis_project.php:195
 #: single-orbis_task.php:61 single.php:51 templates/table-cell-actions.php:8
 msgid "Edit"
 msgstr ""
@@ -824,16 +824,16 @@ msgid "Not invoicable"
 msgstr ""
 
 #: deploy/latest/single-orbis_project.php:150
-#: deploy/latest/templates/company_contact.php:92 single-orbis_project.php:147
+#: deploy/latest/templates/company_contact.php:92 single-orbis_project.php:161
 #: templates/company_contact.php:91
 msgid "Payment Method"
 msgstr ""
 
-#: deploy/latest/single-orbis_project.php:162 single-orbis_project.php:159
+#: deploy/latest/single-orbis_project.php:162 single-orbis_project.php:173
 msgid "Final Invoice"
 msgstr ""
 
-#: deploy/latest/single-orbis_project.php:192 single-orbis_project.php:187
+#: deploy/latest/single-orbis_project.php:192 single-orbis_project.php:201
 msgid "Project Invoices"
 msgstr ""
 
@@ -1019,12 +1019,12 @@ msgid "User"
 msgstr ""
 
 #: deploy/latest/templates/project_invoices.php:67
-#: templates/project_invoices.php:67
+#: templates/project_invoices.php:74
 msgid "Total:"
 msgstr ""
 
 #: deploy/latest/templates/project_invoices.php:88
-#: templates/project_invoices.php:88
+#: templates/project_invoices.php:95
 msgid "No invoices found."
 msgstr ""
 
@@ -1138,7 +1138,11 @@ msgstr ""
 msgid "persons"
 msgstr ""
 
-#: templates/project_sections.php:6
+#: templates/project_invoices.php:61
+msgid "This is the final invoice."
+msgstr ""
+
+#: templates/project_sections.php:5
 msgid "timesheet"
 msgstr ""
 
