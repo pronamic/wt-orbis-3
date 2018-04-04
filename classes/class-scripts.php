@@ -89,7 +89,7 @@ class Orbis_Theme_Scripts {
 				'bootstrap',
 				'tether',
 			),
-			'3.0.0',
+			'3.0.1',
 			true
 		);
 
@@ -108,7 +108,7 @@ class Orbis_Theme_Scripts {
 				'bootstrap',
 				'fontawesome',
 			),
-			'3.0.0'
+			'3.0.1'
 		);
 	}
 
