@@ -1,4 +1,4 @@
-<div class="pull-right">
+<div class="pull-right form-inline">
 	<?php
 
 	wp_dropdown_users( array(
@@ -10,5 +10,5 @@
 
 	?>
 
-	<button class="btn btn-default" type="submit"><?php esc_html_e( 'Filter', 'orbis' ); ?></button>
+	<button class="btn btn-secondary ml-1" type="submit"><?php esc_html_e( 'Filter', 'orbis' ); ?></button>
 </div>
