@@ -294,7 +294,7 @@ function orbis_sorting_icon( $order, $sorting_term ) {
 	$orderby = ( isset( $_GET['orderby'] ) ) ? $_GET['orderby'] : ''; // phpcs:ignore
 
 	if ( isset( $orderby ) && $sorting_term === $orderby ) {
-		$icon_format = "<span>&%sarr;</span>";
+		$icon_format = '<span>&%sarr;</span>';
 		$direction   = ( 'asc' === $order ) ? 'd' : 'u';
 
 		return sprintf( $icon_format, $direction ); // WPCS: XSS ok.
