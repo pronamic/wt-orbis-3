@@ -117,7 +117,8 @@ switch ( get_query_var( 'post_type' ) ) {
 					<?php
 
 					//phpcs:disable
-					$sort_text = ( isset( $_GET['orderby'] ) ) ? esc_html__( ucfirst( $_GET['orderby'] ), 'orbis' ) : esc_html__( 'Sort by…', 'orbis' );
+					$orderby   = ( isset( $_GET['orderby'] ) ) ? $sorting_terms[$_GET['orderby']] : '';
+					$sort_text = ( $orderby ) ? $orderby : esc_html__( 'Sort by…', 'orbis' );
 					//phpcs:enable
 					echo esc_html( $sort_text );
 
