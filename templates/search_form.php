@@ -116,7 +116,7 @@ switch ( get_query_var( 'post_type' ) ) {
 				<a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					<?php
 
-					$sort_text = ( isset( $_GET['orderby'] ) ) ? ucfirst( $_GET['orderby'] ) : esc_html__( 'Sort by…', 'orbis' ); //wpcs: sanitization ok.
+					$sort_text = ( isset( $_GET['orderby'] ) ) ? esc_html__( ucfirst( $_GET['orderby'] ), 'orbis' ) : esc_html__( 'Sort by…', 'orbis' ); //wpcs: sanitization ok.
 					echo esc_html( $sort_text );
 
 					?>
