@@ -10,17 +10,17 @@
 	?>
 
 	<div class="card mb-3">
+		<div class="card-header">
+			<?php
+
+			printf(
+				esc_html__( '%1$s on Twitter', 'orbis' ),
+				esc_html( get_the_title() )
+			);
+
+			?>
+		</div>
 		<div class="card-body">
-			<h3 class="card-title">
-				<?php
-
-				printf(
-					esc_html__( '%1$s on Twitter', 'orbis' ),
-					esc_html( get_the_title() )
-				);
-
-				?>
-			</h3>
 
 			<div class="content">
 				<p class="alt">

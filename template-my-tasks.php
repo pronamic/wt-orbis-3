@@ -206,8 +206,8 @@ while ( have_posts() ) :
 
 	<div ng-controller="OrbisTasksCtrl">
 		<div class="card">
+			<div class="card-header">Overview</div>
 			<div class="card-body">
-				<h3 class="card-title">Overview</h3>
 
 				<div ng-show="tasks == null" class="well">
 					<span class="glyphicon glyphicon-refresh"></span>

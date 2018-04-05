@@ -1,6 +1,6 @@
 <div class="card mb-3">
+	<div class="card-header"><?php esc_html_e( 'Subscription Product Details', 'orbis' ); ?></div>
 	<div class="card-body">
-		<h3 class="card-title"><?php esc_html_e( 'Subscription Product Details', 'orbis' ); ?></h3>
 
 		<div class="content">
 			<dl>

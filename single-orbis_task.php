@@ -11,8 +11,8 @@ while ( have_posts() ) :
 				<?php do_action( 'orbis_before_main_content' ); ?>
 
 				<div class="card mb-3">
+					<div class="card-header"><?php esc_html_e( 'Description', 'orbis' ); ?></div>
 					<div class="card-body">
-						<h3 class="card-title"><?php esc_html_e( 'Description', 'orbis' ); ?></h3>
 
 						<div class="card-text clearfix">
 							<?php if ( has_post_thumbnail() ) : ?>
@@ -37,8 +37,8 @@ while ( have_posts() ) :
 				<?php do_action( 'orbis_before_side_content' ); ?>
 
 				<div class="card">
+					<div class="card-header"><?php esc_html_e( 'Additional Information', 'orbis' ); ?></div>
 					<div class="card-body">
-						<h3 class="card-title"><?php esc_html_e( 'Additional Information', 'orbis' ); ?></h3>
 
 						<div class="card-text">
 							<dl>

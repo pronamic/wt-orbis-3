@@ -108,7 +108,6 @@ function save_taxonomy_custom_fields( $term_id ) {
 add_action( 'orbis_project_status_add_form_fields', 'orbis_status_taxonomy_add_field', 10, 2 );
 add_action( 'orbis_project_status_edit_form_fields', 'orbis_status_taxonomy_edit_field', 10, 2 );
 
-// Save the changes made on the "statuses" taxonomy, using our callback function
 add_action( 'create_orbis_project_status', 'save_taxonomy_custom_fields', 10, 2 );
 add_action( 'edited_orbis_project_status', 'save_taxonomy_custom_fields', 10, 2 );
 
