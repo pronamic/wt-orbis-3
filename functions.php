@@ -97,11 +97,8 @@ function orbis_status_taxonomy_edit_field( $term ) {
  */
 function save_taxonomy_custom_fields( $term_id ) {
 	if ( isset( $_POST['status_type'] ) ) {
-		if ( get_term_meta( $term_id, 'orbis_status_type', true ) ) {
-			update_term_meta( $term_id, 'orbis_status_type', $_POST['status_type'] ); // WPCS: sanitization ok.
-		} else {
-			add_term_meta( $term_id, 'orbis_status_type', $_POST['status_type'], true ); // WPCS: sanitization ok.
-		}
+		$status_type = sanitize_text_field( wp_unslash( $_POST['status_type'] ) );
+		update_term_meta( $term_id, 'orbis_status_type', $status_type );
 	}
 }
 
@@ -293,8 +290,8 @@ function orbis_sorting_icon( $order, $sorting_term ) {
 	$orderby = ( isset( $_GET['orderby'] ) ) ? $_GET['orderby'] : ''; // phpcs:ignore
 
 	if ( isset( $orderby ) && $sorting_term === $orderby ) {
-		$icon_format = '<span>&%sarr;</span>';
-		$direction   = ( 'asc' === $order ) ? 'd' : 'u';
+		$icon_format = '<span>%s</span>';
+		$direction   = ( 'asc' === $order ) ? '↓' : '↑';
 
 		return sprintf( $icon_format, $direction ); // WPCS: XSS ok.
 	}
