@@ -26,7 +26,9 @@ while ( have_posts() ) :
 			<div class="col-md-8">
 				<?php do_action( 'orbis_before_main_content' ); ?>
 
-				<div class="card">
+				<?php if ( ! empty( get_the_content() ) ) : ?>
+
+				<div class="card mb-3">
 					<div class="card-body">
 						<h3 class="card-title"><?php esc_html_e( 'Description', 'orbis' ); ?></h3>
 
@@ -43,11 +45,12 @@ while ( have_posts() ) :
 						</div>
 					</div>
 
-
 					<?php get_template_part( 'templates/post-card-footer' ); ?>
 				</div>
 
-				<div class="card">
+				<?php endif; ?>
+
+				<div class="card mb-3">
 					<div class="card-body">
 						<h3 class="card-title"><?php esc_html_e( 'On the list', 'orbis' ); ?></h3>
 
@@ -117,7 +120,7 @@ while ( have_posts() ) :
 					</div>
 				</div>
 
-				<div class="card">
+				<div class="card mb-3">
 					<div class="card-body">
 						<h3 class="card-title"><?php esc_html_e( 'Not on the list', 'orbis' ); ?></h3>
 
@@ -197,8 +200,17 @@ while ( have_posts() ) :
 
 							<?php wp_reset_postdata(); ?>
 
+						<?php else : ?>
+
+						<div class="content">
+							<p class="alt">
+								<?php esc_html_e( 'Nothing to show here.', 'orbis' ); ?>
+							</p>
+						</div>
+
 						<?php endif; ?>
 					</div>
+
 				</div>
 
 				<?php do_action( 'orbis_after_main_content' ); ?>
