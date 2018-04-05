@@ -24,12 +24,12 @@ $responses = $wpdb->get_results( $wpdb->prepare( "
 			<table class="table table-striped mb-0">
 				<thead>
 					<tr>
-						<th scope="col"><?php esc_html_e( 'Date', 'orbis_monitoring' ); ?></th>
-						<th scope="col"><?php esc_html_e( 'Duration', 'orbis_monitoring' ); ?></th>
-						<th scope="col"><?php esc_html_e( 'Code', 'orbis_monitoring' ); ?></th>
-						<th scope="col"><?php esc_html_e( 'Message', 'orbis_monitoring' ); ?></th>
-						<th scope="col"><?php esc_html_e( 'Content Length', 'orbis_monitoring' ); ?></th>
-						<th scope="col"><?php esc_html_e( 'Content Type', 'orbis_monitoring' ); ?></th>
+						<th scope="col"><?php esc_html_e( 'Date', 'orbis' ); ?></th>
+						<th scope="col"><?php esc_html_e( 'Duration', 'orbis' ); ?></th>
+						<th scope="col"><?php esc_html_e( 'Code', 'orbis' ); ?></th>
+						<th scope="col"><?php esc_html_e( 'Message', 'orbis' ); ?></th>
+						<th scope="col"><?php esc_html_e( 'Content Length', 'orbis' ); ?></th>
+						<th scope="col"><?php esc_html_e( 'Content Type', 'orbis' ); ?></th>
 					</tr>
 				</thead>
 
