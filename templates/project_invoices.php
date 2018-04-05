@@ -57,7 +57,7 @@ if ( $invoices && $invoices[0]->id ) : ?>
 
 							if ( get_post_meta( $post->ID, '_orbis_project_invoice_number', true ) === $invoice->invoice_number ) {
 								printf(
-									' <span title="%s">&#10003;</span>',
+									' <span title="%s">✓</span>',
 									esc_html__( 'This is the final invoice.', 'orbis' )
 								);
 							}
