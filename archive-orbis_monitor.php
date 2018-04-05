@@ -58,7 +58,7 @@ get_header();
 								<?php
 								if ( get_post_meta( $post->ID, '_orbis_monitor_response_date' ) ) {
 									$time = esc_html( get_post_meta( $post->ID, '_orbis_monitor_response_date', true ) );
-									echo date( 'd-m-Y H:i:s', $time );
+									echo esc_html( date( 'd-m-Y H:i:s', $time ) );
 								}
 								?>
 							</td>
