@@ -53,7 +53,7 @@
 
 					?>
 
-					<span class="orbis-toggle-nav text-light"><span class="nav-label"><?php esc_html_e( 'Collapse menu', 'orbis' ); ?></span></span>
+					<span class="orbis-toggle-nav text-light mt-2"><span class="nav-label"><?php esc_html_e( 'Collapse menu', 'orbis' ); ?></span></span>
 				</div>
 			</div>
 
