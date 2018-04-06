@@ -107,6 +107,20 @@ while ( have_posts() ) :
 
 									<?php
 
+									$iban = get_post_meta( $post->ID, '_orbis_iban_number', true );
+
+									if ( ! empty( $iban ) ) :
+									?>
+
+										<dt><?php esc_html_e( 'IBAN Number', 'orbis' ); ?></dt>
+										<dd>
+											<?php echo esc_attr( get_post_meta( $post->ID, '_orbis_iban_number', true ) ); ?>
+										</dd>
+
+									<?php endif; ?>
+
+									<?php
+
 									$birth_date = $contact->get_birth_date();
 
 									if ( $birth_date ) :

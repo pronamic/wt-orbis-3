@@ -71,9 +71,9 @@ while ( have_posts() ) :
 											<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> <br />
 
 											<p>
-												<?php if ( get_post_meta( $post->ID, '_orbis_person_email_address', true ) ) : ?>
+												<?php if ( get_post_meta( $post->ID, '_orbis_email', true ) ) : ?>
 
-													<span><?php echo esc_html( get_post_meta( $post->ID, '_orbis_person_email_address', true ) ); ?></span> <br />
+													<span><?php echo esc_html( get_post_meta( $post->ID, '_orbis_email', true ) ); ?></span> <br />
 
 												<?php endif; ?>
 
