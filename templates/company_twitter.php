@@ -1,9 +1,9 @@
-<?php if ( get_option( 'orbis_twitter_widget_id' ) && get_post_meta( $post->ID, '_orbis_company_twitter', true ) ) : ?>
+<?php if ( get_option( 'orbis_twitter_widget_id' ) && get_post_meta( $post->ID, '_orbis_twitter', true ) ) : ?>
 
 	<?php
 
 	$twitter_widget_id = get_option( 'orbis_twitter_widget_id' );
-	$twitter_username  = get_post_meta( $post->ID, '_orbis_company_twitter', true );
+	$twitter_username  = get_post_meta( $post->ID, '_orbis_twitter', true );
 	$twitter_url       = sprintf( 'https://twitter.com/%s', $twitter_username );
 	$twitter_text      = sprintf( __( 'Tweets from @%s', 'orbis' ), $twitter_username );
 

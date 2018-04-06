@@ -146,15 +146,15 @@ while ( have_posts() ) :
 										?>
 									</dd>
 
-									<?php if ( get_post_meta( $post->ID, '_orbis_person_twitter', true ) || get_post_meta( $post->ID, '_orbis_person_facebook', true ) || get_post_meta( $post->ID, '_orbis_person_linkedin', true ) ) : ?>
+									<?php if ( get_post_meta( $post->ID, '_orbis_twitter', true ) || get_post_meta( $post->ID, '_orbis_facebook', true ) || get_post_meta( $post->ID, '_orbis_linkedin', true ) ) : ?>
 
 										<dt><?php esc_html_e( 'Social media', 'orbis' ); ?></dt>
 										<dd>
 											<ul class="social clearfix">
-												<?php if ( get_post_meta( $post->ID, '_orbis_person_twitter', true ) ) : ?>
+												<?php if ( get_post_meta( $post->ID, '_orbis_twitter', true ) ) : ?>
 
 													<li class="twitter">
-														<?php $twitter_url = 'https://twitter.com/' . get_post_meta( $post->ID, '_orbis_person_twitter', true ); ?>													
+														<?php $twitter_url = 'https://twitter.com/' . get_post_meta( $post->ID, '_orbis_twitter', true ); ?>													
 														<a href="<?php echo esc_attr( $twitter_url ); ?>">
 															<i class="fa fa-twitter"></i>
 
@@ -164,10 +164,10 @@ while ( have_posts() ) :
 
 												<?php endif; ?>
 
-												<?php if ( get_post_meta( $post->ID, '_orbis_person_facebook', true ) ) : ?>
+												<?php if ( get_post_meta( $post->ID, '_orbis_facebook', true ) ) : ?>
 
 													<li class="facebook">
-														<?php $facebook_url = get_post_meta( $post->ID, '_orbis_person_facebook', true ); ?>
+														<?php $facebook_url = get_post_meta( $post->ID, '_orbis_facebook', true ); ?>
 														<a href="<?php echo esc_attr( $facebook_url ); ?>">
 															<i class="fa fa-facebook"></i>
 
@@ -177,10 +177,10 @@ while ( have_posts() ) :
 
 												<?php endif; ?>
 
-												<?php if ( get_post_meta( $post->ID, '_orbis_person_linkedin', true ) ) : ?>
+												<?php if ( get_post_meta( $post->ID, '_orbis_linkedin', true ) ) : ?>
 
 													<li class="linkedin">
-														<?php $linkedin_url = get_post_meta( $post->ID, '_orbis_person_linkedin', true ); ?>
+														<?php $linkedin_url = get_post_meta( $post->ID, '_orbis_linkedin', true ); ?>
 														<a href="<?php echo esc_attr( $linkedin_url ); ?>">
 															<i class="fa fa-linkedin"></i>
 
@@ -213,7 +213,7 @@ while ( have_posts() ) :
 
 			<?php endif; ?>
 
-			<div class="card mt-3">
+			<div class="card mb-3">
 				<div class="card-header"><?php esc_html_e( 'Additional information', 'orbis' ); ?></div>
 
 				<div class="card-body">
