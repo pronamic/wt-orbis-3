@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Orbis 3 3.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2018-04-05 13:49:54+00:00\n"
+"POT-Creation-Date: 2018-04-06 10:24:22+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -366,7 +366,7 @@ msgid "No results found."
 msgstr ""
 
 #: content-post.php:129 deploy/latest/content-post.php:129
-#: deploy/latest/single-orbis_person.php:129 single-orbis_person.php:129
+#: deploy/latest/single-orbis_person.php:129 single-orbis_person.php:143
 msgid "Categories"
 msgstr ""
 
@@ -663,7 +663,7 @@ msgstr ""
 #: deploy/latest/single-orbis_project.php:94
 #: deploy/latest/single-orbis_task.php:45 deploy/latest/single.php:47
 #: single-orbis_company.php:113 single-orbis_list.php:231
-#: single-orbis_person.php:221 single-orbis_project.php:91
+#: single-orbis_person.php:235 single-orbis_project.php:91
 #: single-orbis_task.php:45 single.php:48
 msgid "Posted on"
 msgstr ""
@@ -675,7 +675,7 @@ msgstr ""
 #: deploy/latest/single-orbis_project.php:194
 #: deploy/latest/single-orbis_task.php:48 deploy/latest/single.php:50
 #: single-orbis_company.php:116 single-orbis_list.php:234
-#: single-orbis_person.php:223 single-orbis_project.php:94
+#: single-orbis_person.php:237 single-orbis_project.php:94
 #: single-orbis_project.php:205 single-orbis_task.php:48 single.php:51
 msgid "Posted by"
 msgstr ""
@@ -686,7 +686,7 @@ msgstr ""
 #: deploy/latest/single-orbis_project.php:183
 #: deploy/latest/single-orbis_task.php:60 deploy/latest/single.php:53
 #: single-orbis_company.php:119 single-orbis_list.php:237
-#: single-orbis_person.php:225 single-orbis_project.php:194
+#: single-orbis_person.php:239 single-orbis_project.php:194
 #: single-orbis_task.php:60 single.php:54
 msgid "Actions"
 msgstr ""
@@ -698,7 +698,7 @@ msgstr ""
 #: deploy/latest/single-orbis_task.php:61 deploy/latest/single.php:54
 #: deploy/latest/templates/table-cell-actions.php:8
 #: single-orbis_company.php:120 single-orbis_list.php:238
-#: single-orbis_person.php:226 single-orbis_project.php:195
+#: single-orbis_person.php:240 single-orbis_project.php:195
 #: single-orbis_task.php:61 single.php:55 templates/table-cell-actions.php:8
 msgid "Edit"
 msgstr ""
@@ -765,47 +765,47 @@ msgstr ""
 msgid "Gender"
 msgstr ""
 
-#: deploy/latest/single-orbis_person.php:115 single-orbis_person.php:115
+#: deploy/latest/single-orbis_person.php:115 single-orbis_person.php:129
 msgid "Birth Date"
 msgstr ""
 
-#: deploy/latest/single-orbis_person.php:117 single-orbis_person.php:117
+#: deploy/latest/single-orbis_person.php:117 single-orbis_person.php:131
 msgid "j F Y"
 msgstr ""
 
-#: deploy/latest/single-orbis_person.php:120 single-orbis_person.php:120
+#: deploy/latest/single-orbis_person.php:120 single-orbis_person.php:134
 msgid "Age"
 msgstr ""
 
 #: deploy/latest/single-orbis_person.php:136
-#: deploy/latest/templates/company_contact.php:104 single-orbis_person.php:136
+#: deploy/latest/templates/company_contact.php:104 single-orbis_person.php:150
 #: templates/company_contact.php:103
 msgid "vCard"
 msgstr ""
 
 #: deploy/latest/single-orbis_person.php:143
-#: deploy/latest/templates/company_contact.php:111 single-orbis_person.php:143
+#: deploy/latest/templates/company_contact.php:111 single-orbis_person.php:157
 #: templates/company_contact.php:110
 msgid "Download vCard"
 msgstr ""
 
-#: deploy/latest/single-orbis_person.php:151 single-orbis_person.php:151
+#: deploy/latest/single-orbis_person.php:151 single-orbis_person.php:165
 msgid "Social media"
 msgstr ""
 
-#: deploy/latest/single-orbis_person.php:161 single-orbis_person.php:161
+#: deploy/latest/single-orbis_person.php:161 single-orbis_person.php:175
 msgid "Twitter"
 msgstr ""
 
-#: deploy/latest/single-orbis_person.php:174 single-orbis_person.php:174
+#: deploy/latest/single-orbis_person.php:174 single-orbis_person.php:188
 msgid "Facebook"
 msgstr ""
 
-#: deploy/latest/single-orbis_person.php:187 single-orbis_person.php:187
+#: deploy/latest/single-orbis_person.php:187 single-orbis_person.php:201
 msgid "LinkedIn"
 msgstr ""
 
-#: deploy/latest/single-orbis_person.php:218 single-orbis_person.php:217
+#: deploy/latest/single-orbis_person.php:218 single-orbis_person.php:231
 msgid "Additional information"
 msgstr ""
 
@@ -1166,6 +1166,10 @@ msgstr ""
 
 #: single-orbis_list.php:206
 msgid "Nothing to show here."
+msgstr ""
+
+#: single-orbis_person.php:115
+msgid "IBAN Number"
 msgstr ""
 
 #: templates/monitor_details.php:2
