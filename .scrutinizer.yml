@@ -1,0 +1,14 @@
+filter:
+  excluded_paths:
+    # Exclude `assets` folder, it only contains external libraries.
+    - 'assets/*'
+    - 'deploy/*'
+    # Exclude minified JavaScript files.
+    - '*.min.js'
+
+checks:
+  php:
+    coding_standard:
+      name: WordPress
+    code_rating: true
+    duplication: true
