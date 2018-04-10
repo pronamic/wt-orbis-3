@@ -96,7 +96,7 @@ function orbis_status_taxonomy_edit_field( $term ) {
 /**
  * Save custom fields for any taxonomy
  */
-function save_taxonomy_custom_fields( $term_id ) {
+function orbis_status_save_custom_fields( $term_id ) {
 	if ( isset( $_POST['status_type'] ) ) {
 		$status_type = sanitize_text_field( wp_unslash( $_POST['status_type'] ) );
 		update_term_meta( $term_id, 'orbis_status_type', $status_type );
