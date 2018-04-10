@@ -20,8 +20,7 @@
 
 			?>
 		</div>
-		<div class="card-body">
-
+		<div class="card-body p-0">
 			<div class="content">
 				<p class="alt">
 					<a class="twitter-timeline" href="<?php echo esc_attr( $twitter_url ); ?>" data-widget-id="<?php echo esc_attr( $twitter_widget_id ); ?>" data-screen-name="<?php echo esc_attr( $twitter_username ); ?>" height="300"><?php echo esc_html( $twitter_text ); ?></a>
