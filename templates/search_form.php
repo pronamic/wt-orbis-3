@@ -123,8 +123,8 @@ switch ( get_query_var( 'post_type' ) ) {
 					echo esc_html( $sort_text );
 
 					if ( isset( $_GET['order'] ) ) {
-						$order = orbis_invert_sort_order( $_GET['order'] );
-						echo ' ' . orbis_sorting_icon( $order );
+						$order = orbis_invert_sort_order( sanitize_text_field( wp_unslash( $_GET['order'] ) ) );
+						echo ' ' . wp_kses_post( orbis_sorting_icon( $order ) );
 					}
 					?>
 				</a>
@@ -151,7 +151,7 @@ switch ( get_query_var( 'post_type' ) ) {
 							$classes[] = 'active';
 
 							$icon = orbis_sorting_icon( $order );
-						} else{
+						} else {
 							$icon = '';
 						}
 
