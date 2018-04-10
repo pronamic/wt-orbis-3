@@ -11,17 +11,17 @@
 
 	<div class="card mb-3">
 		<div class="card-header">
-		<?php
+			<?php
 
-		printf(
-			esc_html__( '%1$s on Twitter', 'orbis' ),
-			esc_html( get_the_title() )
-		);
+			printf(
+				esc_html__( '%1$s on Twitter', 'orbis' ),
+				esc_html( get_the_title() )
+			);
 
-		?>
+			?>
 		</div>
 
-		<a class="twitter-timeline" href="<?php echo esc_attr( $twitter_url ); ?>" data-widget-id="<?php echo esc_attr( $twitter_widget_id ); ?>" data-screen-name="<?php echo esc_attr( $twitter_username ); ?>" height="300"><?php echo esc_html( $twitter_text ); ?></a>
+		<a class="twitter-timeline p-2" href="<?php echo esc_attr( $twitter_url ); ?>" data-widget-id="<?php echo esc_attr( $twitter_widget_id ); ?>" data-screen-name="<?php echo esc_attr( $twitter_username ); ?>" height="300"><?php echo esc_html( $twitter_text ); ?></a>
 		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 	</div>
 
