@@ -15,7 +15,7 @@ $query = new WP_Query( array(
 ) );
 
 ?>
-<div class="card">
+<div class="card mb-3">
 	<div class="card-header"><?php esc_html_e( 'Connected Companies', 'orbis' ); ?></div>
 
 	<?php if ( $query->have_posts() ) : ?>
