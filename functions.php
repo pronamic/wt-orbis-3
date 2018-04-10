@@ -265,37 +265,44 @@ function orbis_get_title() {
 /**
  * Invert sorting order ASC<->DESC
  */
-function orbis_invert_sort_order( $sort_term ) {
+function orbis_invert_sort_order( $order ) {
+	if ( 'asc' === $order ) {
+		return 'desc';
+	} elseif ( 'desc' === $order ) {
+		return 'asc';
+	}
+
+	return 'asc';
+}
+
+/**
+ * Get sorting order from URL when necessary
+ */
+function orbis_get_sort_order( $sort_term ) {
 	// phpcs:disable
 	$orderby = ( isset( $_GET['orderby'] ) ) ? $_GET['orderby'] : '';
 	$order   = ( isset( $_GET['order'] ) ) ? $_GET['order'] : '';
 	// phpcs:enable
 
-	$order_inverted = ( isset( $order ) && ( strtolower( $orderby ) === strtolower( $sort_term ) ) ) ? $order : 'desc';
+	$order_set = ( isset( $order ) && ( strtolower( $orderby ) === strtolower( $sort_term ) ) ) ? $order : 'desc';
 
 	if ( isset( $order ) && ( strtolower( $orderby ) === strtolower( $sort_term ) ) ) {
-		if ( 'asc' === $order ) {
-			$order_inverted = 'desc';
-		} elseif ( 'desc' === $order ) {
-			$order_inverted = 'asc';
+		if ( 'asc' === $order || 'desc' === $order ) {
+			return $order;
 		}
 	}
 
-	return $order_inverted;
+	return $order_set;
 }
 
 /**
- * Echoes correct arrow for sorting where necessary
+ * Echoes correct arrow for sorting order
  */
-function orbis_sorting_icon( $order, $sorting_term ) {
-	$orderby = ( isset( $_GET['orderby'] ) ) ? $_GET['orderby'] : ''; // phpcs:ignore
+function orbis_sorting_icon( $order ) {
+	$icon_format = '<span>%s</span>';
+	$direction   = ( 'asc' === $order ) ? '↓' : '↑';
 
-	if ( isset( $orderby ) && $sorting_term === $orderby ) {
-		$icon_format = '<span>%s</span>';
-		$direction   = ( 'asc' === $order ) ? '↓' : '↑';
-
-		return sprintf( $icon_format, $direction ); // WPCS: XSS ok.
-	}
+	return sprintf( $icon_format, $direction ); // WPCS: XSS ok.
 }
 
 /**

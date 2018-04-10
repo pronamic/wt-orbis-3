@@ -122,13 +122,16 @@ switch ( get_query_var( 'post_type' ) ) {
 					//phpcs:enable
 					echo esc_html( $sort_text );
 
+					if ( isset( $_GET['order'] ) ) {
+						$order = orbis_invert_sort_order( $_GET['order'] );
+						echo ' ' . orbis_sorting_icon( $order );
+					}
 					?>
 				</a>
 
 				<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
 
 					<?php
-
 					foreach ( $sorting_terms as $sorting_term => $label ) {
 						if ( '-' === $label ) {
 							echo '<div class="dropdown-divider"></div>';
@@ -142,18 +145,22 @@ switch ( get_query_var( 'post_type' ) ) {
 						);
 
 						$orderby = ( isset( $_GET['orderby'] ) ) ? $_GET['orderby'] : ''; // phpcs:ignore
+						$order   = orbis_get_sort_order( $sorting_term );
+
 						if ( $sorting_term === $orderby ) {
 							$classes[] = 'active';
+
+							$icon = orbis_sorting_icon( $order );
+						} else{
+							$icon = '';
 						}
 
-						$order = orbis_invert_sort_order( $sorting_term );
+						$order = orbis_invert_sort_order( $order );
 
 						$link = add_query_arg( array(
 							'orderby' => $sorting_term,
 							'order'   => $order,
 						) );
-
-						$icon = orbis_sorting_icon( $order, $sorting_term );
 
 						echo sprintf(
 							"<a class='%s' href='%s'> %s %s </a>",
