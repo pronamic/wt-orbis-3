@@ -2,16 +2,16 @@
 
 global $post;
 
-$kvk_number = get_post_meta( $post->ID, '_orbis_company_kvk_number', true );
-$vat_number = get_post_meta( $post->ID, '_orbis_company_vat_number', true );
+$kvk_number = get_post_meta( $post->ID, '_orbis_kvk_number', true );
+$vat_number = get_post_meta( $post->ID, '_orbis_vat_number', true );
 
-$email   = get_post_meta( $post->ID, '_orbis_company_email', true );
-$website = get_post_meta( $post->ID, '_orbis_company_website', true );
+$email   = get_post_meta( $post->ID, '_orbis_email', true );
+$website = get_post_meta( $post->ID, '_orbis_website', true );
 
-$address  = get_post_meta( $post->ID, '_orbis_company_address', true );
-$postcode = get_post_meta( $post->ID, '_orbis_company_postcode', true );
-$city     = get_post_meta( $post->ID, '_orbis_company_city', true );
-$country  = get_post_meta( $post->ID, '_orbis_company_country', true );
+$address  = get_post_meta( $post->ID, '_orbis_address', true );
+$postcode = get_post_meta( $post->ID, '_orbis_postcode', true );
+$city     = get_post_meta( $post->ID, '_orbis_city', true );
+$country  = get_post_meta( $post->ID, '_orbis_country', true );
 
 $invoice_email = get_post_meta( $post->ID, '_orbis_invoice_email', true );
 
