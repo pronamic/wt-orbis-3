@@ -33,7 +33,6 @@ while ( have_posts() ) :
 				<?php do_action( 'orbis_before_side_content' ); ?>
 
 				<?php get_template_part( 'templates/company_persons' ); ?>
-
 				<?php get_template_part( 'templates/company_twitter' ); ?>
 
 				<div class="card">

@@ -15,13 +15,13 @@
 
 		?>
 
-			<ul class="post-list">
+			<ul class="list-unstyled px-3 pt-3">
 				<?php while ( $connected->have_posts() ) : ?>
 
 					<?php $connected->the_post(); ?>
 
-					<li>
-						<a href="<?php the_permalink(); ?>" class="post-image">
+					<li class="media mb-3">
+						<a href="<?php the_permalink(); ?>" class="mr-3">
 							<?php if ( has_post_thumbnail() ) : ?>
 
 								<?php the_post_thumbnail( 'avatar' ); ?>
@@ -32,12 +32,9 @@
 
 							<?php endif; ?>
 						</a>
-
-						<div class="post-content">
-							<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> <br />
-
-							<p>
-								<?php if ( get_post_meta( $post->ID, '_orbis_email', true ) ) : ?>
+						<div class="media-body">
+							<a href="<?php the_permalink(); ?>"><h5 class="mt-0 mb-1"><?php the_title(); ?></h5></a>
+							<?php if ( get_post_meta( $post->ID, '_orbis_email', true ) ) : ?>
 
 									<span><?php echo esc_html( get_post_meta( $post->ID, '_orbis_email', true ) ); ?></span> <br />
 
@@ -48,7 +45,6 @@
 									<span><?php echo esc_html( get_post_meta( $post->ID, '_orbis_person_phone_number', true ) ); ?></span>
 
 								<?php endif; ?>
-							</p>
 						</div>
 					</li>
 
