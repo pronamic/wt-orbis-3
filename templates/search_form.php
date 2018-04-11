@@ -17,8 +17,9 @@ $sorting_terms = array(
 	'title'    => esc_html__( 'Title', 'orbis' ),
 );
 
-$sorting_keys = array_keys( $sorting_terms );
-
+/*
+ * add specific sorting terms per post type here
+ */
 switch ( get_query_var( 'post_type' ) ) {
 	case 'orbis_subscription':
 		$sorting_terms[] = '-';
@@ -186,7 +187,7 @@ switch ( get_query_var( 'post_type' ) ) {
 
 					?>
 					<div class="dropdown">
-						<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php esc_html_e( 'Download', 'orbis' ); ?></button>
+						<button class="btn btn-secondary dropdown-toggle ml-1" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php esc_html_e( 'Download', 'orbis' ); ?></button>
 
 						<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 							<a class="dropdown-item" href="<?php echo esc_url( $xls_url ); ?>" target="_blank"><i class="fa fa-file-excel-o" aria-hidden="true"></i> <?php esc_html_e( 'Excel', 'orbis' ); ?></a>
