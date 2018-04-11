@@ -113,91 +113,92 @@ switch ( get_query_var( 'post_type' ) ) {
 				</span>
 			</div>
 
-			<div class="dropdown show ml-1">
-				<a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					<?php
+			<div class="form-inline">
+				<div class="dropdown show ml-1">
+					<a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<?php
 
-					//phpcs:disable
-					$orderby   = ( isset( $_GET['orderby'] ) ) ? $sorting_terms[$_GET['orderby']] : '';
-					$sort_text = ( $orderby ) ? $orderby : esc_html__( 'Sort by…', 'orbis' );
-					//phpcs:enable
-					echo esc_html( $sort_text );
+						//phpcs:disable
+						$orderby   = ( isset( $_GET['orderby'] ) ) ? $sorting_terms[$_GET['orderby']] : '';
+						$sort_text = ( $orderby ) ? $orderby : esc_html__( 'Sort by…', 'orbis' );
+						//phpcs:enable
+						echo esc_html( $sort_text );
 
-					if ( isset( $_GET['order'] ) ) {
-						$order = orbis_invert_sort_order( sanitize_text_field( wp_unslash( $_GET['order'] ) ) );
-						echo ' ' . wp_kses_post( orbis_sorting_icon( $order ) );
-					}
-					?>
-				</a>
-
-				<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
-
-					<?php
-					foreach ( $sorting_terms as $sorting_term => $label ) {
-						if ( '-' === $label ) {
-							echo '<div class="dropdown-divider"></div>';
-
-							continue;
+						if ( isset( $_GET['order'] ) ) {
+							$order = orbis_invert_sort_order( sanitize_text_field( wp_unslash( $_GET['order'] ) ) );
+							echo ' ' . wp_kses_post( orbis_sorting_icon( $order ) );
 						}
+						?>
+					</a>
 
-						$classes = array(
-							'dropdown-item',
-							'clearfix',
-						);
+					<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
 
-						$orderby = ( isset( $_GET['orderby'] ) ) ? $_GET['orderby'] : ''; // phpcs:ignore
-						$order   = orbis_get_sort_order( $sorting_term );
+						<?php
+						foreach ( $sorting_terms as $sorting_term => $label ) {
+							if ( '-' === $label ) {
+								echo '<div class="dropdown-divider"></div>';
 
-						if ( $sorting_term === $orderby ) {
-							$classes[] = 'active';
+								continue;
+							}
 
-							$icon = orbis_sorting_icon( $order );
-						} else {
-							$icon = '';
+							$classes = array(
+								'dropdown-item',
+								'clearfix',
+							);
+
+							$orderby = ( isset( $_GET['orderby'] ) ) ? $_GET['orderby'] : ''; // phpcs:ignore
+							$order   = orbis_get_sort_order( $sorting_term );
+
+							if ( $sorting_term === $orderby ) {
+								$classes[] = 'active';
+
+								$icon = orbis_sorting_icon( $order );
+							} else {
+								$icon = '';
+							}
+
+							$order = orbis_invert_sort_order( $order );
+
+							$link = add_query_arg( array(
+								'orderby' => $sorting_term,
+								'order'   => $order,
+							) );
+
+							echo sprintf(
+								"<a class='%s' href='%s'> %s %s </a>",
+								esc_attr( implode( ' ', $classes ) ),
+								esc_url( $link ),
+								esc_html( $label ),
+								wp_kses_post( $icon )
+							);
 						}
+						?>
 
-						$order = orbis_invert_sort_order( $order );
-
-						$link = add_query_arg( array(
-							'orderby' => $sorting_term,
-							'order'   => $order,
-						) );
-
-						echo sprintf(
-							"<a class='%s' href='%s'> %s %s </a>",
-							esc_attr( implode( ' ', $classes ) ),
-							esc_url( $link ),
-							esc_html( $label ),
-							wp_kses_post( $icon )
-						);
-					}
-					?>
-
-				</div>
-			</div>
-
-			<?php if ( is_post_type_archive( 'orbis_person' ) ) : ?>
-
-				<div>
-
-					<?php
-
-					$csv_url = add_query_arg( $_GET, get_post_type_archive_link( 'orbis_person' ) . 'csv' );
-					$xls_url = add_query_arg( $_GET, get_post_type_archive_link( 'orbis_person' ) . 'xls' );
-
-					?>
-					<div class="dropdown">
-						<button class="btn btn-secondary dropdown-toggle ml-1" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php esc_html_e( 'Download', 'orbis' ); ?></button>
-
-						<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-							<a class="dropdown-item" href="<?php echo esc_url( $xls_url ); ?>" target="_blank"><i class="fa fa-file-excel-o" aria-hidden="true"></i> <?php esc_html_e( 'Excel', 'orbis' ); ?></a>
-							<a class="dropdown-item" href="<?php echo esc_url( $csv_url ); ?>" target="_blank"><i class="fa fa-file-text-o" aria-hidden="true"></i> <?php esc_html_e( 'CSV', 'orbis' ); ?></a>
-						</div>
 					</div>
 				</div>
 
-			<?php endif; ?>
+				<?php if ( is_post_type_archive( 'orbis_person' ) ) : ?>
 
+					<div>
+
+						<?php
+
+						$csv_url = add_query_arg( $_GET, get_post_type_archive_link( 'orbis_person' ) . 'csv' );
+						$xls_url = add_query_arg( $_GET, get_post_type_archive_link( 'orbis_person' ) . 'xls' );
+
+						?>
+						<div class="dropdown">
+							<button class="btn btn-secondary dropdown-toggle ml-1" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php esc_html_e( 'Download', 'orbis' ); ?></button>
+
+							<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+								<a class="dropdown-item" href="<?php echo esc_url( $xls_url ); ?>" target="_blank"><i class="fa fa-file-excel-o" aria-hidden="true"></i> <?php esc_html_e( 'Excel', 'orbis' ); ?></a>
+								<a class="dropdown-item" href="<?php echo esc_url( $csv_url ); ?>" target="_blank"><i class="fa fa-file-text-o" aria-hidden="true"></i> <?php esc_html_e( 'CSV', 'orbis' ); ?></a>
+							</div>
+						</div>
+					</div>
+
+				<?php endif; ?>
+			</div>
 			<?php get_template_part( 'templates/filter', get_query_var( 'post_type' ) ); ?>
 		</div>
 
