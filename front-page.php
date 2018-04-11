@@ -43,9 +43,9 @@
 				),
 				array(
 					'before_widget' => '<div class="col-md-4"><div class="card">',
-					'after_widget'  => '</div></div></div>',
+					'after_widget'  => '</div></div>',
 					'before_title'  => '<div class="card-header">',
-					'after_title'   => '</div><div class="card-body">',
+					'after_title'   => '</div>',
 				)
 			);
 		}
@@ -59,9 +59,9 @@
 					'title'          => __( 'Projects', 'orbis' ),
 				), array(
 					'before_widget' => '<div class="col-md-4"><div class="card">',
-					'after_widget'  => '</div></div></div>',
+					'after_widget'  => '</div></div>',
 					'before_title'  => '<div class="card-header">',
-					'after_title'   => '</div><div class="card-body">',
+					'after_title'   => '</div>',
 				)
 			);
 		}
@@ -75,9 +75,9 @@
 					'title'          => __( 'Persons', 'orbis' ),
 				), array(
 					'before_widget' => '<div class="col-md-4"><div class="card">',
-					'after_widget'  => '</div></div></div>',
+					'after_widget'  => '</div></div>',
 					'before_title'  => '<div class="card-header">',
-					'after_title'   => '</div><div class="card-body">',
+					'after_title'   => '</div>',
 				)
 			);
 		}
