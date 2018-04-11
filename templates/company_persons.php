@@ -15,36 +15,50 @@
 
 		?>
 
-			<ul class="list-unstyled px-3 pt-3">
+			<ul class="list-group list-group-flush">
 				<?php while ( $connected->have_posts() ) : ?>
 
 					<?php $connected->the_post(); ?>
 
-					<li class="media mb-3">
-						<a href="<?php the_permalink(); ?>" class="mr-3">
-							<?php if ( has_post_thumbnail() ) : ?>
+					<li class="list-group-item">
+						<div class="media">
+							<a href="<?php the_permalink(); ?>" class="mr-3">
+								<?php if ( has_post_thumbnail() ) : ?>
 
-								<?php the_post_thumbnail( 'avatar' ); ?>
+									<?php the_post_thumbnail( 'avatar' ); ?>
 
-							<?php else : ?>
+								<?php else : ?>
 
-								<img src="<?php bloginfo( 'template_directory' ); ?>/placeholders/avatar.png" alt="">
-
-							<?php endif; ?>
-						</a>
-						<div class="media-body">
-							<a href="<?php the_permalink(); ?>"><h5 class="mt-0 mb-1"><?php the_title(); ?></h5></a>
-							<?php if ( get_post_meta( $post->ID, '_orbis_email', true ) ) : ?>
-
-									<span><?php echo esc_html( get_post_meta( $post->ID, '_orbis_email', true ) ); ?></span> <br />
+									<img src="<?php bloginfo( 'template_directory' ); ?>/placeholders/avatar.png" alt="">
 
 								<?php endif; ?>
+							</a>
 
-								<?php if ( get_post_meta( $post->ID, '_orbis_person_phone_number', true ) ) : ?>
+							<div class="media-body">
+								<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a><br />
+								<?php
+								if ( get_post_meta( $post->ID, '_orbis_email', true ) ) {
+									$email = get_post_meta( $post->ID, '_orbis_email', true );
 
-									<span><?php echo esc_html( get_post_meta( $post->ID, '_orbis_person_phone_number', true ) ); ?></span>
+									printf(
+										'<a class="text-secondary" style="font-size: .8em" href="mailto:%s">%s</a><br />',
+										esc_html( $email ),
+										esc_html( $email )
+									);
+								}
+								?>
+								<?php
+								if ( get_post_meta( $post->ID, '_orbis_person_phone_number', true ) ) {
+									$phone_number = get_post_meta( $post->ID, '_orbis_person_phone_number', true );
 
-								<?php endif; ?>
+									printf(
+										'<a class="text-secondary" style="font-size: .8em" href="tel:%s">%s</a><br />',
+										esc_html( $phone_number ),
+										esc_html( $phone_number )
+									);
+								}
+								?>
+							</div>
 						</div>
 					</li>
 
