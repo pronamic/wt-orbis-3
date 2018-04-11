@@ -87,7 +87,7 @@ switch ( get_query_var( 'post_type' ) ) {
 							jQuery( document ).ready( function( $ ) {
 								$( '.select2' ).select2( {
 									theme: 'bootstrap4',
-									width: '30em',
+									width: '16em',
 								});
 							} );
 						</script>
@@ -113,7 +113,7 @@ switch ( get_query_var( 'post_type' ) ) {
 				</span>
 			</div>
 
-			<div class="dropdown show">
+			<div class="dropdown show ml-1">
 				<a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					<?php
 
