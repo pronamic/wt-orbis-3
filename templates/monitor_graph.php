@@ -1,11 +1,13 @@
 <?php
 wp_enqueue_script( 'flotcharts' );
+wp_enqueue_script( 'flotcharts-time' );
 
 global $wpdb;
 
-$response_times = $wpdb->get_col( $wpdb->prepare( "
+$response_times = $wpdb->get_results( $wpdb->prepare( "
 	SELECT
-		duration
+		duration,
+		monitored_date
 	FROM
 		$wpdb->orbis_monitor_responses
 	WHERE
@@ -15,10 +17,12 @@ $response_times = $wpdb->get_col( $wpdb->prepare( "
 ", $post->ID ) );
 
 foreach ( $response_times as $i => $response ) {
-	$graph_values[] = [ $i, $response ];
+	$format_date = strtotime( $response->monitored_date ) * 1000;
+
+	$graph_values[] = [ $i, $response->duration ];
 }
 
-$response_times_JSON = json_encode( $graph_values, JSON_NUMERIC_CHECK );
+$response_times_json = wp_json_encode( $graph_values, JSON_NUMERIC_CHECK );
 
 ?>
 
@@ -30,7 +34,10 @@ $response_times_JSON = json_encode( $graph_values, JSON_NUMERIC_CHECK );
 
 	<script type="text/javascript">
 		jQuery( document ).ready( function( $ ) {
-			$.plot("#graph", [<?php echo $response_times_JSON; ?>] );
+			var options = { xaxis: {
+					mode: "time"
+				} };
+			$.plot("#graph", [<?php echo esc_attr( $response_times_json ); ?>] );
 		});
 	</script>
 </div>
