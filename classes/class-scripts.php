@@ -80,6 +80,14 @@ class Orbis_Theme_Scripts {
 			'4.6.3'
 		);
 
+		// Flotcharts
+		wp_register_script(
+			'flotcharts',
+			$uri . '/assets/flot/jquery.flot' . $min . '.js',
+			array( 'jquery' ),
+			'0.8.3'
+		);
+
 		// Orbis
 		wp_register_script(
 			'wt-orbis',
