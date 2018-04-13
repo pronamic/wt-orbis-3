@@ -10,8 +10,6 @@ while ( have_posts() ) :
 			<div class="col-md-8">
 				<?php do_action( 'orbis_before_main_content' ); ?>
 
-				<?php if ( ! empty( get_the_content() ) ) : ?>
-
 				<div class="card mb-3">
 					<div class="card-header"><?php esc_html_e( 'Description', 'orbis' ); ?></div>
 
@@ -29,8 +27,6 @@ while ( have_posts() ) :
 
 					<?php get_template_part( 'templates/post-card-footer' ); ?>
 				</div>
-
-				<?php endif; ?>
 
 				<?php do_action( 'orbis_after_main_content' ); ?>
 
