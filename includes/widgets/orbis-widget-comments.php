@@ -26,7 +26,7 @@ class Orbis_Comments_Widget extends WP_Widget {
 
 		?>
 
-		<div class="content">
+		<div class="card-body">
 			<?php if ( $comments ) : ?>
 
 				<ul class="no-disc comments">

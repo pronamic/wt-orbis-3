@@ -27,58 +27,63 @@ class Orbis_News_Widget extends WP_Widget {
 
 		?>
 
-		<?php if ( $query->have_posts() ) : ?>
+		<div class="card-body">
 
-			<div class="news with-cols clearfix">
-				<div class="row">
-					<div class="col-md-6">
-						<?php
-						if ( $query->have_posts() ) :
-							$query->the_post();
-						?>
+			<?php if ( $query->have_posts() ) : ?>
 
-							<div class="content">
-								<?php if ( has_post_thumbnail() ) : ?>
+				<div class="news with-cols clearfix">
+					<div class="row">
+						<div class="col-md-6">
+							<?php
+							if ( $query->have_posts() ) :
+								$query->the_post();
+							?>
 
-									<a href="<?php the_permalink(); ?>">
-										<?php the_post_thumbnail( 'featured' ); ?>
-									</a>
+								<div class="content">
+									<?php if ( has_post_thumbnail() ) : ?>
 
-								<?php endif; ?>
+										<a href="<?php the_permalink(); ?>">
+											<?php the_post_thumbnail( 'featured' ); ?>
+										</a>
 
-								<h4>
-									<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-								</h4>
+									<?php endif; ?>
 
-								<?php the_excerpt(); ?>
-							</div>
-
-						<?php endif; ?>
-					</div>
-
-					<div class="col-md-6">
-						<div class="content">
-							<h4><?php esc_html_e( 'More news', 'orbis' ); ?></h4>
-
-							<ul class="no-disc">
-								<?php
-								while ( $query->have_posts() ) :
-									$query->the_post();
-								?>
-
-									<li>
+									<h4>
 										<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-									</li>
+									</h4>
 
-								<?php endwhile; ?>
-							</ul>
+									<?php the_excerpt(); ?>
+								</div>
+
+							<?php endif; ?>
+						</div>
+
+						<div class="col-md-6">
+							<div class="content">
+								<h4><?php esc_html_e( 'More news', 'orbis' ); ?></h4>
+
+								<ul class="no-disc">
+									<?php
+									while ( $query->have_posts() ) :
+										$query->the_post();
+									?>
+
+										<li>
+											<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+										</li>
+
+									<?php endwhile; ?>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
+
+			<?php endif; ?>
+
+		</div>
 
 		<?php
-		endif;
 
 		wp_reset_postdata();
 

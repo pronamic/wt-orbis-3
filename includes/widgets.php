@@ -70,18 +70,18 @@ function orbis_widgets_init() {
 		'name'          => __( 'Frontpage Left Widget', 'orbis' ),
 		'id'            => 'frontpage-left-widget',
 		'before_widget' => '<div id="%1$s" class="mb-3 card %2$s">',
-		'after_widget'  => '</div></div>',
+		'after_widget'  => '</div>',
 		'before_title'  => '<div class="card-header">',
-		'after_title'   => '</div><div class="card-body">',
+		'after_title'   => '</div>',
 	) );
 
 	register_sidebar( array(
 		'name'          => __( 'Frontpage Right Widget', 'orbis' ),
 		'id'            => 'frontpage-right-widget',
 		'before_widget' => '<div id="%1$s" class="mb-3 card %2$s">',
-		'after_widget'  => '</div></div>',
+		'after_widget'  => '</div>',
 		'before_title'  => '<div class="card-header">',
-		'after_title'   => '</div><div class="card-body">',
+		'after_title'   => '</div>',
 	) );
 
 	register_sidebar( array(
