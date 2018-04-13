@@ -28,7 +28,7 @@
 							<td>
 								<?php
 
-								$favicon_url = orbis_get_favicon_url( get_post_meta( get_the_ID(), '_orbis_company_website', true ) );
+								$favicon_url = orbis_get_favicon_url( get_post_meta( get_the_ID(), '_orbis_website', true ) );
 
 								if ( ! empty( $favicon_url ) ) :
 								?>
@@ -44,9 +44,9 @@
 							<td>
 								<?php
 
-								$address  = get_post_meta( $post->ID, '_orbis_company_address', true );
-								$postcode = get_post_meta( $post->ID, '_orbis_company_postcode', true );
-								$city     = get_post_meta( $post->ID, '_orbis_company_city', true );
+								$address  = get_post_meta( $post->ID, '_orbis_address', true );
+								$postcode = get_post_meta( $post->ID, '_orbis_postcode', true );
+								$city     = get_post_meta( $post->ID, '_orbis_city', true );
 
 								printf(
 									'%s<br />%s %s',
@@ -62,7 +62,7 @@
 
 								$break = '';
 
-								$website = get_post_meta( $post->ID, '_orbis_company_website', true );
+								$website = get_post_meta( $post->ID, '_orbis_website', true );
 
 								if ( ! empty( $website ) ) {
 									printf(
@@ -74,10 +74,10 @@
 									$break = '<br />';
 								}
 
-								$email = get_post_meta( $post->ID, '_orbis_company_email', true );
+								$email = get_post_meta( $post->ID, '_orbis_email', true );
 
 								if ( ! empty( $email ) ) {
-									printf( esc_attr( $break ) );
+									printf( wp_kses_post( $break ) );
 
 									printf(
 										'<a href="mailto:%s" target="_blank">%s</a>',
