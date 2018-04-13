@@ -48,8 +48,8 @@
 								}
 								?>
 								<?php
-								if ( get_post_meta( $post->ID, '_orbis_person_phone_number', true ) ) {
-									$phone_number = get_post_meta( $post->ID, '_orbis_person_phone_number', true );
+								if ( get_post_meta( $post->ID, '_orbis_phone_number', true ) ) {
+									$phone_number = get_post_meta( $post->ID, '_orbis_phone_number', true );
 
 									printf(
 										'<a class="text-secondary" style="font-size: .8em" href="tel:%s">%s</a><br />',
