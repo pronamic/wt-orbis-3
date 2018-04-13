@@ -52,45 +52,45 @@ function orbis_widgets_init() {
 		'name'          => __( 'Dashboard Widget Area', 'orbis' ),
 		'id'            => 'dashboard-sidebar',
 		'before_widget' => '<div class="col-md-6"><div id="%1$s" class="mb-3 card %2$s">',
-		'after_widget'  => '</div></div></div>',
+		'after_widget'  => '</div></div>',
 		'before_title'  => '<div class="card-header">',
-		'after_title'   => '</div><div class="card-body">',
+		'after_title'   => '</div>',
 	) );
 
 	register_sidebar( array(
 		'name'          => __( 'Frontpage Top Widget', 'orbis' ),
 		'id'            => 'frontpage-top-widget',
 		'before_widget' => '<div class="col-md-12"><div id="%1$s" class="mb-3 card %2$s">',
-		'after_widget'  => '</div></div></div>',
+		'after_widget'  => '</div></div>',
 		'before_title'  => '<div class="card-title">',
-		'after_title'   => '</div><div class="card-body">',
+		'after_title'   => '</div>',
 	) );
 
 	register_sidebar( array(
 		'name'          => __( 'Frontpage Left Widget', 'orbis' ),
 		'id'            => 'frontpage-left-widget',
 		'before_widget' => '<div id="%1$s" class="mb-3 card %2$s">',
-		'after_widget'  => '</div></div>',
+		'after_widget'  => '</div>',
 		'before_title'  => '<div class="card-title">',
-		'after_title'   => '</div><div class="card-body">',
+		'after_title'   => '</div>',
 	) );
 
 	register_sidebar( array(
 		'name'          => __( 'Frontpage Right Widget', 'orbis' ),
 		'id'            => 'frontpage-right-widget',
 		'before_widget' => '<div id="%1$s" class="mb-3 card %2$s">',
-		'after_widget'  => '</div></div>',
+		'after_widget'  => '</div>',
 		'before_title'  => '<div class="card-title">',
-		'after_title'   => '</div><div class="card-body">',
+		'after_title'   => '</div>',
 	) );
 
 	register_sidebar( array(
 		'name'          => __( 'Frontpage Bottom Widget', 'orbis' ),
 		'id'            => 'frontpage-bottom-widget',
 		'before_widget' => '<div class="col-md-4"><div id="%1$s" class="mb-3 card %2$s">',
-		'after_widget'  => '</div></div></div>',
+		'after_widget'  => '</div></div>',
 		'before_title'  => '<div class="card-title">',
-		'after_title'   => '</div><div class="card-body">',
+		'after_title'   => '</div>',
 	) );
 }
 
