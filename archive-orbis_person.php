@@ -17,7 +17,6 @@
 						<th><?php esc_html_e( 'Name', 'orbis' ); ?></th>
 						<th><?php esc_html_e( 'Company', 'orbis' ); ?></th>
 						<th><?php esc_html_e( 'Address', 'orbis' ); ?></th>
-						<th><?php esc_html_e( 'Phone number', 'orbis' ); ?></th>
 						<th><?php esc_html_e( 'Author', 'orbis' ); ?></th>
 						<th></th>
 					</tr>
@@ -51,15 +50,15 @@
 								<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> <br />
 
 								<span class="orbis-person-meta">
-									<?php if ( get_post_meta( $post->ID, '_orbis_person_email_address', true ) ) : ?>
+									<?php if ( get_post_meta( $post->ID, '_orbis_email', true ) ) : ?>
 
-										<?php echo esc_html( get_post_meta( $post->ID, '_orbis_person_email_address', true ) ); ?><br />
+										<?php echo esc_html( get_post_meta( $post->ID, '_orbis_email', true ) ); ?><br />
 
 									<?php endif; ?>
 
-									<?php if ( get_post_meta( $post->ID, '_orbis_person_phone_number', true ) ) : ?>
+									<?php if ( get_post_meta( $post->ID, '_orbis_phone_number', true ) ) : ?>
 
-										<?php echo esc_html( get_post_meta( $post->ID, '_orbis_person_phone_number', true ) ); ?>
+										<?php echo esc_html( get_post_meta( $post->ID, '_orbis_phone_number', true ) ); ?>
 
 									<?php endif; ?>
 								</span>
@@ -87,17 +86,6 @@
 									esc_html( $address->get_postcode() ),
 									esc_html( $address->get_city() )
 								);
-
-								?>
-							</td>
-							<td>
-								<?php
-
-								$phone_number = get_post_meta( $post->ID, '_orbis_person_phone_number', true );
-
-								if ( ! empty( $phone_number ) && function_exists( 'orbis_snom_call_form' ) ) {
-									orbis_snom_call_form( $phone_number );
-								}
 
 								?>
 							</td>
