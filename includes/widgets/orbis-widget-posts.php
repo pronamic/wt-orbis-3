@@ -74,13 +74,13 @@ class Orbis_List_Posts_Widget extends WP_Widget {
 
 			<?php else : ?>
 
-				<ul class="list">
+				<ul class="list-group list-group-flush">
 					<?php
 					while ( $query->have_posts() ) :
 						$query->the_post();
 					?>
 
-						<li>
+						<li class="list-group-item">
 							<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 						</li>
 
@@ -89,9 +89,9 @@ class Orbis_List_Posts_Widget extends WP_Widget {
 
 			<?php endif; ?>
 
-			<footer>
-				<a href="<?php echo esc_attr( get_post_type_archive_link( $post_type_name ) ); ?>" class="btn btn-default"><?php esc_html_e( 'Show all', 'orbis' ); ?></a>
-			</footer>
+			<div class="card-body">
+				<a href="<?php echo esc_attr( get_post_type_archive_link( $post_type_name ) ); ?>"><?php esc_html_e( 'Show all', 'orbis' ); ?></a>
+			</div>
 
 		<?php wp_reset_postdata(); else : ?>
 
