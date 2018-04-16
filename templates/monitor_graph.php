@@ -4,6 +4,32 @@ wp_enqueue_script( 'flotcharts-time' );
 
 global $wpdb;
 
+$period = isset( $_GET[ 'period' ] ) ? $_GET[ 'period' ] : '';
+
+switch ( $period ) {
+	case 'd':
+		$groupby = 'DAY';
+		$label   = esc_html__( 'Day', 'orbis' );
+		break;
+
+	case 'w':
+		$groupby = 'WEEKOFYEAR';
+		$label   = esc_html__( 'Week', 'orbis' );
+		break;
+
+	case 'm':
+		$groupby = 'MONTH';
+		$label   = esc_html__( 'Month', 'orbis' );
+		break;
+	
+	default:
+		$groupby = 'WEEKOFYEAR';
+		$label   = esc_html__( 'Week', 'orbis' );
+		break;
+}
+
+$graph_title = esc_html__( 'Monitor Graph - Average Response Time Per ', 'orbis' ) . $label;
+
 $response_times = $wpdb->get_results( $wpdb->prepare( "
 	SELECT
 		AVG( duration ) AS avg_duration,
@@ -13,7 +39,7 @@ $response_times = $wpdb->get_results( $wpdb->prepare( "
 	WHERE
 		post_id = %d
 	GROUP BY 
-		WEEKOFYEAR( monitored_date )
+		$groupby( monitored_date )
 	ORDER BY
 		monitored_date ASC
 ",
@@ -29,8 +55,14 @@ $response_times_json = wp_json_encode( $average_period_durations, JSON_NUMERIC_C
 ?>
 
 <div class="card mb-3">
-	<div class="card-header"><?php esc_html__( 'Monitor Graph - Average Response Time Per Time Period', 'orbis' ); ?></div>
+	<div class="card-header"><?php echo $graph_title; ?></div>
 	<div class="card-body">
+		<button class="btn btn-light dropdown-toggle ml-1 mb-3" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $label; ?></button>
+		<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+			<a class="dropdown-item" href="<?php echo esc_url( add_query_arg( 'period', 'd' ) ); ?>"><?php esc_html_e( 'Day', 'orbis' ); ?></a>
+			<a class="dropdown-item" href="<?php echo esc_url( add_query_arg( 'period', 'w' ) ); ?>"><?php esc_html_e( 'Week', 'orbis' ); ?></a>
+			<a class="dropdown-item" href="<?php echo esc_url( add_query_arg( 'period', 'm' ) ); ?>"><?php esc_html_e( 'Month', 'orbis' ); ?></a>
+		</div>
 
 		<div id="graph" style="width:100%;height:300px"></div>
 	</div>
