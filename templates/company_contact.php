@@ -100,35 +100,42 @@ $twinfield_customer_id = get_post_meta( $post->ID, '_twinfield_customer_id', tru
 
 			<?php endif; ?>
 
-			<dt><?php esc_html_e( 'vCard', 'orbis' ); ?></dt>
-			<dd>
-				<?php
+				<dt><?php esc_html_e( 'vCard', 'orbis' ); ?></dt>
+				<dd>
+					<?php
 
-				printf(
-					'<a href="%s">%s</a>',
-					esc_attr( get_permalink() . 'vcard/' ),
-					esc_html__( 'Download vCard', 'orbis' )
-				);
+					printf(
+						'<a href="%s">%s</a>',
+						esc_attr( get_permalink() . 'vcard/' ),
+						esc_html__( 'Download vCard', 'orbis' )
+					);
 
-				?>
-			</dd>
+					?>
+				</dd>
 
 			<?php if ( ! empty( $twinfield_customer_id ) ) : ?>
 
-			<dt><?php esc_html_e( 'Twinfield ID', 'orbis' ); ?></dt>
-			<dd>
-				<?php
+				<dt><?php esc_html_e( 'Twinfield ID', 'orbis' ); ?></dt>
+				<dd>
+					<?php
 
-				$url = home_url( sprintf( '/debiteuren/%s/', $twinfield_customer_id ) );
+					$url = home_url( sprintf( '/debiteuren/%s/', $twinfield_customer_id ) );
 
-				printf(
-					'<a href="%s" target="_blank">%s</a>',
-					esc_attr( $url ),
-					esc_html( $twinfield_customer_id )
-				);
+					printf(
+						'<a href="%s" target="_blank">%s</a>',
+						esc_attr( $url ),
+						esc_html( $twinfield_customer_id )
+					);
 
-				?>
-			</dd>
+					?>
+				</dd>
+
+			<?php endif; ?>
+
+			<?php if ( has_term( null, 'orbis_company_status' ) ) : ?>
+
+				<dt><?php esc_html_e( 'Company Status', 'orbis' ); ?></dt>
+				<dd><?php the_terms( null, 'orbis_company_status' ); ?></dd>
 
 			<?php endif; ?>
 
