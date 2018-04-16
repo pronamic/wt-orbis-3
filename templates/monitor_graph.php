@@ -28,6 +28,8 @@ switch ( $period ) {
 		break;
 }
 
+$last_year = mktime(0, 0, 0, date("m"), date("d"), date("Y") - 1 );
+
 $graph_title = esc_html__( 'Monitor Graph - Average Response Time Per ', 'orbis' ) . $label;
 
 $response_times = $wpdb->get_results( $wpdb->prepare( "
@@ -38,12 +40,15 @@ $response_times = $wpdb->get_results( $wpdb->prepare( "
 		$wpdb->orbis_monitor_responses
 	WHERE
 		post_id = %d
+			AND
+		monitored_date > %s
 	GROUP BY 
 		$groupby( monitored_date )
 	ORDER BY
 		monitored_date ASC
 ",
-	$post->ID
+	$post->ID,
+	$last_year
 ) );
 
 foreach ( $response_times as $response ) {
