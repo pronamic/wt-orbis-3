@@ -107,14 +107,14 @@ while ( have_posts() ) :
 
 									<?php
 
-									$iban = get_post_meta( $post->ID, '_orbis_iban_number', true );
+									$iban = get_post_meta( $post->ID, '_orbis_iban', true );
 
 									if ( ! empty( $iban ) ) :
 									?>
 
 										<dt><?php esc_html_e( 'IBAN Number', 'orbis' ); ?></dt>
 										<dd>
-											<?php echo esc_attr( get_post_meta( $post->ID, '_orbis_iban_number', true ) ); ?>
+											<?php echo esc_attr( get_post_meta( $post->ID, '_orbis_iban', true ) ); ?>
 										</dd>
 
 									<?php endif; ?>
