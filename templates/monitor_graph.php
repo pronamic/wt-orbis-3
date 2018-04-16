@@ -4,7 +4,7 @@ wp_enqueue_script( 'flotcharts-time' );
 
 global $wpdb;
 
-$period = isset( $_GET[ 'period' ] ) ? $_GET[ 'period' ] : '';
+$period = isset( $_GET['period'] ) ? sanitize_text_field( wp_unslash( $_GET['period'] ) ) : '';
 
 switch ( $period ) {
 	case 'd':
@@ -21,14 +21,14 @@ switch ( $period ) {
 		$groupby = 'MONTH';
 		$label   = esc_html__( 'Month', 'orbis' );
 		break;
-	
+
 	default:
 		$groupby = 'WEEKOFYEAR';
 		$label   = esc_html__( 'Week', 'orbis' );
 		break;
 }
 
-$last_year = mktime(0, 0, 0, date("m"), date("d"), date("Y") - 1 );
+$last_year = mktime( 0, 0, 0, date( 'm' ), date( 'd' ), date( 'Y' ) - 1 );
 
 $graph_title = esc_html__( 'Monitor Graph - Average Response Time Per ', 'orbis' ) . $label;
 
@@ -52,7 +52,8 @@ $response_times = $wpdb->get_results( $wpdb->prepare( "
 ) );
 
 foreach ( $response_times as $response ) {
-	$date = strtotime( $response->monitored_date ) * 1000; // WPCS: precision alignment ok.
+	$date = strtotime( $response->monitored_date ) * 1000;
+
 	$average_period_durations[] = [ $date, $response->avg_duration ];
 }
 
@@ -60,9 +61,9 @@ $response_times_json = wp_json_encode( $average_period_durations, JSON_NUMERIC_C
 ?>
 
 <div class="card mb-3">
-	<div class="card-header"><?php echo $graph_title; ?></div>
+	<div class="card-header"><?php echo esc_html( $graph_title ); ?></div>
 	<div class="card-body">
-		<button class="btn btn-light dropdown-toggle ml-1 mb-3" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $label; ?></button>
+		<button class="btn btn-light dropdown-toggle ml-1 mb-3" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo esc_html( $label ); ?></button>
 		<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 			<a class="dropdown-item" href="<?php echo esc_url( add_query_arg( 'period', 'd' ) ); ?>"><?php esc_html_e( 'Day', 'orbis' ); ?></a>
 			<a class="dropdown-item" href="<?php echo esc_url( add_query_arg( 'period', 'w' ) ); ?>"><?php esc_html_e( 'Week', 'orbis' ); ?></a>
