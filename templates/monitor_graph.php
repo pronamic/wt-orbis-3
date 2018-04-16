@@ -62,11 +62,11 @@ $response_times_json = wp_json_encode( $average_durations, JSON_NUMERIC_CHECK );
 <div class="card mb-3">
 	<div class="card-header"><?php echo esc_html( $graph_title ); ?></div>
 	<div class="card-body">
-		<button class="btn btn-light dropdown-toggle ml-1 mb-3" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo esc_html( $label ); ?></button>
+		<button class="btn btn-light dropdown-toggle ml-1 mb-3" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo ucfirst( esc_html( $label ) ); ?></button>
 		<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-			<a class="dropdown-item" href="<?php echo esc_url( add_query_arg( 'period', 'd' ) ); ?>"><?php esc_html_e( 'Day', 'orbis' ); ?></a>
-			<a class="dropdown-item" href="<?php echo esc_url( add_query_arg( 'period', 'w' ) ); ?>"><?php esc_html_e( 'Week', 'orbis' ); ?></a>
-			<a class="dropdown-item" href="<?php echo esc_url( add_query_arg( 'period', 'm' ) ); ?>"><?php esc_html_e( 'Month', 'orbis' ); ?></a>
+			<a class="dropdown-item" href="<?php echo esc_url( add_query_arg( 'period', 'd' ) ); ?>"><?php echo ucfirst( esc_html__( 'Day', 'orbis' ) ); ?></a>
+			<a class="dropdown-item" href="<?php echo esc_url( add_query_arg( 'period', 'w' ) ); ?>"><?php echo ucfirst( esc_html__( 'Week', 'orbis' ) ); ?></a>
+			<a class="dropdown-item" href="<?php echo esc_url( add_query_arg( 'period', 'm' ) ); ?>"><?php echo ucfirst( esc_html__( 'Month', 'orbis' ) ); ?></a>
 		</div>
 
 		<div id="graph" style="width:100%;height:300px"></div>
