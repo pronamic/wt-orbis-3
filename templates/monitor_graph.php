@@ -80,9 +80,23 @@ $response_times_json = wp_json_encode( $average_durations, JSON_NUMERIC_CHECK );
 					timeformat: "%d/%m"
 				},
 				series: {
-					lines: { show: true },
-					points: { show: true }
-				}
+					lines: {
+						show: true,
+						lineWidth: 4
+					},
+					points: {
+						show: true,
+						fill: true,
+						fillColor: "#007bff",
+						radius: 4
+					},
+					shadowSize: 0
+				},
+				grid: {
+					color: "#BBB",
+					borderWidth: 0.5
+				},
+				colors: [ "#007bff" ]
 			}
 			$.plot( "#graph", [<?php echo wp_kses_post( $response_times_json ); ?>], options );
 		} );
