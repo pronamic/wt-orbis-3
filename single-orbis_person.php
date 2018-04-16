@@ -49,17 +49,17 @@ while ( have_posts() ) :
 
 									<?php endif; ?>
 
-									<?php if ( get_post_meta( $post->ID, '_orbis_person_phone_number', true ) ) : ?>
+									<?php if ( get_post_meta( $post->ID, '_orbis_phone_number', true ) ) : ?>
 
 										<dt><?php esc_html_e( 'Phone number', 'orbis' ); ?></dt>
-										<dd><a href="tel:<?php echo esc_attr( get_post_meta( $post->ID, '_orbis_person_phone_number', true ) ); ?>" class="anchor-tooltip" title="<?php esc_attr_e( 'Call this number', 'orbis' ); ?>"><?php echo esc_html( get_post_meta( $post->ID, '_orbis_person_phone_number', true ) ); ?></a></dd>
+										<dd><a href="tel:<?php echo esc_attr( get_post_meta( $post->ID, '_orbis_phone_number', true ) ); ?>" class="anchor-tooltip" title="<?php esc_attr_e( 'Call this number', 'orbis' ); ?>"><?php echo esc_html( get_post_meta( $post->ID, '_orbis_phone_number', true ) ); ?></a></dd>
 
 									<?php endif; ?>
 
-									<?php if ( get_post_meta( $post->ID, '_orbis_person_mobile_number', true ) ) : ?>
+									<?php if ( get_post_meta( $post->ID, '_orbis_mobile_number', true ) ) : ?>
 
 										<dt><?php esc_html_e( 'Mobile number', 'orbis' ); ?></dt>
-										<dd><a href="tel:<?php echo esc_attr( get_post_meta( $post->ID, '_orbis_person_mobile_number', true ) ); ?>" class="anchor-tooltip" title="<?php esc_attr_e( 'Call this number', 'orbis' ); ?>"><?php echo esc_html( get_post_meta( $post->ID, '_orbis_person_mobile_number', true ) ); ?></a></dd>
+										<dd><a href="tel:<?php echo esc_attr( get_post_meta( $post->ID, '_orbis_mobile_number', true ) ); ?>" class="anchor-tooltip" title="<?php esc_attr_e( 'Call this number', 'orbis' ); ?>"><?php echo esc_html( get_post_meta( $post->ID, '_orbis_mobile_number', true ) ); ?></a></dd>
 
 									<?php endif; ?>
 
