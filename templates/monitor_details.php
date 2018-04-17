@@ -36,8 +36,13 @@
 					<?php
 
 					$location = get_post_meta( get_the_ID(), '_orbis_monitor_required_location', true );
+					$link     = sprintf(
+						'<a href="%s">%s</a>',
+						$location,
+						$location
+					);
 
-					echo empty( $location ) ? '—' : esc_html( $location );
+					echo empty( $location ) ? '—' : wp_kses_post( $link );
 
 					?>
 				</dd>
