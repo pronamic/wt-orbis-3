@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Orbis 3 3.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2018-04-16 12:07:01+00:00\n"
+"POT-Creation-Date: 2018-04-17 09:51:02+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -61,7 +61,7 @@ msgstr ""
 #: archive-orbis_deal.php:18 deploy/latest/archive-orbis_deal.php:18
 #: deploy/latest/templates/project_invoices.php:13
 #: deploy/latest/templates/search_form.php:15
-#: deploy/latest/templates/task_form.php:57 templates/monitor_responses.php:27
+#: deploy/latest/templates/task_form.php:57 templates/monitor_responses.php:44
 #: templates/project_invoices.php:13 templates/search_form.php:15
 #: templates/task_form.php:57
 msgid "Date"
@@ -645,7 +645,7 @@ msgstr ""
 msgid "Connected persons"
 msgstr ""
 
-#: deploy/latest/single-orbis_company.php:99 templates/company_persons.php:72
+#: deploy/latest/single-orbis_company.php:99 templates/company_persons.php:70
 msgid "No persons connected."
 msgstr ""
 
@@ -1176,11 +1176,11 @@ msgstr ""
 msgid "Monitor Details"
 msgstr ""
 
-#: templates/monitor_details.php:18
+#: templates/monitor_details.php:23
 msgid "Required Response Code"
 msgstr ""
 
-#: templates/monitor_details.php:29
+#: templates/monitor_details.php:34
 msgid "Required location"
 msgstr ""
 
@@ -1201,27 +1201,27 @@ msgstr ""
 msgid "Monitor Graph - Average Response Time Per "
 msgstr ""
 
-#: templates/monitor_responses.php:21
-msgid "Monitor Responses"
+#: templates/monitor_responses.php:24
+msgid "Last %d Responses"
 msgstr ""
 
-#: templates/monitor_responses.php:28
+#: templates/monitor_responses.php:45
 msgid "Duration"
 msgstr ""
 
-#: templates/monitor_responses.php:29
+#: templates/monitor_responses.php:46
 msgid "Code"
 msgstr ""
 
-#: templates/monitor_responses.php:30
+#: templates/monitor_responses.php:47
 msgid "Message"
 msgstr ""
 
-#: templates/monitor_responses.php:31
+#: templates/monitor_responses.php:48
 msgid "Content Length"
 msgstr ""
 
-#: templates/monitor_responses.php:32
+#: templates/monitor_responses.php:49
 msgid "Content Type"
 msgstr ""
 

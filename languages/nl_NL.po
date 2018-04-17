@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pronamic\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2018-04-16 12:07:01+00:00\n"
-"PO-Revision-Date: 2018-04-16 14:14+0100\n"
+"POT-Creation-Date: 2018-04-17 09:51:02+00:00\n"
+"PO-Revision-Date: 2018-04-17 11:52+0100\n"
 "Last-Translator: Remco Tolsma <info@remcotolsma.nl>\n"
 "Language-Team: Pronamic <info@pronamic.nl>\n"
 "Language: nl_NL\n"
@@ -66,7 +66,7 @@ msgstr "Auteur"
 #: archive-orbis_deal.php:18 deploy/latest/archive-orbis_deal.php:18
 #: deploy/latest/templates/project_invoices.php:13
 #: deploy/latest/templates/search_form.php:15
-#: deploy/latest/templates/task_form.php:57 templates/monitor_responses.php:27
+#: deploy/latest/templates/task_form.php:57 templates/monitor_responses.php:44
 #: templates/project_invoices.php:13 templates/search_form.php:15
 #: templates/task_form.php:57
 msgid "Date"
@@ -658,7 +658,7 @@ msgstr "Beschrijving"
 msgid "Connected persons"
 msgstr "Gekoppelde personen"
 
-#: deploy/latest/single-orbis_company.php:99 templates/company_persons.php:72
+#: deploy/latest/single-orbis_company.php:99 templates/company_persons.php:70
 msgid "No persons connected."
 msgstr "Geen personen verbonden."
 
@@ -1191,11 +1191,11 @@ msgstr "IBAN nummer"
 msgid "Monitor Details"
 msgstr "Monitor details"
 
-#: templates/monitor_details.php:18
+#: templates/monitor_details.php:23
 msgid "Required Response Code"
 msgstr "Vereiste antwoordcode"
 
-#: templates/monitor_details.php:29
+#: templates/monitor_details.php:34
 msgid "Required location"
 msgstr "Vereiste locatie"
 
@@ -1216,27 +1216,27 @@ msgstr "maand"
 msgid "Monitor Graph - Average Response Time Per "
 msgstr "Monitor - Gemiddelde reactieduur per "
 
-#: templates/monitor_responses.php:21
-msgid "Monitor Responses"
-msgstr "Monitor antwoorden"
+#: templates/monitor_responses.php:24
+msgid "Last %d Responses"
+msgstr "Laatste %d antwoorden"
 
-#: templates/monitor_responses.php:28
+#: templates/monitor_responses.php:45
 msgid "Duration"
 msgstr "Duur"
 
-#: templates/monitor_responses.php:29
+#: templates/monitor_responses.php:46
 msgid "Code"
 msgstr "Code"
 
-#: templates/monitor_responses.php:30
+#: templates/monitor_responses.php:47
 msgid "Message"
 msgstr "Bericht"
 
-#: templates/monitor_responses.php:31
+#: templates/monitor_responses.php:48
 msgid "Content Length"
 msgstr "Content lengte"
 
-#: templates/monitor_responses.php:32
+#: templates/monitor_responses.php:49
 msgid "Content Type"
 msgstr "Content type"
 
@@ -1275,6 +1275,12 @@ msgstr "Mijn taken"
 #. Template Name of the plugin/theme
 msgid "Panel"
 msgstr "Panel"
+
+#~ msgid "Last"
+#~ msgstr "Laatste"
+
+#~ msgid "Monitor Responses"
+#~ msgstr "Monitor antwoorden"
 
 #~ msgid "Finished Modified"
 #~ msgstr "Afgerond gewijzigd"
