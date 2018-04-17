@@ -132,13 +132,6 @@ $twinfield_customer_id = get_post_meta( $post->ID, '_twinfield_customer_id', tru
 
 			<?php endif; ?>
 
-			<?php if ( has_term( null, 'orbis_company_status' ) ) : ?>
-
-				<dt><?php esc_html_e( 'Company Status', 'orbis' ); ?></dt>
-				<dd><?php the_terms( null, 'orbis_company_status' ); ?></dd>
-
-			<?php endif; ?>
-
 		</dl>
 	</div>
 </div>
