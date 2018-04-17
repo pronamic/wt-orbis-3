@@ -22,7 +22,7 @@ get_header();
 						<th><?php esc_html_e( 'Required response code', 'orbis' ); ?></th>
 						<th><?php esc_html_e( 'Last response code', 'orbis' ); ?></th>
 						<th><?php esc_html_e( 'Last response message', 'orbis' ); ?></th>
-						<th><?php esc_html_e( 'Last response time', 'orbis' ); ?></th>
+						<th><?php esc_html_e( 'Last response duration', 'orbis' ); ?></th>
 						<th><?php esc_html_e( 'Last time checked', 'orbis' ); ?></th>
 						<th></th>
 					</tr>
@@ -40,7 +40,18 @@ get_header();
 								<?php get_template_part( 'templates/table-cell-comments' ); ?>
 							</td>
 							<td>
-								<?php echo get_post_meta( $post->ID, '_orbis_monitor_url' ) ? esc_html( get_post_meta( $post->ID, '_orbis_monitor_url', true ) ) : ''; ?>
+								<?php
+
+								$url  = get_post_meta( $post->ID, '_orbis_monitor_url', true );
+								$link = sprintf(
+									'<a href="%s">%s</a>',
+									$url,
+									$url
+								);
+
+								echo empty( $url ) ? '—' : wp_kses_post( $link );
+
+								?>
 							</td>
 							<td>
 								<?php echo get_post_meta( $post->ID, '_orbis_monitor_required_response_code' ) ? esc_html( get_post_meta( $post->ID, '_orbis_monitor_required_response_code', true ) ) : ''; ?>
@@ -52,13 +63,20 @@ get_header();
 								<?php echo get_post_meta( $post->ID, '_orbis_monitor_response_message' ) ? esc_html( get_post_meta( $post->ID, '_orbis_monitor_response_message', true ) ) : ''; ?>
 							</td>
 							<td>
-								<?php echo get_post_meta( $post->ID, '_orbis_monitor_duration' ) ? esc_html( get_post_meta( $post->ID, '_orbis_monitor_duration', true ) ) : ''; ?>
+								<?php
+								$duration = get_post_meta( $post->ID, '_orbis_monitor_duration', true );
+								if ( empty( $duration ) ) {
+									echo '—';
+								} else {
+									echo esc_html( number_format_i18n( $duration, 2 ) );
+								}
+								?>
 							</td>
 							<td>
 								<?php
 								if ( get_post_meta( $post->ID, '_orbis_monitor_response_date' ) ) {
 									$time = esc_html( get_post_meta( $post->ID, '_orbis_monitor_response_date', true ) );
-									echo esc_html( date( 'd-m-Y H:i:s', $time ) );
+									echo esc_html( date( 'd-m-Y H:i', $time ) );
 								}
 								?>
 							</td>
