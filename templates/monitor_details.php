@@ -8,7 +8,7 @@
 				<dd>
 					<?php
 
-					$url = get_post_meta( get_the_ID(), '_orbis_monitor_url', true );
+					$url  = get_post_meta( get_the_ID(), '_orbis_monitor_url', true );
 					$link = sprintf(
 						'<a href="%s">%s</a>',
 						$url,
