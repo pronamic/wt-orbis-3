@@ -29,7 +29,7 @@ switch ( $period ) {
 }
 
 $last_year   = mktime( 0, 0, 0, date( 'm' ), date( 'd' ), date( 'Y' ) - 1 );
-$graph_title = esc_html__( 'Monitor Graph - Average Response Time Per ', 'orbis' ) . $label;
+$graph_title = esc_html__( 'Average Response Time Per ', 'orbis' ) . $label;
 
 $response_times = $wpdb->get_results( $wpdb->prepare( "
 	SELECT

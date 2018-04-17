@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Orbis 3 3.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2018-04-17 09:51:02+00:00\n"
+"POT-Creation-Date: 2018-04-17 12:08:26+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -61,7 +61,7 @@ msgstr ""
 #: archive-orbis_deal.php:18 deploy/latest/archive-orbis_deal.php:18
 #: deploy/latest/templates/project_invoices.php:13
 #: deploy/latest/templates/search_form.php:15
-#: deploy/latest/templates/task_form.php:57 templates/monitor_responses.php:44
+#: deploy/latest/templates/task_form.php:57 templates/monitor_responses.php:43
 #: templates/project_invoices.php:13 templates/search_form.php:15
 #: templates/task_form.php:57
 msgid "Date"
@@ -146,7 +146,7 @@ msgid "Last response message"
 msgstr ""
 
 #: archive-orbis_monitor.php:25
-msgid "Last response time"
+msgid "Last response duration"
 msgstr ""
 
 #: archive-orbis_monitor.php:26
@@ -1198,31 +1198,27 @@ msgid "Month"
 msgstr ""
 
 #: templates/monitor_graph.php:32
-msgid "Monitor Graph - Average Response Time Per "
+msgid "Average Response Time Per "
 msgstr ""
 
-#: templates/monitor_responses.php:24
+#: templates/monitor_responses.php:23
 msgid "Last %d Responses"
 msgstr ""
 
-#: templates/monitor_responses.php:45
+#: templates/monitor_responses.php:44
 msgid "Duration"
 msgstr ""
 
-#: templates/monitor_responses.php:46
+#: templates/monitor_responses.php:45
 msgid "Code"
 msgstr ""
 
-#: templates/monitor_responses.php:47
+#: templates/monitor_responses.php:46
 msgid "Message"
 msgstr ""
 
-#: templates/monitor_responses.php:48
+#: templates/monitor_responses.php:47
 msgid "Content Length"
-msgstr ""
-
-#: templates/monitor_responses.php:49
-msgid "Content Type"
 msgstr ""
 
 #: templates/project_invoices.php:61

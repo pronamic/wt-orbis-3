@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pronamic\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2018-04-17 09:51:02+00:00\n"
-"PO-Revision-Date: 2018-04-17 11:52+0100\n"
+"POT-Creation-Date: 2018-04-17 12:08:26+00:00\n"
+"PO-Revision-Date: 2018-04-17 14:09+0100\n"
 "Last-Translator: Remco Tolsma <info@remcotolsma.nl>\n"
 "Language-Team: Pronamic <info@pronamic.nl>\n"
 "Language: nl_NL\n"
@@ -66,7 +66,7 @@ msgstr "Auteur"
 #: archive-orbis_deal.php:18 deploy/latest/archive-orbis_deal.php:18
 #: deploy/latest/templates/project_invoices.php:13
 #: deploy/latest/templates/search_form.php:15
-#: deploy/latest/templates/task_form.php:57 templates/monitor_responses.php:44
+#: deploy/latest/templates/task_form.php:57 templates/monitor_responses.php:43
 #: templates/project_invoices.php:13 templates/search_form.php:15
 #: templates/task_form.php:57
 msgid "Date"
@@ -151,8 +151,8 @@ msgid "Last response message"
 msgstr "Laatste antwoord bericht"
 
 #: archive-orbis_monitor.php:25
-msgid "Last response time"
-msgstr "Laatste antwoordtijd"
+msgid "Last response duration"
+msgstr "Laatste antwoordduur"
 
 #: archive-orbis_monitor.php:26
 msgid "Last time checked"
@@ -1213,32 +1213,28 @@ msgid "Month"
 msgstr "maand"
 
 #: templates/monitor_graph.php:32
-msgid "Monitor Graph - Average Response Time Per "
-msgstr "Monitor - Gemiddelde reactieduur per "
+msgid "Average Response Time Per "
+msgstr "Gemiddelde reactieduur per "
 
-#: templates/monitor_responses.php:24
+#: templates/monitor_responses.php:23
 msgid "Last %d Responses"
 msgstr "Laatste %d antwoorden"
 
-#: templates/monitor_responses.php:45
+#: templates/monitor_responses.php:44
 msgid "Duration"
 msgstr "Duur"
 
-#: templates/monitor_responses.php:46
+#: templates/monitor_responses.php:45
 msgid "Code"
 msgstr "Code"
 
-#: templates/monitor_responses.php:47
+#: templates/monitor_responses.php:46
 msgid "Message"
 msgstr "Bericht"
 
-#: templates/monitor_responses.php:48
+#: templates/monitor_responses.php:47
 msgid "Content Length"
 msgstr "Content lengte"
-
-#: templates/monitor_responses.php:49
-msgid "Content Type"
-msgstr "Content type"
 
 #: templates/project_invoices.php:61
 msgid "This is the final invoice."
@@ -1275,6 +1271,9 @@ msgstr "Mijn taken"
 #. Template Name of the plugin/theme
 msgid "Panel"
 msgstr "Panel"
+
+#~ msgid "Content Type"
+#~ msgstr "Content type"
 
 #~ msgid "Last"
 #~ msgstr "Laatste"
