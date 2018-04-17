@@ -2,7 +2,7 @@
 
 global $wpdb;
 
-$amount = isset( $_GET['period'] ) ? intval( $_GET['amount'] ) : '10'; //PHPCS:ignore WordPress.VIP.ValidatedSanitizedInput.InputNotValidated
+$amount = isset( $_GET['amount'] ) ? intval( $_GET['amount'] ) : '10'; //PHPCS:ignore WordPress.VIP.ValidatedSanitizedInput.InputNotValidated
 
 $responses = $wpdb->get_results( $wpdb->prepare( "
 	SELECT
