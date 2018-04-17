@@ -2,7 +2,7 @@
 
 global $wpdb;
 
-$amount = isset( $_GET['period'] ) ? sanitize_text_field( wp_unslash( $_GET['amount'] ) ) : '10';
+$amount = isset( $_GET['period'] ) ? intval( $_GET['amount'] ) : '10'; //PHPCS:ignore WordPress.VIP.ValidatedSanitizedInput.InputNotValidated
 
 $responses = $wpdb->get_results( $wpdb->prepare( "
 	SELECT
@@ -14,10 +14,9 @@ $responses = $wpdb->get_results( $wpdb->prepare( "
 	ORDER BY
 		monitored_date DESC
 	LIMIT
-		0, %d
-",
-$post->ID,
-$amount
+		0, %d",
+	$post->ID,
+	$amount
 ) );
 
 $table_title = sprintf(
@@ -46,7 +45,6 @@ $table_title = sprintf(
 					<th class="border-top-0" scope="col"><?php esc_html_e( 'Code', 'orbis' ); ?></th>
 					<th class="border-top-0" scope="col"><?php esc_html_e( 'Message', 'orbis' ); ?></th>
 					<th class="border-top-0" scope="col"><?php esc_html_e( 'Content Length', 'orbis' ); ?></th>
-					<th class="border-top-0" scope="col"><?php esc_html_e( 'Content Type', 'orbis' ); ?></th>
 				</tr>
 			</thead>
 
@@ -56,17 +54,15 @@ $table_title = sprintf(
 
 					<tr>
 						<td>
-							<?php echo esc_html( $response->monitored_date ); ?>
+							<?php echo esc_html( date( 'd-m-Y H:i', strtotime( $response->monitored_date ) ) ); ?>
 						</td>
 						<td>
 							<?php
-
 							if ( empty( $response->duration ) ) {
 								echo '—';
 							} else {
-								echo esc_html( number_format_i18n( $response->duration, 6 ) );
+								echo esc_html( number_format_i18n( $response->duration, 2 ) );
 							}
-
 							?>
 						</td>
 						<td>
@@ -77,9 +73,6 @@ $table_title = sprintf(
 						</td>
 						<td>
 							<?php echo esc_html( $response->response_content_length ); ?>
-						</td>
-						<td>
-							<?php echo esc_html( $response->response_content_type ); ?>
 						</td>
 					</tr>
 
