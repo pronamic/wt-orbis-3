@@ -20,15 +20,16 @@ $post->ID,
 $amount
 ) );
 
-$table_title = __( 'Last', 'orbis' ) . ' ' . $amount . ' ' . __( 'Responses', 'orbis' );
-$label = $amount . ' ' . __( 'Responses', 'orbis' );
-
+$table_title = sprintf(
+	__( 'Last %d Responses', 'orbis' ),
+	$amount
+);
 ?>
 
 <div class="card mb-3">
 	<div class="card-header">
 		<?php echo esc_html( $table_title ); ?>
-		<button class="btn btn-light dropdown-toggle m-0 p-0 float-right" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo esc_html( $label ); ?></button>
+		<button class="btn btn-light dropdown-toggle m-0 p-0 float-right" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo esc_html( $amount ); ?></button>
 		<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 			<a class="dropdown-item" href="<?php echo esc_url( add_query_arg( 'amount', '10' ) ); ?>"><?php echo esc_html( '10' ); ?></a>
 			<a class="dropdown-item" href="<?php echo esc_url( add_query_arg( 'amount', '50' ) ); ?>"><?php echo esc_html( '50' ); ?></a>
