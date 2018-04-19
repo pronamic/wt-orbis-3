@@ -26,8 +26,7 @@ if ( function_exists( 'orbis_timesheets_bootstrap' ) ) {
 	require_once get_template_directory() . '/includes/timesheets.php';
 }
 
-function orbis_plugin_activated( $plugin )
-{
+function orbis_plugin_activated( $plugin ) {
 	return function_exists( 'orbis_' . $plugin . '_bootstrap' );
 }
 
