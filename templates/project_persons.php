@@ -57,11 +57,9 @@
 
 	<?php else : ?>
 
-		<div class="card-body">
-			<p class="alt">
-				<?php esc_html_e( 'No persons involved.', 'orbis' ); ?>
-			</p>
-		</div>
+		<p class="alt">
+			<?php esc_html_e( 'No persons involved.', 'orbis' ); ?>
+		</p>
 
 	<?php endif; ?>
 </div>
