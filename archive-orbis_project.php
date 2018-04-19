@@ -11,7 +11,9 @@
 			<table class="table table-striped table-condense table-hover">
 				<thead>
 					<tr>
-						<th><?php esc_html_e( 'Client', 'orbis' ); ?></th>
+						<?php if ( orbis_plugin_activated( 'companies' ) ) : ?>
+							<th><?php esc_html_e( 'Client', 'orbis' ); ?></th>
+						<?php endif ?>
 						<th><?php esc_html_e( 'Project', 'orbis' ); ?></th>
 						<th><?php esc_html_e( 'Price', 'orbis' ); ?></th>
 						<th><?php esc_html_e( 'Time', 'orbis' ); ?></th>
@@ -26,19 +28,21 @@
 					?>
 
 						<tr id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-							<td>
-								<?php
+							<?php if ( orbis_plugin_activated( 'companies' ) ) : ?>
+								<td>
+									<?php
 
-								if ( $orbis_project->has_principal() ) {
-									printf(
-										'<a href="%s">%s</a>',
-										esc_attr( get_permalink( $orbis_project->get_principal_post_id() ) ),
-										esc_html( $orbis_project->get_principal_name() )
-									);
-								}
+									if ( $orbis_project->has_principal() ) {
+										printf(
+											'<a href="%s">%s</a>',
+											esc_attr( get_permalink( $orbis_project->get_principal_post_id() ) ),
+											esc_html( $orbis_project->get_principal_name() )
+										);
+									}
 
-								?>
-							</td>
+									?>
+								</td>
+							<?php endif ?>
 							<td>
 								<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 
