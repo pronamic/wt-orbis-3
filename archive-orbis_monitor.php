@@ -76,7 +76,11 @@ get_header();
 								<?php
 								if ( get_post_meta( $post->ID, '_orbis_monitor_response_date' ) ) {
 									$time = esc_html( get_post_meta( $post->ID, '_orbis_monitor_response_date', true ) );
-									echo esc_html( date( 'd-m-Y H:i', $time ) );
+									if ( $time !== "" ) {
+										echo esc_html( date( 'd-m-Y H:i', $time ) );
+									} else{
+										echo '-';
+									}
 								}
 								?>
 							</td>
