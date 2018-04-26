@@ -72,7 +72,7 @@
 						<?php $current_user = wp_get_current_user(); ?>
 
 						<ul class="nav nav-inline pull-right">
-							<li class="nav-item dropdown">
+							<li class="nav-item dropdown mr-3">
 								<a data-toggle="dropdown" class="dropdown-toggle" href="#"><?php echo get_avatar( $current_user->ID, 24 ); ?> <?php echo esc_html( $current_user->display_name ); ?> <b class="caret"></b></a>
 
 								<ul class="dropdown-menu dropdown-menu-right">
@@ -89,7 +89,7 @@
 								</ul>
 							</li>
 
-							<li class="nav-item dropdown">
+							<li class="nav-item dropdown mr-3">
 								<a data-toggle="dropdown" class="dropdown-toggle search-btn" href="#"><i class="fa fa-search"></i></a>
 
 								<div class="dropdown-menu dropdown-menu-right">
