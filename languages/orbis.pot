@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Orbis 3 3.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2018-04-17 12:08:26+00:00\n"
+"POT-Creation-Date: 2018-04-26 09:13:48+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -62,7 +62,7 @@ msgstr ""
 #: deploy/latest/templates/project_invoices.php:13
 #: deploy/latest/templates/search_form.php:15
 #: deploy/latest/templates/task_form.php:57 templates/monitor_responses.php:43
-#: templates/project_invoices.php:13 templates/search_form.php:15
+#: templates/project_invoices.php:14 templates/search_form.php:15
 #: templates/task_form.php:57
 msgid "Date"
 msgstr ""
@@ -76,8 +76,8 @@ msgstr ""
 
 #: archive-orbis_deal.php:20 archive-orbis_email_example.php:14
 #: archive-orbis_hosting_group.php:14 archive-orbis_monitor.php:20
-#: archive-orbis_product.php:14 archive-orbis_subs_product.php:14
-#: archive-orbis_subs_purchase.php:14 archive-orbis_subscription.php:14
+#: archive-orbis_product.php:14 archive-orbis_subs_product.php:17
+#: archive-orbis_subs_purchase.php:17 archive-orbis_subscription.php:14
 #: deploy/latest/archive-orbis_deal.php:20
 #: deploy/latest/archive-orbis_email_example.php:14
 #: deploy/latest/archive-orbis_hosting_group.php:14
@@ -91,7 +91,7 @@ msgid "Title"
 msgstr ""
 
 #: archive-orbis_deal.php:21 archive-orbis_product.php:15
-#: archive-orbis_project.php:16 archive-orbis_subs_product.php:15
+#: archive-orbis_project.php:22 archive-orbis_subs_product.php:18
 #: archive-orbis_subscription.php:15 deploy/latest/archive-orbis_deal.php:21
 #: deploy/latest/archive-orbis_product.php:15
 #: deploy/latest/archive-orbis_project.php:16
@@ -99,13 +99,13 @@ msgstr ""
 #: deploy/latest/archive-orbis_subscription.php:15
 #: deploy/latest/templates/company_projects.php:16
 #: deploy/latest/templates/subscription_product_details.php:7
-#: templates/company_projects.php:16
-#: templates/subscription_product_details.php:7
+#: templates/company_projects.php:17
+#: templates/subscription_product_details.php:8
 msgid "Price"
 msgstr ""
 
 #: archive-orbis_deal.php:22 deploy/latest/archive-orbis_deal.php:22
-#: deploy/latest/single-orbis_project.php:115 single-orbis_project.php:112
+#: deploy/latest/single-orbis_project.php:115 single-orbis_project.php:118
 msgid "Status"
 msgstr ""
 
@@ -153,47 +153,51 @@ msgstr ""
 msgid "Last time checked"
 msgstr ""
 
-#: archive-orbis_project.php:14 deploy/latest/archive-orbis_project.php:14
+#: archive-orbis_monitor.php:80
+msgid "d-m-Y H:i"
+msgstr ""
+
+#: archive-orbis_project.php:19 deploy/latest/archive-orbis_project.php:14
 #: deploy/latest/single-orbis_project.php:79
 #: deploy/latest/templates/filter_advanced-orbis_project.php:14
-#: single-orbis_project.php:76 templates/filter_advanced-orbis_project.php:14
+#: single-orbis_project.php:82 templates/filter_advanced-orbis_project.php:14
 msgid "Client"
 msgstr ""
 
-#: archive-orbis_project.php:15 deploy/latest/archive-orbis_project.php:15
+#: archive-orbis_project.php:21 deploy/latest/archive-orbis_project.php:15
 #: deploy/latest/single-orbis_task.php:51
 #: deploy/latest/templates/company_projects.php:15
 #: deploy/latest/templates/task_form.php:20 single-orbis_task.php:51
-#: templates/company_projects.php:15 templates/task_form.php:20
+#: templates/company_projects.php:16 templates/task_form.php:20
 msgid "Project"
 msgstr ""
 
-#: archive-orbis_project.php:17 deploy/latest/archive-orbis_project.php:17
+#: archive-orbis_project.php:23 deploy/latest/archive-orbis_project.php:17
 #: deploy/latest/templates/company_projects.php:17
 #: deploy/latest/templates/project_tasks.php:16
-#: deploy/latest/templates/task_form.php:75 templates/company_projects.php:17
+#: deploy/latest/templates/task_form.php:75 templates/company_projects.php:18
 #: templates/project_tasks.php:16 templates/task_form.php:75
 msgid "Time"
 msgstr ""
 
-#: archive-orbis_subs_product.php:16
+#: archive-orbis_subs_product.php:19
 #: deploy/latest/archive-orbis_subs_product.php:16
 #: deploy/latest/templates/subscription_product_details.php:22
-#: templates/subscription_product_details.php:22
+#: templates/subscription_product_details.php:24
 msgid "Cost Price"
 msgstr ""
 
-#: archive-orbis_subs_purchase.php:15
+#: archive-orbis_subs_purchase.php:18
 #: deploy/latest/archive-orbis_subs_purchase.php:15
 msgid "Costs"
 msgstr ""
 
-#: archive-orbis_subs_purchase.php:16
+#: archive-orbis_subs_purchase.php:19
 #: deploy/latest/archive-orbis_subs_purchase.php:16
 msgid "Revenue"
 msgstr ""
 
-#: archive-orbis_subs_purchase.php:17
+#: archive-orbis_subs_purchase.php:20
 #: deploy/latest/archive-orbis_subs_purchase.php:17
 msgid "Profit"
 msgstr ""
@@ -285,7 +289,7 @@ msgstr ""
 msgid "Reverse Layout"
 msgstr ""
 
-#: classes/class-theme.php:50 deploy/latest/classes/class-theme.php:50
+#: classes/class-theme.php:51 deploy/latest/classes/class-theme.php:50
 msgid "Primary Menu"
 msgstr ""
 
@@ -318,7 +322,7 @@ msgid "Give a comment"
 msgstr ""
 
 #: content-post.php:5 deploy/latest/content-post.php:5
-#: deploy/latest/functions.php:152 functions.php:236
+#: deploy/latest/functions.php:152 functions.php:239
 msgid "News"
 msgstr ""
 
@@ -396,7 +400,7 @@ msgstr ""
 msgid "Persons"
 msgstr ""
 
-#: deploy/latest/functions.php:90 functions.php:174
+#: deploy/latest/functions.php:90 functions.php:177
 msgid "No description."
 msgstr ""
 
@@ -408,18 +412,18 @@ msgstr ""
 #: deploy/latest/templates/filter_advanced-orbis_person.php:21
 #: deploy/latest/templates/filter_advanced-orbis_project.php:24
 #: deploy/latest/templates/search_form.php:48
-#: deploy/latest/templates/search_form.php:50 functions.php:254 header.php:98
+#: deploy/latest/templates/search_form.php:50 functions.php:257 header.php:98
 #: templates/filter_advanced-orbis_person.php:21
 #: templates/filter_advanced-orbis_project.php:24 templates/search_form.php:49
 #: templates/search_form.php:51
 msgid "Search"
 msgstr ""
 
-#: deploy/latest/functions.php:173 functions.php:257
+#: deploy/latest/functions.php:173 functions.php:260
 msgid "404 - Page not found"
 msgstr ""
 
-#: deploy/latest/functions.php:176 functions.php:260
+#: deploy/latest/functions.php:176 functions.php:263
 msgid "Unknown"
 msgstr ""
 
@@ -636,7 +640,7 @@ msgstr ""
 #: deploy/latest/single-orbis_project.php:15
 #: deploy/latest/single-orbis_task.php:15 deploy/latest/single.php:15
 #: deploy/latest/templates/project_tasks.php:15 single-orbis_company.php:16
-#: single-orbis_list.php:32 single-orbis_project.php:14
+#: single-orbis_list.php:32 single-orbis_project.php:17
 #: single-orbis_task.php:14 single.php:14 templates/project_tasks.php:15
 msgid "Description"
 msgstr ""
@@ -663,7 +667,7 @@ msgstr ""
 #: deploy/latest/single-orbis_project.php:94
 #: deploy/latest/single-orbis_task.php:45 deploy/latest/single.php:47
 #: single-orbis_company.php:43 single-orbis_list.php:231
-#: single-orbis_person.php:235 single-orbis_project.php:91
+#: single-orbis_person.php:235 single-orbis_project.php:97
 #: single-orbis_task.php:45 single.php:44
 msgid "Posted on"
 msgstr ""
@@ -675,8 +679,8 @@ msgstr ""
 #: deploy/latest/single-orbis_project.php:194
 #: deploy/latest/single-orbis_task.php:48 deploy/latest/single.php:50
 #: single-orbis_company.php:46 single-orbis_list.php:234
-#: single-orbis_person.php:237 single-orbis_project.php:94
-#: single-orbis_project.php:205 single-orbis_task.php:48 single.php:47
+#: single-orbis_person.php:237 single-orbis_project.php:100
+#: single-orbis_project.php:211 single-orbis_task.php:48 single.php:47
 msgid "Posted by"
 msgstr ""
 
@@ -686,7 +690,7 @@ msgstr ""
 #: deploy/latest/single-orbis_project.php:183
 #: deploy/latest/single-orbis_task.php:60 deploy/latest/single.php:53
 #: single-orbis_company.php:49 single-orbis_list.php:237
-#: single-orbis_person.php:239 single-orbis_project.php:194
+#: single-orbis_person.php:239 single-orbis_project.php:200
 #: single-orbis_task.php:60 single.php:50
 msgid "Actions"
 msgstr ""
@@ -698,7 +702,7 @@ msgstr ""
 #: deploy/latest/single-orbis_task.php:61 deploy/latest/single.php:54
 #: deploy/latest/templates/table-cell-actions.php:8 single-orbis_company.php:50
 #: single-orbis_list.php:238 single-orbis_person.php:240
-#: single-orbis_project.php:195 single-orbis_task.php:61 single.php:51
+#: single-orbis_project.php:201 single-orbis_task.php:61 single.php:51
 #: templates/table-cell-actions.php:8
 msgid "Edit"
 msgstr ""
@@ -719,7 +723,7 @@ msgstr ""
 #: deploy/latest/single-orbis_list.php:165
 #: deploy/latest/templates/subscription_product_details.php:43
 #: single-orbis_list.php:94 single-orbis_list.php:167
-#: templates/subscription_product_details.php:43
+#: templates/subscription_product_details.php:46
 msgid "Yes"
 msgstr ""
 
@@ -727,7 +731,7 @@ msgstr ""
 #: deploy/latest/single-orbis_list.php:170
 #: deploy/latest/templates/subscription_product_details.php:43
 #: single-orbis_list.php:97 single-orbis_list.php:172
-#: templates/subscription_product_details.php:43
+#: templates/subscription_product_details.php:46
 msgid "No"
 msgstr ""
 
@@ -809,57 +813,57 @@ msgstr ""
 msgid "Additional information"
 msgstr ""
 
-#: deploy/latest/single-orbis_project.php:35 single-orbis_project.php:32
+#: deploy/latest/single-orbis_project.php:35 single-orbis_project.php:35
 msgid "Project Status"
 msgstr ""
 
-#: deploy/latest/single-orbis_project.php:36 single-orbis_project.php:35
+#: deploy/latest/single-orbis_project.php:36 single-orbis_project.php:38
 msgid "Project budget"
 msgstr ""
 
-#: deploy/latest/single-orbis_project.php:73 single-orbis_project.php:70
+#: deploy/latest/single-orbis_project.php:73 single-orbis_project.php:76
 msgid "Project Details"
 msgstr ""
 
-#: deploy/latest/single-orbis_project.php:108 single-orbis_project.php:105
+#: deploy/latest/single-orbis_project.php:108 single-orbis_project.php:111
 msgid "Agreement"
 msgstr ""
 
-#: deploy/latest/single-orbis_project.php:119 single-orbis_project.php:116
+#: deploy/latest/single-orbis_project.php:119 single-orbis_project.php:122
 msgid "Finished"
 msgstr ""
 
-#: deploy/latest/single-orbis_project.php:123 single-orbis_project.php:120
+#: deploy/latest/single-orbis_project.php:123 single-orbis_project.php:126
 msgid "Not finished"
 msgstr ""
 
-#: deploy/latest/single-orbis_project.php:129 single-orbis_project.php:126
+#: deploy/latest/single-orbis_project.php:129 single-orbis_project.php:132
 msgid "Invoiced"
 msgstr ""
 
-#: deploy/latest/single-orbis_project.php:133 single-orbis_project.php:130
+#: deploy/latest/single-orbis_project.php:133 single-orbis_project.php:136
 msgid "Not invoiced"
 msgstr ""
 
-#: deploy/latest/single-orbis_project.php:139 single-orbis_project.php:136
+#: deploy/latest/single-orbis_project.php:139 single-orbis_project.php:142
 msgid "Invoicable"
 msgstr ""
 
-#: deploy/latest/single-orbis_project.php:143 single-orbis_project.php:140
+#: deploy/latest/single-orbis_project.php:143 single-orbis_project.php:146
 msgid "Not invoicable"
 msgstr ""
 
 #: deploy/latest/single-orbis_project.php:150
-#: deploy/latest/templates/company_contact.php:92 single-orbis_project.php:161
+#: deploy/latest/templates/company_contact.php:92 single-orbis_project.php:167
 #: templates/company_contact.php:91
 msgid "Payment Method"
 msgstr ""
 
-#: deploy/latest/single-orbis_project.php:162 single-orbis_project.php:173
+#: deploy/latest/single-orbis_project.php:162 single-orbis_project.php:179
 msgid "Final Invoice"
 msgstr ""
 
-#: deploy/latest/single-orbis_project.php:192 single-orbis_project.php:201
+#: deploy/latest/single-orbis_project.php:192 single-orbis_project.php:207
 msgid "Project Invoices"
 msgstr ""
 
@@ -920,7 +924,7 @@ msgid "Twinfield ID"
 msgstr ""
 
 #: deploy/latest/templates/company_projects.php:66
-#: templates/company_projects.php:66
+#: templates/company_projects.php:70
 msgid "No projects found."
 msgstr ""
 
@@ -936,19 +940,19 @@ msgstr ""
 msgid "%1$s on Twitter"
 msgstr ""
 
-#: deploy/latest/templates/deals-stats.php:138 templates/deals-stats.php:138
+#: deploy/latest/templates/deals-stats.php:138 templates/deals-stats.php:139
 msgid "Won deals"
 msgstr ""
 
-#: deploy/latest/templates/deals-stats.php:143 templates/deals-stats.php:143
+#: deploy/latest/templates/deals-stats.php:143 templates/deals-stats.php:144
 msgid "Lost deals"
 msgstr ""
 
-#: deploy/latest/templates/deals-stats.php:148 templates/deals-stats.php:148
+#: deploy/latest/templates/deals-stats.php:148 templates/deals-stats.php:149
 msgid "Pending deals"
 msgstr ""
 
-#: deploy/latest/templates/deals-stats.php:153 templates/deals-stats.php:153
+#: deploy/latest/templates/deals-stats.php:153 templates/deals-stats.php:154
 msgid "Total amount open"
 msgstr ""
 
@@ -1005,7 +1009,7 @@ msgstr ""
 #: deploy/latest/templates/project_invoices.php:16
 #: deploy/latest/templates/search_form.php:33
 #: templates/filter_advanced-orbis_project.php:19
-#: templates/project_invoices.php:16 templates/search_form.php:34
+#: templates/project_invoices.php:17 templates/search_form.php:34
 msgid "Invoice Number"
 msgstr ""
 
@@ -1030,27 +1034,27 @@ msgid "Respond"
 msgstr ""
 
 #: deploy/latest/templates/project_invoices.php:14
-#: templates/project_invoices.php:14
+#: templates/project_invoices.php:15
 msgid "Amount"
 msgstr ""
 
 #: deploy/latest/templates/project_invoices.php:15
-#: templates/project_invoices.php:15
+#: templates/project_invoices.php:16
 msgid "Hours"
 msgstr ""
 
 #: deploy/latest/templates/project_invoices.php:17
-#: templates/project_invoices.php:17
+#: templates/project_invoices.php:18
 msgid "User"
 msgstr ""
 
 #: deploy/latest/templates/project_invoices.php:67
-#: templates/project_invoices.php:74
+#: templates/project_invoices.php:78
 msgid "Total:"
 msgstr ""
 
 #: deploy/latest/templates/project_invoices.php:88
-#: templates/project_invoices.php:95
+#: templates/project_invoices.php:104
 msgid "No invoices found."
 msgstr ""
 
@@ -1060,7 +1064,7 @@ msgid "Involved Persons"
 msgstr ""
 
 #: deploy/latest/templates/project_persons.php:63
-#: templates/project_persons.php:62
+#: templates/project_persons.php:61
 msgid "No persons involved."
 msgstr ""
 
@@ -1109,12 +1113,12 @@ msgid "CSV"
 msgstr ""
 
 #: deploy/latest/templates/subscription_product_details.php:3
-#: templates/subscription_product_details.php:2
+#: templates/subscription_product_details.php:3
 msgid "Subscription Product Details"
 msgstr ""
 
 #: deploy/latest/templates/subscription_product_details.php:37
-#: templates/subscription_product_details.php:37
+#: templates/subscription_product_details.php:40
 msgid "Auto Renew"
 msgstr ""
 
@@ -1140,11 +1144,11 @@ msgstr ""
 msgid "minutes"
 msgstr ""
 
-#: functions.php:38 functions.php:66
+#: functions.php:41 functions.php:69
 msgid "Status type."
 msgstr ""
 
-#: functions.php:51 functions.php:88
+#: functions.php:54 functions.php:91
 msgid "The type of status to show."
 msgstr ""
 
@@ -1221,12 +1225,32 @@ msgstr ""
 msgid "Content Length"
 msgstr ""
 
-#: templates/project_invoices.php:61
+#: templates/project_invoices.php:65
 msgid "This is the final invoice."
 msgstr ""
 
 #: templates/project_sections.php:5
 msgid "timesheet"
+msgstr ""
+
+#: vendor/pronamic/wp-money/resources/currencies.php:26
+msgid "Euro"
+msgstr ""
+
+#: vendor/pronamic/wp-money/resources/currencies.php:33
+msgid "Gulden"
+msgstr ""
+
+#: vendor/pronamic/wp-money/resources/currencies.php:40
+msgid "Pound Sterling"
+msgstr ""
+
+#: vendor/pronamic/wp-money/resources/currencies.php:47
+msgid "US Dollar"
+msgstr ""
+
+#: vendor/pronamic/wp-money/resources/currencies.php:54
+msgid "Australian Dollar"
 msgstr ""
 
 #. Theme Name of the plugin/theme
@@ -1255,4 +1279,16 @@ msgstr ""
 
 #. Template Name of the plugin/theme
 msgid "Panel"
+msgstr ""
+
+#: vendor/pronamic/wp-money/src/Money.php:52
+#. translators: 1: currency symbol, 2: amount, 3: currency code, note: use
+#. non-breaking space!
+msgctxt "money format"
+msgid "%1$s%2$s %3$s"
+msgstr ""
+
+#: vendor/pronamic/wp-money/tests/tests/MoneyTest.php:73
+msgctxt "money format"
+msgid "%1$s%2$s %3$s"
 msgstr ""
