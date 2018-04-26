@@ -33,6 +33,7 @@
 		"classmap": ["classes/"]
 	},
     "require": {
+    	"pronamic/wp-money": "dev-develop as 1.0.0",
     	"php": ">=5.2.0",
 		"abraham/twitteroauth": "^0.7.4"
     },

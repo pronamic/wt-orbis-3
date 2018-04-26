@@ -37,6 +37,7 @@ class Orbis_Theme {
 
 		/* Text Domain */
 		load_theme_textdomain( 'orbis', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'pronamic-money', get_template_directory() . '/vendor/pronamic/wp-money/languages/' );
 
 		/* Theme support */
 		add_theme_support( 'automatic-feed-links' );
