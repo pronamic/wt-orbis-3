@@ -1,4 +1,5 @@
 <?php
+use Pronamic\WordPress\Money\Money;
 
 /**
  * Date query
@@ -151,7 +152,12 @@ if ( $total_deals ) {
 
 			<div class="col-md-3">
 				<p><?php esc_html_e( 'Total amount open', 'orbis' ); ?></p>
-				<h1><?php echo esc_html( orbis_price( $total_amount ) ); ?></h1>
+				<h1>
+					<?php
+					$total_amount = new Money( $total_amount, 'EUR' );
+					echo esc_html( $total_amount->format_i18n() );
+					?>
+				</h1>
 			</div>
 		</div>
 	</div>

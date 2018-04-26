@@ -1,4 +1,7 @@
-<?php get_header(); ?>
+<?php
+use Pronamic\WordPress\Money\Money;
+get_header();
+?>
 
 <?php
 while ( have_posts() ) :
@@ -42,7 +45,10 @@ while ( have_posts() ) :
 					?>
 
 						<p class="project-time">
-							<?php echo esc_html( orbis_price( $price ) ); ?>
+							<?php
+							$price = new Money( $price, 'EUR' );
+							echo esc_html( $price->format_i18n() );
+							?>
 						</p>
 
 					<?php endif; ?>

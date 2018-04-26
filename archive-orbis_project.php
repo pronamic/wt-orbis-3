@@ -1,4 +1,8 @@
-<?php get_header(); ?>
+<?php
+use Pronamic\WordPress\Money\Money;
+
+get_header();
+?>
 
 <div class="card">
 	<div class="card-block">
@@ -49,7 +53,10 @@
 								<?php get_template_part( 'templates/table-cell-comments' ); ?>
 							</td>
 							<td>
-								<?php echo esc_html( orbis_price( $orbis_project->get_price() ) ); ?>
+								<?php
+								$price = new Money( $orbis_project->get_price(), 'EUR' );
+								echo esc_html( $price->format_i18n() );
+								?>
 							</td>
 							<td class="project-time">
 								<?php

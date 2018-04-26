@@ -1,4 +1,7 @@
-<?php get_header(); ?>
+<?php
+use Pronamic\WordPress\Money\Money;
+get_header();
+?>
 
 <div class="card">
 	<div class="card-block">
@@ -40,7 +43,8 @@
 								if ( empty( $price ) ) {
 									echo '—';
 								} else {
-									echo esc_html( orbis_price( $price ) );
+									$price = new Money( $price, 'EUR' );
+									echo esc_html( $price->format_i18n() );
 								}
 
 								?>
@@ -51,7 +55,8 @@
 								if ( empty( $revenue ) ) {
 									echo '—';
 								} else {
-									echo esc_html( orbis_price( $revenue ) );
+									$revenue = new Money( $revenue, 'EUR' );
+									echo esc_html( $revenue->format_i18n() );
 								}
 
 								?>
@@ -62,7 +67,8 @@
 								if ( empty( $profit ) ) {
 									echo '—';
 								} else {
-									echo esc_html( orbis_price( $profit ) );
+									$profit = new Money( $profit, 'EUR' );
+									echo esc_html( $profit->format_i18n() );
 								}
 
 								?>

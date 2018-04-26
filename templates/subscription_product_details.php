@@ -1,3 +1,4 @@
+<?php use Pronamic\WordPress\Money\Money; ?>
 <div class="card mb-3">
 	<div class="card-header"><?php esc_html_e( 'Subscription Product Details', 'orbis' ); ?></div>
 	<div class="card-body">
@@ -13,7 +14,8 @@
 					if ( empty( $price ) ) {
 						echo '—';
 					} else {
-						echo esc_html( orbis_price( $price ) );
+						$price = new Money( $price, 'EUR' );
+						echo esc_html( $price->format_i18n() );
 					}
 
 					?>
@@ -28,7 +30,8 @@
 					if ( empty( $price ) ) {
 						echo '—';
 					} else {
-						echo esc_html( orbis_price( $price ) );
+						$price = new Money( $price, 'EUR' );
+						echo esc_html( $price->format_i18n() );
 					}
 
 					?>

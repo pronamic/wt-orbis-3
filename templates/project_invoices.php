@@ -1,5 +1,6 @@
 <?php
 global $post;
+use Pronamic\WordPress\Money\Money;
 
 $orbis_project = new Orbis_Project( $post );
 $invoices      = $orbis_project->get_invoices();
@@ -32,7 +33,10 @@ if ( $invoices && $invoices[0]->id ) : ?>
 							<?php echo esc_html( date_format( new DateTime( $invoice->create_date ), 'd-m-Y' ) ); ?>
 						</td>
 						<td>
-							<?php echo esc_html( orbis_price( $invoice->amount ) ); ?>
+							<?php
+							$amount = new Money( $invoice->amount, 'EUR' );
+							echo esc_html( $amount->format_i18n() );
+							?>
 						</td>
 						<td>
 							<?php
@@ -74,7 +78,12 @@ if ( $invoices && $invoices[0]->id ) : ?>
 							<strong><?php esc_html_e( 'Total:', 'orbis' ); ?></strong>
 						</td>
 						<td>
-							<strong><?php echo esc_html( orbis_price( $amount_total ) ); ?></strong>
+							<strong>
+								<?php
+								$amount_total = new Money( $amount_total, 'EUR' );
+								echo esc_html( $amount_total->format_i18n() );
+								?>
+							</strong>
 						</td>
 						<td>
 							<strong><?php echo esc_html( orbis_time( $hours_total ) ); ?></strong>
