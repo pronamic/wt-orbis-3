@@ -64,23 +64,28 @@ get_header();
 							</td>
 							<td>
 								<?php
+
 								$duration = get_post_meta( $post->ID, '_orbis_monitor_duration', true );
+
 								if ( empty( $duration ) ) {
 									echo '—';
 								} else {
 									echo esc_html( number_format_i18n( $duration, 2 ) );
 								}
+
 								?>
 							</td>
 							<td>
 								<?php
-								$time = esc_html( get_post_meta( $post->ID, '_orbis_monitor_response_date', true ) );
 
-								if ( ! empty( $time ) ) {
-									echo esc_html( date_i18n( __( 'd-m-Y H:i', 'orbis' ), $time ) );
-								} else {
+								$time = get_post_meta( $post->ID, '_orbis_monitor_response_date', true );
+
+								if ( empty( $time ) ) {
 									echo '—';
+								} else {
+									echo esc_html( date_i18n( __( 'd-m-Y H:i', 'orbis' ), $time ) );
 								}
+
 								?>
 							</td>
 							<td>
