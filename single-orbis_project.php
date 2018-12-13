@@ -1,6 +1,9 @@
 <?php
+
 use Pronamic\WordPress\Money\Money;
+
 get_header();
+
 ?>
 
 <?php
@@ -166,6 +169,31 @@ while ( have_posts() ) :
 
 							<dt><?php esc_html_e( 'Payment Method', 'orbis' ); ?></dt>
 							<dd><?php the_terms( null, 'orbis_payment_method' ); ?></dd>
+
+						<?php endif; ?>
+
+						<?php
+
+						$invoice_header_text = get_post_meta( $post->ID, '_orbis_invoice_header_text', true );
+						$invoice_footer_text = get_post_meta( $post->ID, '_orbis_invoice_footer_text', true );
+
+						?>
+
+						<?php if ( ! empty( $invoice_header_text ) ) : ?>
+
+							<dt><?php esc_html_e( 'Invoice Header Text', 'orbis' ); ?></dt>
+							<dd>
+								<?php echo nl2br( esc_html( $invoice_header_text ) ); ?></a>
+							</dd>
+
+						<?php endif; ?>
+
+						<?php if ( ! empty( $invoice_footer_text ) ) : ?>
+
+							<dt><?php esc_html_e( 'Invoice Footer Text', 'orbis' ); ?></dt>
+							<dd>
+								<?php echo nl2br( esc_html( $invoice_footer_text ) ); ?></a>
+							</dd>
 
 						<?php endif; ?>
 
