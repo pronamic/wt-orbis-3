@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pronamic\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2018-04-26 09:13:48+00:00\n"
-"PO-Revision-Date: 2018-04-26 11:16+0100\n"
+"POT-Creation-Date: 2018-12-13 08:13:11+00:00\n"
+"PO-Revision-Date: 2018-12-13 09:13+0100\n"
 "Last-Translator: Remco Tolsma <info@remcotolsma.nl>\n"
 "Language-Team: Pronamic <info@pronamic.nl>\n"
 "Language: nl_NL\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.7.4\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;__ngettext:1,2;__withdesc;_ewithdesc;_c;"
 "_n_noop:1,2;__ngettext_noop:1,2;_x:2c,1;_nc:1,2;esc_attr_e;esc_html_e;"
 "esc_attr__;_nx:4c,1,2;_nx_noop:4c,1,2;esc_html_x:2c,1;esc_html__;_ex:2c,1\n"
@@ -36,8 +36,8 @@ msgstr "Het lijkt erop dat we niet kunnen vinden waar je naar zoekt."
 #: archive-orbis_company.php:14 archive-orbis_person.php:17
 #: deploy/latest/archive-orbis_company.php:14
 #: deploy/latest/archive-orbis_person.php:17
-#: deploy/latest/single-orbis_list.php:68
-#: deploy/latest/single-orbis_list.php:142 single-orbis_list.php:70
+#: deploy/latest/single-orbis_list.php:64
+#: deploy/latest/single-orbis_list.php:134 single-orbis_list.php:70
 #: single-orbis_list.php:144
 msgid "Name"
 msgstr "Naam"
@@ -45,9 +45,9 @@ msgstr "Naam"
 #: archive-orbis_company.php:15 archive-orbis_person.php:19
 #: deploy/latest/archive-orbis_company.php:15
 #: deploy/latest/archive-orbis_person.php:19
-#: deploy/latest/single-orbis_person.php:101
-#: deploy/latest/templates/company_contact.php:29 single-orbis_person.php:101
-#: templates/company_contact.php:28
+#: deploy/latest/single-orbis_person.php:95
+#: deploy/latest/templates/company_contact.php:28 single-orbis_person.php:101
+#: templates/company_contact.php:30
 msgid "Address"
 msgstr "Verzendadres"
 
@@ -59,13 +59,13 @@ msgstr "Online"
 #: archive-orbis_person.php:20 deploy/latest/archive-orbis_company.php:17
 #: deploy/latest/archive-orbis_deal.php:23
 #: deploy/latest/archive-orbis_person.php:21
-#: deploy/latest/templates/search_form.php:14 templates/search_form.php:14
+#: deploy/latest/templates/filter-orbis_project.php:7
+#: templates/search_form.php:14
 msgid "Author"
 msgstr "Auteur"
 
 #: archive-orbis_deal.php:18 deploy/latest/archive-orbis_deal.php:18
-#: deploy/latest/templates/project_invoices.php:13
-#: deploy/latest/templates/search_form.php:15
+#: deploy/latest/templates/filter-orbis_project.php:9
 #: deploy/latest/templates/task_form.php:57 templates/monitor_responses.php:43
 #: templates/project_invoices.php:14 templates/search_form.php:15
 #: templates/task_form.php:57
@@ -75,7 +75,7 @@ msgstr "Datum"
 #: archive-orbis_deal.php:19 archive-orbis_person.php:18
 #: deploy/latest/archive-orbis_deal.php:19
 #: deploy/latest/archive-orbis_person.php:18
-#: deploy/latest/single-orbis_person.php:45 single-orbis_person.php:45
+#: deploy/latest/single-orbis_person.php:42 single-orbis_person.php:45
 msgid "Company"
 msgstr "Bedrijf"
 
@@ -89,8 +89,8 @@ msgstr "Bedrijf"
 #: deploy/latest/archive-orbis_product.php:14
 #: deploy/latest/archive-orbis_subs_product.php:14
 #: deploy/latest/archive-orbis_subs_purchase.php:14
-#: deploy/latest/archive-orbis_subscription.php:14 deploy/latest/index.php:15
-#: deploy/latest/templates/search_form.php:17 index.php:15
+#: deploy/latest/archive-orbis_subscription.php:14 deploy/latest/index.php:14
+#: deploy/latest/templates/filter-orbis_project.php:8 index.php:15
 #: templates/search_form.php:17
 msgid "Title"
 msgstr "Titel"
@@ -103,14 +103,14 @@ msgstr "Titel"
 #: deploy/latest/archive-orbis_subs_product.php:15
 #: deploy/latest/archive-orbis_subscription.php:15
 #: deploy/latest/templates/company_projects.php:16
-#: deploy/latest/templates/subscription_product_details.php:7
+#: deploy/latest/templates/subscription_product_details.php:8
 #: templates/company_projects.php:17
 #: templates/subscription_product_details.php:8
 msgid "Price"
 msgstr "Prijs"
 
 #: archive-orbis_deal.php:22 deploy/latest/archive-orbis_deal.php:22
-#: deploy/latest/single-orbis_project.php:115 single-orbis_project.php:118
+#: deploy/latest/single-orbis_project.php:109 single-orbis_project.php:118
 msgid "Status"
 msgstr "Status"
 
@@ -158,19 +158,19 @@ msgstr "Laatste antwoordduur"
 msgid "Last time checked"
 msgstr "Laatste keer gechecked"
 
-#: archive-orbis_monitor.php:80
+#: archive-orbis_monitor.php:86
 msgid "d-m-Y H:i"
 msgstr "D-m-Y H:i"
 
 #: archive-orbis_project.php:19 deploy/latest/archive-orbis_project.php:14
-#: deploy/latest/single-orbis_project.php:79
+#: deploy/latest/single-orbis_project.php:75
 #: deploy/latest/templates/filter_advanced-orbis_project.php:14
 #: single-orbis_project.php:82 templates/filter_advanced-orbis_project.php:14
 msgid "Client"
 msgstr "Klant"
 
 #: archive-orbis_project.php:21 deploy/latest/archive-orbis_project.php:15
-#: deploy/latest/single-orbis_task.php:51
+#: deploy/latest/single-orbis_task.php:49
 #: deploy/latest/templates/company_projects.php:15
 #: deploy/latest/templates/task_form.php:20 single-orbis_task.php:51
 #: templates/company_projects.php:16 templates/task_form.php:20
@@ -187,7 +187,7 @@ msgstr "Tijd"
 
 #: archive-orbis_subs_product.php:19
 #: deploy/latest/archive-orbis_subs_product.php:16
-#: deploy/latest/templates/subscription_product_details.php:22
+#: deploy/latest/templates/subscription_product_details.php:23
 #: templates/subscription_product_details.php:24
 msgid "Cost Price"
 msgstr "Kostprijs"
@@ -213,7 +213,7 @@ msgid "Task"
 msgstr "Taak"
 
 #: archive-orbis_task.php:15 deploy/latest/archive-orbis_task.php:15
-#: deploy/latest/single-orbis_task.php:54
+#: deploy/latest/single-orbis_task.php:52
 #: deploy/latest/templates/task_form.php:27 single-orbis_task.php:54
 #: templates/task_form.php:27
 msgid "Assignee"
@@ -223,7 +223,7 @@ msgstr "Uitvoerder"
 msgid "Due At"
 msgstr "Verloopt op"
 
-#: archive-orbis_task.php:35 deploy/latest/archive-orbis_task.php:35
+#: archive-orbis_task.php:35 deploy/latest/archive-orbis_task.php:33
 msgid "<span class=\"label label-danger\">%d days</span>"
 msgstr "<span class=”label label-danger”>%d dagen</span>"
 
@@ -294,7 +294,7 @@ msgstr "Blockquotes"
 msgid "Reverse Layout"
 msgstr "Omgekeerde opmaak"
 
-#: classes/class-theme.php:51 deploy/latest/classes/class-theme.php:50
+#: classes/class-theme.php:51 deploy/latest/classes/class-theme.php:48
 msgid "Primary Menu"
 msgstr "Primair menu"
 
@@ -305,84 +305,84 @@ msgstr ""
 "Dit bericht is beveiligd met een wachtwoord. Geef het wachtwoord om de "
 "reacties te bekijken."
 
-#: comments.php:17 deploy/latest/comments.php:17
+#: comments.php:17 deploy/latest/comments.php:16
 msgid "One thought"
 msgid_plural "%1$s thoughts"
 msgstr[0] "1 reactie"
 msgstr[1] "%1$s reacties"
 
-#: comments.php:24 comments.php:37 deploy/latest/comments.php:24
-#: deploy/latest/comments.php:37
+#: comments.php:24 comments.php:37 deploy/latest/comments.php:22
+#: deploy/latest/comments.php:35
 msgid "← Older Comments"
 msgstr "← Oudere reacties"
 
-#: comments.php:25 comments.php:38 deploy/latest/comments.php:25
-#: deploy/latest/comments.php:38
+#: comments.php:25 comments.php:38 deploy/latest/comments.php:23
+#: deploy/latest/comments.php:36
 msgid "Newer Comments →"
 msgstr "Nieuwere reacties →"
 
-#: comments.php:46 deploy/latest/comments.php:46
+#: comments.php:46 deploy/latest/comments.php:44
 msgid "Comments are closed."
 msgstr "Reacties zijn gesloten."
 
-#: comments.php:54 deploy/latest/comments.php:54
+#: comments.php:54 deploy/latest/comments.php:52
 msgid "Give a comment"
 msgstr "Geef een reactie"
 
 #: content-post.php:5 deploy/latest/content-post.php:5
-#: deploy/latest/functions.php:152 functions.php:239
+#: deploy/latest/functions.php:144 functions.php:239
 msgid "News"
 msgstr "Nieuws"
 
-#: content-post.php:18 deploy/latest/content-post.php:18
+#: content-post.php:18 deploy/latest/content-post.php:15
 msgid "Permalink to %s"
 msgstr "Permalink naar %s"
 
-#: content-post.php:34 deploy/latest/content-post.php:34
+#: content-post.php:34 deploy/latest/content-post.php:31
 msgid "Continue reading →"
 msgstr "Lees verder →"
 
-#: content-post.php:44 content-post.php:67 deploy/latest/content-post.php:44
-#: deploy/latest/content-post.php:67
+#: content-post.php:44 content-post.php:67 deploy/latest/content-post.php:41
+#: deploy/latest/content-post.php:63
 msgid ",  "
 msgstr ", "
 
-#: content-post.php:53 deploy/latest/content-post.php:53
+#: content-post.php:53 deploy/latest/content-post.php:49
 msgid "<span class=\"%1$s\">Posted in</span> %2$s"
 msgstr "<span class=\"%1$s\">Geplaatst in</span> %2$s"
 
-#: content-post.php:80 deploy/latest/content-post.php:80
+#: content-post.php:80 deploy/latest/content-post.php:74
 msgid "<span class=\"%1$s\">Tagged</span> %2$s"
 msgstr "<span class=\"%1$s\">Tags:</span> %2$s"
 
-#: content-post.php:102 deploy/latest/content-post.php:102
+#: content-post.php:102 deploy/latest/content-post.php:90
 msgid "Leave a reply"
 msgstr "Geef een reactie"
 
-#: content-post.php:102 deploy/latest/content-post.php:102
+#: content-post.php:102 deploy/latest/content-post.php:90
 msgid "1 reply"
 msgstr "1 reactie"
 
-#: content-post.php:102 deploy/latest/content-post.php:102
+#: content-post.php:102 deploy/latest/content-post.php:90
 msgid "% replies"
 msgstr "% reacties"
 
-#: content-post.php:116 deploy/latest/content-post.php:116
-#: deploy/latest/templates/content-none.php:4 templates/content-none.php:4
+#: content-post.php:116 deploy/latest/content-post.php:104
+#: deploy/latest/templates/content-none.php:3 templates/content-none.php:4
 msgid "No results found."
 msgstr "Geen resultaten gevonden."
 
-#: content-post.php:129 deploy/latest/content-post.php:129
-#: deploy/latest/single-orbis_person.php:129 single-orbis_person.php:143
+#: content-post.php:129 deploy/latest/content-post.php:117
+#: deploy/latest/single-orbis_person.php:122 single-orbis_person.php:143
 msgid "Categories"
 msgstr "Categorie&#235;n"
 
-#: content-post.php:153 deploy/latest/content-post.php:153
+#: content-post.php:153 deploy/latest/content-post.php:140
 msgid "Tags"
 msgstr "Tags"
 
 #: deploy/latest/archive-orbis_person.php:20
-#: deploy/latest/single-orbis_person.php:54 single-orbis_person.php:54
+#: deploy/latest/single-orbis_person.php:51 single-orbis_person.php:54
 msgid "Phone number"
 msgstr "Telefoonnummer"
 
@@ -408,7 +408,7 @@ msgstr "Projecten"
 msgid "Persons"
 msgstr "Personen"
 
-#: deploy/latest/functions.php:90 functions.php:177
+#: deploy/latest/functions.php:89 functions.php:177
 msgid "No description."
 msgstr "Geen beschrijving."
 
@@ -416,42 +416,43 @@ msgstr "Geen beschrijving."
 msgid "Dashboard"
 msgstr "Dashboard"
 
-#: deploy/latest/functions.php:170 deploy/latest/header.php:98
+#: deploy/latest/functions.php:162 deploy/latest/header.php:93
 #: deploy/latest/templates/filter_advanced-orbis_person.php:21
 #: deploy/latest/templates/filter_advanced-orbis_project.php:24
-#: deploy/latest/templates/search_form.php:48
-#: deploy/latest/templates/search_form.php:50 functions.php:257 header.php:98
+#: deploy/latest/templates/search_form.php:18
+#: deploy/latest/templates/search_form.php:19
+#: deploy/latest/templates/search_form.php:22 functions.php:257 header.php:98
 #: templates/filter_advanced-orbis_person.php:21
 #: templates/filter_advanced-orbis_project.php:24 templates/search_form.php:49
 #: templates/search_form.php:51
 msgid "Search"
 msgstr "Zoeken"
 
-#: deploy/latest/functions.php:173 functions.php:260
+#: deploy/latest/functions.php:165 functions.php:260
 msgid "404 - Page not found"
 msgstr "404 - Pagina niet gevonden"
 
-#: deploy/latest/functions.php:176 functions.php:263
+#: deploy/latest/functions.php:168 functions.php:263
 msgid "Unknown"
 msgstr "Onbekend"
 
-#: deploy/latest/header.php:43 header.php:43
+#: deploy/latest/header.php:38 header.php:43
 msgid "Menu"
 msgstr "Menu"
 
-#: deploy/latest/header.php:56 header.php:56
+#: deploy/latest/header.php:51 header.php:56
 msgid "Collapse menu"
 msgstr "Menu invouwen"
 
-#: deploy/latest/header.php:80 header.php:80
+#: deploy/latest/header.php:75 header.php:80
 msgid "Help"
 msgstr "Help"
 
-#: deploy/latest/header.php:83 header.php:83
+#: deploy/latest/header.php:78 header.php:83
 msgid "Edit profile"
 msgstr "Wijzig profiel"
 
-#: deploy/latest/header.php:87 header.php:87
+#: deploy/latest/header.php:82 header.php:87
 msgid "Log out"
 msgstr "Uitloggen"
 
@@ -471,37 +472,33 @@ msgstr "Primaire kleur"
 msgid "Secondary color"
 msgstr "Secundarie kleur"
 
-#: deploy/latest/includes/invoices.php:6 includes/invoices.php:7
-msgid "Invoices"
-msgstr "Facturen"
-
 #: deploy/latest/includes/tasks.php:6 includes/tasks.php:7
 msgid "Tasks"
 msgstr "Taken"
 
-#: deploy/latest/includes/template-tags.php:110 includes/template-tags.php:110
+#: deploy/latest/includes/template-tags.php:49 includes/template-tags.php:110
 msgid "Pingback:"
 msgstr "Pingback:"
 
-#: deploy/latest/includes/template-tags.php:110
-#: deploy/latest/includes/template-tags.php:150 includes/template-tags.php:110
+#: deploy/latest/includes/template-tags.php:49
+#: deploy/latest/includes/template-tags.php:89 includes/template-tags.php:110
 #: includes/template-tags.php:150
 msgid "(Edit)"
 msgstr "Bewerken"
 
-#: deploy/latest/includes/template-tags.php:124 includes/template-tags.php:124
+#: deploy/latest/includes/template-tags.php:63 includes/template-tags.php:124
 msgid "%s <span class=\"says\">says:</span>"
 msgstr "%s <span class=\"says\">zegt:</span>"
 
-#: deploy/latest/includes/template-tags.php:133 includes/template-tags.php:133
+#: deploy/latest/includes/template-tags.php:72 includes/template-tags.php:133
 msgid "Your comment is awaiting moderation."
 msgstr "Je reactie is in afwachting van moderatie."
 
-#: deploy/latest/includes/template-tags.php:142 includes/template-tags.php:142
+#: deploy/latest/includes/template-tags.php:81 includes/template-tags.php:142
 msgid "%1$s at %2$s"
 msgstr "%1$s om %2$s"
 
-#: deploy/latest/includes/template-tags.php:178 includes/template-tags.php:178
+#: deploy/latest/includes/template-tags.php:112 includes/template-tags.php:178
 msgid ""
 "<span class=\"sep\">Posted on </span><a href=\"%1$s\" title=\"%2$s\" rel="
 "\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s\" pubdate>%4$s</"
@@ -515,7 +512,7 @@ msgstr ""
 "class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" title=\"%6$s\" "
 "rel=\"author\">%7$s</a></span></span>"
 
-#: deploy/latest/includes/template-tags.php:184 includes/template-tags.php:184
+#: deploy/latest/includes/template-tags.php:118 includes/template-tags.php:184
 msgid "View all posts by %s"
 msgstr "Bekijk alle berichten van %s"
 
@@ -549,10 +546,10 @@ msgid "Posted by %1$s on %2$s"
 msgstr "Geplaatst door %1$s op %2$s."
 
 #: deploy/latest/includes/widgets/orbis-widget-comments.php:106
-#: deploy/latest/includes/widgets/orbis-widget-news.php:103
-#: deploy/latest/includes/widgets/orbis-widget-posts.php:145
+#: deploy/latest/includes/widgets/orbis-widget-news.php:96
+#: deploy/latest/includes/widgets/orbis-widget-posts.php:139
 #: deploy/latest/includes/widgets/orbis-widget-stats.php:72
-#: deploy/latest/includes/widgets/orbis-widget-twitter.php:72
+#: deploy/latest/includes/widgets/orbis-widget-twitter.php:71
 #: includes/widgets/orbis-widget-comments.php:106
 #: includes/widgets/orbis-widget-news.php:108
 #: includes/widgets/orbis-widget-posts.php:145
@@ -562,8 +559,8 @@ msgid "Title:"
 msgstr "Titel:"
 
 #: deploy/latest/includes/widgets/orbis-widget-comments.php:113
-#: deploy/latest/includes/widgets/orbis-widget-posts.php:170
-#: deploy/latest/includes/widgets/orbis-widget-twitter.php:87
+#: deploy/latest/includes/widgets/orbis-widget-posts.php:164
+#: deploy/latest/includes/widgets/orbis-widget-twitter.php:86
 #: includes/widgets/orbis-widget-comments.php:113
 #: includes/widgets/orbis-widget-posts.php:170
 #: includes/widgets/orbis-widget-twitter.php:87
@@ -575,7 +572,7 @@ msgstr "Aantal:"
 msgid "Orbis - News"
 msgstr "Orbis - Nieuws"
 
-#: deploy/latest/includes/widgets/orbis-widget-news.php:61
+#: deploy/latest/includes/widgets/orbis-widget-news.php:58
 #: includes/widgets/orbis-widget-news.php:63
 msgid "More news"
 msgstr "Meer nieuws"
@@ -585,17 +582,17 @@ msgstr "Meer nieuws"
 msgid "Orbis - Posts List"
 msgstr "Orbis - Berichtenlijst"
 
-#: deploy/latest/includes/widgets/orbis-widget-posts.php:93
+#: deploy/latest/includes/widgets/orbis-widget-posts.php:87
 #: includes/widgets/orbis-widget-posts.php:93
 msgid "Show all"
 msgstr "Bekijk alles"
 
-#: deploy/latest/includes/widgets/orbis-widget-posts.php:105
+#: deploy/latest/includes/widgets/orbis-widget-posts.php:99
 #: includes/widgets/orbis-widget-posts.php:105
 msgid "No %3$s found. <a href=\"%1$s\">Add your first %2$s</a>."
 msgstr "Geen %3$s gevonden. <a href=\"%1$s\">Voeg je eerste %2$s toe</a>."
 
-#: deploy/latest/includes/widgets/orbis-widget-posts.php:153
+#: deploy/latest/includes/widgets/orbis-widget-posts.php:147
 #: includes/widgets/orbis-widget-posts.php:153
 msgid "Post type:"
 msgstr "Post type:"
@@ -615,7 +612,7 @@ msgstr "Berichten"
 msgid "Orbis - Twitter"
 msgstr "Orbis - Twitter"
 
-#: deploy/latest/includes/widgets/orbis-widget-twitter.php:80
+#: deploy/latest/includes/widgets/orbis-widget-twitter.php:79
 #: includes/widgets/orbis-widget-twitter.php:80
 msgid "User:"
 msgstr "Gebruiker:"
@@ -644,75 +641,74 @@ msgstr "Voorpagina rechts widget"
 msgid "Frontpage Bottom Widget"
 msgstr "Voorpagina onderkant widget"
 
-#: deploy/latest/index.php:14 index.php:14
+#: deploy/latest/index.php:13 index.php:14
 msgid "Type"
 msgstr "Type"
 
-#: deploy/latest/single-orbis_company.php:17
-#: deploy/latest/single-orbis_list.php:31
-#: deploy/latest/single-orbis_project.php:15
-#: deploy/latest/single-orbis_task.php:15 deploy/latest/single.php:15
+#: deploy/latest/single-orbis_company.php:12
+#: deploy/latest/single-orbis_list.php:28
+#: deploy/latest/single-orbis_project.php:9
+#: deploy/latest/single-orbis_task.php:12 deploy/latest/single.php:12
 #: deploy/latest/templates/project_tasks.php:15 single-orbis_company.php:16
 #: single-orbis_list.php:32 single-orbis_project.php:17
 #: single-orbis_task.php:14 single.php:14 templates/project_tasks.php:15
 msgid "Description"
 msgstr "Beschrijving"
 
-#: deploy/latest/single-orbis_company.php:41 templates/company_persons.php:4
+#: deploy/latest/single-orbis_company.php:34 templates/company_persons.php:4
 msgid "Connected persons"
 msgstr "Gekoppelde personen"
 
-#: deploy/latest/single-orbis_company.php:99 templates/company_persons.php:70
+#: deploy/latest/single-orbis_company.php:89 templates/company_persons.php:70
 msgid "No persons connected."
 msgstr "Geen personen verbonden."
 
-#: deploy/latest/single-orbis_company.php:113
-#: deploy/latest/single-orbis_list.php:216
-#: deploy/latest/single-orbis_task.php:41 deploy/latest/single.php:43
+#: deploy/latest/single-orbis_company.php:102
+#: deploy/latest/single-orbis_list.php:205
+#: deploy/latest/single-orbis_task.php:38 deploy/latest/single.php:40
 #: single-orbis_company.php:39 single-orbis_list.php:226
 #: single-orbis_task.php:40 single.php:40
 msgid "Additional Information"
 msgstr "Aanvullende informatie"
 
-#: deploy/latest/single-orbis_company.php:117
-#: deploy/latest/single-orbis_list.php:220
-#: deploy/latest/single-orbis_person.php:222
-#: deploy/latest/single-orbis_project.php:94
-#: deploy/latest/single-orbis_task.php:45 deploy/latest/single.php:47
+#: deploy/latest/single-orbis_company.php:107
+#: deploy/latest/single-orbis_list.php:210
+#: deploy/latest/single-orbis_person.php:214
+#: deploy/latest/single-orbis_project.php:90
+#: deploy/latest/single-orbis_task.php:43 deploy/latest/single.php:45
 #: single-orbis_company.php:43 single-orbis_list.php:231
 #: single-orbis_person.php:235 single-orbis_project.php:97
 #: single-orbis_task.php:45 single.php:44
 msgid "Posted on"
 msgstr "Geplaatst op"
 
-#: deploy/latest/single-orbis_company.php:120
-#: deploy/latest/single-orbis_list.php:223
-#: deploy/latest/single-orbis_person.php:224
-#: deploy/latest/single-orbis_project.php:97
-#: deploy/latest/single-orbis_project.php:194
-#: deploy/latest/single-orbis_task.php:48 deploy/latest/single.php:50
+#: deploy/latest/single-orbis_company.php:110
+#: deploy/latest/single-orbis_list.php:213
+#: deploy/latest/single-orbis_person.php:216
+#: deploy/latest/single-orbis_project.php:93
+#: deploy/latest/single-orbis_task.php:46 deploy/latest/single.php:48
 #: single-orbis_company.php:46 single-orbis_list.php:234
 #: single-orbis_person.php:237 single-orbis_project.php:100
 #: single-orbis_project.php:211 single-orbis_task.php:48 single.php:47
 msgid "Posted by"
 msgstr "Aangemaakt door"
 
-#: deploy/latest/single-orbis_company.php:123
-#: deploy/latest/single-orbis_list.php:226
-#: deploy/latest/single-orbis_person.php:226
-#: deploy/latest/single-orbis_project.php:183
-#: deploy/latest/single-orbis_task.php:60 deploy/latest/single.php:53
+#: deploy/latest/single-orbis_company.php:113
+#: deploy/latest/single-orbis_list.php:216
+#: deploy/latest/single-orbis_person.php:218
+#: deploy/latest/single-orbis_project.php:176
+#: deploy/latest/single-orbis_task.php:58 deploy/latest/single.php:51
 #: single-orbis_company.php:49 single-orbis_list.php:237
 #: single-orbis_person.php:239 single-orbis_project.php:200
 #: single-orbis_task.php:60 single.php:50
 msgid "Actions"
 msgstr "Acties"
 
-#: deploy/latest/single-orbis_company.php:124
-#: deploy/latest/single-orbis_list.php:227
-#: deploy/latest/single-orbis_person.php:227
-#: deploy/latest/single-orbis_project.php:184
-#: deploy/latest/single-orbis_task.php:61 deploy/latest/single.php:54
+#: deploy/latest/single-orbis_company.php:114
+#: deploy/latest/single-orbis_list.php:217
+#: deploy/latest/single-orbis_person.php:219
+#: deploy/latest/single-orbis_project.php:177
+#: deploy/latest/single-orbis_task.php:59 deploy/latest/single.php:52
 #: deploy/latest/templates/table-cell-actions.php:8
 #: single-orbis_company.php:50 single-orbis_list.php:238
 #: single-orbis_person.php:240 single-orbis_project.php:201
@@ -720,223 +716,214 @@ msgstr "Acties"
 msgid "Edit"
 msgstr "Bewerken"
 
-#: deploy/latest/single-orbis_list.php:52 single-orbis_list.php:53
+#: deploy/latest/single-orbis_list.php:48 single-orbis_list.php:53
 msgid "On the list"
 msgstr "Op de lijst"
 
-#: deploy/latest/single-orbis_list.php:69 single-orbis_list.php:71
+#: deploy/latest/single-orbis_list.php:65 single-orbis_list.php:71
 msgid "Active"
 msgstr "Actief"
 
-#: deploy/latest/single-orbis_list.php:70 single-orbis_list.php:72
+#: deploy/latest/single-orbis_list.php:66 single-orbis_list.php:72
 msgid "Note"
 msgstr "Notitie"
 
-#: deploy/latest/single-orbis_list.php:92
-#: deploy/latest/single-orbis_list.php:165
-#: deploy/latest/templates/subscription_product_details.php:43
+#: deploy/latest/single-orbis_list.php:85
+#: deploy/latest/single-orbis_list.php:154
+#: deploy/latest/templates/subscription_product_details.php:44
 #: single-orbis_list.php:94 single-orbis_list.php:167
 #: templates/subscription_product_details.php:46
 msgid "Yes"
 msgstr "Ja"
 
-#: deploy/latest/single-orbis_list.php:95
-#: deploy/latest/single-orbis_list.php:170
-#: deploy/latest/templates/subscription_product_details.php:43
+#: deploy/latest/single-orbis_list.php:88
+#: deploy/latest/single-orbis_list.php:159
+#: deploy/latest/templates/subscription_product_details.php:44
 #: single-orbis_list.php:97 single-orbis_list.php:172
 #: templates/subscription_product_details.php:46
 msgid "No"
 msgstr "Nee"
 
-#: deploy/latest/single-orbis_list.php:98 single-orbis_list.php:100
+#: deploy/latest/single-orbis_list.php:91 single-orbis_list.php:100
 msgid "Maybe"
 msgstr "Misschien"
 
-#: deploy/latest/single-orbis_list.php:122 single-orbis_list.php:123
+#: deploy/latest/single-orbis_list.php:115 single-orbis_list.php:123
 msgid "Not on the list"
 msgstr "Niet op de lijst"
 
-#: deploy/latest/single-orbis_list.php:143 single-orbis_list.php:145
+#: deploy/latest/single-orbis_list.php:135 single-orbis_list.php:145
 msgid "Action"
 msgstr "Actie"
 
-#: deploy/latest/single-orbis_person.php:12 single-orbis_person.php:11
+#: deploy/latest/single-orbis_person.php:9 single-orbis_person.php:11
 msgid "About this contact"
 msgstr "Over deze contact"
 
-#: deploy/latest/single-orbis_person.php:55
-#: deploy/latest/single-orbis_person.php:62 single-orbis_person.php:55
+#: deploy/latest/single-orbis_person.php:52
+#: deploy/latest/single-orbis_person.php:59 single-orbis_person.php:55
 #: single-orbis_person.php:62
 msgid "Call this number"
 msgstr "Bel dit nummer"
 
-#: deploy/latest/single-orbis_person.php:61 single-orbis_person.php:61
+#: deploy/latest/single-orbis_person.php:58 single-orbis_person.php:61
 msgid "Mobile number"
 msgstr "Mobiel nummer"
 
-#: deploy/latest/single-orbis_person.php:73 single-orbis_person.php:73
+#: deploy/latest/single-orbis_person.php:69 single-orbis_person.php:73
 msgid "E-mail address"
 msgstr "E-mailadres"
 
-#: deploy/latest/single-orbis_person.php:87 single-orbis_person.php:87
+#: deploy/latest/single-orbis_person.php:82 single-orbis_person.php:87
 msgid "Gender"
 msgstr "Geslacht"
 
-#: deploy/latest/single-orbis_person.php:115 single-orbis_person.php:129
+#: deploy/latest/single-orbis_person.php:108 single-orbis_person.php:129
 msgid "Birth Date"
 msgstr "Geboortedatum"
 
-#: deploy/latest/single-orbis_person.php:117 single-orbis_person.php:131
+#: deploy/latest/single-orbis_person.php:110 single-orbis_person.php:131
 msgid "j F Y"
 msgstr "j F Y"
 
-#: deploy/latest/single-orbis_person.php:120 single-orbis_person.php:134
+#: deploy/latest/single-orbis_person.php:113 single-orbis_person.php:134
 msgid "Age"
 msgstr "Leeftijd"
 
-#: deploy/latest/single-orbis_person.php:136
-#: deploy/latest/templates/company_contact.php:104 single-orbis_person.php:150
-#: templates/company_contact.php:103
+#: deploy/latest/single-orbis_person.php:129
+#: deploy/latest/templates/company_contact.php:103 single-orbis_person.php:150
+#: templates/company_contact.php:123
 msgid "vCard"
 msgstr "vCard"
 
-#: deploy/latest/single-orbis_person.php:143
-#: deploy/latest/templates/company_contact.php:111 single-orbis_person.php:157
-#: templates/company_contact.php:110
+#: deploy/latest/single-orbis_person.php:136
+#: deploy/latest/templates/company_contact.php:110 single-orbis_person.php:157
+#: templates/company_contact.php:130
 msgid "Download vCard"
 msgstr "Download vCard"
 
-#: deploy/latest/single-orbis_person.php:151 single-orbis_person.php:165
+#: deploy/latest/single-orbis_person.php:144 single-orbis_person.php:165
 msgid "Social media"
 msgstr "Social media"
 
-#: deploy/latest/single-orbis_person.php:161 single-orbis_person.php:175
+#: deploy/latest/single-orbis_person.php:154 single-orbis_person.php:175
 msgid "Twitter"
 msgstr "Twitter"
 
-#: deploy/latest/single-orbis_person.php:174 single-orbis_person.php:188
+#: deploy/latest/single-orbis_person.php:167 single-orbis_person.php:188
 msgid "Facebook"
 msgstr "Facebook"
 
-#: deploy/latest/single-orbis_person.php:187 single-orbis_person.php:201
+#: deploy/latest/single-orbis_person.php:180 single-orbis_person.php:201
 msgid "LinkedIn"
 msgstr "Linkedin"
 
-#: deploy/latest/single-orbis_person.php:218 single-orbis_person.php:231
+#: deploy/latest/single-orbis_person.php:209 single-orbis_person.php:231
 msgid "Additional information"
 msgstr "Aanvullende informatie"
 
-#: deploy/latest/single-orbis_project.php:35 single-orbis_project.php:35
-msgid "Project Status"
+#: deploy/latest/single-orbis_project.php:29
+msgid "Project status"
 msgstr "Project status"
 
-#: deploy/latest/single-orbis_project.php:36 single-orbis_project.php:38
+#: deploy/latest/single-orbis_project.php:33 single-orbis_project.php:38
 msgid "Project budget"
 msgstr "Project budget"
 
-#: deploy/latest/single-orbis_project.php:73 single-orbis_project.php:76
+#: deploy/latest/single-orbis_project.php:68 single-orbis_project.php:76
 msgid "Project Details"
 msgstr "Project details"
 
-#: deploy/latest/single-orbis_project.php:108 single-orbis_project.php:111
+#: deploy/latest/single-orbis_project.php:102 single-orbis_project.php:111
 msgid "Agreement"
 msgstr "Akkoord"
 
-#: deploy/latest/single-orbis_project.php:119 single-orbis_project.php:122
+#: deploy/latest/single-orbis_project.php:113 single-orbis_project.php:122
 msgid "Finished"
 msgstr "Afgerond"
 
-#: deploy/latest/single-orbis_project.php:123 single-orbis_project.php:126
+#: deploy/latest/single-orbis_project.php:117 single-orbis_project.php:126
 msgid "Not finished"
 msgstr "Niet afgerond"
 
-#: deploy/latest/single-orbis_project.php:129 single-orbis_project.php:132
+#: deploy/latest/single-orbis_project.php:123 single-orbis_project.php:132
 msgid "Invoiced"
 msgstr "Gefactureerd"
 
-#: deploy/latest/single-orbis_project.php:133 single-orbis_project.php:136
+#: deploy/latest/single-orbis_project.php:127 single-orbis_project.php:136
 msgid "Not invoiced"
 msgstr "Niet gefactureerd"
 
-#: deploy/latest/single-orbis_project.php:139 single-orbis_project.php:142
+#: deploy/latest/single-orbis_project.php:133 single-orbis_project.php:142
 msgid "Invoicable"
 msgstr "Facturabel"
 
-#: deploy/latest/single-orbis_project.php:143 single-orbis_project.php:146
+#: deploy/latest/single-orbis_project.php:137 single-orbis_project.php:146
 msgid "Not invoicable"
 msgstr "Niet facturabel"
 
-#: deploy/latest/single-orbis_project.php:150
-#: deploy/latest/templates/company_contact.php:92 single-orbis_project.php:167
-#: templates/company_contact.php:91
+#: deploy/latest/single-orbis_project.php:144
+#: deploy/latest/templates/company_contact.php:91 single-orbis_project.php:167
+#: templates/company_contact.php:111
 msgid "Payment Method"
 msgstr "Betaalmethode"
 
-#: deploy/latest/single-orbis_project.php:162 single-orbis_project.php:179
-msgid "Final Invoice"
-msgstr "Eindfactuur"
+#: deploy/latest/single-orbis_project.php:155
+msgid "Invoice"
+msgstr "Factuur"
 
-#: deploy/latest/single-orbis_project.php:192 single-orbis_project.php:207
-msgid "Project Invoices"
-msgstr "Project Facturen"
-
-#: deploy/latest/single-orbis_task.php:57 single-orbis_task.php:57
+#: deploy/latest/single-orbis_task.php:55 single-orbis_task.php:57
 msgid "Deadline"
 msgstr "Deadline"
 
-#: deploy/latest/template-dashboard.php:16 template-dashboard.php:16
+#: deploy/latest/template-dashboard.php:13 template-dashboard.php:16
 msgid "Loading…"
 msgstr "Bezig met laden…"
 
-#: deploy/latest/template-my-tasks.php:247 template-my-tasks.php:247
+#: deploy/latest/template-my-tasks.php:245 template-my-tasks.php:247
 msgid "1 day"
 msgstr "1 dag"
 
-#: deploy/latest/template-my-tasks.php:247 template-my-tasks.php:247
+#: deploy/latest/template-my-tasks.php:245 template-my-tasks.php:247
 msgid "{} days"
 msgstr "{} dagen"
 
-#: deploy/latest/templates/company_contact.php:23
-#: templates/company_contact.php:22
+#: deploy/latest/templates/company_contact.php:21
+#: templates/company_contact.php:24
 msgid "Contact Details"
 msgstr "Contact details"
 
-#: deploy/latest/templates/company_contact.php:40
-#: templates/company_contact.php:39
+#: deploy/latest/templates/company_contact.php:39
+#: templates/company_contact.php:41
 msgid "Website"
 msgstr "Website"
 
-#: deploy/latest/templates/company_contact.php:49
-#: templates/company_contact.php:48
+#: deploy/latest/templates/company_contact.php:48
+#: templates/company_contact.php:50
 msgid "E-Mail"
 msgstr "E-mailadres"
 
-#: deploy/latest/templates/company_contact.php:58
-#: templates/company_contact.php:57
+#: deploy/latest/templates/company_contact.php:57
+#: templates/company_contact.php:59
 msgid "Invoice E-Mail"
 msgstr "Factuur e-mailadres"
 
-#: deploy/latest/templates/company_contact.php:67
-#: templates/company_contact.php:66
+#: deploy/latest/templates/company_contact.php:66
+#: templates/company_contact.php:86
 msgid "KvK Number"
 msgstr "KvK nummer"
 
-#: deploy/latest/templates/company_contact.php:85
-#: templates/company_contact.php:84
+#: deploy/latest/templates/company_contact.php:84
+#: templates/company_contact.php:104
 msgid "VAT Number"
 msgstr "BTW-nmmer"
 
-#: deploy/latest/templates/company_contact.php:99
-#: templates/company_contact.php:98
+#: deploy/latest/templates/company_contact.php:98
+#: templates/company_contact.php:118
 msgid "Invoice Shipping Method"
 msgstr "Factuur verzendmethode"
 
-#: deploy/latest/templates/company_contact.php:119
-#: templates/company_contact.php:118
-msgid "Twinfield ID"
-msgstr "Twinfield ID"
-
-#: deploy/latest/templates/company_projects.php:66
+#: deploy/latest/templates/company_projects.php:65
 #: templates/company_projects.php:70
 msgid "No projects found."
 msgstr "Geen projecten gevonden."
@@ -953,19 +940,19 @@ msgstr "Tweets van @%s"
 msgid "%1$s on Twitter"
 msgstr "%1$s op Twitter"
 
-#: deploy/latest/templates/deals-stats.php:138 templates/deals-stats.php:139
+#: deploy/latest/templates/deals-stats.php:129 templates/deals-stats.php:139
 msgid "Won deals"
 msgstr "Gewonnen deals"
 
-#: deploy/latest/templates/deals-stats.php:143 templates/deals-stats.php:144
+#: deploy/latest/templates/deals-stats.php:134 templates/deals-stats.php:144
 msgid "Lost deals"
 msgstr "Verloren deals"
 
-#: deploy/latest/templates/deals-stats.php:148 templates/deals-stats.php:149
+#: deploy/latest/templates/deals-stats.php:139 templates/deals-stats.php:149
 msgid "Pending deals"
 msgstr "In afwachting deals"
 
-#: deploy/latest/templates/deals-stats.php:153 templates/deals-stats.php:154
+#: deploy/latest/templates/deals-stats.php:144 templates/deals-stats.php:154
 msgid "Total amount open"
 msgstr "Totaal open bedrag"
 
@@ -974,13 +961,34 @@ msgstr "Totaal open bedrag"
 msgid "— Select Status —"
 msgstr "— Selecteer status —"
 
-#: deploy/latest/templates/filter-orbis_deal.php:21
+#: deploy/latest/templates/filter-orbis_deal.php:23
 #: deploy/latest/templates/filter-orbis_task.php:13
-#: deploy/latest/templates/search_form.php:103
+#: deploy/latest/templates/search_form.php:76
 #: templates/filter-orbis_deal.php:21 templates/filter-orbis_task.php:13
 #: templates/search_form.php:104
 msgid "Filter"
 msgstr "Filter"
+
+#: deploy/latest/templates/filter-orbis_project.php:10
+#: templates/search_form.php:16
+msgid "Modified"
+msgstr "Gewijzigd"
+
+#: deploy/latest/templates/filter-orbis_project.php:11
+msgid "Finished Modified"
+msgstr "Afgerond gewijzigd"
+
+#: deploy/latest/templates/filter-orbis_project.php:12
+#: deploy/latest/templates/filter_advanced-orbis_project.php:19
+#: templates/filter_advanced-orbis_project.php:19
+#: templates/project_invoices.php:17 templates/search_form.php:34
+msgid "Invoice Number"
+msgstr "Factuurnummer"
+
+#: deploy/latest/templates/filter-orbis_project.php:13
+#: templates/search_form.php:35
+msgid "Invoice Number Modified"
+msgstr "Factuurnummer gewijzigd"
 
 #: deploy/latest/templates/filter-orbis_task.php:7
 #: deploy/latest/templates/task_form.php:34 templates/filter-orbis_task.php:7
@@ -990,7 +998,7 @@ msgstr "— Selecteer uitvoerder —"
 
 #: deploy/latest/templates/filter_advanced-orbis_person.php:11
 #: deploy/latest/templates/filter_advanced-orbis_project.php:11
-#: deploy/latest/templates/search_form.php:109
+#: deploy/latest/templates/search_form.php:82
 #: templates/filter_advanced-orbis_person.php:11
 #: templates/filter_advanced-orbis_project.php:11
 #: templates/search_form.php:110
@@ -1019,14 +1027,6 @@ msgstr "Annuleer"
 msgid "Search on Client"
 msgstr "Zoek op klant"
 
-#: deploy/latest/templates/filter_advanced-orbis_project.php:19
-#: deploy/latest/templates/project_invoices.php:16
-#: deploy/latest/templates/search_form.php:33
-#: templates/filter_advanced-orbis_project.php:19
-#: templates/project_invoices.php:17 templates/search_form.php:34
-msgid "Invoice Number"
-msgstr "Factuurnummer"
-
 #: deploy/latest/templates/filter_advanced-orbis_project.php:20
 #: templates/filter_advanced-orbis_project.php:20
 msgid "Search on Invoice Number"
@@ -1037,7 +1037,7 @@ msgstr "Zoek op factuurnummer"
 msgid "Connected Companies"
 msgstr "Gekoppelde bedrijven"
 
-#: deploy/latest/templates/person_companies.php:56
+#: deploy/latest/templates/person_companies.php:54
 #: templates/person_companies.php:55
 msgid "No companies connected."
 msgstr "Geen bedrijven verbonden."
@@ -1047,37 +1047,12 @@ msgstr "Geen bedrijven verbonden."
 msgid "Respond"
 msgstr "Reageren"
 
-#: deploy/latest/templates/project_invoices.php:14
-#: templates/project_invoices.php:15
-msgid "Amount"
-msgstr "Bedrag"
-
-#: deploy/latest/templates/project_invoices.php:15
-#: templates/project_invoices.php:16
-msgid "Hours"
-msgstr "Uren"
-
-#: deploy/latest/templates/project_invoices.php:17
-#: templates/project_invoices.php:18
-msgid "User"
-msgstr "Gebruiker"
-
-#: deploy/latest/templates/project_invoices.php:67
-#: templates/project_invoices.php:78
-msgid "Total:"
-msgstr "Totaal:"
-
-#: deploy/latest/templates/project_invoices.php:88
-#: templates/project_invoices.php:104
-msgid "No invoices found."
-msgstr "Geen facturen gevonden."
-
 #: deploy/latest/templates/project_persons.php:3
 #: templates/project_persons.php:2
 msgid "Involved Persons"
 msgstr "Betrokken personen"
 
-#: deploy/latest/templates/project_persons.php:63
+#: deploy/latest/templates/project_persons.php:60
 #: templates/project_persons.php:61
 msgid "No persons involved."
 msgstr "Geen personen betrokken."
@@ -1086,43 +1061,23 @@ msgstr "Geen personen betrokken."
 msgid "Comments"
 msgstr "Reacties"
 
-#: deploy/latest/templates/project_tasks.php:51 templates/project_tasks.php:51
+#: deploy/latest/templates/project_tasks.php:48 templates/project_tasks.php:51
 msgid "No tasks found."
 msgstr "Geen taken gevonden."
 
-#: deploy/latest/templates/search_form.php:16 templates/search_form.php:16
-msgid "Modified"
-msgstr "Gewijzigd"
-
-#: deploy/latest/templates/search_form.php:26 templates/search_form.php:27
-msgid "Active Subscriptions"
-msgstr "Actieve Abonnementen"
-
-#: deploy/latest/templates/search_form.php:32 templates/search_form.php:33
-msgid "Modified and Finished"
-msgstr "Afgerond gewijzigd"
-
-#: deploy/latest/templates/search_form.php:34 templates/search_form.php:35
-msgid "Invoice Number Modified"
-msgstr "Factuurnummer gewijzigd"
-
-#: deploy/latest/templates/search_form.php:70 templates/search_form.php:71
+#: deploy/latest/templates/search_form.php:43 templates/search_form.php:71
 msgid "All Categories"
 msgstr "Alle categorieën"
 
-#: deploy/latest/templates/search_form.php:117 templates/search_form.php:123
-msgid "Sort by…"
-msgstr "Sorteer op…"
-
-#: deploy/latest/templates/search_form.php:174 templates/search_form.php:191
+#: deploy/latest/templates/search_form.php:97 templates/search_form.php:191
 msgid "Download"
 msgstr "Download"
 
-#: deploy/latest/templates/search_form.php:177 templates/search_form.php:194
+#: deploy/latest/templates/search_form.php:100 templates/search_form.php:194
 msgid "Excel"
 msgstr "Excel"
 
-#: deploy/latest/templates/search_form.php:178 templates/search_form.php:195
+#: deploy/latest/templates/search_form.php:101 templates/search_form.php:195
 msgid "CSV"
 msgstr "CSV"
 
@@ -1131,7 +1086,7 @@ msgstr "CSV"
 msgid "Subscription Product Details"
 msgstr "Abonnement product details"
 
-#: deploy/latest/templates/subscription_product_details.php:37
+#: deploy/latest/templates/subscription_product_details.php:38
 #: templates/subscription_product_details.php:40
 msgid "Auto Renew"
 msgstr "Automatisch verlengen"
@@ -1170,6 +1125,10 @@ msgstr "Het soort status om te tonen."
 msgid "invoices"
 msgstr "facturen"
 
+#: includes/invoices.php:7
+msgid "Invoices"
+msgstr "Facturen"
+
 #: includes/tasks.php:6
 msgid "tasks"
 msgstr "taken"
@@ -1190,6 +1149,30 @@ msgstr "Niets om hier te laten zien."
 #: single-orbis_person.php:115
 msgid "IBAN Number"
 msgstr "IBAN nummer"
+
+#: single-orbis_project.php:35
+msgid "Project Status"
+msgstr "Project status"
+
+#: single-orbis_project.php:179
+msgid "Final Invoice"
+msgstr "Eindfactuur"
+
+#: single-orbis_project.php:207
+msgid "Project Invoices"
+msgstr "Project Facturen"
+
+#: templates/company_contact.php:68
+msgid "Invoice Header Text"
+msgstr "Factuur koptekst"
+
+#: templates/company_contact.php:77
+msgid "Invoice Footer Text"
+msgstr "Factuur voettekst"
+
+#: templates/company_contact.php:138
+msgid "Twinfield ID"
+msgstr "Twinfield ID"
 
 #: templates/monitor_details.php:2
 msgid "Monitor Details"
@@ -1240,33 +1223,45 @@ msgstr "Bericht"
 msgid "Content Length"
 msgstr "Content lengte"
 
+#: templates/project_invoices.php:15
+msgid "Amount"
+msgstr "Bedrag"
+
+#: templates/project_invoices.php:16
+msgid "Hours"
+msgstr "Uren"
+
+#: templates/project_invoices.php:18
+msgid "User"
+msgstr "Gebruiker"
+
 #: templates/project_invoices.php:65
 msgid "This is the final invoice."
 msgstr "Dit is de eindfactuur."
+
+#: templates/project_invoices.php:78
+msgid "Total:"
+msgstr "Totaal:"
+
+#: templates/project_invoices.php:104
+msgid "No invoices found."
+msgstr "Geen facturen gevonden."
 
 #: templates/project_sections.php:5
 msgid "timesheet"
 msgstr "werkregistratie"
 
-#: vendor/pronamic/wp-money/resources/currencies.php:26
-msgid "Euro"
-msgstr "Euro"
+#: templates/search_form.php:27
+msgid "Active Subscriptions"
+msgstr "Actieve Abonnementen"
 
-#: vendor/pronamic/wp-money/resources/currencies.php:33
-msgid "Gulden"
-msgstr "Gulden"
+#: templates/search_form.php:33
+msgid "Modified and Finished"
+msgstr "Afgerond gewijzigd"
 
-#: vendor/pronamic/wp-money/resources/currencies.php:40
-msgid "Pound Sterling"
-msgstr "Pond"
-
-#: vendor/pronamic/wp-money/resources/currencies.php:47
-msgid "US Dollar"
-msgstr "US Dollar"
-
-#: vendor/pronamic/wp-money/resources/currencies.php:54
-msgid "Australian Dollar"
-msgstr "Australische Dollar"
+#: templates/search_form.php:123
+msgid "Sort by…"
+msgstr "Sorteer op…"
 
 #. Theme Name of the plugin/theme
 msgid "Orbis 3"
@@ -1296,17 +1291,33 @@ msgstr "Mijn taken"
 msgid "Panel"
 msgstr "Panel"
 
-#. translators: 1: currency symbol, 2: amount, 3: currency code, note: use
-#. non-breaking space!
-#: vendor/pronamic/wp-money/src/Money.php:52
-msgctxt "money format"
-msgid "%1$s%2$s %3$s"
-msgstr "%1$s %2$s"
+#: deploy/latest/templates/filter-orbis_project.php:33
+msgctxt "sorting"
+msgid "Order"
+msgstr "Sorteer"
 
-#: vendor/pronamic/wp-money/tests/tests/MoneyTest.php:73
-msgctxt "money format"
-msgid "%1$s%2$s %3$s"
-msgstr "%1$s %2$s"
+#~ msgid "Euro"
+#~ msgstr "Euro"
+
+#~ msgid "Gulden"
+#~ msgstr "Gulden"
+
+#~ msgid "Pound Sterling"
+#~ msgstr "Pond"
+
+#~ msgid "US Dollar"
+#~ msgstr "US Dollar"
+
+#~ msgid "Australian Dollar"
+#~ msgstr "Australische Dollar"
+
+#~ msgctxt "money format"
+#~ msgid "%1$s%2$s %3$s"
+#~ msgstr "%1$s %2$s"
+
+#~ msgctxt "money format"
+#~ msgid "%1$s%2$s %3$s"
+#~ msgstr "%1$s %2$s"
 
 #~ msgid "Content Type"
 #~ msgstr "Content type"
@@ -1316,13 +1327,6 @@ msgstr "%1$s %2$s"
 
 #~ msgid "Monitor Responses"
 #~ msgstr "Monitor antwoorden"
-
-#~ msgid "Finished Modified"
-#~ msgstr "Afgerond gewijzigd"
-
-#~ msgctxt "sorting"
-#~ msgid "Order"
-#~ msgstr "Sorteer"
 
 #~ msgid "Invoice Nr. Modified"
 #~ msgstr "Factuurnummer gewijzigd"

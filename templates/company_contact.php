@@ -13,7 +13,9 @@ $postcode = get_post_meta( $post->ID, '_orbis_postcode', true );
 $city     = get_post_meta( $post->ID, '_orbis_city', true );
 $country  = get_post_meta( $post->ID, '_orbis_country', true );
 
-$invoice_email = get_post_meta( $post->ID, '_orbis_invoice_email', true );
+$invoice_email       = get_post_meta( $post->ID, '_orbis_invoice_email', true );
+$invoice_header_text = get_post_meta( $post->ID, '_orbis_invoice_header_text', true );
+$invoice_footer_text = get_post_meta( $post->ID, '_orbis_invoice_footer_text', true );
 
 $twinfield_customer_id = get_post_meta( $post->ID, '_twinfield_customer_id', true );
 
@@ -57,6 +59,24 @@ $twinfield_customer_id = get_post_meta( $post->ID, '_twinfield_customer_id', tru
 				<dt><?php esc_html_e( 'Invoice E-Mail', 'orbis' ); ?></dt>
 				<dd>
 					<a href="mailto:<?php echo esc_attr( $invoice_email ); ?>" target="_blank"><?php echo esc_html( $invoice_email ); ?></a>
+				</dd>
+
+			<?php endif; ?>
+
+			<?php if ( ! empty( $invoice_header_text ) ) : ?>
+
+				<dt><?php esc_html_e( 'Invoice Header Text', 'orbis' ); ?></dt>
+				<dd>
+					<?php echo nl2br( esc_html( $invoice_header_text ) ); ?></a>
+				</dd>
+
+			<?php endif; ?>
+
+			<?php if ( ! empty( $invoice_footer_text ) ) : ?>
+
+				<dt><?php esc_html_e( 'Invoice Footer Text', 'orbis' ); ?></dt>
+				<dd>
+					<?php echo nl2br( esc_html( $invoice_footer_text ) ); ?></a>
 				</dd>
 
 			<?php endif; ?>
