@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Orbis 3 3.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2018-12-13 08:13:11+00:00\n"
+"POT-Creation-Date: 2018-12-13 09:05:02+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -105,7 +105,7 @@ msgid "Price"
 msgstr ""
 
 #: archive-orbis_deal.php:22 deploy/latest/archive-orbis_deal.php:22
-#: deploy/latest/single-orbis_project.php:109 single-orbis_project.php:118
+#: deploy/latest/single-orbis_project.php:109 single-orbis_project.php:121
 msgid "Status"
 msgstr ""
 
@@ -160,7 +160,7 @@ msgstr ""
 #: archive-orbis_project.php:19 deploy/latest/archive-orbis_project.php:14
 #: deploy/latest/single-orbis_project.php:75
 #: deploy/latest/templates/filter_advanced-orbis_project.php:14
-#: single-orbis_project.php:82 templates/filter_advanced-orbis_project.php:14
+#: single-orbis_project.php:85 templates/filter_advanced-orbis_project.php:14
 msgid "Client"
 msgstr ""
 
@@ -637,7 +637,7 @@ msgstr ""
 #: deploy/latest/single-orbis_project.php:9
 #: deploy/latest/single-orbis_task.php:12 deploy/latest/single.php:12
 #: deploy/latest/templates/project_tasks.php:15 single-orbis_company.php:16
-#: single-orbis_list.php:32 single-orbis_project.php:17
+#: single-orbis_list.php:32 single-orbis_project.php:20
 #: single-orbis_task.php:14 single.php:14 templates/project_tasks.php:15
 msgid "Description"
 msgstr ""
@@ -664,7 +664,7 @@ msgstr ""
 #: deploy/latest/single-orbis_project.php:90
 #: deploy/latest/single-orbis_task.php:43 deploy/latest/single.php:45
 #: single-orbis_company.php:43 single-orbis_list.php:231
-#: single-orbis_person.php:235 single-orbis_project.php:97
+#: single-orbis_person.php:235 single-orbis_project.php:100
 #: single-orbis_task.php:45 single.php:44
 msgid "Posted on"
 msgstr ""
@@ -675,8 +675,8 @@ msgstr ""
 #: deploy/latest/single-orbis_project.php:93
 #: deploy/latest/single-orbis_task.php:46 deploy/latest/single.php:48
 #: single-orbis_company.php:46 single-orbis_list.php:234
-#: single-orbis_person.php:237 single-orbis_project.php:100
-#: single-orbis_project.php:211 single-orbis_task.php:48 single.php:47
+#: single-orbis_person.php:237 single-orbis_project.php:103
+#: single-orbis_project.php:249 single-orbis_task.php:48 single.php:47
 msgid "Posted by"
 msgstr ""
 
@@ -686,7 +686,7 @@ msgstr ""
 #: deploy/latest/single-orbis_project.php:176
 #: deploy/latest/single-orbis_task.php:58 deploy/latest/single.php:51
 #: single-orbis_company.php:49 single-orbis_list.php:237
-#: single-orbis_person.php:239 single-orbis_project.php:200
+#: single-orbis_person.php:239 single-orbis_project.php:238
 #: single-orbis_task.php:60 single.php:50
 msgid "Actions"
 msgstr ""
@@ -698,7 +698,7 @@ msgstr ""
 #: deploy/latest/single-orbis_task.php:59 deploy/latest/single.php:52
 #: deploy/latest/templates/table-cell-actions.php:8 single-orbis_company.php:50
 #: single-orbis_list.php:238 single-orbis_person.php:240
-#: single-orbis_project.php:201 single-orbis_task.php:61 single.php:51
+#: single-orbis_project.php:239 single-orbis_task.php:61 single.php:51
 #: templates/table-cell-actions.php:8
 msgid "Edit"
 msgstr ""
@@ -813,44 +813,44 @@ msgstr ""
 msgid "Project status"
 msgstr ""
 
-#: deploy/latest/single-orbis_project.php:33 single-orbis_project.php:38
+#: deploy/latest/single-orbis_project.php:33 single-orbis_project.php:41
 msgid "Project budget"
 msgstr ""
 
-#: deploy/latest/single-orbis_project.php:68 single-orbis_project.php:76
+#: deploy/latest/single-orbis_project.php:68 single-orbis_project.php:79
 msgid "Project Details"
 msgstr ""
 
-#: deploy/latest/single-orbis_project.php:102 single-orbis_project.php:111
+#: deploy/latest/single-orbis_project.php:102 single-orbis_project.php:114
 msgid "Agreement"
 msgstr ""
 
-#: deploy/latest/single-orbis_project.php:113 single-orbis_project.php:122
+#: deploy/latest/single-orbis_project.php:113 single-orbis_project.php:125
 msgid "Finished"
 msgstr ""
 
-#: deploy/latest/single-orbis_project.php:117 single-orbis_project.php:126
+#: deploy/latest/single-orbis_project.php:117 single-orbis_project.php:129
 msgid "Not finished"
 msgstr ""
 
-#: deploy/latest/single-orbis_project.php:123 single-orbis_project.php:132
+#: deploy/latest/single-orbis_project.php:123 single-orbis_project.php:135
 msgid "Invoiced"
 msgstr ""
 
-#: deploy/latest/single-orbis_project.php:127 single-orbis_project.php:136
+#: deploy/latest/single-orbis_project.php:127 single-orbis_project.php:139
 msgid "Not invoiced"
 msgstr ""
 
-#: deploy/latest/single-orbis_project.php:133 single-orbis_project.php:142
+#: deploy/latest/single-orbis_project.php:133 single-orbis_project.php:145
 msgid "Invoicable"
 msgstr ""
 
-#: deploy/latest/single-orbis_project.php:137 single-orbis_project.php:146
+#: deploy/latest/single-orbis_project.php:137 single-orbis_project.php:149
 msgid "Not invoicable"
 msgstr ""
 
 #: deploy/latest/single-orbis_project.php:144
-#: deploy/latest/templates/company_contact.php:91 single-orbis_project.php:167
+#: deploy/latest/templates/company_contact.php:91 single-orbis_project.php:170
 #: templates/company_contact.php:111
 msgid "Payment Method"
 msgstr ""
@@ -1135,24 +1135,28 @@ msgstr ""
 msgid "IBAN Number"
 msgstr ""
 
-#: single-orbis_project.php:35
+#: single-orbis_project.php:38
 msgid "Project Status"
 msgstr ""
 
-#: single-orbis_project.php:179
-msgid "Final Invoice"
-msgstr ""
-
-#: single-orbis_project.php:207
-msgid "Project Invoices"
-msgstr ""
-
-#: templates/company_contact.php:68
+#: single-orbis_project.php:185 templates/company_contact.php:68
 msgid "Invoice Header Text"
 msgstr ""
 
-#: templates/company_contact.php:77
+#: single-orbis_project.php:194 templates/company_contact.php:77
 msgid "Invoice Footer Text"
+msgstr ""
+
+#: single-orbis_project.php:203
+msgid "Invoice Line Description"
+msgstr ""
+
+#: single-orbis_project.php:217
+msgid "Final Invoice"
+msgstr ""
+
+#: single-orbis_project.php:245
+msgid "Project Invoices"
 msgstr ""
 
 #: templates/company_contact.php:138
