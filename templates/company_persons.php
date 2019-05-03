@@ -36,27 +36,36 @@
 
 							<div class="media-body">
 								<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a><br />
-								<?php
-								if ( get_post_meta( $post->ID, '_orbis_email', true ) ) {
-									$email = get_post_meta( $post->ID, '_orbis_email', true );
 
+								<?php
+
+								$email = get_post_meta( $post->ID, '_orbis_email', true );
+
+								if ( ! empty( $email ) ) {
 									printf(
 										'<a class="text-secondary" style="font-size: .8em" href="mailto:%s">%s</a><br />',
 										esc_html( $email ),
 										esc_html( $email )
 									);
 								}
-								?>
-								<?php
-								if ( get_post_meta( $post->ID, '_orbis_phone_number', true ) ) {
-									$phone_number = get_post_meta( $post->ID, '_orbis_phone_number', true );
 
+								$phone_numbers = array(
+									get_post_meta( $post->ID, '_orbis_phone_number', true ),
+									get_post_meta( $post->ID, '_orbis_mobile_number', true ),									
+								);
+
+								$phone_numbers = array_filter( $phone_numbers );
+
+								$phone_number = reset( $phone_numbers );
+
+								if ( ! empty( $phone_number ) ) {
 									printf(
 										'<a class="text-secondary" style="font-size: .8em" href="tel:%s">%s</a><br />',
 										esc_html( $phone_number ),
 										esc_html( $phone_number )
 									);
 								}
+
 								?>
 							</div>
 						</div>
