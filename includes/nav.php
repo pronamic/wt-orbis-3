@@ -4,19 +4,20 @@
  * Navigation icons
  */
 function orbis_nav_menu_icons( $classes, $item, $args ) {
-	$fa = 'fa-file-o';
+	$fa = 'far fa-file';
 
 	foreach ( $classes as $class ) {
 		$icon = strpos( $class, 'icon-' );
 
 		if ( 0 === $icon ) {
-			$class = str_replace( 'icon-', 'fa-', $class );
+			$class = str_replace( 'icon-far-', 'far fa-', $class );
+			$class = str_replace( 'icon-fas-', 'fas fa-', $class );
 
 			$fa = $class;
 		}
 	}
 
-	$item->title = '<i class="fa ' . $fa . '"></i> <span class="nav-label">' . $item->title . '</span>';
+	$item->title = '<i class="' . $fa . '"></i> <span class="nav-label">' . $item->title . '</span>';
 
 	return $classes;
 }
