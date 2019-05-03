@@ -58,8 +58,8 @@
 			</div>
 
 			<div class="main-wrapper">
-				<div class="page-header clearfix">
-					<div class="pull-left">
+				<div class="page-header d-flex justify-content-between">
+					<div>
 						<h1 class="orbis-page-title">
 							<?php echo esc_html( orbis_get_title() ); ?>
 						</h1>
