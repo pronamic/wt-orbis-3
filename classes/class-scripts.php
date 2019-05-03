@@ -25,7 +25,7 @@ class Orbis_Theme_Scripts {
 			'tether',
 			$uri . '/assets/tether/js/tether' . $min . '.js',
 			array(),
-			'1.4.0',
+			'1.4.6',
 			true
 		);
 
@@ -33,7 +33,7 @@ class Orbis_Theme_Scripts {
 			'tether',
 			$uri . '/assets/tether/css/tether' . $min . '.css',
 			array(),
-			'1.4.0'
+			'1.4.6'
 		);
 
 		// Popper.js - https://popper.js.org/
@@ -41,7 +41,7 @@ class Orbis_Theme_Scripts {
 			'popper',
 			$uri . '/assets/popper/popper' . $min . '.js',
 			array(),
-			'1.12.5',
+			'1.15.0',
 			true
 		);
 
@@ -49,8 +49,11 @@ class Orbis_Theme_Scripts {
 		wp_register_script(
 			'bootstrap',
 			$uri . '/assets/bootstrap/js/bootstrap' . $min . '.js',
-			array( 'jquery', 'popper' ),
-			'4.0.0',
+			array(
+				'jquery',
+				'popper',
+			),
+			'4.3.1',
 			true
 		);
 
@@ -58,7 +61,7 @@ class Orbis_Theme_Scripts {
 			'bootstrap',
 			$uri . '/assets/bootstrap/css/bootstrap' . $min . '.css',
 			array(),
-			'4.0.0'
+			'4.3.1'
 		);
 
 		// Select2
@@ -75,9 +78,9 @@ class Orbis_Theme_Scripts {
 		// Font Awesome - http://fortawesome.github.io/Font-Awesome/
 		wp_register_style(
 			'fontawesome',
-			$uri . '/assets/fontawesome/css/font-awesome' . $min . '.css',
+			$uri . '/assets/fontawesome/css/all' . $min . '.css',
 			array(),
-			'4.6.3'
+			'5.8.1'
 		);
 
 		// Flotcharts
