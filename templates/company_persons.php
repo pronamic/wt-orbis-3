@@ -39,6 +39,19 @@
 
 								<?php
 
+								$note = null;
+
+								if ( function_exists( 'p2p_get_meta' ) ) {
+									$note = p2p_get_meta( get_post()->p2p_id, 'note', true );
+								}
+
+								if ( ! empty( $note ) ) {
+									printf(
+										'<span class="text-info" style="font-size: .8em"><i class="fas fa-info-circle"></i> %s</span><br />',
+										esc_html( $note )
+									);
+								}
+
 								$email = get_post_meta( $post->ID, '_orbis_email', true );
 
 								if ( ! empty( $email ) ) {
