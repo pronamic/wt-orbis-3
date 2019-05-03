@@ -95,8 +95,8 @@ module.exports = function( grunt ) {
 					},
 					{ // Font Awesome - http://fontawesome.io/
 						expand: true,
-						cwd: 'node_modules/font-awesome/',
-						src: [ 'css/**', 'fonts/**' ],
+						cwd: 'node_modules/@fortawesome/fontawesome-free',
+						src: [ 'css/**', 'webfonts/**' ],
 						dest: 'assets/fontawesome'
 					},
 					{ // Tether - http://tether.io/
