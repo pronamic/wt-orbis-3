@@ -215,7 +215,7 @@ module.exports = function( grunt ) {
 				options: {
 					sassDir: 'src/sass',
 					cssDir: 'src/css',
-					importPath: 'bower_components'
+					importPath: 'node_modules'
 				}
 			}
 		},
@@ -272,10 +272,10 @@ module.exports = function( grunt ) {
 	grunt.registerTask( 'default', [
 		'clean',
 		'phplint',
-		'copy',
 		'concat',
 		'compass',
 		'cssmin',
+		'copy',
 		'uglify',
 		'imagemin'
 	] );
