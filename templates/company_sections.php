@@ -5,21 +5,21 @@ $sections = apply_filters( 'orbis_company_sections', array() );
 if ( ! empty( $sections ) ) : ?>
 
 	<div class="card mb-3 with-cols clearfix">
-		<header class="with-tabs">
-			<ul id="tabs" class="nav nav-tabs">
+		<div class="card-header">
+			<ul class="nav nav-tabs card-header-tabs" id="company-tabs">
 				<?php $active = true; ?>
 
 				<?php foreach ( $sections as $section ) : ?>
 
 					<li class="nav-item">
-						<a href="#<?php echo esc_attr( $section['id'] ); ?>" class="nav-link <?php echo esc_attr( $active ? 'active' : '' ); ?>" ><?php echo esc_html( $section['name'] ); ?></a>
+						<a href="#<?php echo esc_attr( $section['id'] ); ?>" class="nav-link <?php echo esc_attr( $active ? 'active' : '' ); ?>" data-toggle="tab"><?php echo esc_html( $section['name'] ); ?></a>
 					</li>
 
 					<?php $active = false; ?>
 
 				<?php endforeach; ?>
 			</ul>
-		</header>
+		</div>
 
 		<div class="tab-content">
 			<?php $active = true; ?>
