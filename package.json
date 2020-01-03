@@ -27,10 +27,10 @@
   "homepage": "https://github.com/wp-orbis/wt-orbis-3",
   "devDependencies": {
     "grunt": "^1.0.4",
-    "grunt-aws-s3": "^2.0.0",
+    "grunt-aws-s3": "^2.0.1",
     "grunt-checktextdomain": "^1.0.1",
     "grunt-contrib-clean": "^2.0.0",
-    "grunt-contrib-compress": "^1.5.0",
+    "grunt-contrib-compress": "^1.6.0",
     "grunt-contrib-compass": "^1.1.1",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-copy": "^1.0.0",
@@ -38,17 +38,17 @@
     "grunt-contrib-imagemin": "^3.1.0",
     "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-uglify": "^4.0.1",
-    "grunt-git": "^1.0.13",
+    "grunt-git": "^1.0.14",
     "grunt-phpcs": "^0.4.0",
     "grunt-phplint": "0.1.0",
     "grunt-wp-i18n": "~1.0.3",
-    "load-grunt-tasks": "^4.0.0"
+    "load-grunt-tasks": "^5.1.0"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.8.1",
-    "bootstrap": "v4.3.1",
-    "popper.js": "^1.15.0",
+    "@fortawesome/fontawesome-free": "^5.12.0",
+    "bootstrap": "v4.4.1",
+    "popper.js": "^1.16.0",
     "select2-bootstrap4-theme": "1.0.0",
-    "tether": "^1.4.6"
+    "tether": "^1.4.7"
   }
 }
