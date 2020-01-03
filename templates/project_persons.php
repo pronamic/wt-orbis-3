@@ -57,7 +57,7 @@
 
 	<?php else : ?>
 
-		<p class="alt">
+		<p class="text-muted m-0">
 			<?php esc_html_e( 'No persons involved.', 'orbis' ); ?>
 		</p>
 

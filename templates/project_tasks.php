@@ -46,8 +46,8 @@ if ( $query->have_posts() ) : ?>
 
 <?php else : ?>
 
-	<div class="content">
-		<p class="alt">
+	<div class="card-body">
+		<p class="text-muted m-0">
 			<?php esc_html_e( 'No tasks found.', 'orbis' ); ?>
 		</p>
 	</div>

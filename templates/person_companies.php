@@ -51,7 +51,7 @@ $query = new WP_Query( array(
 	<?php else : ?>
 
 		<div class="card-body">
-			<p class="alt">
+			<p class="text-muted m-0">
 				<?php esc_html_e( 'No companies connected.', 'orbis' ); ?>
 			</p>
 		</div>

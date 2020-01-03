@@ -1,5 +1,7 @@
 <?php
+
 global $post;
+
 use Pronamic\WordPress\Money\Money;
 
 $orbis_project = new Orbis_Project( $post );
@@ -99,8 +101,8 @@ if ( $invoices && $invoices[0]->id ) : ?>
 
 <?php else : ?>
 
-	<div class="content">
-		<p class="alt">
+	<div class="card-body">
+		<p class="text-muted m-0">
 			<?php esc_html_e( 'No invoices found.', 'orbis' ); ?>
 		</p>
 	</div>

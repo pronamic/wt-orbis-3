@@ -7,8 +7,8 @@ $tab = get_query_var( 'tabs', __( 'timesheet', 'orbis' ) );
 if ( ! empty( $project_sections ) ) : ?>
 
 	<div class="card mb-3 with-cols clearfix">
-		<header class="with-tabs">
-			<ul class="nav nav-tabs">
+		<div class="card-header">
+			<ul class="nav nav-tabs card-header-tabs" id="project-tabs">
 
 				<?php foreach ( $project_sections as $section ) : ?>
 					<?php $active = ( $section['slug'] === $tab ); ?>
@@ -21,7 +21,7 @@ if ( ! empty( $project_sections ) ) : ?>
 
 				<?php endforeach; ?>
 			</ul>
-		</header>
+		</div>
 
 		<div class="tab-content">
 			<?php $active = true; ?>
