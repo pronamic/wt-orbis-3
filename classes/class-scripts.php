@@ -53,7 +53,7 @@ class Orbis_Theme_Scripts {
 				'jquery',
 				'popper',
 			),
-			'4.3.1',
+			'4.4.1',
 			true
 		);
 
@@ -61,7 +61,7 @@ class Orbis_Theme_Scripts {
 			'bootstrap',
 			$uri . '/assets/bootstrap/css/bootstrap' . $min . '.css',
 			array(),
-			'4.3.1'
+			'4.4.1'
 		);
 
 		// Select2
@@ -80,7 +80,7 @@ class Orbis_Theme_Scripts {
 			'fontawesome',
 			$uri . '/assets/fontawesome/css/all' . $min . '.css',
 			array(),
-			'5.8.1'
+			'5.12.0'
 		);
 
 		// Flotcharts
