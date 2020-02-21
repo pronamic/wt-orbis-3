@@ -12,6 +12,7 @@
 				<thead>
 					<tr>
 						<th><?php esc_html_e( 'Title', 'orbis' ); ?></th>
+						<th><?php esc_html_e( 'Status', 'orbis' ); ?></th>
 						<th><?php esc_html_e( 'Price', 'orbis' ); ?></th>
 						<th></th>
 					</tr>
@@ -27,6 +28,9 @@
 								<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 
 								<?php get_template_part( 'templates/table-cell-comments' ); ?>
+							</td>
+							<td>
+								<?php get_template_part( 'templates/subscription-badges' ); ?>
 							</td>
 							<td>
 								<?php orbis_subscription_the_price(); ?>
