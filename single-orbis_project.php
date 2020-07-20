@@ -68,7 +68,7 @@ while ( have_posts() ) :
 
 							?>
 
-							<span class="<?php echo esc_attr( implode( $classes, ' ' ) ); ?>"><?php orbis_project_the_logged_time(); ?></span>
+							<span class="<?php echo esc_attr( implode( ' ', $classes ) ); ?>"><?php orbis_project_the_logged_time(); ?></span>
 
 						<?php endif; ?>
 					</p>
