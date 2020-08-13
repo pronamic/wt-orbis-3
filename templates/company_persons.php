@@ -88,9 +88,12 @@
 			</ul>
 
 		<?php wp_reset_postdata(); else : ?>
-			<p class="alt">
-				<?php esc_html_e( 'No persons connected.', 'orbis' ); ?>
-			</p>
+
+			<div class="card-body">
+				<p class="text-muted m-0">
+					<?php esc_html_e( 'No persons connected.', 'orbis' ); ?>
+				</p>
+			</div>
 
 		<?php endif; ?>
 
