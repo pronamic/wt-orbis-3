@@ -57,8 +57,12 @@ while ( have_posts() ) :
 								<dt><?php esc_html_e( 'Deadline', 'orbis' ); ?></dt>
 								<dd><?php orbis_task_due_at(); ?></dd>
 
-								<dt><?php esc_html_e( 'Actions', 'orbis' ); ?></dt>
-								<dd><?php edit_post_link( __( 'Edit', 'orbis' ) ); ?></dd>
+								<?php if ( null !== get_edit_post_link() ) : ?>
+
+									<dt><?php esc_html_e( 'Actions', 'orbis' ); ?></dt>
+									<dd><?php edit_post_link( __( 'Edit', 'orbis' ) ); ?></dd>
+
+								<?php endif; ?>
 							</dl>
 						</div>
 					</div>

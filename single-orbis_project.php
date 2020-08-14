@@ -235,8 +235,12 @@ while ( have_posts() ) :
 
 						<?php endif; ?>
 
-						<dt><?php esc_html_e( 'Actions', 'orbis' ); ?></dt>
-						<dd><?php edit_post_link( __( 'Edit', 'orbis' ) ); ?></dd>
+						<?php if ( null !== get_edit_post_link() ) : ?>
+
+							<dt><?php esc_html_e( 'Actions', 'orbis' ); ?></dt>
+							<dd><?php edit_post_link( __( 'Edit', 'orbis' ) ); ?></dd>
+
+						<?php endif; ?>
 					</dl>
 				</div>
 			</div>
