@@ -307,6 +307,13 @@ header.with-tabs .nav-tabs > .active > a:hover {
 }
 
 /**
+ * Tabs
+ */
+.tab-pane > table:first-child th {
+	border-top: 0;
+}
+
+/**
  * Lists
  */
 ul.list,
