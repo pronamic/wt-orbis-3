@@ -5,7 +5,7 @@
 		<?php
 
 		printf(
-			'<a href="%s"><i class="fa fa-commenting" aria-hidden="true"></i> %s</a>',
+			'<i class="fa fa-comment text-muted" aria-hidden="true"></i> <a href="%s">%s</a>',
 			esc_url( get_permalink() . '#respond' ),
 			esc_html__( 'Respond', 'orbis' )
 		);
