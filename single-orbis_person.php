@@ -170,7 +170,7 @@ while ( have_posts() ) :
 													<li class="twitter">
 														<?php $twitter_url = 'https://twitter.com/' . get_post_meta( $post->ID, '_orbis_twitter', true ); ?>													
 														<a href="<?php echo esc_attr( $twitter_url ); ?>">
-															<i class="fa fa-twitter"></i>
+															<i class="fab fa-twitter"></i>
 
 															<span class="sr-only"><?php esc_html_e( 'Twitter', 'orbis' ); ?></span>
 														</a>
@@ -183,7 +183,7 @@ while ( have_posts() ) :
 													<li class="facebook">
 														<?php $facebook_url = get_post_meta( $post->ID, '_orbis_facebook', true ); ?>
 														<a href="<?php echo esc_attr( $facebook_url ); ?>">
-															<i class="fa fa-facebook"></i>
+															<i class="fab fa-facebook"></i>
 
 															<span class="sr-only"><?php esc_html_e( 'Facebook', 'orbis' ); ?></span>
 														</a>
@@ -196,7 +196,7 @@ while ( have_posts() ) :
 													<li class="linkedin">
 														<?php $linkedin_url = get_post_meta( $post->ID, '_orbis_linkedin', true ); ?>
 														<a href="<?php echo esc_attr( $linkedin_url ); ?>">
-															<i class="fa fa-linkedin"></i>
+															<i class="fab fa-linkedin"></i>
 
 															<span class="sr-only"><?php esc_html_e( 'LinkedIn', 'orbis' ); ?></span>
 														</a>
