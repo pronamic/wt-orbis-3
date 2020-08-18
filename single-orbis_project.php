@@ -22,6 +22,8 @@ while ( have_posts() ) :
 				<div class="card-body">
 					<?php the_content(); ?>
 				</div>
+
+				<?php get_template_part( 'templates/post-card-footer' ); ?>
 			</div>
 
 			<?php endif; ?>
