@@ -2,7 +2,11 @@
 
 $sections = array();
 
-if ( has_post_thumbnail() || '' !== get_the_content() ) :
+$content = get_the_content();
+
+$content = apply_filters( 'the_content', $content );
+
+if ( has_post_thumbnail() || ! empty( $content ) ) :
 
 	$sections[] = array(
 		'id'            => 'description',
