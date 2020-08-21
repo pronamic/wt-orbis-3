@@ -13,6 +13,8 @@ $postcode = get_post_meta( $post->ID, '_orbis_postcode', true );
 $city     = get_post_meta( $post->ID, '_orbis_city', true );
 $country  = get_post_meta( $post->ID, '_orbis_country', true );
 
+$accounting_email = get_post_meta( $post->ID, '_orbis_accounting_email', true );
+
 $invoice_email       = get_post_meta( $post->ID, '_orbis_invoice_email', true );
 $invoice_header_text = get_post_meta( $post->ID, '_orbis_invoice_header_text', true );
 $invoice_footer_text = get_post_meta( $post->ID, '_orbis_invoice_footer_text', true );
@@ -50,6 +52,15 @@ $twinfield_customer_id = get_post_meta( $post->ID, '_twinfield_customer_id', tru
 				<dt><?php esc_html_e( 'E-Mail', 'orbis' ); ?></dt>
 				<dd>
 					<a href="mailto:<?php echo esc_attr( $email ); ?>" target="_blank"><?php echo esc_html( $email ); ?></a>
+				</dd>
+
+			<?php endif; ?>
+
+			<?php if ( ! empty( $accounting_email ) ) : ?>
+
+				<dt><?php esc_html_e( 'Accounting E-Mail', 'orbis' ); ?></dt>
+				<dd>
+					<a href="mailto:<?php echo esc_attr( $accounting_email ); ?>" target="_blank"><?php echo esc_html( $accounting_email ); ?></a>
 				</dd>
 
 			<?php endif; ?>
