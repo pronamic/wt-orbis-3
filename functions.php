@@ -189,18 +189,6 @@ function orbis_add_tabs_endpoint() {
 
 add_action( 'init', 'orbis_add_tabs_endpoint' );
 
-
-/**
- * Orbis Companies
- */
-function orbis_companies_render_contact_details() {
-	if ( is_singular( 'orbis_company' ) ) {
-		get_template_part( 'templates/company_contact' );
-	}
-}
-
-add_action( 'orbis_before_side_content', 'orbis_companies_render_contact_details' );
-
 /**
  * Custom excerpt
  */

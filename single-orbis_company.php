@@ -6,6 +6,28 @@ while ( have_posts() ) :
 ?>
 
 	<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+		<div class="card-deck mb-4">
+			<div class="card">
+				<div class="card-header"><?php esc_html_e( 'Details', 'orbis' ); ?></div>
+
+				<div class="card-body">
+					<?php get_template_part( 'template-parts/company-general-details' ); ?>
+				</div>
+			</div>
+
+			<div class="card">
+				<div class="card-header"><?php esc_html_e( 'Contacts', 'orbis' ); ?></div>
+
+				<?php get_template_part( 'template-parts/company-contacts' ); ?>
+			</div>
+
+			<div class="card">
+				<div class="card-header"><?php esc_html_e( 'Users', 'orbis' ); ?></div>
+
+				<?php get_template_part( 'template-parts/company-users' ); ?>
+			</div>
+		</div>
+
 		<div class="row">
 			<div class="col-md-8">
 				<?php do_action( 'orbis_before_main_content' ); ?>
@@ -32,7 +54,6 @@ while ( have_posts() ) :
 			<div class="col-md-4">
 				<?php do_action( 'orbis_before_side_content' ); ?>
 
-				<?php get_template_part( 'templates/company_persons' ); ?>
 				<?php get_template_part( 'templates/company_twitter' ); ?>
 
 				<div class="card">

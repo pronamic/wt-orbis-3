@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pronamic\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/wt-orbis-3\n"
-"POT-Creation-Date: 2020-08-21 13:45:12+00:00\n"
-"PO-Revision-Date: 2020-08-21 15:45+0200\n"
+"POT-Creation-Date: 2020-10-08 08:07:37+00:00\n"
+"PO-Revision-Date: 2020-10-08 10:08+0200\n"
 "Last-Translator: Remco Tolsma <info@remcotolsma.nl>\n"
 "Language-Team: Pronamic <info@pronamic.nl>\n"
 "Language: nl_NL\n"
@@ -47,7 +47,7 @@ msgstr "Naam"
 #: deploy/latest/archive-orbis_person.php:19
 #: deploy/latest/single-orbis_person.php:101
 #: deploy/latest/templates/company_contact.php:30 single-orbis_person.php:101
-#: templates/company_contact.php:32
+#: template-parts/company-general-details.php:28
 msgid "Address"
 msgstr "Verzendadres"
 
@@ -335,7 +335,7 @@ msgid "Give a comment"
 msgstr "Geef een reactie"
 
 #: content-post.php:5 deploy/latest/content-post.php:5
-#: deploy/latest/functions.php:239 functions.php:239
+#: deploy/latest/functions.php:239 functions.php:227
 msgid "News"
 msgstr "Nieuws"
 
@@ -430,18 +430,18 @@ msgstr "Dashboard"
 #: deploy/latest/templates/filter_advanced-orbis_person.php:21
 #: deploy/latest/templates/filter_advanced-orbis_project.php:24
 #: deploy/latest/templates/search_form.php:49
-#: deploy/latest/templates/search_form.php:51 functions.php:257 header.php:98
+#: deploy/latest/templates/search_form.php:51 functions.php:245 header.php:98
 #: templates/filter_advanced-orbis_person.php:21
 #: templates/filter_advanced-orbis_project.php:24 templates/search_form.php:49
 #: templates/search_form.php:51
 msgid "Search"
 msgstr "Zoeken"
 
-#: deploy/latest/functions.php:260 functions.php:260
+#: deploy/latest/functions.php:260 functions.php:248
 msgid "404 - Page not found"
 msgstr "404 - Pagina niet gevonden"
 
-#: deploy/latest/functions.php:263 functions.php:263
+#: deploy/latest/functions.php:263 functions.php:251
 msgid "Unknown"
 msgstr "Onbekend"
 
@@ -679,7 +679,7 @@ msgstr "Type"
 #: deploy/latest/single-orbis_list.php:32
 #: deploy/latest/single-orbis_project.php:20
 #: deploy/latest/single-orbis_task.php:14 deploy/latest/single.php:14
-#: deploy/latest/templates/project_tasks.php:15 single-orbis_company.php:16
+#: deploy/latest/templates/project_tasks.php:15 single-orbis_company.php:38
 #: single-orbis_list.php:32 single-orbis_project.php:20
 #: single-orbis_task.php:14 templates/project_tasks.php:15
 #: templates/sections.php:13
@@ -689,7 +689,7 @@ msgstr "Beschrijving"
 #: deploy/latest/single-orbis_company.php:39
 #: deploy/latest/single-orbis_list.php:226
 #: deploy/latest/single-orbis_task.php:40 deploy/latest/single.php:40
-#: single-orbis_company.php:39 single-orbis_list.php:226
+#: single-orbis_company.php:60 single-orbis_list.php:226
 #: single-orbis_task.php:40 single.php:21
 msgid "Additional Information"
 msgstr "Aanvullende informatie"
@@ -699,7 +699,7 @@ msgstr "Aanvullende informatie"
 #: deploy/latest/single-orbis_person.php:235
 #: deploy/latest/single-orbis_project.php:100
 #: deploy/latest/single-orbis_task.php:45 deploy/latest/single.php:44
-#: single-orbis_company.php:43 single-orbis_list.php:231
+#: single-orbis_company.php:64 single-orbis_list.php:231
 #: single-orbis_person.php:237 single-orbis_project.php:102
 #: single-orbis_task.php:45 single.php:25
 msgid "Posted on"
@@ -711,7 +711,7 @@ msgstr "Geplaatst op"
 #: deploy/latest/single-orbis_project.php:103
 #: deploy/latest/single-orbis_project.php:249
 #: deploy/latest/single-orbis_task.php:48 deploy/latest/single.php:47
-#: single-orbis_company.php:46 single-orbis_list.php:234
+#: single-orbis_company.php:67 single-orbis_list.php:234
 #: single-orbis_person.php:240 single-orbis_project.php:105
 #: single-orbis_project.php:255 single-orbis_task.php:48 single.php:28
 msgid "Posted by"
@@ -722,7 +722,7 @@ msgstr "Aangemaakt door"
 #: deploy/latest/single-orbis_person.php:239
 #: deploy/latest/single-orbis_project.php:238
 #: deploy/latest/single-orbis_task.php:60 deploy/latest/single.php:50
-#: single-orbis_company.php:51 single-orbis_list.php:239
+#: single-orbis_company.php:72 single-orbis_list.php:239
 #: single-orbis_person.php:245 single-orbis_project.php:242
 #: single-orbis_task.php:62 single.php:33
 msgid "Actions"
@@ -733,7 +733,7 @@ msgstr "Acties"
 #: deploy/latest/single-orbis_person.php:240
 #: deploy/latest/single-orbis_project.php:239
 #: deploy/latest/single-orbis_task.php:61 deploy/latest/single.php:51
-#: deploy/latest/templates/table-cell-actions.php:8 single-orbis_company.php:52
+#: deploy/latest/templates/table-cell-actions.php:8 single-orbis_company.php:73
 #: single-orbis_list.php:240 single-orbis_person.php:246
 #: single-orbis_project.php:243 single-orbis_task.php:63 single.php:34
 #: templates/table-cell-actions.php:8
@@ -828,13 +828,13 @@ msgstr "Leeftijd"
 
 #: deploy/latest/single-orbis_person.php:150
 #: deploy/latest/templates/company_contact.php:123 single-orbis_person.php:150
-#: templates/company_contact.php:134
+#: template-parts/company-general-details.php:130
 msgid "vCard"
 msgstr "vCard"
 
 #: deploy/latest/single-orbis_person.php:157
 #: deploy/latest/templates/company_contact.php:130 single-orbis_person.php:157
-#: templates/company_contact.php:141
+#: template-parts/company-general-details.php:137
 msgid "Download vCard"
 msgstr "Download vCard"
 
@@ -900,19 +900,19 @@ msgstr "Niet facturabel"
 
 #: deploy/latest/single-orbis_project.php:170
 #: deploy/latest/templates/company_contact.php:111 single-orbis_project.php:172
-#: templates/company_contact.php:122
+#: template-parts/company-general-details.php:118
 msgid "Payment Method"
 msgstr "Betaalmethode"
 
 #: deploy/latest/single-orbis_project.php:185
 #: deploy/latest/templates/company_contact.php:68 single-orbis_project.php:187
-#: templates/company_contact.php:79
+#: template-parts/company-general-details.php:75
 msgid "Invoice Header Text"
 msgstr "Factuur koptekst"
 
 #: deploy/latest/single-orbis_project.php:194
 #: deploy/latest/templates/company_contact.php:77 single-orbis_project.php:196
-#: templates/company_contact.php:88
+#: template-parts/company-general-details.php:84
 msgid "Invoice Footer Text"
 msgstr "Factuur voettekst"
 
@@ -945,42 +945,42 @@ msgid "{} days"
 msgstr "{} dagen"
 
 #: deploy/latest/templates/company_contact.php:24
-#: templates/company_contact.php:26
+#: templates/company_contact.php:2
 msgid "Contact Details"
 msgstr "Contact details"
 
 #: deploy/latest/templates/company_contact.php:41
-#: templates/company_contact.php:43
+#: template-parts/company-general-details.php:39
 msgid "Website"
 msgstr "Website"
 
 #: deploy/latest/templates/company_contact.php:50
-#: templates/company_contact.php:52
+#: template-parts/company-general-details.php:48
 msgid "E-Mail"
 msgstr "E-mailadres"
 
 #: deploy/latest/templates/company_contact.php:59
-#: templates/company_contact.php:70
+#: template-parts/company-general-details.php:66
 msgid "Invoice E-Mail"
 msgstr "Factuur e-mailadres"
 
 #: deploy/latest/templates/company_contact.php:86
-#: templates/company_contact.php:97
+#: template-parts/company-general-details.php:93
 msgid "KvK Number"
 msgstr "KvK nummer"
 
 #: deploy/latest/templates/company_contact.php:104
-#: templates/company_contact.php:115
+#: template-parts/company-general-details.php:111
 msgid "VAT Number"
 msgstr "BTW-nmmer"
 
 #: deploy/latest/templates/company_contact.php:118
-#: templates/company_contact.php:129
+#: template-parts/company-general-details.php:125
 msgid "Invoice Shipping Method"
 msgstr "Factuur verzendmethode"
 
 #: deploy/latest/templates/company_contact.php:138
-#: templates/company_contact.php:149
+#: template-parts/company-general-details.php:145
 msgid "Twinfield ID"
 msgstr "Twinfield ID"
 
@@ -990,7 +990,7 @@ msgid "Connected persons"
 msgstr "Gekoppelde personen"
 
 #: deploy/latest/templates/company_persons.php:92
-#: templates/company_persons.php:94
+#: template-parts/company-contacts.php:91 templates/company_persons.php:94
 msgid "No persons connected."
 msgstr "Geen personen verbonden."
 
@@ -1288,9 +1288,25 @@ msgstr "uren"
 msgid "minutes"
 msgstr "minuten"
 
-#: templates/company_contact.php:61
+#: single-orbis_company.php:11
+msgid "Details"
+msgstr "Details"
+
+#: single-orbis_company.php:19
+msgid "Contacts"
+msgstr "Contacten"
+
+#: single-orbis_company.php:25
+msgid "Users"
+msgstr "Gebruikers"
+
+#: template-parts/company-general-details.php:57
 msgid "Accounting E-Mail"
 msgstr "Administratie e-mailadres"
+
+#: template-parts/company-users.php:20
+msgid "No users connected."
+msgstr "Geen gebruikers verbonden."
 
 #. Theme Name of the plugin/theme
 msgid "Orbis 3"
@@ -1397,9 +1413,6 @@ msgstr "Panel"
 
 #~ msgid "Electronic billing"
 #~ msgstr "Elektronische facturatie"
-
-#~ msgid "Contacts"
-#~ msgstr "Contacten"
 
 #~ msgid "Add company"
 #~ msgstr "Bedrijf toevoegen"
