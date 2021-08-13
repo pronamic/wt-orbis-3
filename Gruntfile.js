@@ -209,13 +209,11 @@ module.exports = function( grunt ) {
 			}
 		},
 
-		// Compass
-		compass: {
+		// SASS
+		sass: {
 			build: {
-				options: {
-					sassDir: 'src/sass',
-					cssDir: 'src/css',
-					importPath: 'node_modules'
+				files: {
+					'src/css/style.css': 'src/sass/style.scss'
 				}
 			}
 		},
@@ -273,7 +271,7 @@ module.exports = function( grunt ) {
 		'clean',
 		'phplint',
 		'concat',
-		'compass',
+		'sass',
 		'cssmin',
 		'copy',
 		'uglify',
