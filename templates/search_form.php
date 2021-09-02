@@ -61,10 +61,6 @@ switch ( get_query_var( 'post_type' ) ) {
 							'taxonomy' => 'orbis_person_category',
 						) );
 
-						wp_enqueue_script( 'select2' );
-						wp_enqueue_style( 'select2' );
-						wp_enqueue_style( 'select2-bootstrap4' );
-
 						printf(
 							'<select name="%s" class="select2" multiple="multiple" style="width: 30em;" placeholder="%s">',
 							esc_attr( 'c[]' ),
@@ -83,14 +79,6 @@ switch ( get_query_var( 'post_type' ) ) {
 						echo '</select>';
 
 						?>
-						<script type="text/javascript">
-							jQuery( document ).ready( function( $ ) {
-								$( '.select2' ).select2( {
-									theme: 'bootstrap4',
-									width: '16em',
-								});
-							} );
-						</script>
 
 						<style type="text/css">
 							.select2-choices {

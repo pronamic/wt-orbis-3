@@ -71,15 +71,6 @@
 			}
 		} )();
 
-		/**
-		 * Fix auto focus in jQuery 3.6.0 for Select2.
-		 *
-		 * @link https://github.com/select2/select2/issues/5993
-		 */
-		$( document ).on( 'select2:open', function() {
-			document.querySelector( '.select2-search__field' ).focus();
-		} );
-
 	} );
 
 } )( jQuery );
