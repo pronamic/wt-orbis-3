@@ -64,17 +64,6 @@ class Orbis_Theme_Scripts {
 			'4.4.1'
 		);
 
-		// Select2
-		wp_register_style(
-			'select2-bootstrap4',
-			$uri . '/assets/select2-bootstrap4/select2-bootstrap4' . $min . '.css',
-			array(
-				'select2',
-				'bootstrap',
-			),
-			'1.0.0'
-		);
-
 		// Font Awesome - http://fortawesome.github.io/Font-Awesome/
 		wp_register_style(
 			'fontawesome',

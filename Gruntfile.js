@@ -105,12 +105,6 @@ module.exports = function( grunt ) {
 						src: [ '**' ],
 						dest: 'assets/tether'
 					},
-					{ // Select2 Bootstrap - https://github.com/select2/select2-bootstrap-theme
-						expand: true,
-						cwd: 'node_modules/select2-bootstrap4-theme/dist/',
-						src: [ '**' ],
-						dest: 'assets/select2-bootstrap4'
-					},
 					{ // Popper.js - https://popper.js.org/
 						expand: true,
 						cwd: 'node_modules/popper.js/dist/umd',
